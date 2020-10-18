@@ -1,5 +1,6 @@
 import React from 'react';
+import style from './index.module.less';
 
 export const MainPage = () => {
-    return <div>main page</div>;
+    return <div className={style.test}>main page red</div>;
 }
