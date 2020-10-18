@@ -1,3 +1,4 @@
+import {MainPage} from "/pages/main/index.jsx";
 import React from 'react';
 import {hot} from 'react-hot-loader/root';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
@@ -12,7 +13,7 @@ const App = () => {
                 <div>users</div>
             </Route>
             <Route path="/">
-                <div>root page</div>
+                <MainPage />
             </Route>
         </Switch>
     </Router>;
