@@ -8,9 +8,7 @@
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/main/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602958663742</updated>
       <workItem from="1602958664922" duration="5102000" />
-      <workItem from="1603022797350" duration="2753000" />
+      <workItem from="1603022797350" duration="3723000" />
     </task>
     <servers />
   </component>
