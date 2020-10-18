@@ -57,6 +57,7 @@ module.exports = {
         new CleanWebpackPlugin(),
     ],
     resolve: {
+        extensions: ['.js', '.jsx'],
         roots: [
             path.resolve(__dirname, 'src'),
             path.resolve(__dirname, 'src', 'components'),
