@@ -29,7 +29,7 @@ module.exports = {
                         loader: 'css-loader',
                         options: {
                             modules: {
-                                localIdentName: '[local]=[hash:base64:5]'
+                                localIdentName: '[local]'
                             }
                         }
                     },
@@ -73,7 +73,7 @@ module.exports = {
         modules: [
             path.resolve(__dirname, 'src'),
             path.resolve(__dirname, 'src', 'components'),
-            'node_modules'
+            path.resolve(__dirname, 'node_modules')
         ]
     }
 }

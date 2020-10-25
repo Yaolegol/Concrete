@@ -6,6 +6,7 @@ module.exports = {
     extends: [
         'plugin:flowtype/recommended',
         'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
         'standard'
     ],
     parser: 'babel-eslint',
