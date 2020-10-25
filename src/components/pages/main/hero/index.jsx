@@ -1,11 +1,11 @@
 // @flow
-import React from 'react'
-import style from './index.module.less'
 import { Slider } from 'common/slider'
+import React from 'react'
+import './index.less'
 
 export const Hero = () => {
     return (
-        <div className={style.hero}>
+        <div className='hero'>
             <Slider>
                 <div>test1</div>
                 <div>test2</div>
