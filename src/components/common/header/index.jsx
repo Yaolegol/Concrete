@@ -5,7 +5,7 @@ import './index.less'
 export const Header = (): React$Node => {
     return (
         <div className='header'>
-            <div>header</div>
+            <img src="src/img/main/header/logo.jpg" alt="Logo"/>
         </div>
     )
 }
