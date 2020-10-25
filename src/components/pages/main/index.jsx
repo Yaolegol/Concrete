@@ -1,3 +1,5 @@
+// @flow
+
 import { Layout } from 'common/layout'
 import React from 'react'
 import style from './index.module.less'
