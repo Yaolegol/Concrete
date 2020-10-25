@@ -1,4 +1,5 @@
 // @flow
+import { Header } from 'common/header'
 import React from 'react'
 import style from './index.module.less'
 
@@ -9,7 +10,7 @@ type TProps = {
 export const Layout = ({ children }: TProps): React$Node => {
     return (
         <div className={style.layout}>
-            {/* <div>header</div> */}
+            <Header />
             {children}
             <div className={style.footer}>footer</div>
         </div>

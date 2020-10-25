@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/slider/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/main/hero/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/random.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/colors.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/flex.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/slider/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/slider/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/slider/index.module.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/main/hero/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/main/hero/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/main/hero/index.module.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/header/index.module.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/header/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,7 @@
       <workItem from="1602958664922" duration="5102000" />
       <workItem from="1603022797350" duration="3858000" />
       <workItem from="1603467125360" duration="1054000" />
-      <workItem from="1603623334997" duration="15275000" />
+      <workItem from="1603623334997" duration="16296000" />
     </task>
     <servers />
   </component>
