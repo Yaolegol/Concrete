@@ -1,12 +1,13 @@
 // @flow
 import { Layout } from 'common/layout'
+import { Hero } from 'pages/main/hero'
 import React from 'react'
-import style from './index.module.less'
+// import style from './index.module.less'
 
 export const MainPage = () => {
     return (
         <Layout>
-            <div className={style.test}>main page red</div>
+            <Hero />
         </Layout>
     )
 }

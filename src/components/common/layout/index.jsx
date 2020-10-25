@@ -9,7 +9,7 @@ type TProps = {
 export const Layout = ({ children }: TProps): React$Node => {
     return (
         <div className={style.layout}>
-            <div>header</div>
+            {/* <div>header</div> */}
             {children}
             <div className={style.footer}>footer</div>
         </div>

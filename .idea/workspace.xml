@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/pages/main/hero/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/main/hero/index.module.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/normalize.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/main/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/main/index.module.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/main/index.module.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +47,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/header" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/pages/main/hero" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -54,6 +61,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/pages/main/hero" />
       <recent name="$PROJECT_DIR$/src/components/common/header" />
       <recent name="$PROJECT_DIR$/src/components/common/layout" />
       <recent name="$PROJECT_DIR$/src/components/pages/main" />
@@ -70,7 +78,7 @@
       <workItem from="1602958664922" duration="5102000" />
       <workItem from="1603022797350" duration="3858000" />
       <workItem from="1603467125360" duration="1054000" />
-      <workItem from="1603623334997" duration="6922000" />
+      <workItem from="1603623334997" duration="8495000" />
     </task>
     <servers />
   </component>
