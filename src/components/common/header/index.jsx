@@ -2,7 +2,7 @@
 import React from 'react'
 import style from './index.module.less'
 
-const TProps = {
+type TProps = {
     children: React$Node
 }
 
