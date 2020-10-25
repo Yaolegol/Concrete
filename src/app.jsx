@@ -1,5 +1,4 @@
 // @flow
-
 import { MainPage } from 'pages/main'
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
