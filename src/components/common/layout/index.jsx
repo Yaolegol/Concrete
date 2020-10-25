@@ -5,10 +5,10 @@ import style from './index.module.less'
 
 export const Layout = ({ children }) => {
     return (
-        <div className={style.test}>
+        <div className={style.layout}>
             <div>header</div>
             {children}
-            <div>footer</div>
+            <div className={style.footer}>footer</div>
         </div>
     )
 }

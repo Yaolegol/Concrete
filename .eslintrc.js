@@ -4,9 +4,11 @@ module.exports = {
         es2021: true
     },
     extends: [
+        'plugin:flowtype/recommended',
         'plugin:react/recommended',
         'standard'
     ],
+    parser: 'babel-eslint',
     parserOptions: {
         ecmaFeatures: {
             jsx: true
@@ -15,6 +17,7 @@ module.exports = {
         sourceType: 'module'
     },
     plugins: [
+        'flowtype',
         'react'
     ],
     rules: {
