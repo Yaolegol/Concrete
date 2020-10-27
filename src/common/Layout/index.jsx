@@ -1,7 +1,7 @@
 // @flow
 import { Header } from 'common/Header'
 import React from 'react'
-import style from './index.module.less'
+import './index.less'
 
 type TProps = {
     children: React$Node
@@ -9,10 +9,12 @@ type TProps = {
 
 export const Layout = ({ children }: TProps): React$Node => {
     return (
-        <div className={style.layout}>
+        <div className='layout'>
             <Header />
-            {children}
-            <div className={style.footer}>footer</div>
+            <div className='layout__content'>
+                {children}
+                <div className='layout__footer'>footer</div>
+            </div>
         </div>
     )
 }
