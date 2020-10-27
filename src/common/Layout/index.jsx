@@ -12,7 +12,9 @@ export const Layout = ({ children }: TProps): React$Node => {
         <div className='layout'>
             <Header />
             <div className='layout__content'>
-                {children}
+                <div className='layout__body'>
+                    {children}
+                </div>
                 <div className='layout__footer'>footer</div>
             </div>
         </div>
