@@ -1,5 +1,6 @@
 // @flow
 import { Logo } from 'common/Logo'
+import { Menu } from 'common/Menu'
 import { Socials } from 'common/Socials'
 import React from 'react'
 import './index.less'
@@ -9,6 +10,7 @@ export const Header = (): React$Node => {
         <div className='header'>
             <Logo />
             <Socials />
+            <Menu />
         </div>
     )
 }

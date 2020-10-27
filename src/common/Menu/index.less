@@ -1,0 +1,17 @@
+@import (reference) '~styles/colors';
+
+.menu {
+    display: flex;
+
+    &__item {
+        color: @white;
+        cursor: pointer;
+        display: flex;
+        padding: 11px 40px;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: @blue;
+        }
+    }
+}
