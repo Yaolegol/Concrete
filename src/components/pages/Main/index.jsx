@@ -1,6 +1,6 @@
 // @flow
-import { Layout } from 'common/layout'
-import { Hero } from 'pages/main/hero'
+import { Layout } from 'common/Layout'
+import { Hero } from 'pages/Main/Hero'
 import React from 'react'
 
 export const MainPage = () => {

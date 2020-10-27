@@ -1,5 +1,5 @@
 // @flow
-import { Slider } from 'common/slider'
+import { Slider } from 'common/Slider'
 import React from 'react'
 import './index.less'
 

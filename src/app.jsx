@@ -1,5 +1,5 @@
 // @flow
-import { MainPage } from 'pages/main'
+import { MainPage } from 'pages/Main'
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
