@@ -44,10 +44,15 @@ module.exports = {
             },
             // images
             {
-                test: /\.(png|svg|jpg)$/,
+                test: /\.(png|jpg)$/,
                 use: [
                     'file-loader'
                 ]
+            },
+            // svg
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack']
             },
             // fonts
             {

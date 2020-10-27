@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/Menu/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Menu/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/CartLink/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/CartLink/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/main/header/cart.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Header/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Logo/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Logo/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Socials/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Socials/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/colors.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/colors.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../veltry" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -63,11 +63,11 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/common/Cart" />
       <recent name="$PROJECT_DIR$/src/common" />
       <recent name="$PROJECT_DIR$/src/common/Socials" />
       <recent name="$PROJECT_DIR$/src/components/common/logo" />
       <recent name="$PROJECT_DIR$/src/img/main/header" />
-      <recent name="$PROJECT_DIR$/src/components/common/header" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -82,7 +82,7 @@
       <workItem from="1603022797350" duration="3858000" />
       <workItem from="1603467125360" duration="1054000" />
       <workItem from="1603623334997" duration="17893000" />
-      <workItem from="1603802388549" duration="1873000" />
+      <workItem from="1603802388549" duration="4842000" />
     </task>
     <servers />
   </component>
@@ -94,10 +94,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="433" y="111" width="1250" height="633" key="#ESLint/67.27.1853.1053@67.27.1853.1053" timestamp="1603630070203" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603647986341">
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603804439612">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1603647986341" />
+    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1603804439612" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1603631575277">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
