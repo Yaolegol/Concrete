@@ -33,8 +33,8 @@ module.exports = {
                             }
                         }
                     },
-                    'less-loader',
-                    'postcss-loader'
+                    'postcss-loader',
+                    'less-loader'
                 ]
             },
             // css

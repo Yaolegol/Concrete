@@ -1,0 +1,72 @@
+@import (reference) '~styles/adaptive';
+@import (reference) '~styles/colors';
+
+.create-font(
+    @color: @default[@color];
+    @font-family: @default[@font-family];
+    @font-size: @default[@font-size];
+    @line-height: @default[@line-height];
+) {
+    color: @color;
+    font-family: @font-family;
+    font-size: @font-size;
+    line-height: @line-height;
+}
+
+@default: {
+    @color: @white;
+    @font-family: 'Noto Sans SC', sans-serif;
+    @font-size: 16px;
+    @line-height: 26px;
+}
+
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-weight: 400;
+    src: url('/src/fonts/NotoSansSC-Regular.otf');
+}
+
+.f_h1 {
+    .create-font(
+        @font-size: 46px;
+        @line-height: 60px;
+    );
+
+    text-transform: uppercase;
+
+    @media @mobile {
+        font-size: 23px;
+        line-height: 25px;
+    }
+}
+
+.f_h2 {
+    .create-font(@font-size: 30px; @line-height: 46px;);
+}
+
+.f_h3 {
+    .create-font(@font-size: 24px; @line-height: 40px;);
+
+    text-transform: capitalize;
+}
+
+.f_h4 {
+    .create-font(@font-size: 24px; @line-height: 24px;);
+}
+
+.f_h5 {
+    .create-font(@font-size: 14px; @line-height: 48px;);
+
+    font-weight: 600;
+}
+
+.f_h6 {
+    .create-font(@font-size: 24px; @line-height: 32px;);
+
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.f_p {
+    .create-font();
+}

@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/SliderMain/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/SliderMain/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/Main/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/NotoSansSC-Regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/adaptive.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/font.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/tags.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Hero/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Hero/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Hero/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Hero/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +55,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img/main/header" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/fonts" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -53,11 +69,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/fonts" />
+      <recent name="$PROJECT_DIR$/src/styles" />
+      <recent name="$PROJECT_DIR$/src/components/pages/Main" />
+      <recent name="$PROJECT_DIR$/src/components/common/SliderMain" />
       <recent name="$PROJECT_DIR$/src/img/main/header" />
-      <recent name="$PROJECT_DIR$/src/components/pages" />
-      <recent name="$PROJECT_DIR$/src/common/Cart" />
-      <recent name="$PROJECT_DIR$/src/common" />
-      <recent name="$PROJECT_DIR$/src/common/Socials" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
@@ -83,7 +99,7 @@
       <workItem from="1604069272332" duration="116000" />
       <workItem from="1604069688329" duration="225000" />
       <workItem from="1604069929639" duration="88000" />
-      <workItem from="1604070033449" duration="1473000" />
+      <workItem from="1604070033449" duration="6030000" />
     </task>
     <servers />
   </component>
@@ -99,18 +115,18 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="729" y="390" width="518" height="325" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1604070015507" />
-    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl" timestamp="1604071208216">
+    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl" timestamp="1604079699491">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1604071208216" />
+    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1604079699491" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1604068546211">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1604068546211" />
-    <state x="162" y="87" width="1595" height="883" key="find.popup" timestamp="1604070652430">
+    <state x="162" y="87" width="1595" height="883" key="find.popup" timestamp="1604080743648">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="162" y="87" width="1595" height="883" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604070652430" />
+    <state x="162" y="87" width="1595" height="883" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604080743648" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1603642556065">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
