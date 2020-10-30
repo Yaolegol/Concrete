@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Shop/Hero/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Shop/Hero/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Shop/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/CartLink/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CartLink/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/CartLink/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CartLink/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Logo/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Logo/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Logo/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Logo/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Menu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Menu/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Slider/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Slider/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Socials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Socials/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Socials/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Socials/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/CartLink/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CartLink/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Logo/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Logo/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/normalize.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/normalize.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +87,7 @@
       <workItem from="1604069272332" duration="116000" />
       <workItem from="1604069688329" duration="225000" />
       <workItem from="1604069929639" duration="88000" />
-      <workItem from="1604070033449" duration="625000" />
+      <workItem from="1604070033449" duration="1095000" />
     </task>
     <servers />
   </component>
