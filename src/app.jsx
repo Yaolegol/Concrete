@@ -26,4 +26,5 @@ const App = () => {
     </Router>
 }
 
+// TODO remove hot from prod
 export default hot(App)
