@@ -1,20 +1,29 @@
+@import (reference) '~styles/adaptive';
 @import (reference) '~styles/colors';
-@import (reference) '~styles/flex';
 
 .slider-main {
     height: 100%;
 
+    &__content {
+        max-width: 600px;
+    }
+
+    &__content-description {
+        margin-top: 35px;
+    }
+
     &__content-header {
-        color: @white;
         font-weight: 900;
     }
 
     &__content-section {
-        .f_c();
-
+        display: flex;
         background-color: @black;
-        flex: 1;
-        padding: 0 50px;
+        color: @white;
+        flex: 1 1 50%;
+        flex-direction: column;
+        padding: 100px 100px 50px;
+        text-align: left;
     }
 
     &__image {
@@ -24,7 +33,7 @@
     }
 
     &__image-section {
-        flex: 1;
+        flex: 1 1 50%;
     }
 
     &__slide {

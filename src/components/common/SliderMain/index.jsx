@@ -12,7 +12,10 @@ export const SliderMain = () => {
                         <img className='slider-main__image' src="src/img/main/header/hero.jpg" alt="Hero" />
                     </div>
                     <div className='slider-main__content-section'>
-                        <h1 className='slider-main__content-header'>Concrete furniture</h1>
+                        <div className='slider-main__content'>
+                            <h1 className='slider-main__content-header'>Concrete furniture</h1>
+                            <p className='slider-main__content-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita illum ipsum nobis omnis quaerat quas saepe tempora voluptas?</p>
+                        </div>
                     </div>
                 </div>
                 <div className='slider-main__slide'>test2</div>
