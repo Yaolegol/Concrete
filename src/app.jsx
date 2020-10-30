@@ -7,11 +7,17 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 const App = () => {
     return <Router>
         <Switch>
-            <Route path="/about">
-                <div>about</div>
+            <Route path="/shop">
+                <div>shop</div>
             </Route>
-            <Route path="/users">
-                <div>users</div>
+            <Route path="/cart">
+                <div>cart</div>
+            </Route>
+            <Route path="/login">
+                <div>login</div>
+            </Route>
+            <Route path="/signup">
+                <div>signup</div>
             </Route>
             <Route path="/">
                 <MainPage />
