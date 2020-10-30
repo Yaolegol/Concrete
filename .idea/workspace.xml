@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/pages/Shop/Hero/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/Shop/Hero/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/Shop/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Layout/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Layout/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/CartLink/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CartLink/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/CartLink/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CartLink/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Logo/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Logo/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Logo/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Logo/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Menu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Menu/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Slider/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Slider/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Socials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Socials/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Socials/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Socials/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +57,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../veltry" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/pages" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -54,15 +70,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/pages" />
       <recent name="$PROJECT_DIR$/src/common/Cart" />
       <recent name="$PROJECT_DIR$/src/common" />
       <recent name="$PROJECT_DIR$/src/common/Socials" />
       <recent name="$PROJECT_DIR$/src/components/common/logo" />
-      <recent name="$PROJECT_DIR$/src/img/main/header" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -77,7 +94,14 @@
       <workItem from="1603022797350" duration="3858000" />
       <workItem from="1603467125360" duration="1054000" />
       <workItem from="1603623334997" duration="17893000" />
-      <workItem from="1603802388549" duration="6616000" />
+      <workItem from="1603802388549" duration="7275000" />
+      <workItem from="1604067583717" duration="1011000" />
+      <workItem from="1604068620995" duration="40000" />
+      <workItem from="1604068962384" duration="80000" />
+      <workItem from="1604069272332" duration="116000" />
+      <workItem from="1604069688329" duration="225000" />
+      <workItem from="1604069929639" duration="88000" />
+      <workItem from="1604070033449" duration="625000" />
     </task>
     <servers />
   </component>
@@ -89,18 +113,22 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="433" y="111" width="1250" height="633" key="#ESLint/67.27.1853.1053@67.27.1853.1053" timestamp="1603630070203" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603804439612">
+    <state x="729" y="390" width="518" height="325" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1604070015507">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1603804439612" />
-    <state x="482" y="187" key="SettingsEditor" timestamp="1603631575277">
+    <state x="729" y="390" width="518" height="325" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1604070015507" />
+    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl" timestamp="1604070013764">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1603631575277" />
-    <state x="683" y="291" width="620" height="522" key="find.popup" timestamp="1603022498307">
+    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1604070013764" />
+    <state x="482" y="187" key="SettingsEditor" timestamp="1604068546211">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="683" y="291" width="620" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1603022498307" />
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1604068546211" />
+    <state x="162" y="87" width="1595" height="883" key="find.popup" timestamp="1604070652430">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="162" y="87" width="1595" height="883" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604070652430" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1603642556065">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
