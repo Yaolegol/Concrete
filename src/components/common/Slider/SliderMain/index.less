@@ -6,7 +6,6 @@
     position: relative;
 
     &__controls {
-        background-color: @white;
         bottom: 0;
         display: flex;
         left: 50%;
@@ -18,9 +17,18 @@
     &__control-button {
         .f_c();
 
+        background-color: @white;
         cursor: pointer;
         height: 45px;
         width: 45px;
+
+        &:hover {
+            background-color: @blue;
+
+            .slider-main__control-icon {
+                color: @white;
+            }
+        }
     }
 
     &__control-icon {
