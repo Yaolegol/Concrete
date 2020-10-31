@@ -1,4 +1,5 @@
 // @flow
+import { MenuItem } from 'common/MenuItem'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './index.less'
@@ -6,10 +7,10 @@ import './index.less'
 export const Menu = (): React$Node => {
     return (
         <div className='menu'>
-            <Link to="/"><span className='menu__item'>home</span></Link>
-            <Link to="/shop"><span className='menu__item'>shop</span></Link>
-            <Link to="/signup"><span className='menu__item'>sign up</span></Link>
-            <Link to="/login"><span className='menu__item'>log in</span></Link>
+            <Link to="/"><MenuItem>home</MenuItem></Link>
+            <Link to="/shop"><MenuItem>shop</MenuItem></Link>
+            <Link to="/signup"><MenuItem>sign up</MenuItem></Link>
+            <Link to="/login"><MenuItem>log in</MenuItem></Link>
         </div>
     )
 }
