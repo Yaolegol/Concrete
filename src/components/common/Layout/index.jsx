@@ -24,9 +24,7 @@ export const Layout = ({ children, hero }: TProps): React$Node => {
             <Header />
             <div className='layout__content'>
                 {heroSection}
-                <div className='layout__body'>
-                    {children}
-                </div>
+                {children}
                 <div className='layout__footer'>footer</div>
             </div>
         </div>
