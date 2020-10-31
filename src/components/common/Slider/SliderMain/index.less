@@ -1,0 +1,35 @@
+@import (reference) '~styles/colors';
+@import (reference) '~styles/flex';
+
+.slider-main {
+    height: 100%;
+    position: relative;
+
+    &__controls {
+        background-color: @white;
+        bottom: 0;
+        display: flex;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        z-index: 9;
+    }
+
+    &__control-button {
+        .f_c();
+
+        cursor: pointer;
+        height: 45px;
+        width: 45px;
+    }
+
+    &__control-icon {
+        color: @gray;
+        height: 25px;
+        width: 25px;
+
+        &_left {
+            transform: rotate(180deg);
+        }
+    }
+}

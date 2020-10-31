@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/arrow-right.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Header/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/MenuItem/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/MenuItem/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/MenuItem/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/MenuItem/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/SliderMain/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/SliderMain/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Hero/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Hero/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/colors.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/colors.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +46,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/Slider/SliderMain" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -63,11 +60,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common/Slider/SliderMain" />
       <recent name="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide" />
       <recent name="$PROJECT_DIR$/src/components/common/Button" />
       <recent name="$PROJECT_DIR$/src/components/common/MenuItem" />
       <recent name="$PROJECT_DIR$/src/fonts" />
-      <recent name="$PROJECT_DIR$/src/styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/common/Layout" />
@@ -96,7 +93,7 @@
       <workItem from="1604069272332" duration="116000" />
       <workItem from="1604069688329" duration="225000" />
       <workItem from="1604069929639" duration="88000" />
-      <workItem from="1604070033449" duration="12462000" />
+      <workItem from="1604070033449" duration="16963000" />
     </task>
     <servers />
   </component>

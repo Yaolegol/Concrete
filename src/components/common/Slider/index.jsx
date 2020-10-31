@@ -11,7 +11,7 @@ type TProps = {
     spaceBetween?: number,
 }
 
-export const Slider = ({ children, slidesPerView = 1, spaceBetween = 50 }: TProps): React$Node => {
+export const Slider = ({ children, slidesPerView = 1, spaceBetween = 50, ...rest }: TProps): React$Node => {
     const slides = useMemo(() => {
         return children.map((item) => {
             return (
@@ -29,8 +29,7 @@ export const Slider = ({ children, slidesPerView = 1, spaceBetween = 50 }: TProp
             <Swiper
                 spaceBetween={spaceBetween}
                 slidesPerView={slidesPerView}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                {...rest}
             >
                 {slides}
             </Swiper>
