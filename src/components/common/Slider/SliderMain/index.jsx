@@ -2,11 +2,23 @@
 import { SliderMainSlide } from 'common/Slider/SliderMain/SliderMainSlide'
 import ArrowIcon from 'img/arrow-right.svg'
 import { Slider } from 'common/Slider'
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import './index.less'
 
 export const SliderMain = () => {
     const [swiper, setSwiper] = useState()
+
+    const slideNext = useCallback(() => {
+        if (swiper) {
+            swiper.slideNext(700)
+        }
+    }, [swiper])
+
+    const slidePrev = useCallback(() => {
+        if (swiper) {
+            swiper.slidePrev(700)
+        }
+    }, [swiper])
 
     return (
         <div className='slider-main'>
@@ -35,10 +47,10 @@ export const SliderMain = () => {
                 />
             </Slider>
             <div className='slider-main__controls'>
-                <button className='slider-main__control-button'>
+                <button className='slider-main__control-button' onClick={slidePrev}>
                     <ArrowIcon className='slider-main__control-icon slider-main__control-icon_left' />
                 </button>
-                <button className='slider-main__control-button'>
+                <button className='slider-main__control-button' onClick={slideNext}>
                     <ArrowIcon className='slider-main__control-icon' />
                 </button>
             </div>
