@@ -1,0 +1,17 @@
+@import (reference) '~styles/colors';
+@import (reference) '~styles/font';
+
+.button {
+    .f_p();
+
+    background-color: @blue;
+    color: @white;
+    cursor: pointer;
+    padding: 10px 40px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: @blue-1;
+        color: fade(@white, 80%);
+    }
+}

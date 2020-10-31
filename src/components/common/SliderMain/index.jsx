@@ -1,4 +1,5 @@
 // @flow
+import { Button } from 'common/Button'
 import { Slider } from 'common/Slider'
 import React from 'react'
 import './index.less'
@@ -15,6 +16,9 @@ export const SliderMain = () => {
                         <div className='slider-main__content'>
                             <h1 className='slider-main__content-header'>Concrete furniture</h1>
                             <p className='slider-main__content-description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita illum ipsum nobis omnis quaerat quas saepe tempora voluptas?</p>
+                            <div className='slider-main__button-container'>
+                                <Button>shop now</Button>
+                            </div>
                         </div>
                     </div>
                 </div>
