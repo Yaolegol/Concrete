@@ -6,8 +6,8 @@ type TProps = {
     children: string
 }
 
-export const Button = ({ children }: TProps): React$Node => {
+export const Button = ({ children, ...rest }: TProps): React$Node => {
     return (
-        <button className='button'>{children}</button>
+        <button className='button' {...rest}>{children}</button>
     )
 }
