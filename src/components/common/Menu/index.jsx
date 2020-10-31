@@ -1,5 +1,5 @@
 // @flow
-import { MenuItem } from 'common/MenuItem'
+import { MenuItem } from 'common/Menu/MenuItem'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './index.less'

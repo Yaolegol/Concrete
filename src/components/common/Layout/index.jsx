@@ -1,5 +1,5 @@
 // @flow
-import { Header } from 'components/common/Header'
+import { Header } from 'components/common/Layout/Header'
 import React from 'react'
 import './index.less'
 
