@@ -5,10 +5,8 @@ import './index.less'
 
 export const Hero = () => {
     return (
-        <div className='hero'>
-            <SliderMain>
-
-            </SliderMain>
+        <div className='main-hero'>
+            <SliderMain></SliderMain>
         </div>
     )
 }
