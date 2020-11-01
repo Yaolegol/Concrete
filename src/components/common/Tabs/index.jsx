@@ -1,5 +1,4 @@
 // @flow
-import { TabsContent } from 'common/Tabs/TabsContent'
 import { TabsTab } from 'common/Tabs/TabsTab'
 import React, { useState, useMemo, useCallback } from 'react'
 import './index.less'
@@ -7,10 +6,11 @@ import './index.less'
 type TProps = {
     activeTabId: number,
     content: Array<{ id: number, data: { address: string, email: string, phone: string, } }>,
+    contentComponent: React$Node,
     tabs: Array<{ id: number, name: string, }>
 }
 
-export const Tabs = ({ activeTabId, content, tabs }: TProps): React$Node => {
+export const Tabs = ({ activeTabId, content, contentComponent: ContentComponent, tabs }: TProps): React$Node => {
     const [activeTab, setActiveTab] = useState(activeTabId)
 
     const onClickTab = useCallback((e) => {
@@ -19,8 +19,8 @@ export const Tabs = ({ activeTabId, content, tabs }: TProps): React$Node => {
     }, [])
 
     const _content = useMemo(() => {
-        return content.map(({ id, data: { address, email, phone } }) => {
-            return <TabsContent address={address} email={email} isActive={id === activeTab} phone={phone} key={id}/>
+        return content.map(({ id, data }) => {
+            return <ContentComponent isActive={id === activeTab} key={id} {...data} />
         })
     }, [activeTab, content])
 

@@ -14,7 +14,7 @@ type TProps = {
     phone: string,
 }
 
-export const TabsContent = ({ address, className, email, isActive, phone }: TProps): React$Node => {
+export const TabsAddressContent = ({ address, className, email, isActive, phone }: TProps): React$Node => {
     return (
         <div className={cn('tabs-content', isActive ? 'tabs-content_active' : null, className)}>
             <div className='tabs-content__item'>
