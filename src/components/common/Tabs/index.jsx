@@ -1,11 +1,9 @@
 // @flow
 import cn from 'classnames'
 import { Tab } from 'common/Tabs/Tab'
-import EmailIcon from 'img/email.svg'
-import MapMarkerIcon from 'img/map-marker.svg'
-import PhoneIcon from 'img/phone.svg'
 import React, { useState, useMemo, useCallback } from 'react'
 import './index.less'
+import { Content } from './Content'
 
 type TProps = {
     activeTabId: number,
@@ -23,20 +21,7 @@ export const Tabs = ({ activeTabId, content, tabs }: TProps): React$Node => {
 
     const _content = useMemo(() => {
         return content.map(({ id, data: { address, email, phone } }) => {
-            return <div className={cn('tabs__content', id === activeTab ? 'tabs__content_active' : null)} key={id}>
-                <div className='tabs__content-item'>
-                    <MapMarkerIcon className='tabs__content-item-icon' />
-                    <p className='tabs__content-item-text'>{address}</p>
-                </div>
-                <div className='tabs__content-item'>
-                    <PhoneIcon className='tabs__content-item-icon' />
-                    <p className='tabs__content-item-text'>{phone}</p>
-                </div>
-                <div className='tabs__content-item'>
-                    <EmailIcon className='tabs__content-item-icon' />
-                    <p className='tabs__content-item-text'>{email}</p>
-                </div>
-            </div>
+            return <Content address={address} email={email} isActive={id === activeTab} phone={phone} key={id}/>
         })
     }, [activeTab, content])
 

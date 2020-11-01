@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/Tabs/Tab/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Tabs/Tab/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Tabs/Content/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Tabs/Content/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Tabs/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Tabs/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +42,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/Tabs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/Tabs/Content" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -58,11 +56,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common/Tabs/Content" />
       <recent name="$PROJECT_DIR$/src/components/common/Tabs" />
       <recent name="$PROJECT_DIR$/src/components/common/Layout/Footer/GoogleMap" />
       <recent name="$PROJECT_DIR$/src/components/common/Layout" />
       <recent name="$PROJECT_DIR$/src/img/main/portfolio" />
-      <recent name="$PROJECT_DIR$/src/components/pages/Main/Portfolio" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/common" />
@@ -91,7 +89,7 @@
       <workItem from="1604069272332" duration="116000" />
       <workItem from="1604069688329" duration="225000" />
       <workItem from="1604069929639" duration="88000" />
-      <workItem from="1604070033449" duration="37506000" />
+      <workItem from="1604070033449" duration="38027000" />
     </task>
     <servers />
   </component>
