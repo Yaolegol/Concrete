@@ -1,4 +1,5 @@
 // @flow
+import { Button } from 'common/Button'
 import React from 'react'
 import './index.less'
 
@@ -14,6 +15,9 @@ export const Portfolio = () => {
                     <img className='main-portfolio__image-secondary main-portfolio__image-secondary_left-bottom' src="src/img/main/portfolio/secondary-lb.jpg" alt="Room"/>
                     <img className='main-portfolio__image-secondary main-portfolio__image-secondary_right-bottom' src="src/img/main/portfolio/secondary-rb.jpg" alt="Room"/>
                 </div>
+            </div>
+            <div>
+                <Button theme='white'>portfolio</Button>
             </div>
         </div>
     )
