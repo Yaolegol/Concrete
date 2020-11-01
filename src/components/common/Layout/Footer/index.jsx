@@ -4,6 +4,48 @@ import { Tabs } from 'common/Tabs'
 import React from 'react'
 import './index.less'
 
+const _tabs = [
+    {
+        id: 1,
+        name: 'test1'
+    },
+    {
+        id: 2,
+        name: 'test2'
+    },
+    {
+        id: 3,
+        name: 'test3'
+    }
+]
+
+const tabsContent = [
+    {
+        id: 1,
+        data: {
+            address: 'address1',
+            email: 'email1',
+            phone: 'phone1'
+        }
+    },
+    {
+        id: 2,
+        data: {
+            address: 'address2',
+            email: 'email2',
+            phone: 'phone2'
+        }
+    },
+    {
+        id: 3,
+        data: {
+            address: 'address3',
+            email: 'email3',
+            phone: 'phone3'
+        }
+    }
+]
+
 export const Footer = (): React$Node => {
     return (
         <div className='footer'>
@@ -15,46 +57,8 @@ export const Footer = (): React$Node => {
                 <div className='footer__content-container'>
                     <Tabs
                         activeTabId={1}
-                        content={[
-                            {
-                                id: 1,
-                                data: {
-                                    address: 'address1',
-                                    email: 'email1',
-                                    phone: 'phone1'
-                                }
-                            },
-                            {
-                                id: 2,
-                                data: {
-                                    address: 'address2',
-                                    email: 'email2',
-                                    phone: 'phone2'
-                                }
-                            },
-                            {
-                                id: 3,
-                                data: {
-                                    address: 'address3',
-                                    email: 'email3',
-                                    phone: 'phone3'
-                                }
-                            }
-                        ]}
-                        tabs={[
-                            {
-                                id: 1,
-                                name: 'test1'
-                            },
-                            {
-                                id: 2,
-                                name: 'test2'
-                            },
-                            {
-                                id: 3,
-                                name: 'test3'
-                            }
-                        ]}/>
+                        content={tabsContent}
+                        tabs={_tabs}/>
                 </div>
             </div>
         </div>
