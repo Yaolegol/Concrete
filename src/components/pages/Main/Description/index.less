@@ -1,15 +1,52 @@
+@import (reference) "~styles/colors";
 @import (reference) "~styles/flex";
 
 .main-description {
-    .f_c();
+    display: flex;
+    margin-top: 150px;
+
+    &__content {
+        max-width: 450px;
+    }
+
+    &__content-description {
+        margin-top: 50px;
+    }
 
     &__content-section {
         .f_c();
 
-        flex: 1;
+        flex: 1 1 50%;
+        flex-direction: column;
+        padding: 0 80px;
+        text-align: center;
+    }
+
+    &__content-title {
+        color: @black;
+    }
+
+    &__image-container {
+        display: flex;
+        position: relative;
+    }
+
+    &__image-main {
+        height: 400px;
+        object-fit: cover;
+        width: 600px;
+    }
+
+    &__image-second {
+        height: 200px;
+        object-fit: cover;
+        position: absolute;
+        right: 10%;
+        top: -15%;
+        width: 250px;
     }
 
     &__image-section {
-        flex: 1;
+        flex: 1 1 50%;
     }
 }
