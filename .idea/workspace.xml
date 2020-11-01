@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Main/Portfolio/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Main/Portfolio/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/main/portfolio/main.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/main/portfolio/secondary-lb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/main/portfolio/secondary-lt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/main/portfolio/secondary-rb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/main/portfolio/secondary-rt.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Portfolio/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Portfolio/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Portfolio/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Portfolio/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/font.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/font.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +47,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/pages/Main/Portfolio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img/main/portfolio" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -58,11 +61,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/img/main/portfolio" />
       <recent name="$PROJECT_DIR$/src/components/pages/Main/Portfolio" />
       <recent name="$PROJECT_DIR$/src/components/common/Link" />
       <recent name="$PROJECT_DIR$/src/img/main/description" />
       <recent name="$PROJECT_DIR$/src/components/pages/Main/Description" />
-      <recent name="$PROJECT_DIR$/src/components/common/Slider/SliderMain" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/common/Link" />
@@ -91,7 +94,7 @@
       <workItem from="1604069272332" duration="116000" />
       <workItem from="1604069688329" duration="225000" />
       <workItem from="1604069929639" duration="88000" />
-      <workItem from="1604070033449" duration="26203000" />
+      <workItem from="1604070033449" duration="27456000" />
     </task>
     <servers />
   </component>

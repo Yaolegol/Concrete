@@ -1,5 +1,49 @@
 @import (reference) "~styles/colors";
+@import (reference) "~styles/flex";
 
 .main-portfolio {
+    .f_c();
 
+    flex-direction: column;
+    margin-top: 150px;
+
+    &__image-container {
+        display: flex;
+        position: relative;
+    }
+
+    &__image-main {
+        height: 400px;
+        object-fit: cover;
+        width: 600px;
+    }
+
+    &__image-secondary {
+        position: absolute;
+        z-index: 9;
+
+        &_left-bottom {
+            left: -10%;
+            bottom: -20%;
+        }
+
+        &_left-top {
+            left: -20%;
+            top: -45%;
+        }
+
+        &_right-bottom {
+            bottom: -40%;
+            right: -25%;
+        }
+
+        &_right-top {
+            right: -40%;
+            top: -40%;
+        }
+    }
+
+    &__image-section {
+        padding: 300px 0;
+    }
 }
