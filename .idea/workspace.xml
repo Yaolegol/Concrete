@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/img/main/description/room.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/main/description/table.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Link/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Link/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/CartLink/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Link/CartLink/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/CartLink/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Link/CartLink/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Header/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Description/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Description/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Description/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Main/Description/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/font.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/font.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/colors.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/colors.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img/main/description" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/Link" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -59,18 +61,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common/Link" />
       <recent name="$PROJECT_DIR$/src/img/main/description" />
       <recent name="$PROJECT_DIR$/src/components/pages/Main/Description" />
       <recent name="$PROJECT_DIR$/src/components/common/Slider/SliderMain" />
       <recent name="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide" />
-      <recent name="$PROJECT_DIR$/src/components/common/Button" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common/Link" />
       <recent name="$PROJECT_DIR$/src/components/common/Layout" />
       <recent name="$PROJECT_DIR$/src/components/common/Slider" />
       <recent name="$PROJECT_DIR$/src/components/common/Menu" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -92,7 +94,7 @@
       <workItem from="1604069272332" duration="116000" />
       <workItem from="1604069688329" duration="225000" />
       <workItem from="1604069929639" duration="88000" />
-      <workItem from="1604070033449" duration="23704000" />
+      <workItem from="1604070033449" duration="24580000" />
     </task>
     <servers />
   </component>

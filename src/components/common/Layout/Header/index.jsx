@@ -1,5 +1,5 @@
 // @flow
-import { CartLink } from 'common/CartLink'
+import { CartLink } from 'common/Link/CartLink'
 import { Logo } from 'common/Logo'
 import { Menu } from 'common/Menu'
 import { Socials } from 'common/Socials'
