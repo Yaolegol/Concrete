@@ -1,0 +1,56 @@
+@import (reference) '~styles/font';
+
+.tabs {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    &__content-container {
+        display: flex;
+        flex: 1;
+    }
+
+    &__content {
+        color: @white;
+        display: none;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+
+        &_active {
+            display: flex;
+        }
+    }
+
+    &__content-item {
+        align-items: center;
+        display: flex;
+        margin-top: 30px;
+
+        &:first-child, &:only-child {
+            margin-top: 0;
+        }
+    }
+
+    &__content-item-icon {
+        color: @white;
+        height: 25px;
+        width: 25px;
+    }
+
+    &__content-item-text {
+        color: @white;
+        margin-left: 15px;
+    }
+
+    &__menu-item {
+        flex: 1;
+        justify-content: center;
+    }
+
+    &__menu-container {
+        display: flex;
+        margin-top: 25px;
+    }
+}

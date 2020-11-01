@@ -1,13 +1,27 @@
 @import (reference) '~styles/colors';
-@import (reference) '~styles/flex';
 
 .footer {
-    .f_c();
-
+    display: flex;
     flex-direction: column;
+    text-align: center;
+
+    &__content-container {
+        background-color: @black;
+        display: flex;
+        flex: 1;
+    }
 
     &__content-section {
         display: flex;
         margin-top: 60px;
+    }
+
+    &__map {
+        height: 450px;
+        width: 600px;
+    }
+
+    &__map-container {
+        flex: 1;
     }
 }
