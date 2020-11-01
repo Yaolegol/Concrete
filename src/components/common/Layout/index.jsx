@@ -1,5 +1,6 @@
 // @flow
-import { Header } from 'components/common/Layout/Header'
+import { Footer } from 'common/Layout/Footer'
+import { Header } from 'common/Layout/Header'
 import React, { useMemo } from 'react'
 import './index.less'
 
@@ -25,7 +26,7 @@ export const Layout = ({ children, hero }: TProps): React$Node => {
             <div className='layout__content'>
                 {heroSection}
                 {children}
-                <div className='layout__footer'>footer</div>
+                <Footer />
             </div>
         </div>
     )
