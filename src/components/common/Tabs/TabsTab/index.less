@@ -1,13 +1,15 @@
 @import (reference) '~styles/colors';
 
-.tab {
+.tabs-tab {
     color: @white;
     cursor: pointer;
     display: flex;
+    flex: 1;
+    justify-content: center;
     padding: 11px 40px;
     text-transform: uppercase;
 
-    &:hover {
+    &:hover, &_active {
         background-color: @blue;
     }
 }

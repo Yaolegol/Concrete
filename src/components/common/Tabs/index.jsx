@@ -1,9 +1,9 @@
 // @flow
 import cn from 'classnames'
-import { Tab } from 'common/Tabs/Tab'
+import { TabsContent } from 'common/Tabs/TabsContent'
+import { TabsTab } from 'common/Tabs/TabsTab'
 import React, { useState, useMemo, useCallback } from 'react'
 import './index.less'
-import { Content } from './Content'
 
 type TProps = {
     activeTabId: number,
@@ -21,13 +21,13 @@ export const Tabs = ({ activeTabId, content, tabs }: TProps): React$Node => {
 
     const _content = useMemo(() => {
         return content.map(({ id, data: { address, email, phone } }) => {
-            return <Content address={address} email={email} isActive={id === activeTab} phone={phone} key={id}/>
+            return <TabsContent address={address} email={email} isActive={id === activeTab} phone={phone} key={id}/>
         })
     }, [activeTab, content])
 
     const _tabs = useMemo(() => {
         return tabs.map(({ id, name }) => {
-            return <Tab className={cn('tabs__menu-item', id === activeTab ? 'tabs__menu-item_active' : null)} data-id={id} key={id} onClick={onClickTab}>{name}</Tab>
+            return <TabsTab data-id={id} isActive={id === activeTab} key={id} onClick={onClickTab}>{name}</TabsTab>
         })
     }, [activeTab, onClickTab, tabs])
 
