@@ -1,5 +1,4 @@
 // @flow
-import cn from 'classnames'
 import { TabsContent } from 'common/Tabs/TabsContent'
 import { TabsTab } from 'common/Tabs/TabsTab'
 import React, { useState, useMemo, useCallback } from 'react'
