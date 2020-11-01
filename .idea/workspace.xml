@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/Tabs/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Tabs/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/email.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/map-marker.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Tabs/Tab/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Tabs/Tab/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/GoogleMap/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/GoogleMap/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/GoogleMap/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/GoogleMap/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/MenuItem/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Menu/MenuItem/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Tabs/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Tabs/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +91,7 @@
       <workItem from="1604069272332" duration="116000" />
       <workItem from="1604069688329" duration="225000" />
       <workItem from="1604069929639" duration="88000" />
-      <workItem from="1604070033449" duration="36280000" />
+      <workItem from="1604070033449" duration="37506000" />
     </task>
     <servers />
   </component>

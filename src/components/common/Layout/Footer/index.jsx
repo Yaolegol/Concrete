@@ -14,6 +14,7 @@ export const Footer = (): React$Node => {
                 </div>
                 <div className='footer__content-container'>
                     <Tabs
+                        activeTabId={1}
                         content={[
                             {
                                 id: 1,
