@@ -53,7 +53,7 @@ export const Footer = (): React$Node => {
             <h2>contacts</h2>
             <div className='footer__content-section'>
                 <div className='footer__map-container'>
-                    <GoogleMap className='footer__map' />
+                    <GoogleMap />
                 </div>
                 <div className='footer__content-container'>
                     <Tabs
