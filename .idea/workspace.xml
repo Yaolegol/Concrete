@@ -2,15 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/Menu/MobileMenu/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Menu/MobileMenu/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/reducer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/store.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/layout/reducer/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Header/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Socials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Socials/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Button/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Button/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Button/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Button/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/GoogleMap/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/GoogleMap/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/GoogleMap/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/GoogleMap/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/Footer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/Footer/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Link/CartLink/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Link/CartLink/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Link/CartLink/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Link/CartLink/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Link/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Link/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Link/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Link/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Logo/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Logo/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Logo/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Logo/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/MenuItem/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/MenuItem/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/MenuItem/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/MenuItem/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/MobileMenu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/MobileMenu/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Menu/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Slider/SliderMain/SliderMainSlide/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/SliderMainSlide/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Slider/SliderMain/SliderMainSlide/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Slider/SliderMain/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/SliderMain/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Slider/SliderMain/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Slider/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Slider/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Slider/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Socials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Socials/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Socials/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Socials/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/TabsAddressContent/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Tabs/TabsAddressContent/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/TabsAddressContent/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Tabs/TabsAddressContent/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/TabsTab/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Tabs/TabsTab/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/TabsTab/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Tabs/TabsTab/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Tabs/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Tabs/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Description/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/Description/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Description/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/Description/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Hero/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/Hero/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Hero/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/Hero/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Portfolio/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/Portfolio/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/Portfolio/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/Portfolio/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Main/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Shop/Hero/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/Hero/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Shop/Hero/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/Hero/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/random.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/helpers/random.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +93,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/Menu" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -61,18 +107,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/common" />
-      <recent name="$PROJECT_DIR$/src/components/common/Link" />
-      <recent name="$PROJECT_DIR$/src/components/common/Layout" />
-      <recent name="$PROJECT_DIR$/src/components/common/Slider" />
-      <recent name="$PROJECT_DIR$/src/components/common/Menu" />
+      <recent name="$PROJECT_DIR$/src/modules/layout/components" />
+      <recent name="$PROJECT_DIR$/src/modules/layout" />
+      <recent name="$PROJECT_DIR$/src/modules/common" />
+      <recent name="$PROJECT_DIR$/src/modules/common/components" />
+      <recent name="$PROJECT_DIR$/src/app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/components/common/Menu" />
       <recent name="$PROJECT_DIR$/src/components/common/Tabs/Content" />
       <recent name="$PROJECT_DIR$/src/components/common/Tabs" />
       <recent name="$PROJECT_DIR$/src/components/common/Layout/Footer/GoogleMap" />
-      <recent name="$PROJECT_DIR$/src/components/common/Layout" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -95,7 +141,7 @@
       <workItem from="1604069688329" duration="225000" />
       <workItem from="1604069929639" duration="88000" />
       <workItem from="1604070033449" duration="40307000" />
-      <workItem from="1604417585583" duration="1947000" />
+      <workItem from="1604417585583" duration="5462000" />
     </task>
     <servers />
   </component>
@@ -111,18 +157,18 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="729" y="390" width="518" height="325" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1604070015507" />
-    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl" timestamp="1604079699491">
+    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl" timestamp="1604420706486">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1604079699491" />
+    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1604420706486" />
     <state x="482" y="187" key="SettingsEditor" timestamp="1604068546211">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1604068546211" />
-    <state x="162" y="87" width="1595" height="883" key="find.popup" timestamp="1604417778154">
+    <state x="153" y="94" width="1595" height="883" key="find.popup" timestamp="1604422415836">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="162" y="87" width="1595" height="883" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604417778154" />
+    <state x="153" y="94" width="1595" height="883" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604422415836" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1603642556065">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
