@@ -1,3 +1,4 @@
+@import (reference) '~styles/adaptive';
 @import (reference) '~styles/colors';
 
 .header {
@@ -13,4 +14,10 @@
     right: 0;
     top: 0;
     z-index: 9;
+
+    &__socials {
+        @media @tablet {
+            display: none;
+        }
+    }
 }

@@ -1,6 +1,7 @@
 // @flow
 import { Footer } from 'common/Layout/Footer'
 import { Header } from 'common/Layout/Header'
+import { MobileMenu } from 'common/Menu/MobileMenu'
 import React, { useMemo } from 'react'
 import './index.less'
 
@@ -22,6 +23,7 @@ export const Layout = ({ children, hero }: TProps): React$Node => {
 
     return (
         <div className='layout'>
+            <MobileMenu />
             <Header />
             <div className='layout__content'>
                 {heroSection}

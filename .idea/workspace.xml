@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/common/Menu/MobileMenu/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/Menu/MobileMenu/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/TabsAddressContent/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Tabs/TabsAddressContent/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/TabsAddressContent/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Tabs/TabsAddressContent/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Header/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Socials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Socials/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +47,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/Menu" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -54,19 +60,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/common/Tabs/Content" />
-      <recent name="$PROJECT_DIR$/src/components/common/Tabs" />
-      <recent name="$PROJECT_DIR$/src/components/common/Layout/Footer/GoogleMap" />
-      <recent name="$PROJECT_DIR$/src/components/common/Layout" />
-      <recent name="$PROJECT_DIR$/src/img/main/portfolio" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/common" />
       <recent name="$PROJECT_DIR$/src/components/common/Link" />
       <recent name="$PROJECT_DIR$/src/components/common/Layout" />
       <recent name="$PROJECT_DIR$/src/components/common/Slider" />
       <recent name="$PROJECT_DIR$/src/components/common/Menu" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common/Menu" />
+      <recent name="$PROJECT_DIR$/src/components/common/Tabs/Content" />
+      <recent name="$PROJECT_DIR$/src/components/common/Tabs" />
+      <recent name="$PROJECT_DIR$/src/components/common/Layout/Footer/GoogleMap" />
+      <recent name="$PROJECT_DIR$/src/components/common/Layout" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -89,7 +95,7 @@
       <workItem from="1604069688329" duration="225000" />
       <workItem from="1604069929639" duration="88000" />
       <workItem from="1604070033449" duration="40307000" />
-      <workItem from="1604417585583" duration="559000" />
+      <workItem from="1604417585583" duration="1947000" />
     </task>
     <servers />
   </component>

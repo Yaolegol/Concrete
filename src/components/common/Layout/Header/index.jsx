@@ -10,7 +10,7 @@ export const Header = (): React$Node => {
     return (
         <div className='header'>
             <Logo />
-            <Socials />
+            <Socials className='header__socials' />
             <Menu />
             <CartLink />
         </div>

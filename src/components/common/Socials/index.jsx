@@ -1,10 +1,15 @@
 // @flow
+import cn from 'classnames'
 import React from 'react'
 import './index.less'
 
-export const Socials = (): React$Node => {
+type TProps = {
+    className?: string,
+}
+
+export const Socials = ({ className }: TProps): React$Node => {
     return (
-        <div className='socials'>
+        <div className={cn('socials', className)}>
             <a className='socials__link' href="#">
                 <img src="src/img/main/header/social/facebook.png" alt="Facebook"/>
             </a>
