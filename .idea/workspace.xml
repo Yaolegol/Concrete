@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/GoogleMap/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/GoogleMap/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Layout/Footer/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Tabs/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/TabsAddressContent/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Tabs/TabsAddressContent/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Tabs/TabsAddressContent/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Tabs/TabsAddressContent/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +41,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common/Tabs/Content" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -90,7 +88,8 @@
       <workItem from="1604069272332" duration="116000" />
       <workItem from="1604069688329" duration="225000" />
       <workItem from="1604069929639" duration="88000" />
-      <workItem from="1604070033449" duration="40223000" />
+      <workItem from="1604070033449" duration="40307000" />
+      <workItem from="1604417585583" duration="559000" />
     </task>
     <servers />
   </component>
@@ -114,10 +113,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1604068546211" />
-    <state x="162" y="87" width="1595" height="883" key="find.popup" timestamp="1604240395510">
+    <state x="162" y="87" width="1595" height="883" key="find.popup" timestamp="1604417778154">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="162" y="87" width="1595" height="883" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604240395510" />
+    <state x="162" y="87" width="1595" height="883" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604417778154" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1603642556065">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

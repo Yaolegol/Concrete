@@ -21,14 +21,14 @@ export const TabsAddressContent = ({ address, className, email, isActive, phone 
                 <MapMarkerIcon className='tabs-content__item-icon' />
                 <p className='tabs-content__item-text'>{address}</p>
             </div>
-            <div className='tabs-content__item'>
+            <a href={`tel:${phone}`} className='tabs-content__item'>
                 <PhoneIcon className='tabs-content__item-icon' />
                 <p className='tabs-content__item-text'>{phone}</p>
-            </div>
-            <div className='tabs-content__item'>
+            </a>
+            <a href={`mailto:${email}`} className='tabs-content__item'>
                 <EmailIcon className='tabs-content__item-icon' />
                 <p className='tabs-content__item-text'>{email}</p>
-            </div>
+            </a>
         </div>
     )
 }
