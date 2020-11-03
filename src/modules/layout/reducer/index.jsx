@@ -12,6 +12,6 @@ export const layoutReducer = (state = initialState, action) => {
             ...data
         }
     default:
-        return { ...state }
+        return state
     }
 }
