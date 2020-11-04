@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Logo/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Logo/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +88,7 @@
       <workItem from="1604069688329" duration="225000" />
       <workItem from="1604069929639" duration="88000" />
       <workItem from="1604070033449" duration="40307000" />
-      <workItem from="1604417585583" duration="13348000" />
+      <workItem from="1604417585583" duration="14606000" />
     </task>
     <servers />
   </component>
