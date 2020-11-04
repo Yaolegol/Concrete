@@ -10,7 +10,7 @@ import './index.less'
 export const Header = (): React$Node => {
     return (
         <div className='header'>
-            <BurgerButton />
+            <BurgerButton className='header__burger-button'/>
             <Logo />
             <Socials className='header__socials' />
             <Menu />
