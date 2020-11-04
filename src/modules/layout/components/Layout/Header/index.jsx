@@ -4,13 +4,21 @@ import { Logo } from 'common/components/Logo'
 import { Menu } from 'common/components/Menu'
 import { BurgerButton } from 'common/components/Menu/BurgerButton'
 import { Socials } from 'common/components/Socials'
-import React from 'react'
+import { actionShowMobileMenu } from 'layout/actions'
+import React, { useCallback } from 'react'
+import { useDispatch } from 'react-redux'
 import './index.less'
 
 export const Header = (): React$Node => {
+    const dispatch = useDispatch()
+
+    const showMobileMenu = useCallback(() => {
+        dispatch(actionShowMobileMenu(true))
+    }, [dispatch])
+
     return (
         <div className='header'>
-            <BurgerButton className='header__burger-button'/>
+            <BurgerButton className='header__burger-button' onClick={showMobileMenu}/>
             <Logo />
             <Socials className='header__socials' />
             <Menu />
