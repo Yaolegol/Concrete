@@ -1,7 +1,7 @@
 // @flow
 import { Footer } from 'layout/components/Layout/Footer'
 import { Header } from 'layout/components/Layout/Header'
-import { MobileMenu } from 'common/components/Menu/MobileMenu'
+import MobileMenu from 'common/components/Menu/MobileMenu'
 import React, { useMemo } from 'react'
 import './index.less'
 

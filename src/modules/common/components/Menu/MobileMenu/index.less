@@ -3,12 +3,16 @@
 .mobile-menu {
     background-color: fade(@black, 80%);
     bottom: 0;
-    display: flex;
+    display: none;
     left: 0;
     position: fixed;
     right: 0;
     top: 0;
     z-index: 999;
+
+    &_show {
+        display: flex;
+    }
 
     &__body {
         background-color: @white;
