@@ -11,7 +11,7 @@ type TProps = {
     spaceBetween?: number,
 }
 
-export const Slider = ({ children, slidesPerView = 1, spaceBetween = 50, ...rest }: TProps): React$Node => {
+export const Slider = ({ children, slidesPerView = 1, spaceBetween = 0, ...rest }: TProps): React$Node => {
     const slides = useMemo(() => {
         return children.map((item) => {
             return (
