@@ -1,11 +1,16 @@
 // @flow
+import cn from 'classnames'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './index.less'
 
-export const Logo = (): React$Node => {
+type TProps = {
+    className?: string
+}
+
+export const Logo = ({ className }: TProps): React$Node => {
     return (
-        <Link className='logo' to="/">
+        <Link className={cn('logo', className)} to="/">
             <img className='logo__img' src="src/img/main/header/logo.jpg" alt="Logo"/>
         </Link>
     )

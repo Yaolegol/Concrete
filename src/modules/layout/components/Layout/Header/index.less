@@ -15,6 +15,11 @@
     top: 0;
     z-index: 9;
 
+    @media @tablet {
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+
     &__burger-button {
         display: none;
 
@@ -23,9 +28,11 @@
         }
     }
 
-    &__socials {
-        @media @tablet {
-            display: none;
+    &__item {
+        &_tablet-hidden {
+            @media @tablet {
+                display: none;
+            }
         }
     }
 }

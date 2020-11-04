@@ -19,9 +19,9 @@ export const Header = (): React$Node => {
     return (
         <div className='header'>
             <BurgerButton className='header__burger-button' onClick={showMobileMenu}/>
-            <Logo />
-            <Socials className='header__socials' />
-            <Menu />
+            <Logo className='header__item_tablet-hidden' />
+            <Socials className='header__item_tablet-hidden' />
+            <Menu className='header__item_tablet-hidden' />
             <CartLink />
         </div>
     )
