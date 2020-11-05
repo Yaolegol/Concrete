@@ -6,7 +6,7 @@ import './index.less'
 export const Portfolio = () => {
     return (
         <div className='main-portfolio'>
-            <h2>Portfolio</h2>
+            <h3>Portfolio</h3>
             <div className='main-portfolio__image-section'>
                 <div className='main-portfolio__image-container'>
                     <img className='main-portfolio__image-main' src="src/img/main/portfolio/main.jpg" alt="House"/>
