@@ -1,3 +1,4 @@
+@import (reference) '~styles/adaptive';
 @import (reference) '~styles/colors';
 
 .footer {
@@ -14,10 +15,19 @@
     &__content-section {
         display: flex;
         margin-top: 60px;
+
+        @media @mobile {
+            flex-direction: column-reverse;
+        }
     }
 
     &__map-container {
         flex: 1;
         height: 475px;
+
+        @media @mobile {
+            flex-direction: column-reverse;
+            width: 100%;
+        }
     }
 }

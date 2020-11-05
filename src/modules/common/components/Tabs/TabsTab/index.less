@@ -1,3 +1,4 @@
+@import (reference) '~styles/adaptive';
 @import (reference) '~styles/colors';
 
 .tabs-tab {
@@ -11,5 +12,9 @@
 
     &:hover, &_active {
         background-color: @blue;
+    }
+
+    @media @mobile {
+        padding: 11px 25px;
     }
 }

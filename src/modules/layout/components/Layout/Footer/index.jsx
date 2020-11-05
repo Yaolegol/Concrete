@@ -50,7 +50,7 @@ const tabsContent = [
 export const Footer = (): React$Node => {
     return (
         <div className='footer'>
-            <h2>contacts</h2>
+            <h3>contacts</h3>
             <div className='footer__content-section'>
                 <div className='footer__map-container'>
                     <GoogleMap />
