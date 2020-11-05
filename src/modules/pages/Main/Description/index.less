@@ -1,9 +1,15 @@
+@import (reference) "~styles/adaptive";
 @import (reference) "~styles/colors";
 @import (reference) "~styles/flex";
 
 .main-description {
     display: flex;
     margin-top: 150px;
+
+    @media @tablet {
+        flex-direction: column;
+        align-items: center;
+    }
 
     &__about-link-container {
         margin-top: 70px;
@@ -50,6 +56,10 @@
         right: -10%;
         top: -15%;
         width: 250px;
+
+        @media @laptop {
+            display: none;
+        }
     }
 
     &__image-section {
