@@ -7,7 +7,11 @@ export const ShopPage = () => {
     return (
         <Layout>
             <div className='shop-page'>
-                shop!
+                <h1>Shop</h1>
+                <div className='shop-page__content'>
+                    <div className='shop-page__filters-section'></div>
+                    <div className='shop-page__goods-section'></div>
+                </div>
             </div>
         </Layout>
     )
