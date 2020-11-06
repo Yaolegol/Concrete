@@ -5,20 +5,30 @@
     margin: 0 auto;
     max-width: 1920px;
     padding-top: 84px;
-    width: 100%;
 
     @media @mobile {
         padding-top: 48px;
+    }
+
+    &__children-container {
+        &_flex {
+            display: flex;
+            flex: 1;
+        }
     }
 
     &__content {
         height: 100%;
         min-height: 600px;
         overflow-y: auto;
-        width: 100%;
 
         @media @mobile {
             min-height: unset;
+        }
+
+        &_flex {
+            display: flex;
+            flex-direction: column;
         }
     }
 

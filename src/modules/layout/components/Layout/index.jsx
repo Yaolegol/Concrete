@@ -1,4 +1,5 @@
 // @flow
+import cn from 'classnames'
 import { Footer } from 'layout/components/Layout/Footer'
 import { Header } from 'layout/components/Layout/Header'
 import MobileMenu from 'common/components/Menu/MobileMenu'
@@ -25,9 +26,9 @@ export const Layout = ({ children, hero }: TProps): React$Node => {
         <div className='layout'>
             <MobileMenu />
             <Header />
-            <div className='layout__content'>
+            <div className={cn('layout__content', heroSection ? null : 'layout__content_flex')}>
                 {heroSection}
-                {children}
+                <div className={cn('layout__children-container', heroSection ? null : 'layout__children-container_flex')}>{children}</div>
                 <Footer />
             </div>
         </div>
