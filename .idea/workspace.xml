@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modules/pages/Shop/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/Hero/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/Hero/index.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +90,7 @@
       <workItem from="1604070033449" duration="40307000" />
       <workItem from="1604417585583" duration="22582000" />
       <workItem from="1604584885693" duration="8626000" />
-      <workItem from="1604667632120" duration="2470000" />
+      <workItem from="1604667632120" duration="2572000" />
     </task>
     <servers />
   </component>
