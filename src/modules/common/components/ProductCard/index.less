@@ -1,0 +1,32 @@
+@import (reference) '~styles/colors';
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+
+    &__counter-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+
+    &__description {
+        cursor: pointer;
+    }
+
+    &__image {
+        cursor: pointer;
+        height: 300px;
+        object-fit: cover;
+        width: 300px;
+    }
+
+    &__price {
+        margin-top: 10px;
+    }
+
+    &__title {
+        cursor: pointer;
+        margin-top: 20px;
+    }
+}

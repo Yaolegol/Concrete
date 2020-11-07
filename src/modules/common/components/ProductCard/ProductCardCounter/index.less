@@ -1,0 +1,46 @@
+@import (reference) '~styles/colors';
+@import (reference) '~styles/flex';
+
+.product-card-counter {
+    display: flex;
+    height: 50px;
+
+    &__button {
+        .f_c();
+
+        background-color: @blue;
+        color: @white;
+        cursor: pointer;
+        width: 50px;
+    }
+
+    &__count {
+        .f_c();
+
+        background-color: @white;
+        user-select: none;
+        width: 50px;
+    }
+
+    &__icon {
+        color: @white;
+        height: 18px;
+        width: 18px;
+    }
+
+    &__icon-container {
+        align-items: center;
+        background-color: @blue;
+        cursor: pointer;
+        justify-content: center;
+        width: 50px;
+    }
+
+    &__item {
+        display: none;
+
+        &_active {
+            display: flex;
+        }
+    }
+}

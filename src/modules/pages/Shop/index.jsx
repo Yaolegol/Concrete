@@ -1,6 +1,7 @@
 // @flow
-import { actionGetProducts } from 'pages/Shop/actions'
+import { ProductCard } from 'common/components/ProductCard'
 import { Layout } from 'layout/components/Layout'
+import { actionGetProducts } from 'pages/Shop/actions'
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import './index.less'
@@ -20,7 +21,9 @@ const ShopPage = ({ dispatch }: TProps) => {
                 <h1>Shop</h1>
                 <div className='shop-page__content'>
                     <div className='shop-page__filters-section'>test</div>
-                    <div className='shop-page__goods-section'>test</div>
+                    <div className='shop-page__goods-section'>
+                        <ProductCard />
+                    </div>
                 </div>
             </div>
         </Layout>
