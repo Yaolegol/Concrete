@@ -1,14 +1,19 @@
 // @flow
-import { request } from 'app/service'
+import { actionGetProducts } from 'pages/Shop/actions'
 import { Layout } from 'layout/components/Layout'
 import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
 import './index.less'
 
-export const ShopPage = () => {
+type TProps = {
+    dispatch: any
+}
+
+const ShopPage = ({ dispatch }: TProps) => {
     useEffect(() => {
         console.log('ShopPage useEffect!!!')
-        request()
-    }, [])
+        dispatch(actionGetProducts())
+    }, [dispatch])
 
     return (
         <Layout>
@@ -22,3 +27,5 @@ export const ShopPage = () => {
         </Layout>
     )
 }
+
+export default connect()(ShopPage)

@@ -1,6 +1,6 @@
 // @flow
 import { MainPage } from 'pages/Main'
-import { ShopPage } from 'pages/Shop'
+import ShopPage from 'pages/Shop'
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'

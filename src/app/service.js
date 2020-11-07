@@ -1,20 +1,32 @@
 // @flow
+import { logError } from 'common/helpers/errors'
+
 type TProps = {
-    data?: any,
-    method?: string,
     options?: any,
+    toJSON?: boolean,
     url: string
 }
 
-export const request = ({ data = {}, method = 'GET', options = {}, url }: TProps): any => {
-    fetch(url, {
-        ...options
-    })
-        .then((data) => {
-            console.log('request data')
-            console.log(data)
+export const request = async ({ options, toJSON = true, url }: TProps): any => {
+    try {
+        const response = await fetch(url, {
+            ...options
         })
-        .catch((error) => {
-            console.error(error)
-        })
+        return await handleResponse({ response, toJSON })
+    } catch (error) {
+        logError(error, 'request')
+    }
+}
+
+const handleResponse = async ({ response, toJSON }) => {
+    if (toJSON) {
+        try {
+            const { status } = response
+            const { data, errors } = await response.json()
+            return { data, errors, status }
+        } catch (error) {
+            logError(error, 'handleResponse')
+        }
+    }
+    return { response }
 }
