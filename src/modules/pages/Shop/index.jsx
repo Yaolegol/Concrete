@@ -1,15 +1,13 @@
 // @flow
+import { request } from 'app/service'
 import { Layout } from 'layout/components/Layout'
 import React, { useEffect } from 'react'
 import './index.less'
 
 export const ShopPage = () => {
     useEffect(() => {
-        console.log('ShopPage!!!')
-        fetch('http://localhost:8000/products').then((data) => {
-            console.log('data')
-            console.log(data)
-        })
+        console.log('ShopPage useEffect!!!')
+        request()
     }, [])
 
     return (
