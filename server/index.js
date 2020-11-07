@@ -1,5 +1,6 @@
 // @flow
 const bodyParser = require('body-parser')
+const cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 const multer = require('multer')
@@ -35,6 +36,9 @@ const app = express()
 app.use(bodyParser.json())
 app.use(uploads.any())
 app.use(express.static(path.resolve(projectRootPath, 'dist')))
+if (process.env.NODE_ENV !== 'production') {
+    app.use(cors())
+}
 app.use(router)
 
 mongoose

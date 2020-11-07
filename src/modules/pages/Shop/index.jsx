@@ -6,7 +6,7 @@ import './index.less'
 export const ShopPage = () => {
     useEffect(() => {
         console.log('ShopPage!!!')
-        fetch('/products').then((data) => {
+        fetch('http://localhost:8000/products').then((data) => {
             console.log('data')
             console.log(data)
         })
