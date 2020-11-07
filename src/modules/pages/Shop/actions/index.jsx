@@ -1,12 +1,11 @@
 // @flow
-import { logError } from 'common/helpers/errors'
 import { SHOP_ACTION_TYPES } from 'pages/Shop/constants'
 import { getProducts } from 'pages/Shop/sevice'
 
 const { GET_PRODUCTS_FAIL, GET_PRODUCTS_START, GET_PRODUCTS_SUCCESS } = SHOP_ACTION_TYPES
 
-const actionGetProductsFail = () => (dispatch) => {
-    dispatch({ type: GET_PRODUCTS_FAIL })
+const actionGetProductsFail = (errors) => (dispatch) => {
+    dispatch({ data: errors, type: GET_PRODUCTS_FAIL })
 }
 const actionGetProductsStart = () => (dispatch) => {
     dispatch({ type: GET_PRODUCTS_START })
@@ -19,11 +18,14 @@ export const actionGetProducts = () => async (dispatch, getState) => {
     dispatch(actionGetProductsStart())
 
     try {
-        const test = await getProducts()
-        console.log('test')
-        console.log(test)
+        const { data, errors } = await getProducts()
+
+        if (!errors) {
+            dispatch(actionGetProductsSuccess(data))
+        } else {
+            dispatch(actionGetProductsFail(errors))
+        }
     } catch (error) {
-        dispatch(actionGetProductsFail())
-        logError(error, 'actionGetProducts')
+        dispatch(actionGetProductsFail([error]))
     }
 }

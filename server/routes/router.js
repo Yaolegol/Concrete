@@ -32,7 +32,7 @@ router.get('/products', (req, res, next) => {
                 .then(count => {
                     res.json({
                         data: {
-                            products,
+                            list: products,
                             count
                         }
                     })

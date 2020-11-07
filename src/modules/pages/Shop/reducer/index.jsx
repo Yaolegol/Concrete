@@ -2,8 +2,12 @@
 import { SHOP_ACTION_TYPES } from 'pages/Shop/constants'
 
 const initialState = {
+    errors: [],
     loading: false,
-    products: []
+    products: {
+        count: 0,
+        list: []
+    }
 }
 
 const { GET_PRODUCTS_FAIL, GET_PRODUCTS_START, GET_PRODUCTS_SUCCESS } = SHOP_ACTION_TYPES
@@ -15,6 +19,10 @@ export const shopReducer = (state = initialState, action) => {
     case GET_PRODUCTS_FAIL:
         return {
             ...state,
+            errors: [
+                ...state.errors,
+                ...data
+            ],
             loading: false
         }
     case GET_PRODUCTS_START:
