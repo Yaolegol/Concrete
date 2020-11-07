@@ -1,7 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-const formidable = require('express-formidable')
 const multer = require('multer')
 const path = require('path')
 
@@ -41,8 +40,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 app.use(router)
 
-mongoose.connect('mongodb+srv://any:anypsw@veltry-2jqsc.mongodb.net/veltry?retryWrites=true&w=majority',
-    { useNewUrlParser: true })
+mongoose
+    .connect(
+        'mongodb+srv://any:anypsw@veltry-2jqsc.mongodb.net/veltry?retryWrites=true&w=majority',
+        { useNewUrlParser: true }
+    )
     .then(result => {
         console.log('db connect')
         app.listen(process.env.PORT || 8000, () => console.log('Server start on 8000'))
