@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/pages/Shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -55,11 +55,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/modules/pages/Shop" />
       <recent name="$PROJECT_DIR$/src/modules/common/components/Menu/Burger" />
       <recent name="$PROJECT_DIR$/src/modules/layout/constants" />
-      <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/src/components/common/Menu" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/modules/layout/components" />
@@ -91,7 +91,7 @@
       <workItem from="1604070033449" duration="40307000" />
       <workItem from="1604417585583" duration="22582000" />
       <workItem from="1604584885693" duration="8626000" />
-      <workItem from="1604667632120" duration="6031000" />
+      <workItem from="1604667632120" duration="8851000" />
     </task>
     <servers />
   </component>
