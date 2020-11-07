@@ -3,7 +3,15 @@ import { ProductCardCounter } from 'common/components/ProductCard/ProductCardCou
 import React, { useCallback, useState } from 'react'
 import './index.less'
 
-export const ProductCard = (): React$Node => {
+type TProps = {
+    description: string,
+    imageAlt?: string,
+    imageUrl: string,
+    price: string,
+    title: string
+}
+
+export const ProductCard = ({ description, imageAlt = '', imageUrl, price, title }: TProps): React$Node => {
     const [count, setCount] = useState(0)
 
     const onDecrement = useCallback(() => {
@@ -18,10 +26,10 @@ export const ProductCard = (): React$Node => {
 
     return (
         <div className='product-card'>
-            <img className='product-card__image' src="img/test-product-image.jpg" alt="Product image"/>
-            <h6 className='product-card__title'>title</h6>
-            <p className='product-card__description'>description</p>
-            <p className='product-card__price'>100$</p>
+            <img className='product-card__image' src={imageUrl} alt={imageAlt}/>
+            <h6 className='product-card__title'>{title}</h6>
+            <p className='product-card__description'>{description}</p>
+            <p className='product-card__price'>{price}</p>
             <div className='product-card__counter-container'>
                 <ProductCardCounter count={count} onDecrement={onDecrement} onIncrement={onIncrement}/>
             </div>
