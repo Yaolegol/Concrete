@@ -1,9 +1,17 @@
 // @flow
 import { Layout } from 'layout/components/Layout'
-import React from 'react'
+import React, { useEffect } from 'react'
 import './index.less'
 
 export const ShopPage = () => {
+    useEffect(() => {
+        console.log('ShopPage!!!')
+        fetch('/products').then((data) => {
+            console.log('data')
+            console.log(data)
+        })
+    }, [])
+
     return (
         <Layout>
             <div className='shop-page'>
