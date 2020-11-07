@@ -15,7 +15,7 @@ const jwt = require('jsonwebtoken')
 
 const router = express.Router()
 
-const perPage = 2
+const perPage = 8
 
 router.get('/products', (req, res, next) => {
     const currentPage = req.body.page || 0

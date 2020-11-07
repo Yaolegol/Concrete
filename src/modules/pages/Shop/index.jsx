@@ -16,9 +16,9 @@ const ShopPage = ({ dispatch, products }: TProps) => {
     const productCards = useMemo(() => {
         return products.map(({ description, _id, images, price, title }) => {
             return (
-                <span key={_id}>
+                <div className='shop-page__product-container' key={_id}>
                     <ProductCard description={description} imageUrl={images[0]} price={price} title={title}/>
-                </span>
+                </div>
             )
         })
     }, [products])
@@ -26,9 +26,6 @@ const ShopPage = ({ dispatch, products }: TProps) => {
     useEffect(() => {
         dispatch(actionGetProducts())
     }, [dispatch])
-
-    console.log('products')
-    console.log(products)
 
     return (
         <Layout>
