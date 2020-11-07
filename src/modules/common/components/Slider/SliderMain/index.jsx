@@ -27,21 +27,21 @@ export const SliderMain = () => {
                     buttonText='shop now'
                     description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita illum ipsum nobis omnis quaerat quas saepe tempora voluptas?'
                     imgAlt="Hero"
-                    imgSrc="src/img/main/header/hero.jpg"
+                    imgSrc="img/main/header/hero.jpg"
                     onClick={() => console.log('click')}
                     title='Concrete furniture'
                 />
                 <SliderMainSlide
                     description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita illum ipsum nobis omnis quaerat quas saepe tempora voluptas?'
                     imgAlt="Hero"
-                    imgSrc="src/img/main/header/hero.jpg"
+                    imgSrc="img/main/header/hero.jpg"
                     title='Concrete furniture'
                 />
                 <SliderMainSlide
                     buttonText='shop now'
                     description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita illum ipsum nobis omnis quaerat quas saepe tempora voluptas?'
                     imgAlt="Hero"
-                    imgSrc="src/img/main/header/hero.jpg"
+                    imgSrc="img/main/header/hero.jpg"
                     onClick={() => console.log('click')}
                     title='Concrete furniture'
                 />

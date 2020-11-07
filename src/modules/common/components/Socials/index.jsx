@@ -11,16 +11,16 @@ export const Socials = ({ className }: TProps): React$Node => {
     return (
         <div className={cn('socials', className)}>
             <a className='socials__link' href="#">
-                <img src="src/img/main/header/social/facebook.png" alt="Facebook"/>
+                <img src="img/main/header/social/facebook.png" alt="Facebook"/>
             </a>
             <a className='socials__link' href="#">
-                <img src="src/img/main/header/social/vk.png" alt="Vk"/>
+                <img src="img/main/header/social/vk.png" alt="Vk"/>
             </a>
             <a className='socials__link' href="#">
-                <img src="src/img/main/header/social/instagram.png" alt="Instagram"/>
+                <img src="img/main/header/social/instagram.png" alt="Instagram"/>
             </a>
             <a className='socials__link' href="#">
-                <img src="src/img/main/header/social/youtube.png" alt="Youtube"/>
+                <img src="img/main/header/social/youtube.png" alt="Youtube"/>
             </a>
         </div>
     )

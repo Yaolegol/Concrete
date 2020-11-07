@@ -17,8 +17,8 @@ export const Description = () => {
             </div>
             <div className='main-description__image-section'>
                 <div className='main-description__image-container'>
-                    <img className='main-description__image-main' src="src/img/main/description/room.jpg" alt="Room"/>
-                    <img className='main-description__image-second' src="src/img/main/description/table.jpg" alt="Table"/>
+                    <img className='main-description__image-main' src="img/main/description/room.jpg" alt="Room"/>
+                    <img className='main-description__image-second' src="img/main/description/table.jpg" alt="Table"/>
                 </div>
             </div>
         </div>
