@@ -11,7 +11,6 @@ type TProps = {
 
 const ShopPage = ({ dispatch }: TProps) => {
     useEffect(() => {
-        console.log('ShopPage useEffect!!!')
         dispatch(actionGetProducts())
     }, [dispatch])
 
@@ -20,8 +19,8 @@ const ShopPage = ({ dispatch }: TProps) => {
             <div className='shop-page'>
                 <h1>Shop</h1>
                 <div className='shop-page__content'>
-                    <div className='shop-page__filters-section'></div>
-                    <div className='shop-page__goods-section'></div>
+                    <div className='shop-page__filters-section'>test</div>
+                    <div className='shop-page__goods-section'>test</div>
                 </div>
             </div>
         </Layout>
