@@ -1,16 +1,11 @@
 // @flow
 import { createSelector } from 'reselect'
 
-const getLayoutState = (state) => {
-    return state.layout
+const getShopState = (state) => {
+    return state.shop
 }
 
-export const selectMobileMenu = createSelector(
-    [getLayoutState],
-    ({ mobileMenu }) => mobileMenu
-)
-
-export const selectMobileMenuShowStatus = createSelector(
-    [selectMobileMenu],
-    ({ isShow }) => isShow
+export const selectProductsList = createSelector(
+    [getShopState],
+    ({ products }) => products.list
 )
