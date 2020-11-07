@@ -6,8 +6,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "flow": "flow",
-    "server": "nodemon index.js",
-    "server:prod": "index.js",
+    "server": "nodemon ./server/index.js",
+    "server:prod": "./server/index.js",
     "start": "webpack-dev-server",
     "style:lint": "npx stylelint **/*.less",
     "test": "echo \"Error: no test specified\" && exit 1"

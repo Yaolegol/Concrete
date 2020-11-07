@@ -8,7 +8,7 @@ const path = require('path')
 if (process.env.NODE_ENV === 'production') {
     var storage = multer.diskStorage({
         destination: function (req, file, cb) {
-            cb(null, path.resolve(__dirname, 'dist'))
+            cb(null, path.resolve(__dirname, '../', 'dist'))
         },
         filename: function (req, file, cb) {
             cb(null, file.fieldname + '_' + Date.now() + '_' + file.originalname)
@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'production') {
 } else {
     var storage = multer.diskStorage({
         destination: function (req, file, cb) {
-            cb(null, path.resolve(__dirname, 'uploads'))
+            cb(null, path.resolve(__dirname, '../', 'uploads'))
         },
         filename: function (req, file, cb) {
             cb(null, file.fieldname + '_' + Date.now() + '_' + file.originalname)
@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === 'production') {
 
 const uploads = multer({ storage: storage })
 
-const router = require('./server/routes/router')
+const router = require(path.resolve(__dirname, 'routes', 'router'))
 
 const app = express()
 
@@ -35,9 +35,9 @@ app.use(bodyParser.json())
 // app.use(formidable());
 app.use(uploads.any())
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.resolve(__dirname, 'dist')))
+    app.use(express.static(path.resolve(__dirname, '../', 'dist')))
 } else {
-    app.use(express.static('./dist'))
+    app.use(express.static(path.resolve(__dirname, '../', 'dist')))
 }
 app.use(router)
 
