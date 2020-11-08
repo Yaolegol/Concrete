@@ -5,7 +5,12 @@ const getShopState = (state) => {
     return state.shop
 }
 
-export const selectProductsList = createSelector(
+export const selectProducts = createSelector(
     [getShopState],
-    ({ products }) => products.list
+    ({ products }) => products
+)
+
+export const selectProductsList = createSelector(
+    [selectProducts],
+    ({ list }) => list
 )
