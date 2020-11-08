@@ -5,9 +5,9 @@ const initialState = {
     mobileMenu: {
         isShow: false
     },
-    products: {
-        cartProductsCount: 0,
-        productsItems: {}
+    cartProducts: {
+        total: 0,
+        items: {}
     }
 }
 
@@ -20,14 +20,14 @@ export const commonReducer = (state = initialState, action) => {
     case DECREMENT_CART_PRODUCTS_COUNT:
         return {
             ...state,
-            products: {
-                ...state.products,
-                cartProductsCount: state.products.cartProductsCount - 1,
-                productsItems: {
-                    ...state.products.productsItems,
+            cartProducts: {
+                ...state.cartProducts,
+                total: state.cartProducts.total - 1,
+                items: {
+                    ...state.cartProducts.items,
                     [data.id]: {
-                        ...state.products.productsItems[data.id],
-                        cartCount: state.products.productsItems[data.id] && state.products.productsItems[data.id].cartCount ? state.products.productsItems[data.id].cartCount - 1 : 0
+                        ...state.cartProducts.items[data.id],
+                        count: state.cartProducts.items[data.id] && state.cartProducts.items[data.id].count ? state.cartProducts.items[data.id].count - 1 : 0
                     }
                 }
             }
@@ -35,14 +35,14 @@ export const commonReducer = (state = initialState, action) => {
     case INCREMENT_CART_PRODUCTS_COUNT:
         return {
             ...state,
-            products: {
-                ...state.products,
-                cartProductsCount: state.products.cartProductsCount + 1,
-                productsItems: {
-                    ...state.products.productsItems,
+            cartProducts: {
+                ...state.cartProducts,
+                total: state.cartProducts.total + 1,
+                items: {
+                    ...state.cartProducts.items,
                     [data.id]: {
-                        ...state.products.productsItems[data.id],
-                        cartCount: state.products.productsItems[data.id] && state.products.productsItems[data.id].cartCount ? state.products.productsItems[data.id].cartCount + 1 : 1
+                        ...state.cartProducts.items[data.id],
+                        count: state.cartProducts.items[data.id] && state.cartProducts.items[data.id].count ? state.cartProducts.items[data.id].count + 1 : 1
                     }
                 }
             }

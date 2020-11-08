@@ -17,7 +17,7 @@ type TProps = {
 const ShopPage = ({ cartProducts, dispatch, products }: TProps) => {
     const productCards = useMemo(() => {
         return products.map(({ description, _id, images, price, title }) => {
-            const initialCount = cartProducts[_id] ? cartProducts[_id].cartCount : 0
+            const initialCount = cartProducts[_id] ? cartProducts[_id].count : 0
             return (
                 <div className='shop-page__product-container' key={_id}>
                     <ProductCard description={description} id={_id} imageUrl={images[0]} initialCount={initialCount} price={price} title={title}/>

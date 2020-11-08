@@ -12,17 +12,17 @@ export const selectMobileMenu = createSelector(
 
 export const selectProducts = createSelector(
     [getCommonState],
-    ({ products }) => products
+    ({ cartProducts }) => cartProducts
 )
 
 export const selectCartProducts = createSelector(
     [selectProducts],
-    ({ productsItems }) => productsItems
+    ({ items }) => items
 )
 
-export const selectCartProductsCount = createSelector(
+export const selectCartProductsTotal = createSelector(
     [selectProducts],
-    ({ cartProductsCount }) => cartProductsCount
+    ({ total }) => total
 )
 
 export const selectMobileMenuShowStatus = createSelector(
