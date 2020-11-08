@@ -16,8 +16,6 @@ type TProps = {
 }
 
 export const ProductCard = ({ description, id, imageAlt = '', imageUrl, initialCount = 0, price, title }: TProps): React$Node => {
-    console.log('initialCount')
-    console.log(initialCount)
     const [count, setCount] = useState(initialCount)
     const dispatch = useDispatch()
 
