@@ -27,9 +27,14 @@ export const selectCartProductsData = createSelector(
         const idsArray = Object.keys(items)
         const selectedProducts = products.filter(({ _id }) => idsArray.includes(_id))
         return selectedProducts.map((product) => {
+            const { _id, price } = product
+            const countInCart = items[_id].count
+            const totalPrice = countInCart * price
+
             return {
                 ...product,
-                countInCart: items[product._id].count
+                countInCart,
+                totalPrice
             }
         })
     }

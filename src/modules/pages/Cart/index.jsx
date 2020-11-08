@@ -11,14 +11,15 @@ type TProps = {
 
 const CartPage = ({ cartProductsData }: TProps) => {
     const content = useMemo(() => {
-        return cartProductsData.map(({ countInCart, description, _id, images, price, title }) => {
+        return cartProductsData.map(({ countInCart, description, _id, images, price, title, totalPrice }) => {
             return (
-                <div className='cart-page__content-item'>
+                <div className='cart-page__content-item' key={_id}>
                     <img src={images[0]} alt=""/>
                     <h4>{title}</h4>
                     <p>{description}</p>
                     <p>{price}</p>
                     <p>{countInCart}</p>
+                    <p>{totalPrice}</p>
                 </div>
             )
         })
