@@ -1,0 +1,30 @@
+@import (reference) '~styles/colors';
+
+.cart-link {
+    border-radius: 50%;
+    display: flex;
+    padding: 20px;
+
+    &:hover {
+        background-color: @blue;
+    }
+
+    &__counter {
+        color: @white;
+        display: flex;
+        position: absolute;
+        right: -12px;
+        top: -12px;
+    }
+
+    &__icon {
+        color: @white;
+        height: 18px;
+        width: 18px;
+    }
+
+    &__icon-container {
+        display: flex;
+        position: relative;
+    }
+}
