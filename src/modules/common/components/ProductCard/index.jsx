@@ -7,27 +7,31 @@ import './index.less'
 
 type TProps = {
     description: string,
+    id: number,
     imageAlt?: string,
     imageUrl: string,
+    initialCount?: number,
     price: string,
     title: string
 }
 
-export const ProductCard = ({ description, imageAlt = '', imageUrl, price, title }: TProps): React$Node => {
-    const [count, setCount] = useState(0)
+export const ProductCard = ({ description, id, imageAlt = '', imageUrl, initialCount = 0, price, title }: TProps): React$Node => {
+    console.log('initialCount')
+    console.log(initialCount)
+    const [count, setCount] = useState(initialCount)
     const dispatch = useDispatch()
 
     const onDecrement = useCallback(() => {
         if (count > 0) {
             setCount(count - 1)
         }
-        dispatch(actionDecCartProductsCount())
-    }, [count, dispatch])
+        dispatch(actionDecCartProductsCount(id))
+    }, [count, dispatch, id])
 
     const onIncrement = useCallback(() => {
         setCount(count + 1)
-        dispatch(actionIncCartProductsCount())
-    }, [count, dispatch])
+        dispatch(actionIncCartProductsCount(id))
+    }, [count, dispatch, id])
 
     return (
         <div className='product-card'>

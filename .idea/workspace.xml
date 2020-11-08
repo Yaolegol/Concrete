@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/CartLink/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/common/constants/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reducer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/common/components/ProductCard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/ProductCard/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Footer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Footer/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Footer/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/CartLink/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/CartLink/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/CartLink/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/constants/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +95,7 @@
       <workItem from="1604417585583" duration="22582000" />
       <workItem from="1604584885693" duration="8626000" />
       <workItem from="1604667632120" duration="33271000" />
-      <workItem from="1604825874591" duration="4209000" />
+      <workItem from="1604825874591" duration="6833000" />
     </task>
     <servers />
   </component>

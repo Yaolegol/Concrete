@@ -6,7 +6,8 @@ const initialState = {
         isShow: false
     },
     products: {
-        cartProductsCount: 0
+        cartProductsCount: 0,
+        productsItems: {}
     }
 }
 
@@ -21,7 +22,14 @@ export const commonReducer = (state = initialState, action) => {
             ...state,
             products: {
                 ...state.products,
-                cartProductsCount: state.products.cartProductsCount - 1
+                cartProductsCount: state.products.cartProductsCount - 1,
+                productsItems: {
+                    ...state.products.productsItems,
+                    [data.id]: {
+                        ...state.products.productsItems[data.id],
+                        cartCount: state.products.productsItems[data.id] && state.products.productsItems[data.id].cartCount ? state.products.productsItems[data.id].cartCount - 1 : 0
+                    }
+                }
             }
         }
     case INCREMENT_CART_PRODUCTS_COUNT:
@@ -29,7 +37,14 @@ export const commonReducer = (state = initialState, action) => {
             ...state,
             products: {
                 ...state.products,
-                cartProductsCount: state.products.cartProductsCount + 1
+                cartProductsCount: state.products.cartProductsCount + 1,
+                productsItems: {
+                    ...state.products.productsItems,
+                    [data.id]: {
+                        ...state.products.productsItems[data.id],
+                        cartCount: state.products.productsItems[data.id] && state.products.productsItems[data.id].cartCount ? state.products.productsItems[data.id].cartCount + 1 : 1
+                    }
+                }
             }
         }
     case SHOW_MOBILE_MENU:
