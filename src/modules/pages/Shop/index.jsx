@@ -1,6 +1,6 @@
 // @flow
+import { Layout } from 'common/components/Layout'
 import { ProductCard } from 'common/components/ProductCard'
-import { Layout } from 'layout/components/Layout'
 import { actionGetProducts } from 'pages/Shop/actions'
 import { selectProductsList } from 'pages/Shop/selectors'
 import React, { useEffect, useMemo } from 'react'

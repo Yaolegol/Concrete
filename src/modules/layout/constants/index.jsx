@@ -1,5 +1,0 @@
-// @flow
-
-export const LAYOUT_ACTION_TYPES = {
-    SHOW_MOBILE_MENU: 'LAYOUT__SHOW_MOBILE_MENU'
-}

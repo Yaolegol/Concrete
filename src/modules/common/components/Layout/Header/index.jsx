@@ -1,10 +1,10 @@
 // @flow
-import CartLink from 'layout/components/Layout/Header/CartLink'
+import { actionShowMobileMenu } from 'common/actions'
+import CartLink from 'common/components/Layout/Header/CartLink'
 import { Logo } from 'common/components/Logo'
 import { Menu } from 'common/components/Menu'
 import { BurgerButton } from 'common/components/Menu/BurgerButton'
 import { Socials } from 'common/components/Socials'
-import { actionShowMobileMenu } from 'layout/actions'
 import React, { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 import './index.less'

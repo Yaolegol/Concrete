@@ -1,6 +1,8 @@
 // @flow
+import { actionDecCartProductsCount, actionIncCartProductsCount } from 'common/actions'
 import { ProductCardCounter } from 'common/components/ProductCard/ProductCardCounter'
 import React, { useCallback, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import './index.less'
 
 type TProps = {
@@ -13,16 +15,19 @@ type TProps = {
 
 export const ProductCard = ({ description, imageAlt = '', imageUrl, price, title }: TProps): React$Node => {
     const [count, setCount] = useState(0)
+    const dispatch = useDispatch()
 
     const onDecrement = useCallback(() => {
         if (count > 0) {
             setCount(count - 1)
         }
-    }, [count])
+        dispatch(actionDecCartProductsCount())
+    }, [count, dispatch])
 
     const onIncrement = useCallback(() => {
         setCount(count + 1)
-    }, [count])
+        dispatch(actionIncCartProductsCount())
+    }, [count, dispatch])
 
     return (
         <div className='product-card'>

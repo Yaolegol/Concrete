@@ -2,10 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/CartLink/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/common/constants/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Link/CartLink/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/CartLink/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Link/CartLink/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/CartLink/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reducer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/ProductCard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/ProductCard/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Footer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Footer/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Footer/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/CartLink/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/CartLink/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/CartLink/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/Header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/components/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/constants/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/layout/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +59,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/pages/Shop/components/ShopProductCard" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -56,18 +73,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/common/components" />
+      <recent name="$PROJECT_DIR$/src/modules" />
       <recent name="$PROJECT_DIR$/src/modules/layout/components/Layout/Header" />
       <recent name="$PROJECT_DIR$/src/modules/layout/components" />
       <recent name="$PROJECT_DIR$/src/modules/layout" />
-      <recent name="$PROJECT_DIR$/src/modules/common" />
-      <recent name="$PROJECT_DIR$/src/modules/common/components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/pages/Shop/components/ShopProductCard" />
+      <recent name="$PROJECT_DIR$/src/modules/common" />
       <recent name="$PROJECT_DIR$/src/modules/common/components/ProductCard/ProductCardCounter" />
       <recent name="$PROJECT_DIR$/src/img" />
       <recent name="$PROJECT_DIR$/src/modules/common/components/ProductCard" />
-      <recent name="$PROJECT_DIR$/src/modules/pages/Shop" />
-      <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -93,7 +110,7 @@
       <workItem from="1604417585583" duration="22582000" />
       <workItem from="1604584885693" duration="8626000" />
       <workItem from="1604667632120" duration="33271000" />
-      <workItem from="1604825874591" duration="974000" />
+      <workItem from="1604825874591" duration="4209000" />
     </task>
     <servers />
   </component>
@@ -117,10 +134,14 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1604068546211" />
-    <state x="153" y="94" width="1595" height="883" key="find.popup" timestamp="1604766036142">
+    <state x="211" y="27" width="1344" height="781" key="dock-window-1" timestamp="1604828748913">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="153" y="94" width="1595" height="883" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604766036142" />
+    <state x="211" y="27" width="1344" height="781" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1604828748913" />
+    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1604830106057">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604830106057" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1603642556065">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

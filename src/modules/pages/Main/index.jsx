@@ -1,5 +1,5 @@
 // @flow
-import { Layout } from 'layout/components/Layout'
+import { Layout } from 'common/components/Layout'
 import { Description } from 'pages/Main/Description'
 import { Portfolio } from 'pages/Main/Portfolio'
 import { Hero } from 'pages/Main/Hero'

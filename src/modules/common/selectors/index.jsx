@@ -1,12 +1,17 @@
 // @flow
 import { createSelector } from 'reselect'
 
-const getLayoutState = (state) => {
-    return state.layout
+const getCommonState = (state) => {
+    return state.common
 }
 
+export const selectCartProductsCount = createSelector(
+    [getCommonState],
+    ({ products }) => products.cartProductsCount
+)
+
 export const selectMobileMenu = createSelector(
-    [getLayoutState],
+    [getCommonState],
     ({ mobileMenu }) => mobileMenu
 )
 

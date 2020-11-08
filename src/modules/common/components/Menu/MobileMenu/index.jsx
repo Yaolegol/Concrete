@@ -1,7 +1,7 @@
 // @flow
 import cn from 'classnames'
-import { actionShowMobileMenu } from 'layout/actions'
-import { selectMobileMenuShowStatus } from 'layout/selectors'
+import { actionShowMobileMenu } from 'common/actions'
+import { selectMobileMenuShowStatus } from 'common/selectors'
 import React, { useCallback } from 'react'
 import { connect } from 'react-redux'
 import './index.less'

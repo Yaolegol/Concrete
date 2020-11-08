@@ -1,8 +1,8 @@
-import { layoutReducer } from 'layout/reducer'
+import { commonReducer } from 'common/reducer'
 import { shopReducer } from 'pages/Shop/reducer'
 import { combineReducers } from 'redux'
 
 export const rootReducer = combineReducers({
-    layout: layoutReducer,
+    common: commonReducer,
     shop: shopReducer
 })
