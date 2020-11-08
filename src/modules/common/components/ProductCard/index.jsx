@@ -1,6 +1,6 @@
 // @flow
-import { actionDecCartProductsCount, actionIncCartProductsCount } from 'common/actions'
 import { ProductCardCounter } from 'common/components/ProductCard/ProductCardCounter'
+import { actionDecCartProductsCount, actionIncCartProductsCount } from 'pages/Cart/actions'
 import React, { useCallback, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import './index.less'

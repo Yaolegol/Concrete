@@ -10,21 +10,6 @@ export const selectMobileMenu = createSelector(
     ({ mobileMenu }) => mobileMenu
 )
 
-export const selectProducts = createSelector(
-    [getCommonState],
-    ({ cartProducts }) => cartProducts
-)
-
-export const selectCartProducts = createSelector(
-    [selectProducts],
-    ({ items }) => items
-)
-
-export const selectCartProductsTotal = createSelector(
-    [selectProducts],
-    ({ total }) => total
-)
-
 export const selectMobileMenuShowStatus = createSelector(
     [selectMobileMenu],
     ({ isShow }) => isShow

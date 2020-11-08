@@ -1,7 +1,7 @@
 // @flow
 import { Layout } from 'common/components/Layout'
 import { ProductCard } from 'common/components/ProductCard'
-import { selectCartProducts } from 'common/selectors'
+import { selectCartProductsItems } from 'pages/Cart/selectors'
 import { actionGetProducts } from 'pages/Shop/actions'
 import { selectProductsList } from 'pages/Shop/selectors'
 import React, { useEffect, useMemo } from 'react'
@@ -46,6 +46,6 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps) => {
 }
 
 export default connect((state) => ({
-    cartProducts: selectCartProducts(state),
+    cartProducts: selectCartProductsItems(state),
     products: selectProductsList(state)
 }))(ShopPage)

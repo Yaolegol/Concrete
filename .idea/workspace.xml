@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/actions/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/constants/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/reducer/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/selectors/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reducer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/CartLink/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/CartLink/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/common/components/ProductCard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/ProductCard/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/constants/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/constants/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +54,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/pages/Shop/components/ShopProductCard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/pages/Cart" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -60,11 +75,11 @@
       <recent name="$PROJECT_DIR$/src/modules/layout" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/pages/Cart" />
+      <recent name="$PROJECT_DIR$/src/modules/pages" />
       <recent name="$PROJECT_DIR$/src/modules/pages/Shop/components/ShopProductCard" />
       <recent name="$PROJECT_DIR$/src/modules/common" />
       <recent name="$PROJECT_DIR$/src/modules/common/components/ProductCard/ProductCardCounter" />
-      <recent name="$PROJECT_DIR$/src/img" />
-      <recent name="$PROJECT_DIR$/src/modules/common/components/ProductCard" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -90,7 +105,7 @@
       <workItem from="1604417585583" duration="22582000" />
       <workItem from="1604584885693" duration="8626000" />
       <workItem from="1604667632120" duration="33271000" />
-      <workItem from="1604825874591" duration="8046000" />
+      <workItem from="1604825874591" duration="11510000" />
     </task>
     <servers />
   </component>
@@ -118,10 +133,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="211" y="27" width="1344" height="781" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1604828748913" />
-    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1604830106057">
+    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1604844105092">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604830106057" />
+    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1604844105092" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1603642556065">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

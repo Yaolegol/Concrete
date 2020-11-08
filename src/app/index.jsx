@@ -1,5 +1,6 @@
 // @flow
 import { MainPage } from 'pages/Main'
+import CartPage from 'pages/Cart'
 import ShopPage from 'pages/Shop'
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
@@ -13,7 +14,7 @@ const App = () => {
                     <ShopPage />
                 </Route>
                 <Route path="/cart">
-                    <div>cart</div>
+                    <CartPage />
                 </Route>
                 <Route path="/login">
                     <div>login</div>

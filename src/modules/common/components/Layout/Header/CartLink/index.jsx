@@ -1,7 +1,7 @@
 // @flow
 import cn from 'classnames'
-import { selectCartProductsTotal } from 'common/selectors'
 import CartIcon from 'img/main/header/cart.svg'
+import { selectCartProductsTotal } from 'pages/Cart/selectors'
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
