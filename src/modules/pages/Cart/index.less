@@ -11,16 +11,29 @@
         max-width: 1200px;
     }
 
-    &__content-section {
-        display: flex;
-        flex: 1;
+    &__content-header {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
         justify-content: center;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    &__content-header-image {
+        width: 275px;
+    }
+
+    &__content-section {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
     }
 
     &__content-item {
         align-items: center;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
     }
 
     &__title {
