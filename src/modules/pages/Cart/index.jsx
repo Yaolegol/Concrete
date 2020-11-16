@@ -1,5 +1,7 @@
 // @flow
 import { Layout } from 'common/components/Layout'
+import { CartContentHeader } from 'pages/Cart/components/CartContentHeader'
+import { CartItem } from 'pages/Cart/components/CartItem'
 import { selectCartProductsData } from 'pages/Cart/selectors'
 import React, { useMemo } from 'react'
 import { connect } from 'react-redux'
@@ -13,14 +15,7 @@ const CartPage = ({ cartProductsData }: TProps) => {
     const content = useMemo(() => {
         return cartProductsData.map(({ countInCart, description, _id, images, price, title, totalPrice }) => {
             return (
-                <div className='cart-page__content-item' key={_id}>
-                    <img src={images[0]} alt=""/>
-                    <h4>{title}</h4>
-                    <p>{description}</p>
-                    <p>{price}</p>
-                    <p>{countInCart}</p>
-                    <p>{totalPrice}</p>
-                </div>
+                <CartItem countInCart={countInCart} description={description} key={_id} price={price} src={images[0]} title={title} totalPrice={totalPrice} />
             )
         })
     }, [cartProductsData])
@@ -29,14 +24,7 @@ const CartPage = ({ cartProductsData }: TProps) => {
             <div className='cart-page'>
                 <h1 className='cart-page__title'>Cart</h1>
                 <div className='cart-page__content-section'>
-                    <div className='cart-page__content-header'>
-                        <div className='cart-page__content-header-image' />
-                        <p>Title</p>
-                        <p>Description</p>
-                        <p>Price</p>
-                        <p>Count</p>
-                        <p>Total</p>
-                    </div>
+                    <CartContentHeader />
                     <div className='cart-page__content-container'>
                         {content}
                     </div>
