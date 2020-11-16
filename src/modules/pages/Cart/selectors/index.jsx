@@ -24,9 +24,11 @@ export const selectCartProductsTotal = createSelector(
 export const selectCartProductsData = createSelector(
     [selectCartProductsItems, selectProductsList],
     (items, products) => {
-        const idsArray = Object.keys(items)
-        const selectedProducts = products.filter(({ _id }) => idsArray.includes(_id))
-        return selectedProducts.map((product) => {
+        const buyingItemsId = Object.keys(items).filter((key) => {
+            return items[key].count > 0
+        })
+        const buyingProducts = products.filter(({ _id }) => buyingItemsId.includes(_id))
+        return buyingProducts.map((product) => {
             const { _id, price } = product
             const countInCart = items[_id].count
             const totalPrice = countInCart * price
