@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/components/CartContentHeader/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/components/CartContentHeader/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/components/CartItem/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/components/CartItem/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/types/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/components/CartItem/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Cart/components/CartItem/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Cart/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Cart/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +95,7 @@
       <workItem from="1604667632120" duration="33271000" />
       <workItem from="1604825874591" duration="18044000" />
       <workItem from="1605194412897" duration="3657000" />
-      <workItem from="1605539072135" duration="1368000" />
+      <workItem from="1605539072135" duration="1908000" />
     </task>
     <servers />
   </component>

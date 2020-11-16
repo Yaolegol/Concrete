@@ -3,12 +3,13 @@ import { Layout } from 'common/components/Layout'
 import { CartContentHeader } from 'pages/Cart/components/CartContentHeader'
 import { CartItem } from 'pages/Cart/components/CartItem'
 import { selectCartProductsData } from 'pages/Cart/selectors'
+import { TCartProductsData } from 'pages/Cart/types'
 import React, { useMemo } from 'react'
 import { connect } from 'react-redux'
 import './index.less'
 
 type TProps = {
-    cartProductsData: any
+    cartProductsData: TCartProductsData
 }
 
 const CartPage = ({ cartProductsData }: TProps) => {
