@@ -30,12 +30,12 @@ const CartPage = ({ cartProductsData }: TProps) => {
                 <h1 className='cart-page__title'>Cart</h1>
                 <div className='cart-page__content-section'>
                     <div className='cart-page__content-header'>
-                        <p className='cart-page__content-header-image'>test</p>
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
+                        <div className='cart-page__content-header-image' />
+                        <p>Title</p>
+                        <p>Description</p>
+                        <p>Price</p>
+                        <p>Count</p>
+                        <p>Total</p>
                     </div>
                     <div className='cart-page__content-container'>
                         {content}
