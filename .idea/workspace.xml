@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/Shop/components/ShopPageFilters/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/Shop/components/ShopPageFilters/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Cart/selectors/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/ProductCard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/ProductCard/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +45,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/common/components/Button/ShopNow" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/pages/Shop/components" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -53,19 +58,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/modules/common/components/Button/ShopNow" />
-      <recent name="$PROJECT_DIR$/src/modules/pages/Cart/components/CartEmpty" />
-      <recent name="$PROJECT_DIR$/src/modules/pages/Cart/components" />
-      <recent name="$PROJECT_DIR$/src/modules/pages/Cart/components/CartItem" />
-      <recent name="$PROJECT_DIR$/src/modules/pages/Cart" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/pages/Shop/components/Filters" />
       <recent name="$PROJECT_DIR$/src/modules/common/components" />
       <recent name="$PROJECT_DIR$/src/modules" />
       <recent name="$PROJECT_DIR$/src/modules/layout/components/Layout/Header" />
       <recent name="$PROJECT_DIR$/src/modules/layout/components" />
-      <recent name="$PROJECT_DIR$/src/modules/layout" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/pages/Shop/components" />
+      <recent name="$PROJECT_DIR$/src/modules/common/components/Button/ShopNow" />
+      <recent name="$PROJECT_DIR$/src/modules/pages/Cart/components/CartEmpty" />
+      <recent name="$PROJECT_DIR$/src/modules/pages/Cart/components" />
+      <recent name="$PROJECT_DIR$/src/modules/pages/Cart/components/CartItem" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -93,7 +98,8 @@
       <workItem from="1604667632120" duration="33271000" />
       <workItem from="1604825874591" duration="18044000" />
       <workItem from="1605194412897" duration="3657000" />
-      <workItem from="1605539072135" duration="4896000" />
+      <workItem from="1605539072135" duration="5942000" />
+      <workItem from="1605796451703" duration="4540000" />
     </task>
     <servers />
   </component>
@@ -121,10 +127,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="211" y="27" width="1344" height="781" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1604828748913" />
-    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1605543212425">
+    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1605805456074">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1605543212425" />
+    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1605805456074" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1603642556065">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

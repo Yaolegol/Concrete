@@ -3,6 +3,7 @@ import { Layout } from 'common/components/Layout'
 import { ProductCard } from 'common/components/ProductCard'
 import { selectCartProductsItems } from 'pages/Cart/selectors'
 import { actionGetProducts } from 'pages/Shop/actions'
+import { ShopPageFilters } from 'pages/Shop/components/ShopPageFilters'
 import { selectProductsList } from 'pages/Shop/selectors'
 import React, { useEffect, useMemo } from 'react'
 import { connect } from 'react-redux'
@@ -35,7 +36,9 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps) => {
             <div className='shop-page'>
                 <h1>Shop</h1>
                 <div className='shop-page__content'>
-                    <div className='shop-page__filters-section'>test</div>
+                    <div className='shop-page__filters-section'>
+                        <ShopPageFilters />
+                    </div>
                     <div className='shop-page__goods-section'>
                         {productCards}
                     </div>

@@ -1,8 +1,10 @@
 @import (reference) '~styles/colors';
 
 .product-card {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
+    user-select: none;
 
     &__counter-container {
         display: flex;
@@ -11,11 +13,10 @@
     }
 
     &__description {
-        cursor: pointer;
+        user-select: text;
     }
 
     &__image {
-        cursor: pointer;
         height: 300px;
         object-fit: cover;
         width: 300px;
@@ -23,10 +24,11 @@
 
     &__price {
         margin-top: 10px;
+        user-select: text;
     }
 
     &__title {
-        cursor: pointer;
         margin-top: 20px;
+        user-select: text;
     }
 }
