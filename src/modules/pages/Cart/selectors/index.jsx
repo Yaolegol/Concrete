@@ -6,22 +6,22 @@ const getCartState = (state) => {
     return state.cart
 }
 
-export const selectCartProducts = createSelector(
+export const selectCartProducts: any = createSelector(
     [getCartState],
     ({ products }) => products
 )
 
-export const selectCartProductsItems = createSelector(
+export const selectCartProductsItems: any = createSelector(
     [selectCartProducts],
     ({ items }) => items
 )
 
-export const selectCartProductsTotal = createSelector(
+export const selectCartProductsTotal: any = createSelector(
     [selectCartProducts],
     ({ total }) => total
 )
 
-export const selectCartProductsData = createSelector(
+export const selectCartProductsData: any = createSelector(
     [selectCartProductsItems, selectProductsList],
     (items, products) => {
         const buyingItemsId = Object.keys(items).filter((key) => {

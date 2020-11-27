@@ -3,14 +3,16 @@ import { Range } from 'rc-slider'
 import React from 'react'
 import './index.less'
 
+type rangeValues = [number, number]
+
 type TProps = {
-    initialValues: [number, number],
+    initialValues: rangeValues,
     max: number,
-    onChange: (Array<number>) => any,
-    values: Array<number>,
+    onChange: (rangeValues) => any,
+    values: rangeValues,
 }
 
-export const ShopPagePriceFilter = ({ initialValues, max, onChange, values }: TProps) => {
+export const ShopPagePriceFilter = ({ initialValues, max, onChange, values }: TProps): React$Node => {
     return (
         <div className='shop-page-price-filter'>
             <h6 className='shop-page-price-filter__title'>

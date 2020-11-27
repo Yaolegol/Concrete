@@ -15,7 +15,7 @@ type TProps = {
     products: any
 }
 
-const ShopPage = ({ cartProducts, dispatch, products }: TProps) => {
+const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
     const productCards = useMemo(() => {
         return products.map(({ description, _id, images, price, title }) => {
             const initialCount = cartProducts[_id] ? cartProducts[_id].count : 0
@@ -48,7 +48,7 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps) => {
     )
 }
 
-export default connect((state) => ({
+export default (connect((state) => ({
     cartProducts: selectCartProductsItems(state),
     products: selectProductsList(state)
-}))(ShopPage)
+}))(ShopPage): any)
