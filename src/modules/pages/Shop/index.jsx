@@ -8,7 +8,6 @@ import { selectProductsList } from "pages/Shop/selectors";
 import React, { useEffect, useMemo } from "react";
 import { connect } from "react-redux";
 import "./index.less";
-import { CustomSelect } from "common/components/CustomSelect";
 
 type TProps = {
     cartProducts: any,
@@ -45,7 +44,6 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
         <Layout>
             <div className="shop-page">
                 <h1>Shop</h1>
-                <CustomSelect />
                 <div className="shop-page__content">
                     <div className="shop-page__filters-section">
                         <ShopPageFilters />

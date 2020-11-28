@@ -1,35 +1,40 @@
 // @flow
-import React, { useState } from "react";
+import React from "react";
 import Select from "react-select";
 import "./index.less";
 
-const options = [
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "vanilla", label: "Vanilla" },
-];
+type TSelectOption = {|
+    label: string,
+    value: string,
+|};
 
-export const CustomSelect = (): React$Node => {
-    const [selectedOption, setSelectedOption] = useState(null);
-    const handleChange = (value) => {
-        console.log("value");
-        console.log(value);
-        setSelectedOption(value);
-    };
+type TProps = {
+    isSearchable?: boolean,
+    onChange: (TSelectOption) => any,
+    options: Array<TSelectOption>,
+    placeholder?: string,
+    value: TSelectOption | null,
+};
 
+export const CustomSelect = ({
+    isSearchable = false,
+    onChange,
+    options,
+    placeholder = "",
+    value,
+    ...rest
+}: TProps): React$Node => {
     return (
         <div className="custom-select">
             <Select
+                {...rest}
+                className="select"
                 classNamePrefix="select"
-                components={{
-                    DropdownIndicator: null,
-                    IndicatorSeparator: null,
-                }}
-                isSearchable={false}
-                onChange={handleChange}
+                isSearchable={isSearchable}
+                onChange={onChange}
                 options={options}
-                placeholder=""
-                value={selectedOption}
+                placeholder={placeholder}
+                value={value}
             />
         </div>
     );

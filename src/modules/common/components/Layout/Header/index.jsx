@@ -1,5 +1,6 @@
 // @flow
 import { actionShowMobileMenu } from "common/actions";
+import { LangSelect } from "common/components/CustomSelect/LangSelect";
 import CartLink from "common/components/Layout/Header/CartLink";
 import { Logo } from "common/components/Logo";
 import { Menu } from "common/components/Menu";
@@ -25,6 +26,9 @@ export const Header = (): React$Node => {
             <Logo className="header__item_tablet-hidden" />
             <Socials className="header__item_tablet-hidden" />
             <Menu className="header__item_tablet-hidden" />
+            <div className="header__lang-select">
+                <LangSelect />
+            </div>
             <CartLink />
         </div>
     );
