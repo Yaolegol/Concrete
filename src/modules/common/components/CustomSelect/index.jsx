@@ -1,16 +1,36 @@
 // @flow
-import Select, { Option } from "rc-select";
-import React from "react";
+import React, { useState } from "react";
+import Select from "react-select";
 import "./index.less";
 
+const options = [
+    { value: "chocolate", label: "Chocolate" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" },
+];
+
 export const CustomSelect = (): React$Node => {
+    const [selectedOption, setSelectedOption] = useState(null);
+    const handleChange = (value) => {
+        console.log("value");
+        console.log(value);
+        setSelectedOption(value);
+    };
+
     return (
         <div className="custom-select">
-            <Select menuItemSelectedIcon={false} showArrow={false}>
-                <Option value="jack">jack</Option>
-                <Option value="lucy">lucy</Option>
-                <Option value="yiminghe">yiminghe</Option>
-            </Select>
+            <Select
+                classNamePrefix="select"
+                components={{
+                    DropdownIndicator: null,
+                    IndicatorSeparator: null,
+                }}
+                isSearchable={false}
+                onChange={handleChange}
+                options={options}
+                placeholder=""
+                value={selectedOption}
+            />
         </div>
     );
 };

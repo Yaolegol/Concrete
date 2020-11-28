@@ -1,35 +1,16 @@
-@import '~rc-select/assets';
 @import (reference) '~styles/colors';
 
 .custom-select {
-    cursor: pointer;
+    .select {
+        &__control {
+            &:hover {
+                border-color: @blue-1;
+            }
 
-    .rc-select-selection-search-input {
-        cursor: pointer;
-        height: 100%;
-        padding: 0;
+            &--is-focused {
+                border-color: @gray-1;
+                box-shadow: none;
+            }
+        }
     }
-
-    .rc-select-selector {
-        border: 1px solid @gray-1 !important;
-        padding: 0 !important;
-    }
-}
-
-.rc-select-dropdown {
-    border: 1px solid @gray-1;
-    cursor: pointer;
-    min-height: initial;
-}
-
-.rc-select-item {
-    padding: 0;
-
-    &:hover {
-        background-color: fade(@gray-1, 40%);
-    }
-}
-
-.rc-select-item-option-active {
-    background-color: @white;
 }
