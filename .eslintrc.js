@@ -20,7 +20,6 @@ module.exports = {
     },
     plugins: ["flowtype", "prettier", "react"],
     rules: {
-        indent: ["error", 4],
         "prettier/prettier": "error",
     },
 };
