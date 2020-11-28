@@ -1,10 +1,10 @@
 // @flow
-import { MainPage } from 'pages/Main'
-import CartPage from 'pages/Cart'
-import ShopPage from 'pages/Shop'
-import React from 'react'
-import { hot } from 'react-hot-loader/root'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { MainPage } from "pages/Main";
+import CartPage from "pages/Cart";
+import ShopPage from "pages/Shop";
+import React from "react";
+import { hot } from "react-hot-loader/root";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
     return (
@@ -23,12 +23,12 @@ const App = () => {
                     <div>signup</div>
                 </Route>
                 <Route path="/">
-                    <MainPage/>
+                    <MainPage />
                 </Route>
             </Switch>
         </Router>
-    )
-}
+    );
+};
 
 // TODO remove hot from prod
-export default hot(App)
+export default hot(App);
