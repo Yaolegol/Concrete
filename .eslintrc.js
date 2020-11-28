@@ -1,29 +1,26 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true
+        es2021: true,
     },
     extends: [
-        'plugin:flowtype/recommended',
-        'plugin:react/recommended',
-        'plugin:react-hooks/recommended',
-        'standard',
-        'prettier'
+        "plugin:flowtype/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "standard",
+        "plugin:prettier/recommended",
     ],
-    parser: 'babel-eslint',
+    parser: "babel-eslint",
     parserOptions: {
         ecmaFeatures: {
-            jsx: true
+            jsx: true,
         },
         ecmaVersion: 12,
-        sourceType: 'module'
+        sourceType: "module",
     },
-    plugins: [
-        'flowtype',
-        'react'
-    ],
+    plugins: ["flowtype", "prettier", "react"],
     rules: {
-        indent: ['error', 4],
+        indent: ["error", 4],
         "prettier/prettier": "error",
-    }
-}
+    },
+};
