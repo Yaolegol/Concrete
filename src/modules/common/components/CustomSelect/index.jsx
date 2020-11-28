@@ -13,7 +13,7 @@ type TProps = {
     onChange: (TSelectOption) => any,
     options: Array<TSelectOption>,
     placeholder?: string,
-    value: TSelectOption | null,
+    value: ?TSelectOption,
 };
 
 export const CustomSelect = ({
