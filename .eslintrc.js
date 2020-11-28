@@ -7,7 +7,8 @@ module.exports = {
         'plugin:flowtype/recommended',
         'plugin:react/recommended',
         'plugin:react-hooks/recommended',
-        'standard'
+        'standard',
+        'prettier'
     ],
     parser: 'babel-eslint',
     parserOptions: {
@@ -22,6 +23,7 @@ module.exports = {
         'react'
     ],
     rules: {
-        indent: ['error', 4]
+        indent: ['error', 4],
+        "prettier/prettier": "error",
     }
 }
