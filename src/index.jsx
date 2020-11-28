@@ -1,26 +1,25 @@
 // @flow
-import React from "react";
-import { IntlProvider } from "react-intl";
-import { render } from "react-dom";
-import { Provider } from "react-redux";
-import App from "app/index.jsx";
+import App from "app";
 import { store } from "app/store";
+import textConfig from "config/text.json";
+import { logError } from "common/helpers/errors";
+import React from "react";
+import { render } from "react-dom";
+import { IntlProvider } from "react-intl";
+import { Provider } from "react-redux";
 import "styles/index.less";
 
-const appTextData = {
-    en: {
-        test: "test en",
-    },
-    ru: {
-        test: "test ru",
-    },
-};
+const rootElement = document.getElementById("root");
 
-render(
-    <Provider store={store}>
-        <IntlProvider locale="en" messages={appTextData.en}>
-            <App />
-        </IntlProvider>
-    </Provider>,
-    document.getElementById("root")
-);
+if (rootElement) {
+    render(
+        <Provider store={store}>
+            <IntlProvider locale="en" messages={textConfig.en}>
+                <App />
+            </IntlProvider>
+        </Provider>,
+        rootElement
+    );
+} else {
+    logError("No root element is found", "index.jsx");
+}
