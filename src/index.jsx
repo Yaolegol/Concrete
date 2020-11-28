@@ -1,23 +1,21 @@
 // @flow
 import App from "app";
-import { store } from "app/store";
-import textConfig from "config/text.json";
+import { CustomIntl } from "app/components/CustomIntl";
+import { CustomProvider } from "app/components/CustomProvider";
 import { logError } from "common/helpers/errors";
 import React from "react";
 import { render } from "react-dom";
-import { IntlProvider } from "react-intl";
-import { Provider } from "react-redux";
 import "styles/index.less";
 
 const rootElement = document.getElementById("root");
 
 if (rootElement) {
     render(
-        <Provider store={store}>
-            <IntlProvider locale="en" messages={textConfig.en}>
+        <CustomProvider>
+            <CustomIntl>
                 <App />
-            </IntlProvider>
-        </Provider>,
+            </CustomIntl>
+        </CustomProvider>,
         rootElement
     );
 } else {
