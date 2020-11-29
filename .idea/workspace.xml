@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/LogIn/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/LogIn/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/SignUp/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/SignUp/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/common/components/FormField" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/pages" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -62,11 +63,11 @@
       <recent name="$PROJECT_DIR$/src/modules/pages/Shop/components/Filters" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/pages" />
       <recent name="$PROJECT_DIR$/src/modules/common/components/FormField" />
       <recent name="$PROJECT_DIR$/src/modules/common/components/Input" />
       <recent name="$PROJECT_DIR$/src/modules/pages/Registration" />
       <recent name="$PROJECT_DIR$/src/app/components/CustomProvider" />
-      <recent name="$PROJECT_DIR$/src/app/Intl" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -102,7 +103,7 @@
       <workItem from="1606496719930" duration="4793000" />
       <workItem from="1606501536565" duration="1587000" />
       <workItem from="1606503144534" duration="5678000" />
-      <workItem from="1606551004417" duration="32306000" />
+      <workItem from="1606551004417" duration="32718000" />
     </task>
     <servers />
   </component>

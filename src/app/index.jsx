@@ -3,6 +3,7 @@ import { MainPage } from "pages/Main";
 import CartPage from "pages/Cart";
 import ShopPage from "pages/Shop";
 import SignUp from "pages/SignUp";
+import LogIn from "pages/LogIn";
 import React from "react";
 import { hot } from "react-hot-loader/root";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -18,7 +19,7 @@ const App = () => {
                     <CartPage />
                 </Route>
                 <Route path="/login">
-                    <div>login</div>
+                    <LogIn />
                 </Route>
                 <Route path="/signup">
                     <SignUp />
