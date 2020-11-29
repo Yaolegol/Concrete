@@ -1,0 +1,46 @@
+@import (reference) '~styles/colors';
+@import (reference) '~styles/font';
+
+.input-container {
+    border-bottom: 1px solid @gray-1;
+    display: flex;
+    flex: 1;
+    position: relative;
+
+    &__bottom-line {
+        background-color: @blue;
+        bottom: -1px;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transition: width ease-in-out 300ms;
+        width: 0;
+    }
+
+    &__input {
+        height: 100%;
+        padding: 10px;
+        width: 100%;
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            ~ .input-container__bottom-line {
+                width: 100%;
+            }
+
+            ~ .input-container__placeholder {
+                color: @blue;
+                position: absolute;
+                top: -10px;
+            }
+        }
+    }
+
+    &__placeholder {
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: top ease-out 120ms, color ease-out 120ms;
+    }
+}
