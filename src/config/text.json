@@ -1,8 +1,16 @@
 {
     "en": {
+        "common.menu.logIn": "Log In",
+        "common.menu.mainPage": "Home",
+        "common.menu.shopPage": "Shop",
+        "common.menu.signUp": "Sign Up",
         "test": "test en"
     },
     "ru": {
+        "common.menu.logIn": "Войти",
+        "common.menu.mainPage": "Главная",
+        "common.menu.shopPage": "Магазин",
+        "common.menu.signUp": "Зарегистрироваться",
         "test": "test ru"
     }
 }

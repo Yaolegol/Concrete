@@ -1,21 +1,38 @@
 // @flow
-import cn from 'classnames'
-import { MenuItem } from 'common/components/Menu/MenuItem'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './index.less'
+import cn from "classnames";
+import { MenuItem } from "common/components/Menu/MenuItem";
+import React from "react";
+import { FormattedMessage } from "react-intl";
+import { Link } from "react-router-dom";
+import "./index.less";
 
 type TProps = {
-    className?: string
-}
+    className?: string,
+};
 
 export const Menu = ({ className }: TProps): React$Node => {
     return (
-        <div className={cn('menu', className)}>
-            <Link to="/"><MenuItem>home</MenuItem></Link>
-            <Link to="/shop"><MenuItem>shop</MenuItem></Link>
-            <Link to="/signup"><MenuItem>sign up</MenuItem></Link>
-            <Link to="/login"><MenuItem>log in</MenuItem></Link>
+        <div className={cn("menu", className)}>
+            <Link to="/">
+                <MenuItem>
+                    <FormattedMessage id="common.menu.mainPage" />
+                </MenuItem>
+            </Link>
+            <Link to="/shop">
+                <MenuItem>
+                    <FormattedMessage id="common.menu.shopPage" />
+                </MenuItem>
+            </Link>
+            <Link to="/signup">
+                <MenuItem>
+                    <FormattedMessage id="common.menu.signUp" />
+                </MenuItem>
+            </Link>
+            <Link to="/login">
+                <MenuItem>
+                    <FormattedMessage id="common.menu.logIn" />
+                </MenuItem>
+            </Link>
         </div>
-    )
-}
+    );
+};
