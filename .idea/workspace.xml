@@ -4,10 +4,7 @@
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/text.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/text.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Button/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Button/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Link/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Link/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/Description/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/Description/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/Portfolio/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/Portfolio/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Layout/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Layout/Footer/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +102,7 @@
       <workItem from="1606496719930" duration="4793000" />
       <workItem from="1606501536565" duration="1587000" />
       <workItem from="1606503144534" duration="5678000" />
-      <workItem from="1606551004417" duration="22646000" />
+      <workItem from="1606551004417" duration="23409000" />
     </task>
     <servers />
   </component>
