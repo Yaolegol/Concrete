@@ -10,12 +10,20 @@ const initialState = {
     },
 };
 
-const { SHOW_MOBILE_MENU } = COMMON_ACTION_TYPES;
+const { SELECT_LANG, SHOW_MOBILE_MENU } = COMMON_ACTION_TYPES;
 
 export const commonReducer = (state = initialState, action) => {
     const { data, type } = action;
 
     switch (type) {
+        case SELECT_LANG:
+            return {
+                ...state,
+                locale: {
+                    ...state.locale,
+                    current: data,
+                },
+            };
         case SHOW_MOBILE_MENU:
             return {
                 ...state,
