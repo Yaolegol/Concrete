@@ -2,6 +2,7 @@
 import { MainPage } from "pages/Main";
 import CartPage from "pages/Cart";
 import ShopPage from "pages/Shop";
+import SignUp from "pages/SignUp";
 import React from "react";
 import { hot } from "react-hot-loader/root";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -20,7 +21,7 @@ const App = () => {
                     <div>login</div>
                 </Route>
                 <Route path="/signup">
-                    <div>signup</div>
+                    <SignUp />
                 </Route>
                 <Route path="/">
                     <MainPage />
