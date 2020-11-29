@@ -1,16 +1,22 @@
 {
     "en": {
+        "common.buttons.shopNow.title": "Shop now",
         "common.menu.logIn": "Log In",
         "common.menu.mainPage": "Home",
         "common.menu.shopPage": "Shop",
         "common.menu.signUp": "Sign Up",
+        "hero.slide.description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita illum ipsum nobis omnis quaerat quas saepe tempora voluptas?",
+        "hero.slide.title": "Concrete furniture",
         "test": "test en"
     },
     "ru": {
+        "common.buttons.shopNow.title": "Купить сейчас",
         "common.menu.logIn": "Войти",
         "common.menu.mainPage": "Главная",
         "common.menu.shopPage": "Магазин",
         "common.menu.signUp": "Зарегистрироваться",
+        "hero.slide.description": "Невероятное описание на русском языке о супер крутой бетонной фурнитуре. Невероятное описание на русском языке о супер крутой бетонной фурнитуре?",
+        "hero.slide.title": "Бетонная фурнитура",
         "test": "test ru"
     }
 }

@@ -3,10 +3,13 @@ import { SliderMainSlide } from "common/components/Slider/SliderMain/SliderMainS
 import ArrowIcon from "img/arrow-right.svg";
 import { Slider } from "common/components/Slider";
 import React, { useState, useCallback } from "react";
+import { useIntl } from "react-intl";
 import "./index.less";
 
 export const SliderMain = () => {
     const [swiper, setSwiper] = useState();
+
+    const intl = useIntl();
 
     const slideNext = useCallback(() => {
         if (swiper) {
@@ -24,28 +27,46 @@ export const SliderMain = () => {
         <div className="slider-main">
             <Slider onSwiper={setSwiper}>
                 <SliderMainSlide
-                    buttonText="shop now"
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita illum ipsum nobis omnis quaerat quas saepe tempora voluptas?"
+                    buttonText={intl.formatMessage({
+                        id: "common.buttons.shopNow.title",
+                    })}
+                    description={intl.formatMessage({
+                        id: "hero.slide.description",
+                    })}
                     imgAlt="Hero"
                     imgSrc="img/main/header/hero.jpg"
                     onClick={() => console.log("click")}
-                    title="Concrete furniture"
+                    title={intl.formatMessage({
+                        id: "hero.slide.title",
+                    })}
                 />
                 <SliderMainSlide
-                    buttonText="shop now"
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita illum ipsum nobis omnis quaerat quas saepe tempora voluptas?"
+                    buttonText={intl.formatMessage({
+                        id: "common.buttons.shopNow.title",
+                    })}
+                    description={intl.formatMessage({
+                        id: "hero.slide.description",
+                    })}
                     imgAlt="Hero"
                     imgSrc="img/main/header/hero.jpg"
                     onClick={() => console.log("click")}
-                    title="Concrete furniture"
+                    title={intl.formatMessage({
+                        id: "hero.slide.title",
+                    })}
                 />
                 <SliderMainSlide
-                    buttonText="shop now"
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita illum ipsum nobis omnis quaerat quas saepe tempora voluptas?"
+                    buttonText={intl.formatMessage({
+                        id: "common.buttons.shopNow.title",
+                    })}
+                    description={intl.formatMessage({
+                        id: "hero.slide.description",
+                    })}
                     imgAlt="Hero"
                     imgSrc="img/main/header/hero.jpg"
                     onClick={() => console.log("click")}
-                    title="Concrete furniture"
+                    title={intl.formatMessage({
+                        id: "hero.slide.title",
+                    })}
                 />
             </Slider>
             <div className="slider-main__controls">
