@@ -4,12 +4,17 @@
     align-items: center;
     display: flex;
     flex: 1;
-    justify-content: center;
+    flex-direction: column;
+    padding: 100px 0;
 
     &__content-container {
         border-radius: 5px;
         box-shadow: 1px 1px 15px @shadow;
+        display: flex;
+        flex-direction: column;
+        min-width: 800px;
         padding: 50px 100px;
+        text-align: center;
     }
 
     &__form {
