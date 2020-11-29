@@ -1,0 +1,17 @@
+@import (reference) '~styles/colors';
+@import (reference) '~styles/font';
+
+.form-field {
+    &__error-container {
+        color: @red;
+        visibility: hidden;
+
+        &_show {
+            visibility: visible;
+        }
+    }
+
+    &_with-margin {
+        margin-top: 15px;
+    }
+}

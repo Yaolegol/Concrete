@@ -1,4 +1,5 @@
 // @flow
+import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
 import { Layout } from "common/components/Layout";
 import React from "react";
@@ -11,7 +12,18 @@ const SignUp = (): React$Node => {
                 <div className="signup-page__content-container">
                     <h1>Sign Up</h1>
                     <div className="signup-page__form">
-                        <Input />
+                        <FormField withMargin={false}>
+                            <Input placeholder="Email" type="email" />
+                        </FormField>
+                        <FormField>
+                            <Input placeholder="Password" type="password" />
+                        </FormField>
+                        <FormField>
+                            <Input
+                                placeholder="Confirm password"
+                                type="password"
+                            />
+                        </FormField>
                     </div>
                 </div>
             </div>
