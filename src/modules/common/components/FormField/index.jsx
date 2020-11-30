@@ -7,6 +7,7 @@ type TProps = {
     children: React$Node,
     errorMessage?: string,
     isError?: boolean,
+    isTouched?: boolean,
     withMargin?: boolean,
 };
 
@@ -14,6 +15,7 @@ export const FormField = ({
     children,
     errorMessage = "error",
     isError = false,
+    isTouched = false,
     withMargin = true,
 }: TProps): React$Node => {
     return (
@@ -25,7 +27,7 @@ export const FormField = ({
             {children}
             <p
                 className={cn("form-field__error-container", {
-                    "form-field__error-container_show": isError,
+                    "form-field__error-container_show": isError && isTouched,
                 })}
             >
                 {errorMessage}

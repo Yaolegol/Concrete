@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modules/pages/LogIn/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/pages/LogIn/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/FormField/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/FormField/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/SignUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/SignUp/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/SignUp/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/SignUp/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +54,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -103,7 +106,8 @@
       <workItem from="1606496719930" duration="4793000" />
       <workItem from="1606501536565" duration="1587000" />
       <workItem from="1606503144534" duration="5678000" />
-      <workItem from="1606551004417" duration="32718000" />
+      <workItem from="1606551004417" duration="35021000" />
+      <workItem from="1606741940007" duration="10705000" />
     </task>
     <servers />
   </component>
