@@ -302,39 +302,37 @@ router.post('/order', (req, res, next) => {
         })
 })
 
-router.post('/auth', (req, res, next) => {
-    const authAction = req.query.authAction
-
-    if (authAction === 'singup') {
-        User.findOne({ email: req.body.email }, 'email admin')
-            .then(doc => {
+router.post('/registration', (req, res, next) => {
+        User.findOne({ email: req.body.email })
+            .then((doc) => {
                 if (!doc) {
                     const user = new User(req.body)
                     user.save()
-                        .then(user => {
+                        .then((user) => {
                             const token = jwt.sign({
-                                exp: Math.floor(Date.now() / 1000) + (60 * 60),
+                                exp: Math.floor(Date.now() / 1000) + (60 * 60)
+                            }, 'superSecretSecretSecret');
+
+                            res.json({
                                 data: {
-                                    id: user._id,
-                                    email: user.email,
-                                    admin: user.admin
-                                }
-                            }, 'superSecretSecretSecret')
-                            res.json({ token, user: user })
+                                    token,
+                                    user,
+                                },
+                            })
                         })
                         .catch(err => {
                             res.json(err)
                         })
                 } else {
-                    res.json({ error: 'user already exists' })
+                    res.json({ error: 'User already exists' })
                 }
             })
-            .catch(error => {
-                console.log(user)
+            .catch((error) => {
+                console.log(error)
             })
-    }
-    // else if (authAction === 'login') {
-    else {
+})
+
+router.get('/auth', (req, res, next) => {
         User.findOne({ email: req.body.email, password: req.body.password }, 'email admin')
             .then(doc => {
                 if (doc) {
@@ -354,7 +352,6 @@ router.post('/auth', (req, res, next) => {
             .catch(err => {
                 res.json(err)
             })
-    }
 })
 
 router.get('/auth', (req, res, next) => {
