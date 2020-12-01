@@ -10,9 +10,14 @@
     padding: 10px 40px;
     text-transform: uppercase;
 
-    &:hover {
+    &:hover:not(:disabled) {
         background-color: @blue-1;
         color: fade(@white, 80%);
+    }
+
+    &:disabled {
+        color: @gray-1;
+        cursor: initial;
     }
 
     &_white {
@@ -20,8 +25,12 @@
         border: 1px solid @blue-2;
         color: @blue-2;;
 
-        &:hover {
+        &:hover:not(:disabled) {
             background-color: @blue-2;
+        }
+
+        &:disabled {
+            border-color: @gray-1;
         }
     }
 }

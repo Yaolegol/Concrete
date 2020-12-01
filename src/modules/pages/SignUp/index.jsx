@@ -48,10 +48,12 @@ const SignUp = (): React$Node => {
                             }}
                         >
                             {({
+                                dirty,
                                 errors,
                                 handleBlur,
                                 handleChange,
                                 handleSubmit,
+                                isValid,
                                 touched,
                                 values,
                             }) => {
@@ -103,7 +105,12 @@ const SignUp = (): React$Node => {
                                             />
                                         </FormField>
                                         <div className="signup-page__submit-button-container">
-                                            <Button theme="white">test</Button>
+                                            <Button
+                                                disabled={!isValid || !dirty}
+                                                theme="white"
+                                            >
+                                                Sign Up
+                                            </Button>
                                         </div>
                                     </form>
                                 );
