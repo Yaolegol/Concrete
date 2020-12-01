@@ -4,10 +4,14 @@ import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
 import { Layout } from "common/components/Layout";
 import { Formik } from "formik";
+import { actionRegistration } from "pages/SignUp/actions";
 import React from "react";
+import { useDispatch } from "react-redux";
 import "./index.less";
 
 const SignUp = (): React$Node => {
+    const dispatch = useDispatch();
+
     return (
         <Layout withFooter={false}>
             <div className="signup-page">
@@ -21,8 +25,9 @@ const SignUp = (): React$Node => {
                                 passwordConfirm: "",
                             }}
                             onSubmit={(values) => {
-                                console.log("onSubmit values");
+                                console.log("SignUp data");
                                 console.log(values);
+                                dispatch(actionRegistration({ data: values }));
                             }}
                             validate={(values) => {
                                 const {
@@ -108,6 +113,7 @@ const SignUp = (): React$Node => {
                                             <Button
                                                 disabled={!isValid || !dirty}
                                                 theme="white"
+                                                type="submit"
                                             >
                                                 Sign Up
                                             </Button>

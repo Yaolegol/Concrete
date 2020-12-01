@@ -8,6 +8,8 @@ type TProps = {
 };
 
 export const request = async ({ options, toJSON = true, url }: TProps): any => {
+    console.log("options");
+    console.log(options);
     try {
         const response = await fetch(url, {
             ...options,

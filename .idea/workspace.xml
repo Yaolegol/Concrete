@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/routes/products/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/registration/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/SignUp/actions/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/SignUp/constants/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/SignUp/reducer/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/SignUp/service/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/actions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/sevice/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/service/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/SignUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/SignUp/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +52,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/routes" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -54,19 +66,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/routes" />
+      <recent name="$PROJECT_DIR$/src/modules/pages/SignUp" />
+      <recent name="$PROJECT_DIR$/src/modules/pages" />
+      <recent name="$PROJECT_DIR$/src/modules/common/components/FormField" />
+      <recent name="$PROJECT_DIR$/src/modules/common/components/Input" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/components" />
       <recent name="$PROJECT_DIR$/src/app/store" />
       <recent name="$PROJECT_DIR$/src/app/service" />
       <recent name="$PROJECT_DIR$/src/app/reducer" />
       <recent name="$PROJECT_DIR$/src/modules/pages/Shop/components/Filters" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/modules/pages" />
-      <recent name="$PROJECT_DIR$/src/modules/common/components/FormField" />
-      <recent name="$PROJECT_DIR$/src/modules/common/components/Input" />
-      <recent name="$PROJECT_DIR$/src/modules/pages/Registration" />
-      <recent name="$PROJECT_DIR$/src/app/components/CustomProvider" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -104,7 +116,7 @@
       <workItem from="1606503144534" duration="5678000" />
       <workItem from="1606551004417" duration="35021000" />
       <workItem from="1606741940007" duration="11539000" />
-      <workItem from="1606833189094" duration="2511000" />
+      <workItem from="1606833189094" duration="6706000" />
     </task>
     <servers />
   </component>
@@ -136,10 +148,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="211" y="27" width="1344" height="781" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1604828748913" />
-    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1606833690507">
+    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1606835840457">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1606833690507" />
+    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1606835840457" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1606552442839">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

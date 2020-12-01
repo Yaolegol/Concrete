@@ -1,3 +1,4 @@
+const customRequire = require('app-root-path').require;
 const express = require('express')
 const User = require('../models/User')
 const Product = require('../models/Product')
@@ -14,37 +15,11 @@ cloudinary.config({
 const jwt = require('jsonwebtoken')
 
 const router = express.Router()
-
 const perPage = 8
+const routeProducts = customRequire('server/routes/products');
+const routeRegistration = customRequire('server/routes/registration');
 
-router.get('/products', (req, res, next) => {
-    const currentPage = req.body.page || 0
-    const skip = currentPage * perPage
-
-    Product
-        .find(null, null, {
-            skip: skip,
-            limit: perPage
-        })
-        .then(products => {
-            Product
-                .count()
-                .then(count => {
-                    res.json({
-                        data: {
-                            list: products,
-                            count
-                        }
-                    })
-                })
-                .catch(err => {
-                    console.log(err)
-                })
-        })
-        .catch(err => {
-            console.log(err)
-        })
-})
+router.use(routeProducts);
 
 router.post('/products', (req, res, next) => {
     const currentPage = req.body.page || 0
@@ -302,35 +277,7 @@ router.post('/order', (req, res, next) => {
         })
 })
 
-router.post('/registration', (req, res, next) => {
-        User.findOne({ email: req.body.email })
-            .then((doc) => {
-                if (!doc) {
-                    const user = new User(req.body)
-                    user.save()
-                        .then((user) => {
-                            const token = jwt.sign({
-                                exp: Math.floor(Date.now() / 1000) + (60 * 60)
-                            }, 'superSecretSecretSecret');
-
-                            res.json({
-                                data: {
-                                    token,
-                                    user,
-                                },
-                            })
-                        })
-                        .catch(err => {
-                            res.json(err)
-                        })
-                } else {
-                    res.json({ error: 'User already exists' })
-                }
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-})
+router.use(routeRegistration);
 
 router.get('/auth', (req, res, next) => {
         User.findOne({ email: req.body.email, password: req.body.password }, 'email admin')
