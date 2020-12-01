@@ -19,19 +19,25 @@ router.post('/registration', (req, res, next) => {
                         res.json({
                             data: {
                                 token,
-                                user,
                             },
                         })
                     })
                     .catch(err => {
-                        res.json(err)
+                        res.json({
+                            errors: [err.message]
+                        })
                     })
             } else {
-                res.json({ error: 'User already exists' })
+                res.json({
+                    errors: ['User already exists']
+                })
             }
         })
         .catch((error) => {
             console.log(error)
+            res.json({
+                errors: ['Server error']
+            })
         })
 })
 

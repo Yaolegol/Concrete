@@ -40,17 +40,13 @@ export const actionRegistration = ({ data: userData }) => async (
         const { data, errors } = await registrationRequest({
             data: userData,
         });
-        console.log("data");
-        console.log(data);
-        console.log("errors");
-        console.log(errors);
 
-        // if (!errors) {
-        //     dispatch(actionSignUpSuccess(data));
-        // } else {
-        //     dispatch(actionSignUpFail(errors));
-        // }
+        if (!errors) {
+            dispatch(actionSignUpSuccess(data));
+        } else {
+            dispatch(actionSignUpFail({ errors }));
+        }
     } catch (error) {
-        // dispatch(actionSignUpFail([error]));
+        dispatch(actionSignUpFail({ errors: error.message }));
     }
 };
