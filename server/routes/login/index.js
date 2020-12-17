@@ -13,7 +13,13 @@ router.post('/login', (req, res, next) => {
                 const token = jwt.sign({
                     exp: Date.now() + 60 * 60 * 1000,
                 }, 'superSecretSecretSecret')
-                res.json({ token })
+
+                res.json({
+                    data: {
+                        id: doc._id,
+                        token,
+                    },
+                })
             } else {
                 res.json({ errors: 'Email or password incorrect' })
             }

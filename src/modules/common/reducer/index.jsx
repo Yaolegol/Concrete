@@ -15,6 +15,7 @@ const {
 const initialState = {
     auth: {
         errors: [],
+        id: "",
         token: "",
     },
     locale: {
@@ -27,6 +28,9 @@ const initialState = {
 
 export const commonReducer = (state = initialState, action) => {
     const { data, type } = action;
+
+    console.log("data");
+    console.log(data);
 
     switch (type) {
         case LOGIN_FAIL:

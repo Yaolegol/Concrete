@@ -18,6 +18,7 @@ router.post('/registration', (req, res, next) => {
 
                         res.json({
                             data: {
+                                id: user._id,
                                 token,
                             },
                         })
