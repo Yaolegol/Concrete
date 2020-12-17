@@ -1,13 +1,17 @@
 // @flow
+import { actionLogin } from "common/actions";
 import { Button } from "common/components/Button";
 import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
 import { Layout } from "common/components/Layout";
 import { Formik } from "formik";
 import React from "react";
+import { useDispatch } from "react-redux";
 import "./index.less";
 
 const LogIn = (): React$Node => {
+    const dispatch = useDispatch();
+
     return (
         <Layout withFooter={false}>
             <div className="login-page">
@@ -20,8 +24,7 @@ const LogIn = (): React$Node => {
                                 password: "",
                             }}
                             onSubmit={(values) => {
-                                console.log("onSubmit values");
-                                console.log(values);
+                                dispatch(actionLogin({ data: values }));
                             }}
                             validate={(values) => {
                                 const { email, password } = values;
@@ -80,6 +83,7 @@ const LogIn = (): React$Node => {
                                             <Button
                                                 disabled={!isValid || !dirty}
                                                 theme="white"
+                                                type="submit"
                                             >
                                                 Log In
                                             </Button>

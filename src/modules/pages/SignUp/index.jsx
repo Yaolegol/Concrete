@@ -25,8 +25,6 @@ const SignUp = (): React$Node => {
                                 passwordConfirm: "",
                             }}
                             onSubmit={(values) => {
-                                console.log("SignUp data");
-                                console.log(values);
                                 dispatch(actionRegistration({ data: values }));
                             }}
                             validate={(values) => {

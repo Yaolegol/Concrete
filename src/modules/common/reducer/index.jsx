@@ -2,6 +2,9 @@
 import { COMMON_ACTION_TYPES } from "common/constants";
 
 const {
+    LOGIN_FAIL,
+    LOGIN_START,
+    LOGIN_SUCCESS,
     SELECT_LANG,
     SHOW_MOBILE_MENU,
     SIGNUP_FAIL,
@@ -10,15 +13,15 @@ const {
 } = COMMON_ACTION_TYPES;
 
 const initialState = {
+    auth: {
+        errors: [],
+        token: "",
+    },
     locale: {
         current: "en",
     },
     mobileMenu: {
         isShow: false,
-    },
-    registration: {
-        errors: [],
-        token: "",
     },
 };
 
@@ -26,6 +29,27 @@ export const commonReducer = (state = initialState, action) => {
     const { data, type } = action;
 
     switch (type) {
+        case LOGIN_FAIL:
+            return {
+                ...state,
+                auth: {
+                    ...state.auth,
+                    ...data,
+                },
+            };
+        case LOGIN_START:
+            return {
+                ...state,
+            };
+        case LOGIN_SUCCESS:
+            return {
+                ...state,
+                auth: {
+                    ...state.auth,
+                    errors: [],
+                    ...data,
+                },
+            };
         case SELECT_LANG:
             return {
                 ...state,
@@ -45,8 +69,8 @@ export const commonReducer = (state = initialState, action) => {
         case SIGNUP_FAIL:
             return {
                 ...state,
-                registration: {
-                    ...state.registration,
+                auth: {
+                    ...state.auth,
                     ...data,
                 },
             };
@@ -57,8 +81,8 @@ export const commonReducer = (state = initialState, action) => {
         case SIGNUP_SUCCESS:
             return {
                 ...state,
-                registration: {
-                    ...state.registration,
+                auth: {
+                    ...state.auth,
                     errors: [],
                     ...data,
                 },
