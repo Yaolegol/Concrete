@@ -13,7 +13,7 @@ router.post('/registration', (req, res, next) => {
                 user.save()
                     .then((user) => {
                         const token = jwt.sign({
-                            exp: Math.floor(Date.now() / 1000) + (60 * 60)
+                            exp: Date.now() + 60 * 60 * 1000
                         }, 'superSecretSecretSecret');
 
                         res.json({

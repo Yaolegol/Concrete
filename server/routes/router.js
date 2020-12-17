@@ -16,10 +16,14 @@ const jwt = require('jsonwebtoken')
 
 const router = express.Router()
 const perPage = 8
+const routeLogin = customRequire('server/routes/login');
 const routeProducts = customRequire('server/routes/products');
 const routeRegistration = customRequire('server/routes/registration');
 
-router.use(routeProducts);
+router
+    .use(routeProducts)
+    .use(routeRegistration)
+    .use(routeLogin);
 
 router.post('/products', (req, res, next) => {
     const currentPage = req.body.page || 0
@@ -275,60 +279,6 @@ router.post('/order', (req, res, next) => {
         .catch(error => {
             console.log(error)
         })
-})
-
-router.use(routeRegistration);
-
-router.get('/auth', (req, res, next) => {
-        User.findOne({ email: req.body.email, password: req.body.password }, 'email admin')
-            .then(doc => {
-                if (doc) {
-                    const token = jwt.sign({
-                        exp: Math.floor(Date.now() / 1000) + (60 * 60),
-                        data: {
-                            id: doc._id,
-                            email: doc.email,
-                            admin: doc.admin
-                        }
-                    }, 'superSecretSecretSecret')
-                    res.json({ token, user: doc })
-                } else {
-                    res.json({ error: 'email or password incorrect' })
-                }
-            })
-            .catch(err => {
-                res.json(err)
-            })
-})
-
-router.get('/auth', (req, res, next) => {
-    const reqToken = req.get('Authorization').split(' ')[1]
-
-    jwt.verify(reqToken, 'superSecretSecretSecret', function (err, decoded) {
-        if (decoded) {
-            User.findOne({ email: decoded.data.email }, 'email admin')
-                .then(doc => {
-                    if (doc) {
-                        const token = jwt.sign({
-                            exp: Math.floor(Date.now() / 1000) + (60 * 60),
-                            data: {
-                                id: doc._id,
-                                email: doc.email,
-                                admin: doc.admin
-                            }
-                        }, 'superSecretSecretSecret')
-                        res.json({ token, user: doc })
-                    } else {
-                        res.json({ error: 'email or password incorrect' })
-                    }
-                })
-                .catch(err => {
-                    res.json(err)
-                })
-        } else {
-            console.log(err)
-        }
-    })
 })
 
 if (process.env.NODE_ENV === 'production') {

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/routes/login/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/registration/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/registration/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,19 +56,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server/routes" />
-      <recent name="$PROJECT_DIR$/src/modules/pages/SignUp" />
-      <recent name="$PROJECT_DIR$/src/modules/pages" />
-      <recent name="$PROJECT_DIR$/src/modules/common/components/FormField" />
-      <recent name="$PROJECT_DIR$/src/modules/common/components/Input" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/modules/common" />
       <recent name="$PROJECT_DIR$/src/app/components" />
       <recent name="$PROJECT_DIR$/src/app/store" />
       <recent name="$PROJECT_DIR$/src/app/service" />
       <recent name="$PROJECT_DIR$/src/app/reducer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/routes" />
+      <recent name="$PROJECT_DIR$/src/modules/pages/SignUp" />
+      <recent name="$PROJECT_DIR$/src/modules/pages" />
+      <recent name="$PROJECT_DIR$/src/modules/common/components/FormField" />
+      <recent name="$PROJECT_DIR$/src/modules/common/components/Input" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -106,7 +106,8 @@
       <workItem from="1606503144534" duration="5678000" />
       <workItem from="1606551004417" duration="35021000" />
       <workItem from="1606741940007" duration="11539000" />
-      <workItem from="1606833189094" duration="8741000" />
+      <workItem from="1606833189094" duration="9438000" />
+      <workItem from="1608218104414" duration="1355000" />
     </task>
     <servers />
   </component>
