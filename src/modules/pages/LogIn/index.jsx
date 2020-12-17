@@ -7,10 +7,12 @@ import { Layout } from "common/components/Layout";
 import { Formik } from "formik";
 import React from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import "./index.less";
 
 const LogIn = (): React$Node => {
     const dispatch = useDispatch();
+    const history = useHistory();
 
     return (
         <Layout withFooter={false}>
@@ -24,7 +26,13 @@ const LogIn = (): React$Node => {
                                 password: "",
                             }}
                             onSubmit={(values) => {
-                                dispatch(actionLogin({ data: values }));
+                                dispatch(actionLogin({ data: values })).then(
+                                    ({ errors }) => {
+                                        if (!errors) {
+                                            history.push("/");
+                                        }
+                                    }
+                                );
                             }}
                             validate={(values) => {
                                 const { email, password } = values;

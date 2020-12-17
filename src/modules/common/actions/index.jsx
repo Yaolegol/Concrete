@@ -38,8 +38,12 @@ export const actionLogin = ({ data: userData }) => async (
         } else {
             dispatch(actionLoginFail({ errors }));
         }
+
+        return { data, errors };
     } catch (error) {
         dispatch(actionLoginFail({ errors: error.message }));
+
+        return { errors: [error.message] };
     }
 };
 
