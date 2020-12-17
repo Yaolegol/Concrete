@@ -19,11 +19,13 @@ const perPage = 8
 const routeLogin = customRequire('server/routes/login');
 const routeProducts = customRequire('server/routes/products');
 const routeRegistration = customRequire('server/routes/registration');
+const routeUser = customRequire('server/routes/user');
 
 router
     .use(routeProducts)
     .use(routeRegistration)
-    .use(routeLogin);
+    .use(routeLogin)
+    .use(routeUser);
 
 router.post('/products', (req, res, next) => {
     const currentPage = req.body.page || 0
@@ -78,42 +80,6 @@ router.post('/products', (req, res, next) => {
         .catch(err => {
             console.log(err)
         })
-})
-
-router.get('/user_history', (req, res, next) => {
-    const reqToken = req.get('Authorization').split(' ')[1]
-
-    jwt.verify(reqToken, 'superSecretSecretSecret', function (err, decoded) {
-        if (decoded) {
-            // Orders
-            //     .find()
-            //     .populate('order.productID')
-            //     .then(doc => {
-            //         if (doc) {
-            //             res.json({ user: doc });
-            //         } else {
-            //             res.json({ error: 'history not found' });
-            //         }
-            //     })
-            //     .catch(err => {
-            //         res.json(err);
-            //     });
-            User.findOne({ email: decoded.data.email }, 'orders')
-                .populate({ path: 'orders.productID', select: 'title' })
-                .then(doc => {
-                    if (doc) {
-                        res.json({ user: doc })
-                    } else {
-                        res.json({ error: 'history not found' })
-                    }
-                })
-                .catch(err => {
-                    res.json(err)
-                })
-        } else {
-            console.log(err)
-        }
-    })
 })
 
 router.get('/admin_history', (req, res, next) => {
