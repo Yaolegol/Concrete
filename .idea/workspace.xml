@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/User/actions/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/User/components/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/User/components/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/User/constants/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/User/reducer/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/User/selectors/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/pages/User/service/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/LogIn/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/LogIn/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Main/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/pages/User" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -58,19 +60,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/pages/User" />
+      <recent name="$PROJECT_DIR$/src/modules/pages" />
+      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/server/routes" />
+      <recent name="$PROJECT_DIR$/src/modules/pages/SignUp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/pages/User/components" />
       <recent name="$PROJECT_DIR$/src/modules/common" />
       <recent name="$PROJECT_DIR$/src/app/components" />
       <recent name="$PROJECT_DIR$/src/app/store" />
       <recent name="$PROJECT_DIR$/src/app/service" />
-      <recent name="$PROJECT_DIR$/src/app/reducer" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/server/routes" />
-      <recent name="$PROJECT_DIR$/src/modules/pages/SignUp" />
-      <recent name="$PROJECT_DIR$/src/modules/pages" />
-      <recent name="$PROJECT_DIR$/src/modules/common/components/FormField" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -109,7 +111,8 @@
       <workItem from="1606551004417" duration="35021000" />
       <workItem from="1606741940007" duration="11539000" />
       <workItem from="1606833189094" duration="9438000" />
-      <workItem from="1608218104414" duration="6360000" />
+      <workItem from="1608218104414" duration="7086000" />
+      <workItem from="1608305368774" duration="1809000" />
     </task>
     <servers />
   </component>
