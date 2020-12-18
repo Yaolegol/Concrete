@@ -2,17 +2,30 @@
 import { logError } from "common/helpers/errors";
 
 type TProps = {
+    isPrivate?: boolean,
     options?: any,
     toJSON?: boolean,
     url: string,
 };
 
-export const request = async ({ options, toJSON = true, url }: TProps): any => {
-    console.log("options");
-    console.log(options);
+export const request = async ({
+    isPrivate,
+    options,
+    toJSON = true,
+    url,
+}: TProps): any => {
+    let token;
+
     try {
+        if (isPrivate) {
+            token = localStorage.getItem("token");
+        }
         const response = await fetch(url, {
             ...options,
+            headers: {
+                ...options.headers,
+                Authorization: `Bearer ${token}`,
+            },
         });
         return await handleResponse({ response, toJSON });
     } catch (error) {

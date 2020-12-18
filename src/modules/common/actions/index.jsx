@@ -35,6 +35,7 @@ export const actionLogin = ({ data: userData }) => async (
 
         if (!errors) {
             dispatch(actionLoginSuccess(data));
+            localStorage.setItem("token", data.token);
         } else {
             dispatch(actionLoginFail({ errors }));
         }

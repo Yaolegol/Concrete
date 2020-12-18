@@ -12,11 +12,11 @@ router.post('/login', (req, res, next) => {
             if (doc) {
                 const token = jwt.sign({
                     exp: Date.now() + 60 * 60 * 1000,
+                    id: doc._id,
                 }, 'superSecretSecretSecret')
 
                 res.json({
                     data: {
-                        id: doc._id,
                         token,
                     },
                 })

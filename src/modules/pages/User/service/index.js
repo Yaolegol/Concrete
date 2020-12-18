@@ -2,5 +2,14 @@
 import { request } from "app/service";
 
 export const getUser = () => {
-    return request({ url: "http://localhost:8000/user" });
+    return request({
+        isPrivate: true,
+        options: {
+            headers: {
+                "Content-Type": "application/json",
+            },
+            method: "GET",
+        },
+        url: "http://localhost:8000/user",
+    });
 };
