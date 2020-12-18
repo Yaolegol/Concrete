@@ -1,10 +1,16 @@
 // @flow
-import { Layout } from "src/modules/common/components/Layout";
+import { Layout } from "common/components/Layout";
+import { actionGetUser } from "pages/User/actions";
 import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import "./index.less";
 
 export const UserPage = () => {
-    useEffect(() => {}, []);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(actionGetUser());
+    }, [dispatch]);
 
     return (
         <Layout>
