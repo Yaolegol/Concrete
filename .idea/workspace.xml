@@ -27,16 +27,18 @@
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/CustomIntl/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/components/CustomIntl/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/CustomProvider/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/components/CustomProvider/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/reducer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/store/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/constants/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/constants/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/common/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/User/service/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/actions/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/User/components/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/constants/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/reducer/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/selectors/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/service/index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/pages/User" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -95,9 +97,9 @@
       <recent name="$PROJECT_DIR$/src/app/store" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/modules/pages/User" />
       <recent name="$PROJECT_DIR$/src/modules/pages" />
-      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/server/routes" />
       <recent name="$PROJECT_DIR$/src/modules/pages/SignUp" />
     </key>
@@ -140,7 +142,7 @@
       <workItem from="1606833189094" duration="9438000" />
       <workItem from="1608218104414" duration="7086000" />
       <workItem from="1608305368774" duration="8764000" />
-      <workItem from="1608405012185" duration="978000" />
+      <workItem from="1608405012185" duration="1691000" />
     </task>
     <servers />
   </component>

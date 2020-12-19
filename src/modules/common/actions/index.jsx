@@ -1,7 +1,10 @@
 // @flow
 import { COMMON_ACTION_TYPES } from "common/constants";
-import { loginRequest, registrationRequest } from "common/service";
+import { getUser, loginRequest, registrationRequest } from "common/service";
 const {
+    GET_USER_FAIL,
+    GET_USER_START,
+    GET_USER_SUCCESS,
     LOGIN_FAIL,
     LOGIN_START,
     LOGIN_SUCCESS,
@@ -11,6 +14,32 @@ const {
     SIGNUP_START,
     SIGNUP_SUCCESS,
 } = COMMON_ACTION_TYPES;
+
+const actionGetUserFail = (errors) => (dispatch) => {
+    dispatch({ data: errors, type: GET_USER_FAIL });
+};
+const actionGetUserStart = () => (dispatch) => {
+    dispatch({ type: GET_USER_START });
+};
+const actionGetUserSuccess = (data) => (dispatch) => {
+    dispatch({ data, type: GET_USER_SUCCESS });
+};
+
+export const actionGetUser = () => async (dispatch, getState) => {
+    dispatch(actionGetUserStart());
+
+    try {
+        const { data, errors } = await getUser();
+
+        if (!errors) {
+            dispatch(actionGetUserSuccess(data));
+        } else {
+            dispatch(actionGetUserFail(errors));
+        }
+    } catch (error) {
+        dispatch(actionGetUserFail([error]));
+    }
+};
 
 const actionLoginFail = (errors) => (dispatch) => {
     dispatch({ data: errors, type: LOGIN_FAIL });

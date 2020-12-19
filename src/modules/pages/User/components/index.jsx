@@ -1,6 +1,6 @@
 // @flow
 import { Layout } from "common/components/Layout";
-import { actionGetUser } from "pages/User/actions";
+import { actionGetUser } from "common/actions";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import "./index.less";
