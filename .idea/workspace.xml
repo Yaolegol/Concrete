@@ -27,8 +27,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/text.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/text.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/components/Menu/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/common/constants/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/constants/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/LogIn/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/LogIn/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/helpers/object.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/helpers/object.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +137,7 @@
       <workItem from="1606833189094" duration="9438000" />
       <workItem from="1608218104414" duration="7086000" />
       <workItem from="1608305368774" duration="8764000" />
-      <workItem from="1608405012185" duration="3018000" />
+      <workItem from="1608405012185" duration="5109000" />
     </task>
     <servers />
   </component>
@@ -192,10 +197,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="211" y="27" width="1344" height="781" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1604828748913" />
-    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1608405983466">
+    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1608409332135">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1608405983466" />
+    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1608409332135" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1606552442839">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

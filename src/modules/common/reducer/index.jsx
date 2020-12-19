@@ -8,6 +8,7 @@ const {
     LOGIN_FAIL,
     LOGIN_START,
     LOGIN_SUCCESS,
+    LOGOUT,
     SELECT_LANG,
     SHOW_MOBILE_MENU,
     SIGNUP_FAIL,
@@ -69,6 +70,11 @@ export const commonReducer = (state = initialState, action) => {
                     errors: [],
                     ...data,
                 },
+            };
+        case LOGOUT:
+            return {
+                ...state,
+                user: {},
             };
         case SELECT_LANG:
             return {

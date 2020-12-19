@@ -1,12 +1,9 @@
 // @flow
+import { isObjectEmpty } from "common/helpers/object";
 import { createSelector } from "reselect";
 
 const getCommonState = (state) => {
     return state.common;
-};
-
-const getUserState = (state) => {
-    return state.user;
 };
 
 export const selectLocale = (createSelector(
@@ -29,4 +26,9 @@ export const selectMobileMenuShowStatus = (createSelector(
     ({ isShow }) => isShow
 ): any);
 
-export const selectUser = createSelector([getUserState], (user) => user);
+export const selectUser = (createSelector([getCommonState], ({ user }) => {
+    if (isObjectEmpty(user)) {
+        return null;
+    }
+    return { ...user };
+}): any);

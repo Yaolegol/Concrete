@@ -8,6 +8,7 @@ const {
     LOGIN_FAIL,
     LOGIN_START,
     LOGIN_SUCCESS,
+    LOGOUT,
     SELECT_LANG,
     SHOW_MOBILE_MENU,
     SIGNUP_FAIL,
@@ -75,6 +76,11 @@ export const actionLogin = ({ data: userData }) => async (
 
         return { errors: [error.message] };
     }
+};
+
+export const actionLogout = () => (dispatch, getState) => {
+    localStorage.removeItem("token");
+    dispatch({ type: LOGOUT });
 };
 
 export const actionSelectLang = (lang: string) => (dispatch, getState) => {
