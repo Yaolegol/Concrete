@@ -1,5 +1,5 @@
 // @flow
-import { actionLogin } from "common/actions";
+import { actionGetUser, actionLogin } from "common/actions";
 import { Button } from "common/components/Button";
 import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
@@ -29,6 +29,7 @@ const LogIn = (): React$Node => {
                                 dispatch(actionLogin({ data: values })).then(
                                     ({ errors }) => {
                                         if (!errors) {
+                                            dispatch(actionGetUser());
                                             history.push("/");
                                         }
                                     }
