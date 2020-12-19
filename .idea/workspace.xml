@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:dev" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/registration/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/registration/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/user/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reducer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/User/service/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,12 +131,37 @@
       <workItem from="1606741940007" duration="11539000" />
       <workItem from="1606833189094" duration="9438000" />
       <workItem from="1608218104414" duration="7086000" />
-      <workItem from="1608305368774" duration="4376000" />
+      <workItem from="1608305368774" duration="8764000" />
+      <workItem from="1608405012185" duration="52000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="433" y="111" width="1250" height="633" key="#ESLint" timestamp="1606496640471">
@@ -133,6 +176,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="729" y="390" width="518" height="325" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1604070015507" />
+    <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1608311293112">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="167" y="125" width="1653" height="855" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1608311293112" />
     <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl" timestamp="1604740976965">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -145,10 +192,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="211" y="27" width="1344" height="781" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1604828748913" />
-    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1608308690868">
+    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1608310711418">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1608308690868" />
+    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1608310711418" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1606552442839">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

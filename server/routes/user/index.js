@@ -8,11 +8,10 @@ const router = express.Router()
 router.get('/user', (req, res, next) => {
     const reqToken = req.get('Authorization').split(' ')[1]
 
-    jwt.verify(reqToken, 'superSecretSecretSecret', (err, decoded) => {
-        console.log('decoded')
-        console.log(decoded)
-        if (decoded) {
-            User.findOne({ _id: decoded.id })
+    jwt.verify(reqToken, 'superSecretSecretSecret', (err, tokenData) => {
+        if (tokenData) {
+            User.findOne({ _id: tokenData.id })
+                .populate('orders.productID')
                 .then(doc => {
                     if (doc) {
                         res.json({
