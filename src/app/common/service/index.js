@@ -14,7 +14,6 @@ export const request = async ({
     toJSON = true,
     url,
 }: TProps): any => {
-    let token;
     let headers = {};
 
     if (options.headers) {
@@ -23,18 +22,19 @@ export const request = async ({
         };
     }
 
-    try {
-        if (isPrivate) {
-            token = localStorage.getItem("token");
-            if (!token) {
-                logError("Token not found", "request");
-                return;
-            }
-            headers = {
-                ...headers,
-                Authorization: `Bearer ${token}`,
-            };
+    if (isPrivate) {
+        const token = localStorage.getItem("token");
+        if (!token) {
+            logError("Token not found", "request");
+            return;
         }
+        headers = {
+            ...headers,
+            Authorization: `Bearer ${token}`,
+        };
+    }
+
+    try {
         const response = await fetch(url, {
             ...options,
             headers: {
