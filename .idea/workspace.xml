@@ -27,18 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/common/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/reducer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/constants/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/constants/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/actions/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/User/components/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/constants/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/reducer/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/selectors/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/service/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +131,7 @@
       <workItem from="1606833189094" duration="9438000" />
       <workItem from="1608218104414" duration="7086000" />
       <workItem from="1608305368774" duration="8764000" />
-      <workItem from="1608405012185" duration="1691000" />
+      <workItem from="1608405012185" duration="1888000" />
     </task>
     <servers />
   </component>
