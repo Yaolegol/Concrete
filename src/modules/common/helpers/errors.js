@@ -1,6 +1,5 @@
 // @flow
-
 export const logError = (error: any, where: string): void => {
-    console.info(module);
+    console.info(where);
     console.error(error);
 };

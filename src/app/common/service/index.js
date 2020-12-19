@@ -19,6 +19,10 @@ export const request = async ({
     try {
         if (isPrivate) {
             token = localStorage.getItem("token");
+            if (!token) {
+                logError("Token not found", "request");
+                return;
+            }
         }
         const response = await fetch(url, {
             ...options,
