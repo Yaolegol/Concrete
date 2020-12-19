@@ -3,6 +3,7 @@ import { actionGetUser } from "common/actions";
 import { MainPage } from "pages/Main";
 import CartPage from "pages/Cart";
 import LogIn from "pages/LogIn";
+import { ProfilePage } from "pages/Profile";
 import ShopPage from "pages/Shop";
 import SignUp from "pages/SignUp";
 import { UserPage } from "pages/User/components";
@@ -21,20 +22,23 @@ const App = () => {
     return (
         <Router>
             <Switch>
-                <Route path="/shop">
-                    <ShopPage />
-                </Route>
-                <Route path="/user">
-                    <UserPage />
-                </Route>
                 <Route path="/cart">
                     <CartPage />
                 </Route>
                 <Route path="/login">
                     <LogIn />
                 </Route>
+                <Route path="/profile">
+                    <ProfilePage />
+                </Route>
+                <Route path="/shop">
+                    <ShopPage />
+                </Route>
                 <Route path="/signup">
                     <SignUp />
+                </Route>
+                <Route path="/user">
+                    <UserPage />
                 </Route>
                 <Route path="/">
                     <MainPage />

@@ -1,0 +1,30 @@
+.cart-page {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+
+    &__content-container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        max-width: 1200px;
+    }
+
+    &__content-section {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &__content-item {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    &__title {
+        margin-top: 100px;
+    }
+}

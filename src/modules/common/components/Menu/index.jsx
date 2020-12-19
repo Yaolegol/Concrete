@@ -24,7 +24,7 @@ export const Menu = ({ className }: TProps): React$Node => {
     const registeredLinks = useMemo(() => {
         return (
             <>
-                <Link to="/signup">
+                <Link to="/profile">
                     <MenuItem>
                         <FormattedMessage id="common.menu.profile" />
                     </MenuItem>
