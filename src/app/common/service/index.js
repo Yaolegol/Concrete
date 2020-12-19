@@ -10,11 +10,18 @@ type TProps = {
 
 export const request = async ({
     isPrivate,
-    options,
+    options = {},
     toJSON = true,
     url,
 }: TProps): any => {
     let token;
+    let headers = {};
+
+    if (options.headers) {
+        headers = {
+            ...options.headers,
+        };
+    }
 
     try {
         if (isPrivate) {
@@ -23,12 +30,15 @@ export const request = async ({
                 logError("Token not found", "request");
                 return;
             }
+            headers = {
+                ...headers,
+                Authorization: `Bearer ${token}`,
+            };
         }
         const response = await fetch(url, {
             ...options,
             headers: {
-                ...options.headers,
-                Authorization: `Bearer ${token}`,
+                ...headers,
             },
         });
         return await handleResponse({ response, toJSON });
