@@ -1,7 +1,6 @@
 // @flow
 import cn from "classnames";
 import { actionLogout } from "common/actions";
-import { Button } from "common/components/Button";
 import { MenuItem } from "common/components/Menu/MenuItem";
 import { selectUser } from "common/selectors";
 import React, { useCallback, useMemo } from "react";
@@ -30,14 +29,14 @@ export const Menu = ({ className }: TProps): React$Node => {
                         <FormattedMessage id="common.menu.profile" />
                     </MenuItem>
                 </Link>
-                <Button onClick={logout}>
+                <button className="menu__button" onClick={logout}>
                     <MenuItem>
                         <FormattedMessage id="common.menu.logOut" />
                     </MenuItem>
-                </Button>
+                </button>
             </>
         );
-    }, []);
+    }, [logout]);
 
     const unregisteredLinks = useMemo(() => {
         return (

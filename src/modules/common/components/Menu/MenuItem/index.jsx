@@ -13,7 +13,7 @@ export const MenuItem = ({
     className,
     ...rest
 }: TProps): React$Node => (
-    <span className={cn("menu-item", className)} {...rest}>
+    <span {...rest} className={cn("menu-item", className)}>
         {children}
     </span>
 );
