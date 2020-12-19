@@ -1,5 +1,5 @@
 // @flow
-import { rootReducer } from "app/reducer";
+import { rootReducer } from "app/common/reducer";
 import { applyMiddleware, compose, createStore } from "redux";
 import thunk from "redux-thunk";
 

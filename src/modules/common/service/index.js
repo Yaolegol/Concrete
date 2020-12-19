@@ -1,5 +1,5 @@
 // @flow
-import { request } from "app/service";
+import { request } from "app/common/service";
 
 export const loginRequest = ({ data }) => {
     return request({

@@ -27,8 +27,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/user/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/CustomIntl/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/components/CustomIntl/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/CustomProvider/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/components/CustomProvider/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/service/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/store/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/service/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Shop/service/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/User/service/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,19 +87,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/common" />
+      <recent name="$PROJECT_DIR$/src/modules/pages/User/components" />
+      <recent name="$PROJECT_DIR$/src/modules/common" />
+      <recent name="$PROJECT_DIR$/src/app/components" />
+      <recent name="$PROJECT_DIR$/src/app/store" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/modules/pages/User" />
       <recent name="$PROJECT_DIR$/src/modules/pages" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/server/routes" />
       <recent name="$PROJECT_DIR$/src/modules/pages/SignUp" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/modules/pages/User/components" />
-      <recent name="$PROJECT_DIR$/src/modules/common" />
-      <recent name="$PROJECT_DIR$/src/app/components" />
-      <recent name="$PROJECT_DIR$/src/app/store" />
-      <recent name="$PROJECT_DIR$/src/app/service" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -132,7 +140,7 @@
       <workItem from="1606833189094" duration="9438000" />
       <workItem from="1608218104414" duration="7086000" />
       <workItem from="1608305368774" duration="8764000" />
-      <workItem from="1608405012185" duration="52000" />
+      <workItem from="1608405012185" duration="978000" />
     </task>
     <servers />
   </component>
@@ -192,10 +200,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="211" y="27" width="1344" height="781" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1604828748913" />
-    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1608310711418">
+    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1608405983466">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1608310711418" />
+    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1608405983466" />
     <state x="657" y="253" key="run.anything.popup" timestamp="1606552442839">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
