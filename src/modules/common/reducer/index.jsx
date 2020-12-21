@@ -47,7 +47,7 @@ export const commonReducer = (state = initialState, action) => {
                 ...state,
                 user: {
                     ...state.user,
-                    ...data,
+                    ...data.user,
                 },
             };
         case LOGIN_FAIL:
