@@ -1,11 +1,12 @@
 // @flow
+import { Button } from "common/components/Button";
 import { Layout } from "common/components/Layout";
 import { OrderHeader } from "common/components/Order/OrderHeader";
 import { OrderItem } from "common/components/Order/OrderItem";
 import { CartEmpty } from "pages/Cart/components/CartEmpty";
 import { selectCartProductsData } from "pages/Cart/selectors";
 import type { TCartProductsData } from "pages/Cart/types";
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import { connect } from "react-redux";
 import "./index.less";
 
@@ -57,11 +58,18 @@ const CartPage = ({ cartProductsData }: TProps) => {
         );
     }, [contentItems, empty]);
 
+    const handleBuy = useCallback(() => {
+
+    }, [])
+
     return (
         <Layout>
             <div className="cart-page">
                 <h1 className="cart-page__title">Cart</h1>
                 {content}
+                <div>
+                    <Button onClick={handleBuy}>Buy</Button>
+                </div>
             </div>
         </Layout>
     );
