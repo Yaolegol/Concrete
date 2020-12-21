@@ -1,6 +1,6 @@
 // @flow
-import React from 'react'
-import './index.less'
+import React from "react";
+import "./index.less";
 
 type TProps = {
     alt?: string,
@@ -9,18 +9,26 @@ type TProps = {
     price: number,
     src: string,
     title: string,
-    totalPrice: number
-}
+    totalPrice: number,
+};
 
-export const CartItem = ({ alt = '', countInCart, description, price, src, title, totalPrice }: TProps) => {
+export const OrderItem = ({
+    alt = "",
+    countInCart,
+    description,
+    price,
+    src,
+    title,
+    totalPrice,
+}: TProps) => {
     return (
-        <div className='cart-item'>
-            <img src={src} alt=""/>
+        <div className="order-item">
+            <img src={src} alt="" />
             <h4>{title}</h4>
             <p>{description}</p>
             <p>{price}</p>
             <p>{countInCart}</p>
             <p>{totalPrice}</p>
         </div>
-    )
-}
+    );
+};

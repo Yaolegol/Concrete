@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
-const OrderedProducts = require('./OrderedProducts');
+const Order = require('./Order');
 const Schema = mongoose.Schema;
 
 const Orders = new Schema({
-    order: {
-        type: [OrderedProducts.OrderedProducts],
-    },
     email: {
         type: String,
         required: true
+    },
+    order: {
+        type: [Order],
     },
     user: {
         type: Array

@@ -1,26 +1,23 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const OrderedProducts = require('./OrderedProducts');
+const Order = require('./Order');
 
 const User = new Schema({
-    email: {
-        type: String,
-        required: true
+    admin: {
+        default: false,
+        type: Boolean,
     },
-    password: {
-        type: String,
-        required: true
+    email: {
+        required: true,
+        type: String
     },
     orders: {
-        type: [[OrderedProducts.OrderedProducts]],        
+        type: [Order],
     },
-    // orders: {
-    //     type: Array
-    // },
-    admin: {
-        type: Boolean,
-        default: false
-    }
+    password: {
+        required: true,
+        type: String
+    },
 });
 
 module.exports = mongoose.model('user', User);
