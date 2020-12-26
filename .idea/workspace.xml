@@ -26,8 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/schemes/userOrder/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/purchase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/purchase/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/schemes/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/schemes/user/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Cart/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +64,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/schemes" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -76,11 +79,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/schemes" />
       <recent name="$PROJECT_DIR$/server/models" />
       <recent name="$PROJECT_DIR$/server/schemes/user" />
       <recent name="$PROJECT_DIR$/server/schemes/purchase" />
       <recent name="$PROJECT_DIR$/server/schemes/product" />
-      <recent name="$PROJECT_DIR$/server/schemes/order" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/modules/common/components/Order/OrderItem" />
@@ -133,7 +136,7 @@
       <workItem from="1608910171231" duration="60000" />
       <workItem from="1608910549244" duration="50000" />
       <workItem from="1608910801989" duration="2476000" />
-      <workItem from="1608990275237" duration="12638000" />
+      <workItem from="1608990275237" duration="17600000" />
     </task>
     <servers />
   </component>

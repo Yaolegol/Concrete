@@ -18,7 +18,10 @@ router.post('/purchase', (req, res, next) => {
             UsersModel.findOne({email})
                 .then(user => {
                     if (user) {
-                        user.purchases.push(purchase)
+                        user.purchases.push({
+                            id: _purchase._id,
+                            purchase,
+                        })
                         user.save()
                             .then(_user => {
                                 res.json({
@@ -32,12 +35,13 @@ router.post('/purchase', (req, res, next) => {
                                     errors: [error]
                                 })
                             })
+                    } else {
+                        res.json({
+                            data: {
+                                success: true,
+                            }
+                        })
                     }
-                    res.json({
-                        data: {
-                            success: true,
-                        }
-                    })
                 })
                 .catch(error => {
                     res.json({

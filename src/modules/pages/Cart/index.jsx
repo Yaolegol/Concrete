@@ -3,6 +3,7 @@ import { Button } from "common/components/Button";
 import { Layout } from "common/components/Layout";
 import { OrderHeader } from "common/components/Order/OrderHeader";
 import { OrderItem } from "common/components/Order/OrderItem";
+import { selectUser } from "common/selectors";
 import { actionBuyProducts } from "pages/Cart/actions";
 import { CartEmpty } from "pages/Cart/components/CartEmpty";
 import { selectCartProductsData } from "pages/Cart/selectors";
@@ -14,9 +15,10 @@ import "./index.less";
 type TProps = {
     cartProductsData: TCartProductsData,
     dispatch: any,
+    user: any,
 };
 
-const CartPage = ({ cartProductsData, dispatch }: TProps) => {
+const CartPage = ({ cartProductsData, dispatch, user }: TProps) => {
     const contentItems = useMemo(() => {
         return cartProductsData.map(
             ({
@@ -77,7 +79,8 @@ const CartPage = ({ cartProductsData, dispatch }: TProps) => {
 
         dispatch(
             actionBuyProducts({
-                email: "hardcode@email.ru",
+                // TODO add input for email
+                email: user ? user.email : "hardcode@email.ru",
                 purchase,
             })
         );
@@ -98,4 +101,5 @@ const CartPage = ({ cartProductsData, dispatch }: TProps) => {
 
 export default (connect((state) => ({
     cartProductsData: selectCartProductsData(state),
+    user: selectUser(state),
 }))(CartPage): any);

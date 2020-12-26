@@ -1,5 +1,5 @@
 const customRequire = require('app-root-path').require;
-const orderSchema = customRequire('server/schemes/order');
+const userOrderSchema = customRequire('server/schemes/userOrder');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -17,7 +17,7 @@ const userSchema = new Schema({
         type: String
     },
     purchases: {
-        type: [orderSchema],
+        type: [userOrderSchema]
     },
 });
 
