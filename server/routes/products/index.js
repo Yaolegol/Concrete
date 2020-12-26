@@ -1,6 +1,6 @@
 const customRequire = require('app-root-path').require;
+const ProductsModel = customRequire('server/models/product');
 const express = require('express')
-const Product = customRequire('server/models/Product')
 
 const router = express.Router();
 const perPage = 8;
@@ -9,13 +9,13 @@ router.get('/products', (req, res, next) => {
     const currentPage = req.body.page || 0
     const skip = currentPage * perPage
 
-    Product
+    ProductsModel
         .find(null, null, {
             skip: skip,
             limit: perPage
         })
         .then(products => {
-            Product
+            ProductsModel
                 .count()
                 .then(count => {
                     res.json({

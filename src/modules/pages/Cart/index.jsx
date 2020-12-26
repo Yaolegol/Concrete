@@ -3,6 +3,7 @@ import { Button } from "common/components/Button";
 import { Layout } from "common/components/Layout";
 import { OrderHeader } from "common/components/Order/OrderHeader";
 import { OrderItem } from "common/components/Order/OrderItem";
+import { actionBuyProducts } from "pages/Cart/actions";
 import { CartEmpty } from "pages/Cart/components/CartEmpty";
 import { selectCartProductsData } from "pages/Cart/selectors";
 import type { TCartProductsData } from "pages/Cart/types";
@@ -12,9 +13,10 @@ import "./index.less";
 
 type TProps = {
     cartProductsData: TCartProductsData,
+    dispatch: any,
 };
 
-const CartPage = ({ cartProductsData }: TProps) => {
+const CartPage = ({ cartProductsData, dispatch }: TProps) => {
     const contentItems = useMemo(() => {
         return cartProductsData.map(
             ({
@@ -58,9 +60,28 @@ const CartPage = ({ cartProductsData }: TProps) => {
         );
     }, [contentItems, empty]);
 
-    const handleBuy = useCallback(() => {
+    console.log("cartProductsData");
+    console.log(cartProductsData);
 
-    }, [])
+    const handleBuy = useCallback(() => {
+        const purchase = cartProductsData.map(
+            ({ _id, countInCart, price, totalPrice }) => {
+                return {
+                    count: countInCart,
+                    productID: _id,
+                    price,
+                    sum: totalPrice,
+                };
+            }
+        );
+
+        dispatch(
+            actionBuyProducts({
+                email: "hardcode@email.ru",
+                purchase,
+            })
+        );
+    }, [cartProductsData, dispatch]);
 
     return (
         <Layout>
@@ -75,6 +96,6 @@ const CartPage = ({ cartProductsData }: TProps) => {
     );
 };
 
-export default connect((state) => ({
+export default (connect((state) => ({
     cartProductsData: selectCartProductsData(state),
-}))(CartPage);
+}))(CartPage): any);

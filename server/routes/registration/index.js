@@ -1,15 +1,15 @@
 const customRequire = require('app-root-path').require;
+const UsersModel = customRequire('server/models/user');
 const express = require('express')
 const jwt = require('jsonwebtoken')
-const User = customRequire('server/models/User')
 
 const router = express.Router()
 
 router.post('/registration', (req, res, next) => {
-    User.findOne({ email: req.body.email })
+    UsersModel.findOne({ email: req.body.email })
         .then((doc) => {
             if (!doc) {
-                const user = new User(req.body)
+                const user = new UsersModel(req.body)
                 user.save()
                     .then((user) => {
                         const token = jwt.sign({

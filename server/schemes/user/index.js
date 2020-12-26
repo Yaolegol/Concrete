@@ -1,8 +1,9 @@
+const customRequire = require('app-root-path').require;
+const orderSchema = customRequire('server/schemes/order');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const Order = require('./Order');
 
-const User = new Schema({
+const userSchema = new Schema({
     admin: {
         default: false,
         type: Boolean,
@@ -11,13 +12,13 @@ const User = new Schema({
         required: true,
         type: String
     },
-    orders: {
-        type: [Order],
-    },
     password: {
         required: true,
         type: String
     },
+    purchases: {
+        type: [orderSchema],
+    },
 });
 
-module.exports = mongoose.model('user', User);
+module.exports = userSchema;

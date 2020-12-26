@@ -26,11 +26,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modules/pages/Cart/service/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/purchase/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/purchase/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/schemes/product/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/schemes/purchase/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/schemes/user/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Cart/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/constants/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Cart/constants/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/Order.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/schemes/order/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/Orders.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/product/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/user/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/products/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/products/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/registration/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/registration/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/user/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Cart/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Cart/selectors/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/Cart/service/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,10 +67,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
     <exe-path>$PROJECT_DIR$/node_modules/flow-bin</exe-path>
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1j15GkEIo36vaaCXJTrevVjDdNk" />
   <component name="ProjectViewState">
@@ -67,7 +78,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/pages/Cart" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/models" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -82,11 +93,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/modules/pages/Cart" />
-      <recent name="$PROJECT_DIR$/src/modules/common/components/Order" />
-      <recent name="$PROJECT_DIR$/src/modules/common/components/OrderItem" />
       <recent name="$PROJECT_DIR$/server/models" />
-      <recent name="$PROJECT_DIR$/src/modules/pages" />
+      <recent name="$PROJECT_DIR$/server/schemes/user" />
+      <recent name="$PROJECT_DIR$/server/schemes/purchase" />
+      <recent name="$PROJECT_DIR$/server/schemes/product" />
+      <recent name="$PROJECT_DIR$/server/schemes/order" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/modules/common/components/Order/OrderItem" />
@@ -135,7 +146,11 @@
       <workItem from="1608218104414" duration="7086000" />
       <workItem from="1608305368774" duration="8764000" />
       <workItem from="1608405012185" duration="7599000" />
-      <workItem from="1608563236547" duration="4439000" />
+      <workItem from="1608563236547" duration="5066000" />
+      <workItem from="1608910171231" duration="60000" />
+      <workItem from="1608910549244" duration="50000" />
+      <workItem from="1608910801989" duration="2476000" />
+      <workItem from="1608990275237" duration="11552000" />
     </task>
     <servers />
   </component>
@@ -165,47 +180,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="433" y="111" width="1250" height="633" key="#ESLint" timestamp="1606496640471">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="433" y="111" width="1250" height="633" key="#ESLint/67.27.1853.1053@67.27.1853.1053" timestamp="1606496640471" />
-    <state x="672" y="354" width="632" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606551632335">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="672" y="354" width="632" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1606551632335" />
-    <state x="729" y="390" width="518" height="325" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1604070015507">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="729" y="390" width="518" height="325" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1604070015507" />
-    <state x="167" y="125" width="1653" height="855" key="DiffContextDialog" timestamp="1608311293112">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="167" y="125" width="1653" height="855" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1608311293112" />
-    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl" timestamp="1604740976965">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="776" y="310" width="501" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1604740976965" />
-    <state x="482" y="187" key="SettingsEditor" timestamp="1606551927743">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1606551927743" />
-    <state x="211" y="27" width="1344" height="781" key="dock-window-1" timestamp="1604828748913">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="211" y="27" width="1344" height="781" key="dock-window-1/67.27.1853.1053@67.27.1853.1053" timestamp="1604828748913" />
-    <state x="156" y="93" width="1595" height="703" key="find.popup" timestamp="1608567662494">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="156" y="93" width="1595" height="703" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1608567662494" />
-    <state x="657" y="253" key="run.anything.popup" timestamp="1606552442839">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1606552442839" />
-    <state x="718" y="466" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1606496515211">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="718" y="466" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1606496515211" />
   </component>
 </project>

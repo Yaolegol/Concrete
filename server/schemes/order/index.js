@@ -1,12 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const Order = new Schema({
+const orderSchema = new Schema({
     count: {
         required: true,
-        type: Number
-    },
-    number: {
         type: Number
     },
     price: {
@@ -21,7 +18,7 @@ const Order = new Schema({
     sum: {
         required: true,
         type: Number
-    }
+    },
 });
 
-module.exports = Order;
+module.exports = orderSchema;

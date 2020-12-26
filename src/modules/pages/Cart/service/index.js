@@ -10,6 +10,6 @@ export const buyProducts = (products) => {
             },
             method: "POST",
         },
-        url: "http://localhost:8000/buy",
+        url: "http://localhost:8000/purchase",
     });
 };

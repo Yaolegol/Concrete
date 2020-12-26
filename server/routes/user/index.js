@@ -1,7 +1,7 @@
 const customRequire = require('app-root-path').require;
+const UsersModel = customRequire('server/models/user');
 const express = require('express')
 const jwt = require('jsonwebtoken')
-const User = customRequire('server/models/User')
 
 const router = express.Router()
 
@@ -10,7 +10,7 @@ router.get('/user', (req, res, next) => {
 
     jwt.verify(reqToken, 'superSecretSecretSecret', (err, tokenData) => {
         if (tokenData) {
-            User.findOne({ _id: tokenData.id })
+            UsersModel.findOne({ _id: tokenData.id })
                 .populate('orders.productID')
                 .then(doc => {
                     if (doc) {

@@ -27,7 +27,10 @@ export const selectMobileMenuShowStatus = (createSelector(
 ): any);
 
 export const selectUser = (createSelector([getCommonState], ({ user }) => {
-    return { ...user };
+    if (!isObjectEmpty(user)) {
+        return { ...user };
+    }
+    return null;
 }): any);
 
 export const selectUserOrders = (createSelector([selectUser], ({ orders }) => {
