@@ -50,6 +50,7 @@ export const actionLogin = ({ data: userData }) => async (
 
 export const actionLogout = () => (dispatch, getState) => {
     localStorage.removeItem("token");
+    window.location.href = "/";
     dispatch({ type: LOGOUT });
 };
 
