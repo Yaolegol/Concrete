@@ -1,5 +1,5 @@
 // @flow
-import { SHOP_ACTION_TYPES } from 'pages/Shop/constants'
+import { SHOP_ACTION_TYPES } from 'modules/Shop/constants'
 
 const initialState = {
     errors: [],

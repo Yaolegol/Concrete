@@ -1,6 +1,6 @@
 // @flow
-import { CART_ACTION_TYPES } from "pages/Cart/constants";
-import { buyProducts } from "../service";
+import { CART_ACTION_TYPES } from "modules/Cart/constants";
+import { buyProducts } from "modules/Cart/service";
 
 const {
     BUY_PRODUCTS_FAIL,

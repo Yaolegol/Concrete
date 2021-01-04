@@ -1,6 +1,6 @@
 // @flow
-import { SHOP_ACTION_TYPES } from "pages/Shop/constants";
-import { getProducts } from "pages/Shop/service";
+import { SHOP_ACTION_TYPES } from "modules/Shop/constants";
+import { getProducts } from "modules/Shop/service";
 
 const {
     GET_PRODUCTS_FAIL,
