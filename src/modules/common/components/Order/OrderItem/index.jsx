@@ -23,7 +23,7 @@ export const OrderItem = ({
 }: TProps) => {
     return (
         <div className="order-item">
-            <img src={src} alt="" />
+            <img alt={title} className="order-item__image" src={src} />
             <h4>{title}</h4>
             <p>{description}</p>
             <p>{price}</p>

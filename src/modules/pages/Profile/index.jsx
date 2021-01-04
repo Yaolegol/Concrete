@@ -60,7 +60,9 @@ export const ProfilePage = () => {
         <Layout>
             <div className="profile-page">
                 <h1 className="profile-page__title">Profile</h1>
-                <h4 className="profile-page__orders-title">Your orders</h4>
+                <h4 className="profile-page__orders-history-title">
+                    Orders history
+                </h4>
                 {content}
             </div>
         </Layout>
