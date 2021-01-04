@@ -4,7 +4,7 @@ import { Layout } from "common/components/Layout";
 import { OrderHeader } from "common/components/Order/OrderHeader";
 import { OrderItem } from "common/components/Order/OrderItem";
 import { selectUserPurchases } from "common/selectors";
-import { CartEmpty } from "../Cart/components/CartEmpty";
+import { CartEmpty } from "modules/Cart/components/CartEmpty";
 import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./index.less";

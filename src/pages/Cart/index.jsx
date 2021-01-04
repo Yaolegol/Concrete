@@ -1,16 +1,15 @@
 // @flow
-import { actionGetUser } from "common/actions";
 import { Button } from "common/components/Button";
 import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
 import { Layout } from "common/components/Layout";
 import { OrderHeader } from "common/components/Order/OrderHeader";
 import { OrderItem } from "common/components/Order/OrderItem";
-import { selectUser } from "common/selectors";
-import { actionBuyProducts, actionResetCart } from "pages/Cart/actions";
-import { CartEmpty } from "pages/Cart/components/CartEmpty";
-import { selectCartProductsData } from "pages/Cart/selectors";
-import type { TCartProductsData } from "pages/Cart/types";
+import { selectUser } from "modules/User/selectors";
+import { actionBuyProducts, actionResetCart } from "modules/Cart/actions";
+import { CartEmpty } from "modules/Cart/components/CartEmpty";
+import { selectCartProductsData } from "modules/Cart/selectors";
+import type { TCartProductsData } from "modules/Cart/types";
 import { Formik } from "formik";
 import React, { useCallback, useMemo } from "react";
 import { connect } from "react-redux";

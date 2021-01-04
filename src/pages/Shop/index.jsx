@@ -1,7 +1,7 @@
 // @flow
 import { Layout } from "common/components/Layout";
 import { ProductCard } from "common/components/ProductCard";
-import { selectCartProductsItems } from "pages/Cart/selectors";
+import { selectCartProductsItems } from "modules/Cart/selectors";
 import { actionGetProducts } from "pages/Shop/actions";
 import { ShopPageFilters } from "pages/Shop/components/ShopPageFilters";
 import { selectProductsList } from "pages/Shop/selectors";

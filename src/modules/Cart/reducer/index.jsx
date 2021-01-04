@@ -1,5 +1,5 @@
 // @flow
-import { CART_ACTION_TYPES } from "pages/Cart/constants";
+import { CART_ACTION_TYPES } from "modules/Cart/constants";
 
 const initialState = {
     products: {
