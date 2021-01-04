@@ -6,7 +6,6 @@ import LogIn from "pages/LogIn";
 import { ProfilePage } from "pages/Profile";
 import ShopPage from "pages/Shop";
 import SignUp from "pages/SignUp";
-import { UserPage } from "pages/User/components";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { hot } from "react-hot-loader/root";
@@ -36,9 +35,6 @@ const App = () => {
                 </Route>
                 <Route path="/signup">
                     <SignUp />
-                </Route>
-                <Route path="/user">
-                    <UserPage />
                 </Route>
                 <Route path="/">
                     <MainPage />

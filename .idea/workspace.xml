@@ -27,21 +27,18 @@
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reducer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/Layout/Header/CartLink/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Header/CartLink/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/ProductCard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/ProductCard/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Cart/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Cart/reducer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/actions/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/components/CartEmpty/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/components/CartEmpty/index.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/constants/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/reducer/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/selectors/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/service/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/types/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LogIn/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LogIn/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Profile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/actions/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/components/ShopPageFilters/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Shop/components/ShopPageFilters/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/constants/index.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Shop/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/reducer/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/selectors/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/service/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/User/components/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/User/components/index.less" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +145,7 @@
       <workItem from="1608910549244" duration="50000" />
       <workItem from="1608910801989" duration="2476000" />
       <workItem from="1608990275237" duration="17831000" />
-      <workItem from="1609751880800" duration="13542000" />
+      <workItem from="1609751880800" duration="13990000" />
     </task>
     <servers />
   </component>

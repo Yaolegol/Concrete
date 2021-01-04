@@ -1,6 +1,6 @@
 // @flow
 import { createSelector } from "reselect";
-import { selectProductsList } from "pages/Shop/selectors";
+import { selectProductsList } from "modules/Shop/selectors";
 
 const getCartState = (state) => {
     return state.cart;

@@ -1,10 +1,10 @@
 // @flow
-import { actionGetUser } from "common/actions";
 import { Layout } from "common/components/Layout";
 import { OrderHeader } from "common/components/Order/OrderHeader";
 import { OrderItem } from "common/components/Order/OrderItem";
-import { selectUserPurchases } from "common/selectors";
 import { CartEmpty } from "modules/Cart/components/CartEmpty";
+import { actionGetUser } from "modules/User/actions";
+import { selectUserPurchases } from "modules/User/selectors";
 import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./index.less";
@@ -12,9 +12,6 @@ import "./index.less";
 export const ProfilePage = () => {
     const dispatch = useDispatch();
     const userPurchases = useSelector(selectUserPurchases);
-
-    console.log("userPurchases");
-    console.log(userPurchases);
 
     const contentItems = useMemo(() => {
         return userPurchases.map((purchase) => {

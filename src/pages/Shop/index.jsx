@@ -2,9 +2,9 @@
 import { Layout } from "common/components/Layout";
 import { ProductCard } from "common/components/ProductCard";
 import { selectCartProductsItems } from "modules/Cart/selectors";
-import { actionGetProducts } from "pages/Shop/actions";
-import { ShopPageFilters } from "pages/Shop/components/ShopPageFilters";
-import { selectProductsList } from "pages/Shop/selectors";
+import { actionGetProducts } from "modules/Shop/actions";
+import { ShopPageFilters } from "modules/Shop/components/ShopPageFilters";
+import { selectProductsList } from "modules/Shop/selectors";
 import React, { useEffect, useMemo } from "react";
 import { connect } from "react-redux";
 import "./index.less";
