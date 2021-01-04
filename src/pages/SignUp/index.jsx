@@ -1,9 +1,10 @@
 // @flow
-import { actionGetUser, actionLogin, actionRegistration } from "common/actions";
 import { Button } from "common/components/Button";
 import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
 import { Layout } from "common/components/Layout";
+import { actionLogin, actionRegistration } from "modules/Auth/actions";
+import { actionGetUser } from "modules/User/actions";
 import { Formik } from "formik";
 import React from "react";
 import { useDispatch } from "react-redux";
