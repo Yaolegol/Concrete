@@ -6,14 +6,14 @@ const getUserState = (state) => {
     return state.user;
 };
 
-export const selectUser = (createSelector([getUserState], ({ user }) => {
+export const selectUser: any = createSelector([getUserState], ({ user }) => {
     if (!isObjectEmpty(user)) {
         return { ...user };
     }
     return null;
-}): any);
+});
 
-export const selectUserPurchases = (createSelector([selectUser], (user) => {
+export const selectUserPurchases: any = createSelector([selectUser], (user) => {
     if (user) {
         const { purchases } = user;
         if (!purchases) {
@@ -22,4 +22,4 @@ export const selectUserPurchases = (createSelector([selectUser], (user) => {
         return purchases.map(({ purchaseID }) => purchaseID.purchase);
     }
     return [];
-}): any);
+});
