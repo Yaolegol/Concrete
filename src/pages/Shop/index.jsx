@@ -3,8 +3,8 @@ import { Layout } from "common/components/Layout";
 import { ProductCard } from "common/components/ProductCard";
 import { selectCartProductsItems } from "modules/Cart/selectors";
 import { actionGetProducts } from "modules/Shop/actions";
-import { ShopPageFilters } from "modules/Shop/components/ShopPageFilters";
 import { selectProductsList } from "modules/Shop/selectors";
+import { Filters } from "pages/Shop/components/Filters";
 import React, { useEffect, useMemo } from "react";
 import { connect } from "react-redux";
 import "./index.less";
@@ -46,7 +46,7 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
                 <h1>Shop</h1>
                 <div className="shop-page__content">
                     <div className="shop-page__filters-section">
-                        <ShopPageFilters />
+                        <Filters />
                     </div>
                     <div className="shop-page__goods-section">
                         {productCards}

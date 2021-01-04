@@ -2,9 +2,9 @@
 import { Layout } from "common/components/Layout";
 import { OrderHeader } from "common/components/Order/OrderHeader";
 import { OrderItem } from "common/components/Order/OrderItem";
-import { CartEmpty } from "modules/Cart/components/CartEmpty";
 import { actionGetUser } from "modules/User/actions";
 import { selectUserPurchases } from "modules/User/selectors";
+import { CartEmpty } from "pages/Cart/components/CartEmpty";
 import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./index.less";

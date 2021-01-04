@@ -27,7 +27,19 @@
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SignUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignUp/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Cart/components/CartEmpty/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/components/CartEmpty/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Cart/components/CartEmpty/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/components/CartEmpty/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Shop/components/ShopPageFilters/ShopPagePriceFilter/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Shop/components/Filters/PriceFilter/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Shop/components/ShopPageFilters/ShopPagePriceFilter/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Shop/components/Filters/PriceFilter/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Shop/components/ShopPageFilters/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Shop/components/ShopPageFilters/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Shop/components/Filters/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/components/ShopPageFilters/ShopPagePriceFilter/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/components/ShopPageFilters/ShopPagePriceFilter/index.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/components/ShopPageFilters/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Shop/components/Filters/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/components/ShopPageFilters/index.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Shop/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +73,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/User" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/Cart" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -76,11 +88,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/Cart" />
       <recent name="$PROJECT_DIR$/src/modules/User" />
       <recent name="$PROJECT_DIR$/src/modules/Auth" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/server/schemes" />
-      <recent name="$PROJECT_DIR$/server/models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app" />
@@ -134,7 +146,7 @@
       <workItem from="1608910549244" duration="50000" />
       <workItem from="1608910801989" duration="2476000" />
       <workItem from="1608990275237" duration="17831000" />
-      <workItem from="1609751880800" duration="14194000" />
+      <workItem from="1609751880800" duration="14608000" />
     </task>
     <servers />
   </component>
