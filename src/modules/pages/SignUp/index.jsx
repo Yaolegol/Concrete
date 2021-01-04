@@ -1,5 +1,5 @@
 // @flow
-import { actionRegistration } from "common/actions";
+import { actionGetUser, actionLogin, actionRegistration } from "common/actions";
 import { Button } from "common/components/Button";
 import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
@@ -7,10 +7,12 @@ import { Layout } from "common/components/Layout";
 import { Formik } from "formik";
 import React from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import "./index.less";
 
 const SignUp = (): React$Node => {
     const dispatch = useDispatch();
+    const history = useHistory();
 
     return (
         <Layout withFooter={false}>
@@ -25,7 +27,20 @@ const SignUp = (): React$Node => {
                                 passwordConfirm: "",
                             }}
                             onSubmit={(values) => {
-                                dispatch(actionRegistration({ data: values }));
+                                dispatch(
+                                    actionRegistration({ data: values })
+                                ).then(({ errors }) => {
+                                    if (!errors) {
+                                        dispatch(
+                                            actionLogin({ data: values })
+                                        ).then(({ errors }) => {
+                                            if (!errors) {
+                                                dispatch(actionGetUser());
+                                                history.push("/");
+                                            }
+                                        });
+                                    }
+                                });
                             }}
                             validate={(values) => {
                                 const {

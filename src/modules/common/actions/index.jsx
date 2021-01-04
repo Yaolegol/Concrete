@@ -120,7 +120,11 @@ export const actionRegistration = ({ data: userData }) => async (
         } else {
             dispatch(actionSignUpFail({ errors }));
         }
+
+        return { data, errors };
     } catch (error) {
         dispatch(actionSignUpFail({ errors: error.message }));
+
+        return { errors: error };
     }
 };
