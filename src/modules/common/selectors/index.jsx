@@ -33,9 +33,12 @@ export const selectUser = (createSelector([getCommonState], ({ user }) => {
     return null;
 }): any);
 
-export const selectUserOrders = (createSelector([selectUser], ({ orders }) => {
-    if (!orders) {
-        return [];
+export const selectUserPurchases = (createSelector(
+    [selectUser],
+    ({ purchases }) => {
+        if (!purchases) {
+            return [];
+        }
+        return purchases.map(({ purchaseID }) => purchaseID.purchase);
     }
-    return orders;
-}): any);
+): any);

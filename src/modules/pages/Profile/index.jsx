@@ -3,7 +3,7 @@ import { actionGetUser } from "common/actions";
 import { Layout } from "common/components/Layout";
 import { OrderHeader } from "common/components/Order/OrderHeader";
 import { OrderItem } from "common/components/Order/OrderItem";
-import { selectUserOrders } from "common/selectors";
+import { selectUserPurchases } from "common/selectors";
 import { CartEmpty } from "../Cart/components/CartEmpty";
 import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,36 +11,29 @@ import "./index.less";
 
 export const ProfilePage = () => {
     const dispatch = useDispatch();
-    const cartProductsData = useSelector(selectUserOrders);
+    const userPurchases = useSelector(selectUserPurchases);
 
-    console.log("cartProductsData");
-    console.log(cartProductsData);
+    console.log("userPurchases");
+    console.log(userPurchases);
 
     const contentItems = useMemo(() => {
-        return cartProductsData.map(
-            ({
-                countInCart,
-                description,
-                _id,
-                images,
-                price,
-                title,
-                totalPrice,
-            }) => {
+        return userPurchases.map((purchase) => {
+            return purchase.map(({ _id, count, productID, price, sum }) => {
+                const { description, images, title } = productID;
                 return (
                     <OrderItem
-                        countInCart={countInCart}
+                        countInCart={count}
                         description={description}
                         key={_id}
                         price={price}
-                        src={""}
+                        src={images[0]}
                         title={title}
-                        totalPrice={totalPrice}
+                        totalPrice={sum}
                     />
                 );
-            }
-        );
-    }, [cartProductsData]);
+            });
+        });
+    }, [userPurchases]);
 
     const empty = useMemo(() => {
         return <CartEmpty />;

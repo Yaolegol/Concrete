@@ -10,8 +10,19 @@ router.get('/user', (req, res, next) => {
 
     jwt.verify(reqToken, 'superSecretSecretSecret', (err, tokenData) => {
         if (tokenData) {
-            UsersModel.findOne({ _id: tokenData.id })
-                .populate('orders.productID')
+            UsersModel.findOne({_id: tokenData.id})
+                .populate({
+                    path: 'purchases',
+                    populate: {
+                        path: 'purchaseID',
+                        populate: {
+                            path: 'purchase',
+                            populate: {
+                                path: 'productID'
+                            }
+                        }
+                    }
+                })
                 .then(doc => {
                     if (doc) {
                         res.json({
@@ -20,7 +31,7 @@ router.get('/user', (req, res, next) => {
                             }
                         })
                     } else {
-                        res.json({ errors: 'User not found' })
+                        res.json({errors: 'User not found'})
                     }
                 })
                 .catch(err => {

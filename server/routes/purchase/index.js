@@ -19,8 +19,7 @@ router.post('/purchase', (req, res, next) => {
                 .then(user => {
                     if (user) {
                         user.purchases.push({
-                            id: _purchase._id,
-                            purchase,
+                            purchaseID: _purchase._id,
                         })
                         user.save()
                             .then(_user => {
