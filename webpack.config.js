@@ -1,21 +1,21 @@
 // @flow
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
-const HtmlWebPackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const path = require('path')
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
 
 module.exports = {
     devServer: {
         historyApiFallback: true,
         hot: true,
-        inline: true
+        inline: true,
     },
-    devtool: 'source-map',
-    entry: './src/index.jsx',
+    devtool: "source-map",
+    entry: "./src/index.jsx",
     output: {
-        path: path.join(__dirname, '/dist'),
-        filename: '[name].[hash].js'
+        path: path.join(__dirname, "/dist"),
+        filename: "[name].[hash].js",
     },
     module: {
         rules: [
@@ -24,8 +24,8 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader'
-                }
+                    loader: "babel-loader",
+                },
             },
             // less
             {
@@ -33,67 +33,67 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
-                        loader: 'css-loader',
+                        loader: "css-loader",
                         options: {
                             modules: {
-                                localIdentName: '[local]'
-                            }
-                        }
+                                localIdentName: "[local]",
+                            },
+                        },
                     },
-                    'postcss-loader',
-                    'less-loader'
-                ]
+                    "postcss-loader",
+                    "less-loader",
+                ],
             },
             // css
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader', 'postcss-loader']
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "style-loader",
+                    "css-loader",
+                    "postcss-loader",
+                ],
             },
             // images
             {
                 test: /\.(png|jpg)$/,
-                use: [
-                    'file-loader'
-                ]
+                use: ["file-loader"],
             },
             // svg
             {
                 test: /\.svg$/,
-                use: ['@svgr/webpack']
+                use: ["@svgr/webpack"],
             },
             // fonts
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: [
-                    'file-loader'
-                ]
-            }
-        ]
+                use: ["file-loader"],
+            },
+        ],
     },
     plugins: [
         new CopyPlugin({
             patterns: [
                 {
-                    from: 'src/img',
-                    to: 'img'
-                }
-            ]
+                    from: "src/img",
+                    to: "img",
+                },
+            ],
         }),
         new HtmlWebPackPlugin({
-            filename: 'index.html',
+            filename: "index.html",
             hash: true,
-            template: 'src/index.html',
-            title: 'My app'
+            template: "src/index.html",
+            title: "My app",
         }),
         new MiniCssExtractPlugin(),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
     ],
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: [".js", ".jsx"],
         modules: [
-            path.resolve(__dirname, 'src'),
-            path.resolve(__dirname, 'src', 'modules'),
-            path.resolve(__dirname, 'node_modules')
-        ]
-    }
-}
+            path.resolve(__dirname, "src"),
+            path.resolve(__dirname, "node_modules"),
+        ],
+    },
+};

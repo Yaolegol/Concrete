@@ -1,0 +1,94 @@
+@import (reference) "~styles/adaptive";
+@import (reference) "~styles/colors";
+@import (reference) "~styles/flex";
+
+.main-portfolio {
+    .f_c();
+
+    flex-direction: column;
+    margin-top: 150px;
+
+    @media @mobile {
+        margin-top: 100px;
+    }
+
+    &__button-container {
+        @media @mobile {
+            margin-top: 50px;
+        }
+    }
+
+    &__image-container {
+        display: flex;
+        padding: 0;
+        position: relative;
+
+        @media @tablet {
+            align-items: center;
+            flex-direction: column;
+            padding: 0 50px;
+        }
+
+        @media @mobile {
+            padding: 0;
+        }
+    }
+
+    &__image-main {
+        height: 400px;
+        object-fit: cover;
+        width: 600px;
+
+        @media @tablet {
+            max-width: 600px;
+            width: 100%;
+        }
+    }
+
+    &__image-secondary {
+        position: absolute;
+        z-index: 9;
+
+        @media @tablet {
+            flex: 1;
+            flex-basis: 50%;
+            object-fit: cover;
+            position: static;
+        }
+
+        &_left-bottom {
+            left: -10%;
+            bottom: -20%;
+        }
+
+        &_left-top {
+            left: -20%;
+            top: -45%;
+        }
+
+        &_right-bottom {
+            bottom: -40%;
+            right: -25%;
+        }
+
+        &_right-top {
+            right: -35%;
+            top: -40%;
+        }
+    }
+
+    &__image-section {
+        margin: 300px 0 200px;
+
+        @media @mobile {
+            margin: 100px 0 0;
+        }
+    }
+
+    &__secondary-images-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 600px;
+    }
+}

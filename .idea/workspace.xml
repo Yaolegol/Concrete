@@ -26,9 +26,154 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/modules/Auth/actions/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/Auth/constants/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/Auth/reducer/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/Auth/service/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/actions/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/constants/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/reducer/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/selectors/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/service/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/actions/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/components/CartEmpty/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/components/CartEmpty/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/constants/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/reducer/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/selectors/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/service/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Cart/types/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/Description/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/Description/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/Hero/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/Hero/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/Portfolio/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/Portfolio/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Main/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Profile/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Profile/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Shop/actions/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Shop/components/ShopPageFilters/ShopPagePriceFilter/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Shop/components/ShopPageFilters/ShopPagePriceFilter/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Shop/components/ShopPageFilters/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Shop/components/ShopPageFilters/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Shop/constants/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Shop/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Shop/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Shop/reducer/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Shop/selectors/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Shop/service/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/pages/SignUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/pages/SignUp/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/components/CustomIntl/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/CustomIntl/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/components/CustomProvider/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/CustomProvider/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/store/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/actions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Button/ShopNowButton/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Button/ShopNowButton/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Button/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Button/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Button/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Button/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/CustomSelect/LangSelect/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/CustomSelect/LangSelect/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/CustomSelect/LangSelect/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/CustomSelect/LangSelect/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/CustomSelect/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/CustomSelect/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/CustomSelect/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/CustomSelect/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/FormField/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/FormField/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/FormField/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/FormField/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/GoogleMap/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/GoogleMap/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/GoogleMap/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/GoogleMap/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Input/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Input/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Input/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Input/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Layout/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Footer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Layout/Footer/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Footer/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/CartLink/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Header/CartLink/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/CartLink/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Header/CartLink/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Layout/Header/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Header/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Layout/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Link/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Link/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Link/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Link/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Logo/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Logo/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Logo/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Logo/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/BurgerButton/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Menu/BurgerButton/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/BurgerButton/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Menu/BurgerButton/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/MenuItem/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Menu/MenuItem/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/MenuItem/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Menu/MenuItem/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Menu/MobileMenu/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/MobileMenu/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Menu/MobileMenu/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Menu/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Menu/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Menu/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Order/OrderHeader/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Order/OrderHeader/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Order/OrderHeader/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Order/OrderHeader/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Order/OrderItem/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Order/OrderItem/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Order/OrderItem/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Order/OrderItem/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/ProductCard/ProductCardCounter/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/ProductCard/ProductCardCounter/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/ProductCard/ProductCardCounter/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/ProductCard/ProductCardCounter/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/ProductCard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/ProductCard/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/ProductCard/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/ProductCard/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Slider/SliderMain/SliderMainSlide/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Slider/SliderMain/SliderMainSlide/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Slider/SliderMain/SliderMainSlide/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Slider/SliderMain/SliderMainSlide/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Slider/SliderMain/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Slider/SliderMain/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Slider/SliderMain/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Slider/SliderMain/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Slider/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Slider/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Slider/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Slider/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Socials/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Socials/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Socials/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Socials/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Tabs/TabsAddressContent/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Tabs/TabsAddressContent/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Tabs/TabsAddressContent/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Tabs/TabsAddressContent/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Tabs/TabsTab/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Tabs/TabsTab/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Tabs/TabsTab/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Tabs/TabsTab/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Tabs/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Tabs/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/components/Tabs/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Tabs/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/constants/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/constants/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/helpers/errors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/helpers/errors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/helpers/object.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/helpers/object.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/helpers/random.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/helpers/random.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/selectors/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/common/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/service/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Cart/actions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/components/CartEmpty/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Cart/components/CartEmpty/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/components/CartEmpty/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Cart/components/CartEmpty/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/constants/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Cart/constants/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Cart/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Cart/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Cart/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Cart/selectors/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Cart/service/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Cart/types/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Cart/types/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/LogIn/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LogIn/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/LogIn/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LogIn/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/Description/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Main/Description/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/Description/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Main/Description/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/Hero/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Main/Hero/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/Hero/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Main/Hero/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/Portfolio/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Main/Portfolio/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/Portfolio/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Main/Portfolio/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Main/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Main/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Main/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Profile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Profile/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Profile/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Profile/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/actions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/components/ShopPageFilters/ShopPagePriceFilter/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/components/ShopPageFilters/ShopPagePriceFilter/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/components/ShopPageFilters/ShopPagePriceFilter/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/components/ShopPageFilters/ShopPagePriceFilter/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/components/ShopPageFilters/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/components/ShopPageFilters/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/components/ShopPageFilters/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/components/ShopPageFilters/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/constants/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/constants/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/selectors/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/selectors/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/Shop/service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/service/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/SignUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignUp/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/SignUp/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignUp/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/components/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/User/components/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/pages/User/components/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/User/components/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +207,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/schemes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/User" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -77,18 +222,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/User" />
+      <recent name="$PROJECT_DIR$/src/modules/Auth" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/server/schemes" />
       <recent name="$PROJECT_DIR$/server/models" />
-      <recent name="$PROJECT_DIR$/server/schemes/user" />
-      <recent name="$PROJECT_DIR$/server/schemes/purchase" />
-      <recent name="$PROJECT_DIR$/server/schemes/product" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/modules" />
       <recent name="$PROJECT_DIR$/src/modules/common/components/Order/OrderItem" />
       <recent name="$PROJECT_DIR$/src/app/common" />
-      <recent name="$PROJECT_DIR$/src/modules/pages/User/components" />
-      <recent name="$PROJECT_DIR$/src/modules/common" />
-      <recent name="$PROJECT_DIR$/src/app/components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -135,7 +280,7 @@
       <workItem from="1608910549244" duration="50000" />
       <workItem from="1608910801989" duration="2476000" />
       <workItem from="1608990275237" duration="17831000" />
-      <workItem from="1609751880800" duration="10988000" />
+      <workItem from="1609751880800" duration="12669000" />
     </task>
     <servers />
   </component>

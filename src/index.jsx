@@ -1,7 +1,7 @@
 // @flow
 import App from "app";
-import { CustomIntl } from "app/common/components/CustomIntl";
-import { CustomProvider } from "app/common/components/CustomProvider";
+import { CustomIntl } from "app/components/CustomIntl";
+import { CustomProvider } from "app/components/CustomProvider";
 import { logError } from "common/helpers/errors";
 import React from "react";
 import { render } from "react-dom";
