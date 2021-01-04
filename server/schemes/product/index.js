@@ -2,7 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
-    title: {
+    availability: {
+        type: Boolean,
+        required: true,
+        default: true
+    },
+    brand: {
         type: String,
         required: true
     },
@@ -10,21 +15,16 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
-    brand: {
-        type: String,
-        required: true
-    },
+    description: String,
+    images: Array,
     price: {
         type: Number,
         required: true
     },
-    avalibility: {
-        type: Boolean,
-        required: true,
-        default: true
-    },    
-    images: Array,
-    description: String
+    title: {
+        type: String,
+        required: true
+    },
 });
 
 module.exports = productSchema;

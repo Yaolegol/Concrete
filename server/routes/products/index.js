@@ -5,12 +5,21 @@ const express = require('express')
 const router = express.Router();
 const perPage = 8;
 
-router.get('/products', (req, res, next) => {
+router.post('/products', (req, res, next) => {
     const currentPage = req.body.page || 0
     const skip = currentPage * perPage
 
+    const minPrice = req.body.filters ? req.body.filters[0] : 0
+    const maxPrice = req.body.filters ? req.body.filters[1] : 999999
+
     ProductsModel
-        .find(null, null, {
+        .find({
+            availability: true,
+            price: {
+                $gte: minPrice,
+                $lte: maxPrice
+            }
+        }, null, {
             skip: skip,
             limit: perPage
         })

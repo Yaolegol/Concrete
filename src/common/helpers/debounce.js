@@ -34,6 +34,7 @@ export const debounce = ({ action, id, time }: TDebounceProps): any => {
         checkProcessStatus({ id, time });
     } else {
         process.time = timeToAction;
+        process.action = action;
 
         checkProcessStatus({ id, time });
     }
