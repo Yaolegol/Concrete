@@ -7,7 +7,7 @@ const router = express.Router()
 
 router.post('/login', (req, res, next) => {
     const {email, password} = req.body;
-    UsersModel.findOne({ email, password })
+    UsersModel.findOne({email, password})
         .then(doc => {
             if (doc) {
                 const token = jwt.sign({
@@ -21,13 +21,21 @@ router.post('/login', (req, res, next) => {
                     },
                 })
             } else {
-                res.json({ errors: 'Email or password incorrect' })
+                res.json({
+                    errors: [{
+                        key: 'common',
+                        message: 'Email or password incorrect'
+                    }]
+                })
             }
         })
         .catch(err => {
             console.log(err)
             res.json({
-                errors: ['Server error']
+                errors: [{
+                    key: 'common',
+                    message: 'Server error'
+                }]
             })
         })
 })

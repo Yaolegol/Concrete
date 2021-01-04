@@ -27,7 +27,7 @@ const SignUp = (): React$Node => {
                                 password: "",
                                 passwordConfirm: "",
                             }}
-                            onSubmit={(values) => {
+                            onSubmit={(values, { setFieldError }) => {
                                 dispatch(
                                     actionRegistration({ data: values })
                                 ).then(({ errors }) => {
@@ -39,6 +39,10 @@ const SignUp = (): React$Node => {
                                                 dispatch(actionGetUser());
                                                 history.push("/");
                                             }
+                                        });
+                                    } else {
+                                        errors.forEach(({ key, message }) => {
+                                            setFieldError(key, message);
                                         });
                                     }
                                 });

@@ -7,6 +7,16 @@
     flex-direction: column;
     padding: 100px 0;
 
+    &__common-error-container {
+        color: @red;
+        display: inline-block;
+        visibility: hidden;
+
+        &_visible {
+            visibility: visible;
+        }
+    }
+
     &__content-container {
         border-radius: 5px;
         box-shadow: 1px 1px 15px @shadow;

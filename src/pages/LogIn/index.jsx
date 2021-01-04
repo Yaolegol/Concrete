@@ -1,4 +1,5 @@
 // @flow
+import cn from "classnames";
 import { Button } from "common/components/Button";
 import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
@@ -26,12 +27,18 @@ const LogIn = (): React$Node => {
                                 email: "",
                                 password: "",
                             }}
-                            onSubmit={(values) => {
+                            onSubmit={(values, { setFieldError }) => {
                                 dispatch(actionLogin({ data: values })).then(
                                     ({ errors }) => {
                                         if (!errors) {
                                             dispatch(actionGetUser());
                                             history.push("/");
+                                        } else {
+                                            errors.forEach(
+                                                ({ key, message }) => {
+                                                    setFieldError(key, message);
+                                                }
+                                            );
                                         }
                                     }
                                 );
@@ -89,6 +96,17 @@ const LogIn = (): React$Node => {
                                                 value={values.password}
                                             />
                                         </FormField>
+                                        <div
+                                            className={cn(
+                                                "login-page__common-error-container",
+                                                {
+                                                    "login-page__common-error-container_visible":
+                                                        errors.common,
+                                                }
+                                            )}
+                                        >
+                                            {errors.common}
+                                        </div>
                                         <div className="signup-page__submit-button-container">
                                             <Button
                                                 disabled={!isValid || !dirty}
