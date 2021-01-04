@@ -26,16 +26,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/components/Layout/Footer/AddressContent/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flowconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.flowconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/helpers/debounce.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/Layout/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Footer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/Menu/BurgerButton/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Menu/BurgerButton/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/Tabs/TabsAddressContent/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/Tabs/TabsAddressContent/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Footer/AddressContent/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/Tabs/TabsTab/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Tabs/Tab/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/Tabs/TabsTab/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Tabs/Tab/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/Tabs/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Tabs/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/components/Filters/PriceFilter/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Shop/components/Filters/PriceFilter/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Shop/components/Filters/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Shop/components/Filters/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +63,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/Layout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/common/helpers" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -84,11 +78,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/common/helpers" />
       <recent name="$PROJECT_DIR$/src/modules/Layout" />
       <recent name="$PROJECT_DIR$/src/modules" />
       <recent name="$PROJECT_DIR$/src/pages/Cart" />
       <recent name="$PROJECT_DIR$/src/modules/User" />
-      <recent name="$PROJECT_DIR$/src/modules/Auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/common/components/Layout/Footer" />
@@ -142,7 +136,7 @@
       <workItem from="1608910549244" duration="50000" />
       <workItem from="1608910801989" duration="2476000" />
       <workItem from="1608990275237" duration="17831000" />
-      <workItem from="1609751880800" duration="23883000" />
+      <workItem from="1609751880800" duration="29816000" />
     </task>
     <servers />
   </component>

@@ -36,7 +36,7 @@ export const PriceFilter = ({
                     <Range
                         defaultValue={initialValues}
                         max={max}
-                        onChange={onChange}
+                        onAfterChange={onChange}
                     />
                 </div>
             </div>
