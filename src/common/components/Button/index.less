@@ -16,7 +16,8 @@
     }
 
     &:disabled {
-        background-color: @gray-1;
+        background-color: fade(@gray-1, 45%);
+        border-color: fade(@gray-1, 45%);
         color: @white;
         cursor: initial;
     }
@@ -31,7 +32,8 @@
         }
 
         &:disabled {
-            border-color: @gray-1;
+            background-color: fade(@gray-1, 45%);
+            border-color: fade(@gray-1, 45%);
         }
     }
 }
