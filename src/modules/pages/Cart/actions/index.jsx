@@ -8,6 +8,7 @@ const {
     BUY_PRODUCTS_SUCCESS,
     DECREMENT_PRODUCTS_COUNT,
     INCREMENT_PRODUCTS_COUNT,
+    RESET_CART,
 } = CART_ACTION_TYPES;
 
 const actionBuyProductsFail = (errors) => (dispatch) => {
@@ -31,8 +32,12 @@ export const actionBuyProducts = (products) => async (dispatch, getState) => {
         } else {
             dispatch(actionBuyProductsFail(errors));
         }
+
+        return { data, errors };
     } catch (error) {
         dispatch(actionBuyProductsFail([error]));
+
+        return { errors: error };
     }
 };
 
@@ -42,4 +47,8 @@ export const actionDecCartProductsCount = (id) => (dispatch, getState) => {
 
 export const actionIncCartProductsCount = (id) => (dispatch, getState) => {
     dispatch({ data: { id }, type: INCREMENT_PRODUCTS_COUNT });
+};
+
+export const actionResetCart = () => (dispatch, getState) => {
+    dispatch({ type: RESET_CART });
 };
