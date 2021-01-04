@@ -1,5 +1,4 @@
 // @flow
-import { isObjectEmpty } from "common/helpers/object";
 import { createSelector } from "reselect";
 
 const getCommonState = (state) => {
@@ -24,21 +23,4 @@ export const selectMobileMenu = (createSelector(
 export const selectMobileMenuShowStatus = (createSelector(
     [selectMobileMenu],
     ({ isShow }) => isShow
-): any);
-
-export const selectUser = (createSelector([getCommonState], ({ user }) => {
-    if (!isObjectEmpty(user)) {
-        return { ...user };
-    }
-    return null;
-}): any);
-
-export const selectUserPurchases = (createSelector(
-    [selectUser],
-    ({ purchases }) => {
-        if (!purchases) {
-            return [];
-        }
-        return purchases.map(({ purchaseID }) => purchaseID.purchase);
-    }
 ): any);

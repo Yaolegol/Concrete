@@ -1,8 +1,8 @@
 // @flow
 import cn from "classnames";
-import { actionLogout } from "common/actions";
 import { MenuItem } from "common/components/Menu/MenuItem";
-import { selectUser } from "common/selectors";
+import { actionLogout } from "modules/Auth/actions";
+import { selectUser } from "modules/User/selectors";
 import React, { useCallback, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import { useDispatch, useSelector } from "react-redux";

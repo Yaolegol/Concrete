@@ -1,5 +1,5 @@
 // @flow
-import { actionGetUser } from "common/actions";
+import { actionGetUser } from "modules/User/actions";
 import { MainPage } from "pages/Main";
 import CartPage from "pages/Cart";
 import LogIn from "pages/LogIn";
