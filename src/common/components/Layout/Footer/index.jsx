@@ -1,6 +1,6 @@
 // @flow
-import { TabsAddressContent } from "common/components/Tabs/TabsAddressContent";
 import { GoogleMap } from "common/components/GoogleMap";
+import { AddressContent } from "common/components/Layout/Footer/AddressContent";
 import { Tabs } from "common/components/Tabs";
 import React from "react";
 import { FormattedMessage } from "react-intl";
@@ -62,7 +62,7 @@ export const Footer = (): React$Node => {
                     <Tabs
                         activeTabId={1}
                         content={tabsContent}
-                        contentComponent={TabsAddressContent}
+                        contentComponent={AddressContent}
                         tabs={_tabs}
                     />
                 </div>
