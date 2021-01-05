@@ -25,7 +25,7 @@ export const request = async ({
     if (isPrivate) {
         const token = localStorage.getItem("token");
         if (!token) {
-            logError("Token not found", "request");
+            console.info("---Token not found");
             return;
         }
         headers = {
