@@ -1,6 +1,7 @@
 const customRequire = require('app-root-path').require;
+const isObjectEmpty = customRequire('server/helpers/object');
 const ProductsModel = customRequire('server/models/product');
-const express = require('express')
+const express = require('express');
 
 const router = express.Router();
 const perPage = 8;
@@ -9,29 +10,32 @@ router.post('/products', (req, res, next) => {
     const currentPage = req.body.page || 0
     const skip = currentPage * perPage
 
-    const filters = {
-        minPrice: req.body.filters ? req.body.filters[0] : 0,
-        maxPrice: req.body.filters ? req.body.filters[1] : 999999,
-    }
+    let filters = {};
 
-    let sort = {};
-
-    if (req.body.sort) {
-        sort = req.body.sort.reduce((acc, {id, value}) => {
+    if (!isObjectEmpty(req.body.filters)) {
+        filters = Object.entries(req.body.filters).reduce((acc, [key, value]) => {
+            if(key === 'price') {
+                return {
+                    ...acc,
+                    [key]: {
+                        $gte: value[0],
+                        $lte: value[1]
+                    }
+                }
+            }
             return {
                 ...acc,
-                [id]: value
+                [key]: value
             }
-        }, {})
+        }, {});
     }
+
+    const sort = !isObjectEmpty(req.body.sort) ? req.body.sort : {};
 
     ProductsModel
         .find({
             availability: true,
-            price: {
-                $gte: filters.minPrice,
-                $lte: filters.maxPrice
-            }
+            ...filters
         }, null, {
             limit: perPage,
             skip: skip,

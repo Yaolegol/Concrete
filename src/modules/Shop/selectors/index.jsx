@@ -10,7 +10,17 @@ export const selectProducts: any = createSelector(
     ({ products }) => products
 );
 
+export const selectProductsFilters: any = createSelector(
+    [getShopState],
+    ({ filters }) => filters
+);
+
 export const selectProductsList: any = createSelector(
     [selectProducts],
     ({ list }) => list
+);
+
+export const selectProductsSort: any = createSelector(
+    [getShopState],
+    ({ sort }) => sort
 );

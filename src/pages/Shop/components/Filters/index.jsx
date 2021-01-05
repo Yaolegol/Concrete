@@ -1,17 +1,26 @@
 // @flow
 import { debounce } from "common/helpers/debounce";
-import { actionGetProducts } from "modules/Shop/actions";
+import {
+    actionGetProducts,
+    actionSetProductsFilter,
+} from "modules/Shop/actions";
 import { PriceFilter } from "pages/Shop/components/Filters/PriceFilter";
 import React, { useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
 import "./index.less";
 
 export const Filters = (): React$Node => {
-    const [priceFilterValue, setPriceFilterValue] = useState([0, 10000]);
     const dispatch = useDispatch();
+    const [priceFilterValue, setPriceFilterValue] = useState([0, 10000]);
+
     const getProducts = useCallback(
         (val) => () => {
-            dispatch(actionGetProducts({ filters: val }));
+            dispatch(
+                actionSetProductsFilter({
+                    price: val,
+                })
+            );
+            dispatch(actionGetProducts());
         },
         [dispatch]
     );

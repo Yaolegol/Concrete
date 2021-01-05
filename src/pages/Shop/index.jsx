@@ -3,7 +3,7 @@ import { SortSelect } from "common/components/CustomSelect/SortSelect";
 import { Layout } from "common/components/Layout";
 import { ProductCard } from "common/components/ProductCard";
 import { selectCartProductsItems } from "modules/Cart/selectors";
-import { actionGetProducts } from "modules/Shop/actions";
+import { actionGetProducts, actionSetProductsSort } from "modules/Shop/actions";
 import { selectProductsList } from "modules/Shop/selectors";
 import { Filters } from "pages/Shop/components/Filters";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
@@ -23,17 +23,13 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
         (value) => {
             setSortSelectValue(value);
             dispatch(
-                actionGetProducts({
-                    sort: [
-                        {
-                            id: value.id,
-                            value: value.value,
-                        },
-                    ],
+                actionSetProductsSort({
+                    [value.id]: value.value,
                 })
             );
+            dispatch(actionGetProducts());
         },
-        [dispatch, sortSelectValue]
+        [dispatch]
     );
 
     const productCards = useMemo(() => {
