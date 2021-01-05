@@ -100,6 +100,7 @@ export const CreateProduct = (): React$Node => {
                                     isTouched={touched.price}
                                 >
                                     <Input
+                                        isNumber
                                         name="price"
                                         onBlur={handleBlur}
                                         onChange={handleChange}
