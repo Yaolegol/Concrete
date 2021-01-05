@@ -17,15 +17,23 @@
         flex: 2;
     }
 
+    &__goods-container {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        margin-top: -100px;
+        pointer-events: none;
+    }
+
     &__goods-section {
         display: flex;
         flex: 4;
-        flex-wrap: wrap;
-        margin-top: -100px;
+        flex-direction: column;
     }
 
     &__product-container {
         display: flex;
         margin-top: 100px;
+        pointer-events: auto;
     }
 }

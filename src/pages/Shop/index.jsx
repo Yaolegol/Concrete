@@ -49,7 +49,10 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
                         <Filters />
                     </div>
                     <div className="shop-page__goods-section">
-                        {productCards}
+                        <div>sort</div>
+                        <div className="shop-page__goods-container">
+                            {productCards}
+                        </div>
                     </div>
                 </div>
             </div>
