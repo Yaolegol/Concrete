@@ -21,6 +21,18 @@ export const Menu = ({ className }: TProps): React$Node => {
         dispatch(actionLogout());
     }, [dispatch]);
 
+    const adminLinks = useMemo(() => {
+        return (
+            <>
+                <Link to="/admin">
+                    <MenuItem>
+                        <FormattedMessage id="common.menu.adminDashboard" />
+                    </MenuItem>
+                </Link>
+            </>
+        );
+    }, []);
+
     const registeredLinks = useMemo(() => {
         return (
             <>
@@ -67,6 +79,7 @@ export const Menu = ({ className }: TProps): React$Node => {
                     <FormattedMessage id="common.menu.shopPage" />
                 </MenuItem>
             </Link>
+            {user && user.admin ? adminLinks : null}
             {user ? registeredLinks : unregisteredLinks}
         </div>
     );

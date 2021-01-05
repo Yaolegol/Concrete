@@ -26,11 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/Admin/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Admin/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Shop/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Shop/constants/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/constants/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Shop/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Shop/reducer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Shop/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/components/Menu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Menu/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/text.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/text.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -79,11 +80,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/src/common/components/CustomSelect" />
       <recent name="$PROJECT_DIR$/src/common/helpers" />
       <recent name="$PROJECT_DIR$/src/modules/Layout" />
-      <recent name="$PROJECT_DIR$/src/modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/common/components/Layout/Footer" />
@@ -137,7 +138,7 @@
       <workItem from="1608910549244" duration="50000" />
       <workItem from="1608910801989" duration="2476000" />
       <workItem from="1608990275237" duration="17831000" />
-      <workItem from="1609751880800" duration="43184000" />
+      <workItem from="1609751880800" duration="44158000" />
     </task>
     <servers />
   </component>

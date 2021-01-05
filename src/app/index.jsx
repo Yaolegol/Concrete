@@ -1,5 +1,6 @@
 // @flow
 import { actionGetUser } from "modules/User/actions";
+import { AdminPage } from "pages/Admin";
 import { MainPage } from "pages/Main";
 import CartPage from "pages/Cart";
 import LogIn from "pages/LogIn";
@@ -21,6 +22,9 @@ const App = () => {
     return (
         <Router>
             <Switch>
+                <Route path="/admin">
+                    <AdminPage />
+                </Route>
                 <Route path="/cart">
                     <CartPage />
                 </Route>
