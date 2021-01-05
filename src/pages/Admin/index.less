@@ -1,15 +1,35 @@
-.profile-page {
+.admin-page {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 0 50px;
+    padding: 50px 20px;
+    position: relative;
     text-align: center;
 
-    &__orders-history-title {
-        margin-top: 50px;
+    &__main-section {
+        display: flex;
+        flex: 1;
     }
 
-    &__title {
-        margin-top: 100px;
+    &__content-section {
+        display: flex;
+        flex: 5;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    &__control {
+        margin-top: 10px;
+
+        &:first-child,
+        &:only-child {
+            margin-top: 0;
+        }
+    }
+
+    &__controls-section {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
     }
 }

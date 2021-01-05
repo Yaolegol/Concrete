@@ -1,66 +1,42 @@
 // @flow
+import { Button } from "common/components/Button";
 import { Layout } from "common/components/Layout";
-import { OrderHeader } from "common/components/Order/OrderHeader";
-import { OrderItem } from "common/components/Order/OrderItem";
-import { actionGetUser } from "modules/User/actions";
-import { selectUserPurchases } from "modules/User/selectors";
-import { CartEmpty } from "pages/Cart/components/CartEmpty";
-import React, { useEffect, useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 import "./index.less";
 
 export const AdminPage = (): React$Node => {
-    const dispatch = useDispatch();
-    const userPurchases = useSelector(selectUserPurchases);
-
-    const contentItems = useMemo(() => {
-        return userPurchases.map((purchase) => {
-            return purchase.map(({ _id, count, productID, price, sum }) => {
-                const { description, images, title } = productID;
-                return (
-                    <OrderItem
-                        countInCart={count}
-                        description={description}
-                        key={_id}
-                        price={price}
-                        src={images[0]}
-                        title={title}
-                        totalPrice={sum}
-                    />
-                );
-            });
-        });
-    }, [userPurchases]);
-
-    const empty = useMemo(() => {
-        return <CartEmpty />;
-    }, []);
-
-    const content = useMemo(() => {
-        return contentItems.length ? (
-            <div className="cart-page__content-section">
-                <OrderHeader />
-                <div className="cart-page__content-container">
-                    {contentItems}
-                </div>
-            </div>
-        ) : (
-            empty
-        );
-    }, [contentItems, empty]);
-
-    useEffect(() => {
-        dispatch(actionGetUser());
-    }, [dispatch]);
-
     return (
-        <Layout>
-            <div className="profile-page">
-                <h1 className="profile-page__title">Profile</h1>
-                <h4 className="profile-page__orders-history-title">
-                    Orders history
-                </h4>
-                {content}
+        <Layout withFooter={false}>
+            <div className="admin-page">
+                <h1>Dashboard</h1>
+                <div className="admin-page__main-section">
+                    <div className="admin-page__controls-section">
+                        <h4>Menu</h4>
+                        <div className="admin-page__control">
+                            <Button fullWidth theme="white">
+                                Create product
+                            </Button>
+                        </div>
+                        <div className="admin-page__control">
+                            <Button fullWidth theme="white">
+                                Create category
+                            </Button>
+                        </div>
+                        <div className="admin-page__control">
+                            <Button fullWidth theme="white">
+                                Create brand
+                            </Button>
+                        </div>
+                        <div className="admin-page__control">
+                            <Button fullWidth theme="white">
+                                View orders
+                            </Button>
+                        </div>
+                    </div>
+                    <div className="admin-page__content-section">
+                        test
+                    </div>
+                </div>
             </div>
         </Layout>
     );
