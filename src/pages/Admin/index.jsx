@@ -1,10 +1,31 @@
 // @flow
 import { Button } from "common/components/Button";
 import { Layout } from "common/components/Layout";
-import React from "react";
+import { CreateProduct } from "pages/Admin/components/CreateProduct";
+import React, { useCallback, useMemo, useState } from "react";
 import "./index.less";
 
 export const AdminPage = (): React$Node => {
+    const [currentContent, setCurrentContent] = useState("create product");
+
+    const changeContent = useCallback(
+        (value) => () => {
+            setCurrentContent(value);
+        },
+        []
+    );
+
+    const content = useMemo(() => {
+        switch (currentContent) {
+            case "create product":
+                return <CreateProduct />;
+            case "view orders":
+                return null;
+            default:
+                return null;
+        }
+    }, [currentContent]);
+
     return (
         <Layout withFooter={false}>
             <div className="admin-page">
@@ -13,29 +34,25 @@ export const AdminPage = (): React$Node => {
                     <div className="admin-page__controls-section">
                         <h4>Menu</h4>
                         <div className="admin-page__control">
-                            <Button fullWidth theme="white">
+                            <Button
+                                fullWidth
+                                onClick={changeContent("create product")}
+                                theme="white"
+                            >
                                 Create product
                             </Button>
                         </div>
                         <div className="admin-page__control">
-                            <Button fullWidth theme="white">
-                                Create category
-                            </Button>
-                        </div>
-                        <div className="admin-page__control">
-                            <Button fullWidth theme="white">
-                                Create brand
-                            </Button>
-                        </div>
-                        <div className="admin-page__control">
-                            <Button fullWidth theme="white">
+                            <Button
+                                fullWidth
+                                onClick={changeContent("view orders")}
+                                theme="white"
+                            >
                                 View orders
                             </Button>
                         </div>
                     </div>
-                    <div className="admin-page__content-section">
-                        test
-                    </div>
+                    <div className="admin-page__content-section">{content}</div>
                 </div>
             </div>
         </Layout>
