@@ -1,0 +1,37 @@
+@import (reference) '~styles/colors';
+@import (reference) '~styles/font';
+
+.checkbox {
+    display: flex;
+    text-align: left;
+
+    &__checkmark {
+        background-color: @white;
+        border: 1px solid @gray-1;
+        border-radius: 5px;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+    }
+
+    &__input {
+        display: none;
+
+        &:checked {
+            ~ .checkbox__checkmark {
+                background-color: @blue;
+                border-color: @blue;
+            }
+        }
+    }
+
+    &__input-label {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+    }
+
+    &__title {
+        margin-left: 10px;
+    }
+}

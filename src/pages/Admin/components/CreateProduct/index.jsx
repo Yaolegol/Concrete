@@ -1,5 +1,6 @@
 // @flow
 import { Button } from "common/components/Button";
+import { Checkbox } from "common/components/Checkbox";
 import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
 import { actionLogin, actionRegistration } from "modules/Auth/actions";
@@ -108,6 +109,15 @@ export const CreateProduct = (): React$Node => {
                                         value={values.price}
                                     />
                                 </FormField>
+                                <Checkbox
+                                    checked={values.available}
+                                    name="available"
+                                    onBlur={handleBlur}
+                                    onChange={handleChange}
+                                    value={values.available}
+                                >
+                                    Is available
+                                </Checkbox>
                                 <div className="signup-page__submit-button-container">
                                     <Button
                                         disabled={!isValid || !dirty}

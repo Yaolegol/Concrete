@@ -26,8 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/common/components/Checkbox/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/components/Checkbox/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/Input/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Input/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Admin/components/CreateProduct/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin/components/CreateProduct/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +63,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/Admin/components/CreateProduct" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/common/components" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -77,11 +78,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/common/components" />
       <recent name="$PROJECT_DIR$/src/pages/Admin/components/CreateProduct" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/src/common/components/CustomSelect" />
-      <recent name="$PROJECT_DIR$/src/common/helpers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/common/components/Layout/Footer" />
@@ -135,7 +136,7 @@
       <workItem from="1608910549244" duration="50000" />
       <workItem from="1608910801989" duration="2476000" />
       <workItem from="1608990275237" duration="17831000" />
-      <workItem from="1609751880800" duration="50065000" />
+      <workItem from="1609751880800" duration="52134000" />
     </task>
     <servers />
   </component>
