@@ -10,8 +10,8 @@ const {
     GET_PRODUCTS_FAIL,
     GET_PRODUCTS_START,
     GET_PRODUCTS_SUCCESS,
-    RESET_PRODUCTS_FILTER,
-    RESET_PRODUCTS_SORT,
+    RESET_PRODUCTS_FILTERS,
+    RESET_PRODUCTS_SORTS,
     SET_PRODUCTS_FILTER,
     SET_PRODUCTS_SORT,
 } = SHOP_ACTION_TYPES;
@@ -44,6 +44,14 @@ export const actionGetProducts = (): any => async (dispatch, getState) => {
     } catch (error) {
         dispatch(actionGetProductsFail([error]));
     }
+};
+
+export const actionResetProductsFilters = (): any => (dispatch) => {
+    dispatch({ type: RESET_PRODUCTS_FILTERS });
+};
+
+export const actionResetProductsSorts = (): any => (dispatch) => {
+    dispatch({ type: RESET_PRODUCTS_SORTS });
 };
 
 export const actionSetProductsFilter = (data: any): any => (dispatch) => {

@@ -16,8 +16,8 @@ const {
     GET_PRODUCTS_FAIL,
     GET_PRODUCTS_START,
     GET_PRODUCTS_SUCCESS,
-    RESET_PRODUCTS_FILTER,
-    RESET_PRODUCTS_SORT,
+    RESET_PRODUCTS_FILTERS,
+    RESET_PRODUCTS_SORTS,
     SET_PRODUCTS_FILTER,
     SET_PRODUCTS_SORT,
 } = SHOP_ACTION_TYPES;
@@ -45,6 +45,16 @@ export const shopReducer = (state: any = initialState, action: any): any => {
                     ...state.products,
                     ...data,
                 },
+            };
+        case RESET_PRODUCTS_FILTERS:
+            return {
+                ...state,
+                filters: {},
+            };
+        case RESET_PRODUCTS_SORTS:
+            return {
+                ...state,
+                sort: {},
             };
         case SET_PRODUCTS_FILTER:
             return {

@@ -3,7 +3,12 @@ import { SortSelect } from "common/components/CustomSelect/SortSelect";
 import { Layout } from "common/components/Layout";
 import { ProductCard } from "common/components/ProductCard";
 import { selectCartProductsItems } from "modules/Cart/selectors";
-import { actionGetProducts, actionSetProductsSort } from "modules/Shop/actions";
+import {
+    actionGetProducts,
+    actionResetProductsFilters,
+    actionResetProductsSorts,
+    actionSetProductsSort,
+} from "modules/Shop/actions";
 import { selectProductsList } from "modules/Shop/selectors";
 import { Filters } from "pages/Shop/components/Filters";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
@@ -53,6 +58,8 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
     }, [cartProducts, products]);
 
     useEffect(() => {
+        dispatch(actionResetProductsFilters());
+        dispatch(actionResetProductsSorts());
         dispatch(actionGetProducts());
     }, [dispatch]);
 
