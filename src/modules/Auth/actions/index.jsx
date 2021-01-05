@@ -22,7 +22,7 @@ const actionLoginSuccess = (data) => (dispatch) => {
     dispatch({ data, type: LOGIN_SUCCESS });
 };
 
-export const actionLogin = ({ data: userData }) => async (
+export const actionLogin = ({ data: userData }: any): any => async (
     dispatch,
     getState
 ) => {
@@ -48,14 +48,10 @@ export const actionLogin = ({ data: userData }) => async (
     }
 };
 
-export const actionLogout = () => (dispatch, getState) => {
+export const actionLogout = (): any => (dispatch, getState) => {
     localStorage.removeItem("token");
     window.location.href = "/";
     dispatch({ type: LOGOUT });
-};
-
-export const actionSelectLang = (lang: string) => (dispatch, getState) => {
-    dispatch({ data: lang, type: SELECT_LANG });
 };
 
 const actionSignUpFail = (errors) => (dispatch) => {
@@ -68,7 +64,7 @@ const actionSignUpSuccess = (data) => (dispatch) => {
     dispatch({ data, type: SIGNUP_SUCCESS });
 };
 
-export const actionRegistration = ({ data: userData }) => async (
+export const actionRegistration = ({ data: userData }: any): any => async (
     dispatch,
     getState
 ) => {

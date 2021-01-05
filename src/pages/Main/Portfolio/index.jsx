@@ -4,7 +4,7 @@ import React from "react";
 import { FormattedMessage } from "react-intl";
 import "./index.less";
 
-export const Portfolio = () => {
+export const Portfolio = (): React$Node => {
     return (
         <div className="main-portfolio">
             <h3>

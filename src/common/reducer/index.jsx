@@ -15,7 +15,7 @@ const initialState = {
     },
 };
 
-export const commonReducer = (state = initialState, action) => {
+export const commonReducer = (state: any = initialState, action: any): any => {
     const { data, type } = action;
 
     switch (type) {

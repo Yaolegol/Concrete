@@ -20,7 +20,7 @@ export const OrderItem = ({
     src,
     title,
     totalPrice,
-}: TProps) => {
+}: TProps): React$Node => {
     return (
         <div className="order-item">
             <img alt={title} className="order-item__image" src={src} />

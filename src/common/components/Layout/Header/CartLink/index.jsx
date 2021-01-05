@@ -31,6 +31,6 @@ const CartLink = ({ cartProductsTotal }: TProps): React$Node => {
     );
 };
 
-export default connect((state) => ({
+export default (connect((state) => ({
     cartProductsTotal: selectCartProductsTotal(state),
-}))(CartLink);
+}))(CartLink): any);

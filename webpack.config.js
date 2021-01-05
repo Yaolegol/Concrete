@@ -1,4 +1,3 @@
-// @flow
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");

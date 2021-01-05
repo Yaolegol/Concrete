@@ -21,7 +21,10 @@ const actionBuyProductsSuccess = (data) => (dispatch) => {
     dispatch({ data, type: BUY_PRODUCTS_SUCCESS });
 };
 
-export const actionBuyProducts = (products) => async (dispatch, getState) => {
+export const actionBuyProducts = (products: any): any => async (
+    dispatch,
+    getState
+) => {
     dispatch(actionBuyProductsStart());
 
     try {
@@ -41,14 +44,20 @@ export const actionBuyProducts = (products) => async (dispatch, getState) => {
     }
 };
 
-export const actionDecCartProductsCount = (id) => (dispatch, getState) => {
+export const actionDecCartProductsCount = (id: any): any => (
+    dispatch,
+    getState
+) => {
     dispatch({ data: { id }, type: DECREMENT_PRODUCTS_COUNT });
 };
 
-export const actionIncCartProductsCount = (id) => (dispatch, getState) => {
+export const actionIncCartProductsCount = (id: any): any => (
+    dispatch,
+    getState
+) => {
     dispatch({ data: { id }, type: INCREMENT_PRODUCTS_COUNT });
 };
 
-export const actionResetCart = () => (dispatch, getState) => {
+export const actionResetCart = (): any => (dispatch, getState) => {
     dispatch({ type: RESET_CART });
 };

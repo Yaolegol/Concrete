@@ -18,7 +18,7 @@ const initialState = {
     },
 };
 
-export const authReducer = (state = initialState, action) => {
+export const authReducer = (state: any = initialState, action: any): any => {
     const { data, type } = action;
 
     switch (type) {

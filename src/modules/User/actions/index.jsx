@@ -14,7 +14,7 @@ const actionGetUserSuccess = (data) => (dispatch) => {
     dispatch({ data, type: GET_USER_SUCCESS });
 };
 
-export const actionGetUser = () => async (dispatch, getState) => {
+export const actionGetUser = (): any => async (dispatch, getState) => {
     dispatch(actionGetUserStart());
 
     try {

@@ -18,7 +18,7 @@ const actionGetProductsSuccess = (data) => (dispatch) => {
     dispatch({ data, type: GET_PRODUCTS_SUCCESS });
 };
 
-export const actionGetProducts = ({ filters } = {}) => async (
+export const actionGetProducts = ({ filters }: any = {}): any => async (
     dispatch,
     getState
 ) => {

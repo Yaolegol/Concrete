@@ -22,7 +22,7 @@ type TProps = {
     user: any,
 };
 
-const CartPage = ({ cartProductsData, dispatch, user }: TProps) => {
+const CartPage = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
     const history = useHistory();
 
     const contentItems = useMemo(() => {

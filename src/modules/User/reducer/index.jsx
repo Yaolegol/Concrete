@@ -7,7 +7,7 @@ const initialState = {
     user: {},
 };
 
-export const userReducer = (state = initialState, action) => {
+export const userReducer = (state: any = initialState, action: any): any => {
     const { data, type } = action;
 
     switch (type) {

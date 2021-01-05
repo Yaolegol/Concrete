@@ -14,7 +14,7 @@ const {
     RESET_CART,
 } = CART_ACTION_TYPES;
 
-export const cartReducer = (state = initialState, action) => {
+export const cartReducer = (state: any = initialState, action: any): any => {
     const { data, type } = action;
 
     switch (type) {

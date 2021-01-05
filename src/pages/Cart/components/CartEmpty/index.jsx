@@ -1,15 +1,15 @@
 // @flow
-import { ShopNowButton } from 'common/components/Button/ShopNowButton'
-import React from 'react'
-import './index.less'
+import { ShopNowButton } from "common/components/Button/ShopNowButton";
+import React from "react";
+import "./index.less";
 
-export const CartEmpty = () => {
+export const CartEmpty = (): React$Node => {
     return (
-        <div className='cart-empty'>
+        <div className="cart-empty">
             <p>Cart is empty yet :(</p>
-            <div className='cart-empty__button-shop'>
+            <div className="cart-empty__button-shop">
                 <ShopNowButton />
             </div>
         </div>
-    )
-}
+    );
+};

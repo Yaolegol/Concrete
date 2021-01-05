@@ -45,4 +45,4 @@ const App = () => {
 };
 
 // TODO remove hot from prod
-export default hot(App);
+export default (hot(App): any);

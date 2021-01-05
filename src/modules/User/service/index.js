@@ -1,7 +1,7 @@
 // @flow
 import { request } from "app/service";
 
-export const getUser = () => {
+export const getUser = (): any => {
     return request({
         isPrivate: true,
         options: {

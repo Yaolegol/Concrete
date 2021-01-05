@@ -1,7 +1,7 @@
 // @flow
 import { request } from "app/service";
 
-export const getProducts = ({ filters }) => {
+export const getProducts = ({ filters }: any): any => {
     return request({
         options: {
             body: JSON.stringify({ filters }),

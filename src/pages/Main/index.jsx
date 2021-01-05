@@ -6,7 +6,7 @@ import { Hero } from "pages/Main/Hero";
 import React from "react";
 import "./index.less";
 
-export const MainPage = () => {
+export const MainPage = (): React$Node => {
     return (
         <Layout hero={<Hero />}>
             <div className="main-page">

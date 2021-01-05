@@ -4,7 +4,7 @@ import React from "react";
 import { FormattedMessage } from "react-intl";
 import "./index.less";
 
-export const Description = () => {
+export const Description = (): React$Node => {
     return (
         <div className="main-description">
             <div className="main-description__content-section">

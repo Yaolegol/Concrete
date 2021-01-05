@@ -1,16 +1,16 @@
 // @flow
-import { createSelector } from 'reselect'
+import { createSelector } from "reselect";
 
 const getShopState = (state) => {
-    return state.shop
-}
+    return state.shop;
+};
 
-export const selectProducts = createSelector(
+export const selectProducts: any = createSelector(
     [getShopState],
     ({ products }) => products
-)
+);
 
-export const selectProductsList = createSelector(
+export const selectProductsList: any = createSelector(
     [selectProducts],
     ({ list }) => list
-)
+);

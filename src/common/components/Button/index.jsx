@@ -18,7 +18,9 @@ export const Button = ({
     return (
         <button
             {...rest}
-            className={cn("button", { [`button_${theme}`]: theme })}
+            className={cn("button", {
+                [`button_${theme || ""}`]: theme,
+            })}
             type={type}
         >
             {children}

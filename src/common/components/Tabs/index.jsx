@@ -7,10 +7,10 @@ type TProps = {
     activeTabId: number,
     content: Array<{
         id: number,
-        data: { address: string, email: string, phone: string },
+        data: { address: any, email: any, phone: any },
     }>,
     contentComponent: any,
-    tabs: Array<{ id: number, name: string }>,
+    tabs: Array<{ id: number, name: any }>,
 };
 
 export const Tabs = ({

@@ -1,7 +1,7 @@
 // @flow
 import { request } from "app/service";
 
-export const loginRequest = ({ data }) => {
+export const loginRequest = ({ data }: any): any => {
     return request({
         options: {
             body: JSON.stringify(data),
@@ -14,7 +14,7 @@ export const loginRequest = ({ data }) => {
     });
 };
 
-export const registrationRequest = ({ data }) => {
+export const registrationRequest = ({ data }: any): any => {
     return request({
         options: {
             body: JSON.stringify(data),
