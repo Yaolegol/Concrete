@@ -18,14 +18,14 @@ const actionGetProductsSuccess = (data) => (dispatch) => {
     dispatch({ data, type: GET_PRODUCTS_SUCCESS });
 };
 
-export const actionGetProducts = ({ filters }: any = {}): any => async (
+export const actionGetProducts = ({ filters, sort }: any = {}): any => async (
     dispatch,
     getState
 ) => {
     dispatch(actionGetProductsStart());
 
     try {
-        const { data, errors } = await getProducts({ filters });
+        const { data, errors } = await getProducts({ filters, sort });
 
         if (!errors) {
             dispatch(actionGetProductsSuccess(data));

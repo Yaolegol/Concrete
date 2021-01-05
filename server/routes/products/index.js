@@ -9,19 +9,33 @@ router.post('/products', (req, res, next) => {
     const currentPage = req.body.page || 0
     const skip = currentPage * perPage
 
-    const minPrice = req.body.filters ? req.body.filters[0] : 0
-    const maxPrice = req.body.filters ? req.body.filters[1] : 999999
+    const filters = {
+        minPrice: req.body.filters ? req.body.filters[0] : 0,
+        maxPrice: req.body.filters ? req.body.filters[1] : 999999,
+    }
+
+    let sort = {};
+
+    if (req.body.sort) {
+        sort = req.body.sort.reduce((acc, {id, value}) => {
+            return {
+                ...acc,
+                [id]: value
+            }
+        }, {})
+    }
 
     ProductsModel
         .find({
             availability: true,
             price: {
-                $gte: minPrice,
-                $lte: maxPrice
+                $gte: filters.minPrice,
+                $lte: filters.maxPrice
             }
         }, null, {
+            limit: perPage,
             skip: skip,
-            limit: perPage
+            sort,
         })
         .then(products => {
             ProductsModel

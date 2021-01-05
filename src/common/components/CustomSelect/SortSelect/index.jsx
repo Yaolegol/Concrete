@@ -4,8 +4,8 @@ import React from "react";
 import "./index.less";
 
 const options = [
-    { label: "По возрастанию цены", value: "price min" },
-    { label: "По убыванию цены", value: "price max" },
+    { id: "price", label: "По возрастанию цены", value: "ascending" },
+    { id: "price", label: "По убыванию цены", value: "descending" },
 ];
 
 export const SortSelect = ({ onChange, value, ...rest }: any): React$Node => {

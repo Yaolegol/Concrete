@@ -19,12 +19,22 @@ type TProps = {
 const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
     const [sortSelectValue, setSortSelectValue] = useState(null);
 
-    console.log("sortSelectValue");
-    console.log(sortSelectValue);
-
-    const handleSortSelectChange = useCallback((value) => {
-        setSortSelectValue(value);
-    }, []);
+    const handleSortSelectChange = useCallback(
+        (value) => {
+            setSortSelectValue(value);
+            dispatch(
+                actionGetProducts({
+                    sort: [
+                        {
+                            id: value.id,
+                            value: value.value,
+                        },
+                    ],
+                })
+            );
+        },
+        [dispatch, sortSelectValue]
+    );
 
     const productCards = useMemo(() => {
         return products.map(({ description, _id, images, price, title }) => {

@@ -3,10 +3,11 @@ import React from "react";
 import Select from "react-select";
 import "./index.less";
 
-type TSelectOption = {|
+type TSelectOption = {
+    id?: any,
     label: string,
     value: string,
-|};
+};
 
 type TProps = {
     isSearchable?: boolean,
