@@ -8,6 +8,6 @@ export const adminCreateProduct = ({ productData }: any): any => {
         options: {
             method: "POST",
         },
-        url: "http://localhost:8000/admin/create-product-images",
+        url: "http://localhost:8000/admin/create-product",
     });
 };

@@ -13,8 +13,30 @@ cloudinary.config({
 
 const router = express.Router()
 
-router.post('/admin/create-product-images', (req, res, next) => {
-    const urls = []
+router.post('/admin/create-product', (req, res, next) => {
+    Promise.all(req.files.map((file) => {
+        return cloudinary.uploader.upload(file.path, {
+                public_id: `${Date.now()}`,
+                resource_type: 'auto'
+            }
+        )
+    })).then((results) => {
+        req.files.forEach((file) => {
+            fs.unlink(file.path, (err) => {
+                if(err) {
+                    console.log(err)
+                } else {
+                    console.log('file removed')
+                }
+            })
+        })
+        console.log('results')
+        console.log(results)
+
+    }).catch((err) => {
+        console.log(err)
+    });
+
 
     // async function sendImagesToCloudinary () {
     //     for (const file of req.files) {
@@ -42,13 +64,6 @@ router.post('/admin/create-product-images', (req, res, next) => {
     // }
 
     // sendImagesToCloudinary()
-
-    console.log('req.body')
-    console.log(req.body)
-    console.log('req.files')
-    console.log(req.files)
-    // console.log('req.file')
-    // console.log(req.file)
 })
 
 module.exports = router
