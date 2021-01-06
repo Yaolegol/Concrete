@@ -3,27 +3,23 @@ const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
     availability: {
-        type: Boolean,
+        default: true,
         required: true,
-        default: true
+        type: Boolean
     },
-    brand: {
+    description: {
         type: String,
-        required: true
     },
-    category: {
-        type: String,
-        required: true
+    images: {
+        type: [String]
     },
-    description: String,
-    images: Array,
     price: {
-        type: Number,
-        required: true
+        required: true,
+        type: Number
     },
     title: {
-        type: String,
-        required: true
+        required: true,
+        type: String
     },
 });
 

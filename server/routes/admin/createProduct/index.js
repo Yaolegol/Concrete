@@ -1,9 +1,8 @@
 const customRequire = require('app-root-path').require;
-const UsersModel = customRequire('server/models/user');
+const ProductModel = customRequire('server/models/product');
 const cloudinary = require('cloudinary')
 const express = require('express');
 const fs = require('fs');
-const jwt = require('jsonwebtoken');
 
 cloudinary.config({
     cloud_name: 'yaolegol',
@@ -20,7 +19,7 @@ router.post('/admin/create-product', (req, res, next) => {
                 resource_type: 'auto'
             }
         )
-    })).then((results) => {
+    })).then((result) => {
         req.files.forEach((file) => {
             fs.unlink(file.path, (err) => {
                 if(err) {
@@ -30,40 +29,22 @@ router.post('/admin/create-product', (req, res, next) => {
                 }
             })
         })
-        console.log('results')
-        console.log(results)
-
+        const imagesUrls = result.map(({secure_url: url}) => url);
+        const product = {
+            ...req.body,
+            images: imagesUrls,
+        }
+        const productModel = new ProductModel(product);
+        productModel.save()
+            .then(product => {
+                res.json(product)
+            })
+            .catch(err => {
+                res.json(err)
+            })
     }).catch((err) => {
         console.log(err)
     });
-
-
-    // async function sendImagesToCloudinary () {
-    //     for (const file of req.files) {
-    //         console.log('!!!!!!!!!!!!!!!!!file.path', file.path)
-    //
-    //         await cloudinary.uploader.upload(
-    //             file.path,
-    //             {
-    //                 public_id: `${Date.now()}`,
-    //                 resource_type: 'auto'
-    //             }
-    //         ).then(result => {
-    //             fs.unlink(file.path, function (err) {
-    //                 if (err) {
-    //                     console.log(err)
-    //                 }
-    //             })
-    //             urls.push(result.url)
-    //         })
-    //             .catch(err => {
-    //                 console.log(err)
-    //             })
-    //     }
-    //     res.json(urls)
-    // }
-
-    // sendImagesToCloudinary()
 })
 
 module.exports = router
