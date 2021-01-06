@@ -43,8 +43,8 @@ router.post('/admin/create-product-images', (req, res, next) => {
 
     // sendImagesToCloudinary()
 
-    // console.log('req.body')
-    // console.log(req.body)
+    console.log('req.body')
+    console.log(req.body)
     console.log('req.files')
     console.log(req.files)
     // console.log('req.file')

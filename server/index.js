@@ -39,7 +39,6 @@ if (process.env.NODE_ENV !== 'production') {
 }
 app.use(express.static(path.resolve(projectRootPath, 'dist')))
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(uploads.any())
 app.use(router)
 
