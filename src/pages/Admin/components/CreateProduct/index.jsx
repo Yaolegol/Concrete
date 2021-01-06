@@ -60,8 +60,6 @@ export const CreateProduct = (): React$Node => {
                         touched,
                         values,
                     }) => {
-                        console.log("values");
-                        console.log(values);
                         return (
                             <form onSubmit={handleSubmit}>
                                 <FormField

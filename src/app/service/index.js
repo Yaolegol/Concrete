@@ -57,8 +57,6 @@ export const request = async ({
     }
 
     try {
-        console.log("_options");
-        console.log(_options);
         const response = await fetch(url, {
             ..._options,
             headers: {
