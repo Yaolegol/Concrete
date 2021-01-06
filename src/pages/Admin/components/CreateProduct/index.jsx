@@ -26,7 +26,7 @@ export const CreateProduct = (): React$Node => {
             <div className="admin-page-create-product__content-container">
                 <Formik
                     initialValues={{
-                        available: true,
+                        availability: true,
                         description: "",
                         images: "",
                         price: "",
@@ -113,11 +113,11 @@ export const CreateProduct = (): React$Node => {
                                 </div>
                                 <div className="admin-page-create-product__input-container">
                                     <Checkbox
-                                        checked={values.available}
-                                        name="available"
+                                        checked={values.availability}
+                                        name="availability"
                                         onBlur={handleBlur}
                                         onChange={handleChange}
-                                        value={values.available}
+                                        value={values.availability}
                                     >
                                         Is available
                                     </Checkbox>
