@@ -8,36 +8,39 @@ const path = require('path')
 const projectRootPath = path.resolve(__dirname, '../')
 const serverRootPath = __dirname
 
+let multerStorage;
+
 if (process.env.NODE_ENV === 'production') {
-    var storage = multer.diskStorage({
+    multerStorage = multer.diskStorage({
         destination: function (req, file, cb) {
             cb(null, path.resolve(projectRootPath, 'dist'))
         },
         filename: function (req, file, cb) {
-            cb(null, file.fieldname + '_' + Date.now() + '_' + file.originalname)
+            cb(null, `${Date.now()}_${file.originalname}`)
         }
     })
 } else {
-    var storage = multer.diskStorage({
+    multerStorage = multer.diskStorage({
         destination: function (req, file, cb) {
             cb(null, path.resolve(projectRootPath, 'uploads'))
         },
         filename: function (req, file, cb) {
-            cb(null, file.fieldname + '_' + Date.now() + '_' + file.originalname)
+            cb(null, `${Date.now()}_${file.originalname}`)
         }
     })
 }
 
-const uploads = multer({ storage: storage })
+const uploads = multer({ storage: multerStorage })
 const router = require(path.resolve(serverRootPath, 'routes', 'router'))
 const app = express()
 
-app.use(bodyParser.json())
-app.use(uploads.any())
-app.use(express.static(path.resolve(projectRootPath, 'dist')))
 if (process.env.NODE_ENV !== 'production') {
     app.use(cors())
 }
+app.use(express.static(path.resolve(projectRootPath, 'dist')))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(uploads.any())
 app.use(router)
 
 mongoose

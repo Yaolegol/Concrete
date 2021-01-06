@@ -4,15 +4,21 @@ import { Checkbox } from "common/components/Checkbox";
 import { FileInput } from "common/components/FileInput";
 import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
-import { actionLogin, actionRegistration } from "modules/Auth/actions";
-import { actionGetUser } from "modules/User/actions";
+import { actionAdminCreateProduct } from "modules/Admin/actions";
 import { Formik } from "formik";
-import React from "react";
+import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import "./index.less";
 
 export const CreateProduct = (): React$Node => {
     const dispatch = useDispatch();
+
+    const handleFileInputChange = useCallback(
+        ({ handler, name }) => (e) => {
+            handler(name, e.target.files);
+        },
+        []
+    );
 
     return (
         <div className="admin-page-create-product">
@@ -27,22 +33,8 @@ export const CreateProduct = (): React$Node => {
                         title: "",
                     }}
                     onSubmit={(values, { setFieldError }) => {
-                        dispatch(actionRegistration({ data: values })).then(
-                            ({ errors }) => {
-                                if (!errors) {
-                                    dispatch(
-                                        actionLogin({ data: values })
-                                    ).then(({ errors }) => {
-                                        if (!errors) {
-                                            dispatch(actionGetUser());
-                                        }
-                                    });
-                                } else {
-                                    errors.forEach(({ key, message }) => {
-                                        setFieldError(key, message);
-                                    });
-                                }
-                            }
+                        dispatch(
+                            actionAdminCreateProduct({ productData: values })
                         );
                     }}
                     validate={(values) => {
@@ -64,9 +56,12 @@ export const CreateProduct = (): React$Node => {
                         handleChange,
                         handleSubmit,
                         isValid,
+                        setFieldValue,
                         touched,
                         values,
                     }) => {
+                        console.log("values");
+                        console.log(values);
                         return (
                             <form onSubmit={handleSubmit}>
                                 <FormField
@@ -111,7 +106,12 @@ export const CreateProduct = (): React$Node => {
                                     />
                                 </FormField>
                                 <div className="admin-page-create-product__input-container">
-                                    <FileInput />
+                                    <FileInput
+                                        onChange={handleFileInputChange({
+                                            handler: setFieldValue,
+                                            name: "images",
+                                        })}
+                                    />
                                 </div>
                                 <div className="admin-page-create-product__input-container">
                                     <Checkbox

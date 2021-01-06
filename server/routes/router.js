@@ -11,6 +11,7 @@ const jwt = require('jsonwebtoken')
 
 const router = express.Router()
 const perPage = 8
+const adminCreateProductRoute = customRequire('server/routes/admin/createProduct');
 const loginRoute = customRequire('server/routes/login');
 const purchaseRoute = customRequire('server/routes/purchase');
 const productsRoute = customRequire('server/routes/products');
@@ -18,6 +19,7 @@ const registrationRoute = customRequire('server/routes/registration');
 const userRoute = customRequire('server/routes/user');
 
 router
+    .use(adminCreateProductRoute)
     .use(loginRoute)
     .use(purchaseRoute)
     .use(productsRoute)

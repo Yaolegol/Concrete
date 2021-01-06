@@ -2,18 +2,26 @@
 import React, { useCallback, useMemo, useState } from "react";
 import "./index.less";
 
-export const FileInput = (): React$Node => {
+type TProps = {
+    onChange: (any) => void,
+};
+
+export const FileInput = ({ onChange, ...rest }: TProps): React$Node => {
     const [previewUrlList, setPreviewUrlList] = useState([]);
 
-    const handleChange = useCallback((e) => {
-        const urls = [];
-        [...e.target.files].forEach((file) => {
-            const { name } = file;
-            const url = URL.createObjectURL(file);
-            urls.push({ name, url });
-        });
-        setPreviewUrlList(urls);
-    }, []);
+    const handleChange = useCallback(
+        (e) => {
+            const urls = [];
+            [...e.target.files].forEach((file) => {
+                const { name } = file;
+                const url = URL.createObjectURL(file);
+                urls.push({ name, url });
+            });
+            setPreviewUrlList(urls);
+            onChange(e);
+        },
+        [onChange]
+    );
 
     const preview = useMemo(() => {
         return previewUrlList.map(({ name, url }) => {
@@ -36,6 +44,7 @@ export const FileInput = (): React$Node => {
         <div className="file-input">
             <label className="file-input__label">
                 <input
+                    {...rest}
                     className="file-input__input"
                     multiple
                     onChange={handleChange}
