@@ -1,6 +1,6 @@
 // @flow
-import { OrderHeader } from "common/components/Order/OrderHeader";
-import { OrderItem } from "common/components/Order/OrderItem";
+import { OrderHeader } from "modules/Admin/components/Order/OrderHeader";
+import { OrderItem } from "modules/Admin/components/Order/OrderItem";
 import { selectOrders } from "modules/Admin/selectors";
 import { actionGetPurchases } from "modules/Admin/actions";
 import { CartEmpty } from "pages/Cart/components/CartEmpty";
@@ -13,13 +13,14 @@ export const ViewOrders = (): React$Node => {
     const orders = useSelector(selectOrders);
 
     const contentItems = useMemo(() => {
-        return orders.map(({email, purchase}) => {
+        return orders.map(({ email, purchase }) => {
             return purchase.map(({ _id, count, productID, price, sum }) => {
                 const { description, images, title } = productID;
                 return (
                     <OrderItem
                         countInCart={count}
                         description={description}
+                        email={email}
                         key={_id}
                         price={price}
                         src={images[0]}
