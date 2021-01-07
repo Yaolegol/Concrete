@@ -4,11 +4,11 @@ const ProductsModel = customRequire('server/models/product');
 const express = require('express');
 
 const router = express.Router();
-const perPage = 8;
+const perPage = 9;
 
 router.post('/products', (req, res, next) => {
-    const currentPage = req.body.page || 0
-    const skip = currentPage * perPage
+    const currentPage = req.body.page;
+    const skip = currentPage > 1 ? (currentPage - 1) * perPage : 0;
 
     let filters = {};
 
@@ -43,7 +43,10 @@ router.post('/products', (req, res, next) => {
         })
         .then(products => {
             ProductsModel
-                .count()
+                .count({
+                    availability: true,
+                    ...filters,
+                })
                 .then(count => {
                     res.json({
                         data: {

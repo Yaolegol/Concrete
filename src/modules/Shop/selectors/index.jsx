@@ -5,6 +5,11 @@ const getShopState = (state) => {
     return state.shop;
 };
 
+export const selectCurrentPage: any = createSelector(
+    [getShopState],
+    ({ currentPage }) => currentPage
+);
+
 export const selectProducts: any = createSelector(
     [getShopState],
     ({ products }) => products
