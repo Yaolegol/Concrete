@@ -33,23 +33,25 @@ export const AdminPage = (): React$Node => {
                 <div className="admin-page__main-section">
                     <div className="admin-page__controls-section">
                         <h4>Menu</h4>
-                        <div className="admin-page__control">
-                            <Button
-                                fullWidth
-                                onClick={changeContent("create product")}
-                                theme="white"
-                            >
-                                Create product
-                            </Button>
-                        </div>
-                        <div className="admin-page__control">
-                            <Button
-                                fullWidth
-                                onClick={changeContent("view orders")}
-                                theme="white"
-                            >
-                                View orders
-                            </Button>
+                        <div className="admin-page__controls-container">
+                            <div className="admin-page__control">
+                                <Button
+                                    fullWidth
+                                    onClick={changeContent("create product")}
+                                    theme="white"
+                                >
+                                    Create product
+                                </Button>
+                            </div>
+                            <div className="admin-page__control">
+                                <Button
+                                    fullWidth
+                                    onClick={changeContent("view orders")}
+                                    theme="white"
+                                >
+                                    View orders
+                                </Button>
+                            </div>
                         </div>
                     </div>
                     <div className="admin-page__content-section">{content}</div>
