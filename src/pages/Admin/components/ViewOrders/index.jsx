@@ -54,8 +54,8 @@ export const ViewOrders = (): React$Node => {
     }, [dispatch]);
 
     return (
-        <div className="profile-page">
-            <h4 className="profile-page__orders-history-title">Orders</h4>
+        <div>
+            <h4>Orders</h4>
             {content}
         </div>
     );
