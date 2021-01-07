@@ -109,6 +109,7 @@ export const CreateProduct = (): React$Node => {
                                             handler: setFieldValue,
                                             name: "images",
                                         })}
+                                        title="Выберите фото"
                                     />
                                 </div>
                                 <div className="admin-page-create-product__input-container">

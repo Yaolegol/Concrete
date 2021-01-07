@@ -4,9 +4,10 @@ import "./index.less";
 
 type TProps = {
     onChange: (any) => void,
+    title: string,
 };
 
-export const FileInput = ({ onChange, ...rest }: TProps): React$Node => {
+export const FileInput = ({ onChange, title, ...rest }: TProps): React$Node => {
     const [previewUrlList, setPreviewUrlList] = useState([]);
 
     const handleChange = useCallback(
@@ -50,7 +51,7 @@ export const FileInput = ({ onChange, ...rest }: TProps): React$Node => {
                     onChange={handleChange}
                     type="file"
                 />
-                <span>Выберите файлы</span>
+                <span>{title}</span>
             </label>
             <div className="file-input__preview-section">{preview}</div>
         </div>
