@@ -5,10 +5,13 @@ const {
     CREATE_PRODUCT_FAIL,
     CREATE_PRODUCT_START,
     CREATE_PRODUCT_SUCCESS,
+    GET_PURCHASES_FAIL,
+    GET_PURCHASES_START,
+    GET_PURCHASES_SUCCESS,
 } = ADMIN_ACTION_TYPES;
 
 const initialState = {
-    admin: {},
+    purchases: [],
 };
 
 export const adminReducer = (state: any = initialState, action: any): any => {
@@ -26,6 +29,19 @@ export const adminReducer = (state: any = initialState, action: any): any => {
         case CREATE_PRODUCT_SUCCESS:
             return {
                 ...state,
+            };
+        case GET_PURCHASES_FAIL:
+            return {
+                ...state,
+            };
+        case GET_PURCHASES_START:
+            return {
+                ...state,
+            };
+        case GET_PURCHASES_SUCCESS:
+            return {
+                ...state,
+                purchases: data,
             };
         default:
             return state;

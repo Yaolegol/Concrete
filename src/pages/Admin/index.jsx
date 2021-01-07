@@ -2,6 +2,7 @@
 import { Button } from "common/components/Button";
 import { Layout } from "common/components/Layout";
 import { CreateProduct } from "pages/Admin/components/CreateProduct";
+import { ViewOrders } from "pages/Admin/components/ViewOrders";
 import React, { useCallback, useMemo, useState } from "react";
 import "./index.less";
 
@@ -20,7 +21,7 @@ export const AdminPage = (): React$Node => {
             case "create product":
                 return <CreateProduct />;
             case "view orders":
-                return null;
+                return <ViewOrders />;
             default:
                 return null;
         }

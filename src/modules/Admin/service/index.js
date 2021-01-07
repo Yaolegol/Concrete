@@ -11,3 +11,10 @@ export const adminCreateProduct = ({ productData }: any): any => {
         url: "http://localhost:8000/admin/create-product",
     });
 };
+
+export const adminGetPurchases = (): any => {
+    return request({
+        isPrivate: true,
+        url: "http://localhost:8000/admin/get-purchases",
+    });
+};
