@@ -9,7 +9,7 @@ import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./index.less";
 
-export const ProfilePage = (): React$Node => {
+const ProfilePage = (): React$Node => {
     const dispatch = useDispatch();
     const userPurchases = useSelector(selectUserPurchases);
 
@@ -65,3 +65,5 @@ export const ProfilePage = (): React$Node => {
         </Layout>
     );
 };
+
+export default ProfilePage;

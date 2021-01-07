@@ -6,7 +6,7 @@ import { ViewOrders } from "pages/Admin/components/ViewOrders";
 import React, { useCallback, useMemo, useState } from "react";
 import "./index.less";
 
-export const AdminPage = (): React$Node => {
+const AdminPage = (): React$Node => {
     const [currentContent, setCurrentContent] = useState("create product");
 
     const changeContent = useCallback(
@@ -61,3 +61,5 @@ export const AdminPage = (): React$Node => {
         </Layout>
     );
 };
+
+export default AdminPage;
