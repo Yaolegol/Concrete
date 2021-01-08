@@ -1,5 +1,7 @@
 // @flow
 import cn from "classnames";
+import { Menu } from "common/components/Menu";
+import { LangSelect } from "modules/Locale/components/LangSelect";
 import { actionToggleMobileMenu } from "modules/MobileMenu/actions";
 import { selectMobileMenuShowStatus } from "modules/MobileMenu/selectors";
 import React, { useCallback } from "react";
@@ -7,12 +9,11 @@ import { connect } from "react-redux";
 import "./index.less";
 
 type TProps = {
-    children: React$Node,
     dispatch: any,
     isShow: boolean,
 };
 
-const MobileMenu = ({ children, dispatch, isShow }: TProps): React$Node => {
+const MobileMenu = ({ dispatch, isShow }: TProps): React$Node => {
     const toggleMobileMenu = useCallback(() => {
         dispatch(actionToggleMobileMenu());
     }, [dispatch]);
@@ -27,7 +28,10 @@ const MobileMenu = ({ children, dispatch, isShow }: TProps): React$Node => {
             onClick={toggleMobileMenu}
         >
             <div className="mobile-menu__body" onClick={preventClick}>
-                {children}
+                <Menu className="mobile-menu__menu" />
+                <div className="mobile-menu__lang-select">
+                    <LangSelect />
+                </div>
             </div>
         </div>
     );

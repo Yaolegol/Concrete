@@ -26,7 +26,7 @@ export const Header = (): React$Node => {
             <Logo className="header__item_tablet-hidden" />
             <Socials className="header__item_tablet-hidden" />
             <Menu className="header__item_tablet-hidden" />
-            <div className="header__lang-select">
+            <div className="header__lang-select header__item_tablet-hidden">
                 <LangSelect />
             </div>
             <CartLink />

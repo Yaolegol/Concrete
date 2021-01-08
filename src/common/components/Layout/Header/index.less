@@ -35,13 +35,13 @@
     &__item {
         &_tablet-hidden {
             @media @tablet {
-                display: none;
+                display: none !important;
             }
         }
     }
 
     &__lang-select {
         display: flex;
-        width: 80px;
+        min-width: 80px;
     }
 }
