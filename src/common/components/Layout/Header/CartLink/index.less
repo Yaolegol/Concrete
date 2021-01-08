@@ -1,9 +1,14 @@
+@import (reference) '~styles/adaptive';
 @import (reference) '~styles/colors';
 
 .cart-link {
     border-radius: 50%;
     display: flex;
     padding: 20px;
+
+    @media @mobile {
+        padding: 10px;
+    }
 
     &:hover {
         background-color: @blue;
