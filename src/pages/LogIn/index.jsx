@@ -9,6 +9,7 @@ import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import { actionGetUser } from "modules/User/actions";
 import { Formik } from "formik";
 import React, { useEffect } from "react";
+import { FormattedMessage } from "react-intl";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./index.less";
@@ -25,7 +26,9 @@ const LogIn = (): React$Node => {
         <Layout withFooter={false}>
             <div className="login-page">
                 <div className="login-page__content-container">
-                    <h1>Log In</h1>
+                    <h1>
+                        <FormattedMessage id="login.title" />
+                    </h1>
                     <div className="login-page__form">
                         <Formik
                             initialValues={{
@@ -118,7 +121,7 @@ const LogIn = (): React$Node => {
                                                 theme="white"
                                                 type="submit"
                                             >
-                                                Log In
+                                                <FormattedMessage id="login.loginButton" />
                                             </Button>
                                         </div>
                                     </form>

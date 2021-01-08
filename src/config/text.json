@@ -31,9 +31,13 @@
         "footer.tabs.tab3.title": "Test3",
         "hero.slide.description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eligendi expedita illum ipsum nobis omnis quaerat quas saepe tempora voluptas?",
         "hero.slide.title": "Concrete furniture",
+        "login.loginButton": "log in",
+        "login.title": "log in",
         "main.descriptionSection.description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda doloribus dolorum error fugit itaque iure nemo praesentium quam qui quisquam.",
         "main.descriptionSection.title": "Made with a soul",
         "shop.title": "Shop",
+        "signup.signupButton": "sign up",
+        "signup.title": "sign up",
         "test": "test en"
     },
     "ru": {
@@ -68,9 +72,13 @@
         "footer.tabs.tab3.title": "Тест3",
         "hero.slide.description": "Невероятное описание на русском языке о супер крутой бетонной фурнитуре. Невероятное описание на русском языке о супер крутой бетонной фурнитуре?",
         "hero.slide.title": "Бетонная фурнитура",
+        "login.loginButton": "войти",
+        "login.title": "войти",
         "main.descriptionSection.description": "Невероятное описание на русском языке о том какая у нас крутая бетонная фурнитура.",
         "main.descriptionSection.title": "Сделано с душой",
         "shop.title": "Магазин",
+        "signup.signupButton": "Зарегистрироваться",
+        "signup.title": "Зарегистрироваться",
         "test": "test ru"
     }
 }
