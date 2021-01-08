@@ -1,3 +1,5 @@
+@import (reference) '~styles/adaptive';
+
 .admin-page {
     display: flex;
     flex: 1;
@@ -9,6 +11,10 @@
         display: flex;
         flex: 1;
         margin-top: 50px;
+
+        @media @tablet {
+            flex-direction: column;
+        }
     }
 
     &__content-section {
@@ -17,6 +23,10 @@
         flex: 5;
         flex-direction: column;
         padding: 0 20px;
+
+        @media @tablet {
+            margin-top: 100px;
+        }
     }
 
     &__control {

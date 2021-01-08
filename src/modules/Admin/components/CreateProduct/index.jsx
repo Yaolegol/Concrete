@@ -123,13 +123,13 @@ export const CreateProduct = (): React$Node => {
                                         Is available
                                     </Checkbox>
                                 </div>
-                                <div className="signup-page__submit-button-container">
+                                <div className="admin-page-create-product__submit-button-container">
                                     <Button
                                         disabled={!isValid || !dirty}
                                         theme="white"
                                         type="submit"
                                     >
-                                        Sign Up
+                                        Создать товар
                                     </Button>
                                 </div>
                             </form>

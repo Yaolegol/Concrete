@@ -1,9 +1,9 @@
 // @flow
 import { Button } from "common/components/Button";
 import { Layout } from "common/components/Layout";
+import { CreateProduct } from "modules/Admin/components/CreateProduct";
+import { ViewOrders } from "modules/Admin/components/ViewOrders";
 import { actionHideMobileMenu } from "modules/MobileMenu/actions";
-import { CreateProduct } from "pages/Admin/components/CreateProduct";
-import { ViewOrders } from "pages/Admin/components/ViewOrders";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useDispatch } from "react-redux";
 import "./index.less";

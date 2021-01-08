@@ -27,18 +27,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/MobileMenu/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/MobileMenu/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/MobileMenu/components/MobileMenu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/MobileMenu/components/MobileMenu/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/MobileMenu/constants/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/MobileMenu/constants/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/MobileMenu/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/MobileMenu/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Admin/components/CreateProduct/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/components/CreateProduct/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Admin/components/CreateProduct/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/components/CreateProduct/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Admin/components/ViewOrders/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/components/ViewOrders/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Admin/components/ViewOrders/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/components/ViewOrders/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Admin/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LogIn/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LogIn/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Profile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Shop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Shop/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SignUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignUp/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Admin/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Admin/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,11 +88,11 @@
       <recent name="$PROJECT_DIR$/src/modules/MobileMenu" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/Admin/components" />
       <recent name="$PROJECT_DIR$/src/common/components/Layout/Footer" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/modules" />
-      <recent name="$PROJECT_DIR$/src/modules/common/components/Order/OrderItem" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -147,7 +141,7 @@
       <workItem from="1608990275237" duration="17831000" />
       <workItem from="1609751880800" duration="56339000" />
       <workItem from="1609931240484" duration="38839000" />
-      <workItem from="1610110703939" duration="10409000" />
+      <workItem from="1610110703939" duration="11055000" />
     </task>
     <servers />
   </component>

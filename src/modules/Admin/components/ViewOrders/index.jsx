@@ -3,7 +3,6 @@ import { OrderHeader } from "modules/Admin/components/Order/OrderHeader";
 import { OrderItem } from "modules/Admin/components/Order/OrderItem";
 import { selectOrders } from "modules/Admin/selectors";
 import { actionGetPurchases } from "modules/Admin/actions";
-import { CartEmpty } from "pages/Cart/components/CartEmpty";
 import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./index.less";
@@ -32,10 +31,6 @@ export const ViewOrders = (): React$Node => {
         });
     }, [orders]);
 
-    const empty = useMemo(() => {
-        return <CartEmpty />;
-    }, []);
-
     const content = useMemo(() => {
         return contentItems.length ? (
             <div className="cart-page__content-section">
@@ -44,10 +39,8 @@ export const ViewOrders = (): React$Node => {
                     {contentItems}
                 </div>
             </div>
-        ) : (
-            empty
-        );
-    }, [contentItems, empty]);
+        ) : null;
+    }, [contentItems]);
 
     useEffect(() => {
         dispatch(actionGetPurchases());
