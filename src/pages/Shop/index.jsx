@@ -16,6 +16,7 @@ import {
 import { selectCurrentPage, selectProducts } from "modules/Shop/selectors";
 import { Filters } from "pages/Shop/components/Filters";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import "./index.less";
 
@@ -79,7 +80,7 @@ const ShopPage = ({
         return isShow ? (
             <div className="shop-page__show-more-container">
                 <Button onClick={loadMoreProducts} theme="white">
-                    Show more
+                    <FormattedMessage id="common.showMore" />
                 </Button>
             </div>
         ) : null;
@@ -96,7 +97,9 @@ const ShopPage = ({
     return (
         <Layout>
             <div className="shop-page">
-                <h1>Shop</h1>
+                <h1>
+                    <FormattedMessage id="shop.title" />
+                </h1>
                 <div className="shop-page__content">
                     <div className="shop-page__filters-section">
                         <Filters />

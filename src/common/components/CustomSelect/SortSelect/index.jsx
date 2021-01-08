@@ -1,14 +1,25 @@
 // @flow
 import { CustomSelect } from "common/components/CustomSelect";
-import React from "react";
+import React, { useMemo } from "react";
+import { FormattedMessage } from "react-intl";
 import "./index.less";
 
-const options = [
-    { id: "price", label: "По возрастанию цены", value: "ascending" },
-    { id: "price", label: "По убыванию цены", value: "descending" },
-];
-
 export const SortSelect = ({ onChange, value, ...rest }: any): React$Node => {
+    const options = useMemo(() => {
+        return [
+            {
+                id: "price",
+                label: <FormattedMessage id="common.sort.priceAscending" />,
+                value: "ascending",
+            },
+            {
+                id: "price",
+                label: <FormattedMessage id="common.sort.priceDescending" />,
+                value: "descending",
+            },
+        ];
+    }, []);
+
     return (
         <div className="sort-select">
             <CustomSelect
@@ -18,7 +29,7 @@ export const SortSelect = ({ onChange, value, ...rest }: any): React$Node => {
                 }}
                 onChange={onChange}
                 options={options}
-                placeholder="Сортировать..."
+                placeholder={<FormattedMessage id="common.sort.placeholder" />}
                 value={value}
             />
         </div>

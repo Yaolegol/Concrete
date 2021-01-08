@@ -1,6 +1,7 @@
 // @flow
 import { Range } from "rc-slider";
 import React from "react";
+import { FormattedMessage } from "react-intl";
 import "./index.less";
 
 type rangeValues = [number, number];
@@ -21,7 +22,9 @@ export const PriceFilter = ({
     return (
         <div className="shop-page-price-filter">
             <h6 className="shop-page-price-filter__title">
-                <span>Price (</span>
+                <span>
+                    <FormattedMessage id="common.price" /> (
+                </span>
                 <span className="shop-page-price-filter__price">
                     {values[0]}
                 </span>

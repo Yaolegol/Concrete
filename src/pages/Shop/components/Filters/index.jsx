@@ -6,6 +6,7 @@ import {
 } from "modules/Shop/actions";
 import { PriceFilter } from "pages/Shop/components/Filters/PriceFilter";
 import React, { useCallback, useState } from "react";
+import { FormattedMessage } from "react-intl";
 import { useDispatch } from "react-redux";
 import "./index.less";
 
@@ -35,7 +36,9 @@ export const Filters = (): React$Node => {
 
     return (
         <div className="shop-page-filters">
-            <h6>Filters</h6>
+            <h6>
+                <FormattedMessage id="common.filters" />
+            </h6>
             <div className="shop-page-filters__container">
                 <PriceFilter
                     initialValues={[0, 10000]}
