@@ -53,7 +53,11 @@ const CartPage = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
     }, [cartProductsData]);
 
     const empty = useMemo(() => {
-        return <CartEmpty />;
+        return (
+            <div className="cart-page__empty-container">
+                <CartEmpty />
+            </div>
+        );
     }, []);
 
     const handleBuy = useCallback(

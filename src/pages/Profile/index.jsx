@@ -33,10 +33,6 @@ const ProfilePage = (): React$Node => {
         });
     }, [userPurchases]);
 
-    const empty = useMemo(() => {
-        return <CartEmpty />;
-    }, []);
-
     const content = useMemo(() => {
         return contentItems.length ? (
             <div className="cart-page__content-section">
@@ -45,10 +41,8 @@ const ProfilePage = (): React$Node => {
                     {contentItems}
                 </div>
             </div>
-        ) : (
-            empty
-        );
-    }, [contentItems, empty]);
+        ) : null;
+    }, [contentItems]);
 
     useEffect(() => {
         dispatch(actionHideMobileMenu());
