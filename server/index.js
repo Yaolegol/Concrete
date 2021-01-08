@@ -34,7 +34,9 @@ const uploads = multer({ storage: multerStorage })
 const router = require(path.resolve(serverRootPath, 'routes', 'router'))
 const app = express()
 
-app.use(cors())
+if (process.env.NODE_ENV !== 'production') {
+    app.use(cors())
+}
 app.use(express.static(path.resolve(projectRootPath, 'dist')))
 app.use(bodyParser.json())
 app.use(uploads.any())

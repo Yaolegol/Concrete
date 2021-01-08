@@ -10,6 +10,6 @@ export const getProducts = ({ filters, page, sort }: any): any => {
             },
             method: "POST",
         },
-        url: "http://localhost:8000/products",
+        url: "/products",
     });
 };

@@ -8,13 +8,13 @@ export const adminCreateProduct = ({ productData }: any): any => {
         options: {
             method: "POST",
         },
-        url: "http://localhost:8000/admin/create-product",
+        url: "/admin/create-product",
     });
 };
 
 export const adminGetPurchases = (): any => {
     return request({
         isPrivate: true,
-        url: "http://localhost:8000/admin/get-purchases",
+        url: "/admin/get-purchases",
     });
 };

@@ -10,7 +10,7 @@ export const loginRequest = ({ data }: any): any => {
             },
             method: "POST",
         },
-        url: "http://localhost:8000/login",
+        url: "/login",
     });
 };
 
@@ -23,6 +23,6 @@ export const registrationRequest = ({ data }: any): any => {
             },
             method: "POST",
         },
-        url: "http://localhost:8000/registration",
+        url: "/registration",
     });
 };

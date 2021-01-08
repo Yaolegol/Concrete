@@ -10,6 +10,6 @@ export const getUser = (): any => {
             },
             method: "GET",
         },
-        url: "http://localhost:8000/user",
+        url: "/user",
     });
 };
