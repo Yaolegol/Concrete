@@ -1,8 +1,14 @@
 ###1. Install dependencies
-npm i
+> npm i
 
-###2. Run app
-- npm run build
-- npm run server
+###2. Run frontend
+> npm start
 
-Server start on 8000 port
+**Frontend** start on **8080** port
+
+###3. Run backend
+> npm run server
+
+**Backend** start on **8000** port
+
+###4. Enjoy!
