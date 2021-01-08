@@ -9,9 +9,10 @@ import { selectUser } from "modules/User/selectors";
 import { actionBuyProducts, actionResetCart } from "modules/Cart/actions";
 import { selectCartProductsData } from "modules/Cart/selectors";
 import type { TCartProductsData } from "modules/Cart/types";
+import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import { CartEmpty } from "pages/Cart/components/CartEmpty";
 import { Formik } from "formik";
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./index.less";
@@ -169,8 +170,9 @@ const CartPage = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
         );
     }, [contentItems, empty, handleBuy, user]);
 
-    console.log("cartProductsData");
-    console.log(cartProductsData);
+    useEffect(() => {
+        dispatch(actionHideMobileMenu());
+    }, [dispatch]);
 
     return (
         <Layout>

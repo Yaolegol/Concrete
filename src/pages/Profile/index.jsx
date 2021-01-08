@@ -2,6 +2,7 @@
 import { Layout } from "common/components/Layout";
 import { OrderHeader } from "common/components/Order/OrderHeader";
 import { OrderItem } from "common/components/Order/OrderItem";
+import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import { actionGetUser } from "modules/User/actions";
 import { selectUserPurchases } from "modules/User/selectors";
 import { CartEmpty } from "pages/Cart/components/CartEmpty";
@@ -50,6 +51,7 @@ const ProfilePage = (): React$Node => {
     }, [contentItems, empty]);
 
     useEffect(() => {
+        dispatch(actionHideMobileMenu());
         dispatch(actionGetUser());
     }, [dispatch]);
 

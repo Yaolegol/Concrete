@@ -2,7 +2,7 @@
 import cn from "classnames";
 import { Menu } from "common/components/Menu";
 import { LangSelect } from "modules/Locale/components/LangSelect";
-import { actionToggleMobileMenu } from "modules/MobileMenu/actions";
+import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import { selectMobileMenuShowStatus } from "modules/MobileMenu/selectors";
 import React, { useCallback } from "react";
 import { connect } from "react-redux";
@@ -15,7 +15,7 @@ type TProps = {
 
 const MobileMenu = ({ dispatch, isShow }: TProps): React$Node => {
     const toggleMobileMenu = useCallback(() => {
-        dispatch(actionToggleMobileMenu());
+        dispatch(actionHideMobileMenu());
     }, [dispatch]);
 
     const preventClick = useCallback((e) => {

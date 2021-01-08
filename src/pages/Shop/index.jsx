@@ -4,6 +4,7 @@ import { SortSelect } from "common/components/CustomSelect/SortSelect";
 import { Layout } from "common/components/Layout";
 import { ProductCard } from "common/components/ProductCard";
 import { selectCartProductsItems } from "modules/Cart/selectors";
+import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import {
     actionGetProducts,
     actionResetPage,
@@ -85,6 +86,7 @@ const ShopPage = ({
     }, [loadMoreProducts, products.count, products.list.length]);
 
     useEffect(() => {
+        dispatch(actionHideMobileMenu());
         dispatch(actionResetPage());
         dispatch(actionResetProductsFilters());
         dispatch(actionResetProductsSorts());

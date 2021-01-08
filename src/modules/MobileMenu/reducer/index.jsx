@@ -1,7 +1,7 @@
 // @flow
 import { MOBILE_MENU_ACTION_TYPES } from "modules/MobileMenu/constants";
 
-const { TOGGLE } = MOBILE_MENU_ACTION_TYPES;
+const { HIDE, SHOW } = MOBILE_MENU_ACTION_TYPES;
 
 const initialState = {
     isShow: false,
@@ -14,10 +14,15 @@ export const mobileMenuReducer = (
     const { type } = action;
 
     switch (type) {
-        case TOGGLE:
+        case HIDE:
             return {
                 ...state,
-                isShow: !state.isShow,
+                isShow: false,
+            };
+        case SHOW:
+            return {
+                ...state,
+                isShow: true,
             };
         default:
             return state;

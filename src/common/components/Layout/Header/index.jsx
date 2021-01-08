@@ -1,6 +1,6 @@
 // @flow
 import { LangSelect } from "modules/Locale/components/LangSelect";
-import { actionToggleMobileMenu } from "modules/MobileMenu/actions";
+import { actionShowMobileMenu } from "modules/MobileMenu/actions";
 import { BurgerButton } from "common/components/Button/BurgerButton";
 import CartLink from "common/components/Layout/Header/CartLink";
 import { Logo } from "common/components/Logo";
@@ -14,7 +14,7 @@ export const Header = (): React$Node => {
     const dispatch = useDispatch();
 
     const toggleMobileMenu = useCallback(() => {
-        dispatch(actionToggleMobileMenu());
+        dispatch(actionShowMobileMenu());
     }, [dispatch]);
 
     return (

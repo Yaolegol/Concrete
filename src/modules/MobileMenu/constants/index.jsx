@@ -1,4 +1,5 @@
 // @flow
 export const MOBILE_MENU_ACTION_TYPES = {
-    TOGGLE: "MOBILE_MENU__TOGGLE",
+    HIDE: "MOBILE_MENU__HIDE",
+    SHOW: "MOBILE_MENU__SHOW",
 };

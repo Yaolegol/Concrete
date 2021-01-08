@@ -4,9 +4,10 @@ import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
 import { Layout } from "common/components/Layout";
 import { actionLogin, actionRegistration } from "modules/Auth/actions";
+import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import { actionGetUser } from "modules/User/actions";
 import { Formik } from "formik";
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./index.less";
@@ -14,6 +15,10 @@ import "./index.less";
 const SignUp = (): React$Node => {
     const dispatch = useDispatch();
     const history = useHistory();
+
+    useEffect(() => {
+        dispatch(actionHideMobileMenu());
+    }, [dispatch]);
 
     return (
         <Layout withFooter={false}>
