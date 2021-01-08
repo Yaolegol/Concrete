@@ -98,7 +98,9 @@ module.exports = {
             template: "src/index.html",
             title: "My app",
         }),
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            ignoreOrder: true,
+        }),
         new CleanWebpackPlugin(),
     ],
     resolve: {
