@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "flow": "flow",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm run build",
     "server": "nodemon ./server/index.js",
     "server:prod": "./server/index.js",
     "start": "webpack-dev-server",
