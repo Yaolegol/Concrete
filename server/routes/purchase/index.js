@@ -30,8 +30,9 @@ router.post('/purchase', (req, res, next) => {
                                 })
                             })
                             .catch(error => {
+                                console.log(error)
                                 res.json({
-                                    errors: [error]
+                                    errors: ['Server error']
                                 })
                             })
                     } else {
@@ -43,14 +44,16 @@ router.post('/purchase', (req, res, next) => {
                     }
                 })
                 .catch(error => {
+                    console.log(error)
                     res.json({
-                        errors: [error]
+                        errors: ['Server error']
                     })
                 })
         })
         .catch(error => {
+            console.log(error)
             res.json({
-                errors: [error]
+                errors: ['Server error']
             })
         })
 });

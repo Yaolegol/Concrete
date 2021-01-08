@@ -57,10 +57,16 @@ router.post('/products', (req, res, next) => {
                 })
                 .catch(err => {
                     console.log(err)
+                    res.json({
+                        errors: ['Server error']
+                    })
                 })
         })
         .catch(err => {
             console.log(err)
+            res.json({
+                errors: ['Server error']
+            })
         })
 })
 

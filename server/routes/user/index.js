@@ -9,7 +9,7 @@ router.get('/user', (req, res, next) => {
     const reqToken = req.get('Authorization').split(' ')[1]
 
     jwt.verify(reqToken, 'superSecretSecretSecret', (err, tokenData) => {
-        if (tokenData) {
+        if (tokenData && !err) {
             UsersModel.findOne({_id: tokenData.id})
                 .populate({
                     path: 'purchases',
@@ -31,14 +31,14 @@ router.get('/user', (req, res, next) => {
                             }
                         })
                     } else {
-                        res.json({errors: 'User not found'})
+                        res.json({errors: ['User not found']})
                     }
                 })
                 .catch(err => {
-                    res.json(err)
+                    console.log(err)
+                    res.json({errors: ['Server error']})
                 })
         } else {
-            console.log(err)
             res.json({
                 errors: ['Token not valid']
             })

@@ -37,13 +37,15 @@ router.post('/admin/create-product', (req, res, next) => {
         const productModel = new ProductModel(product);
         productModel.save()
             .then(product => {
-                res.json(product)
+                res.json({data: product})
             })
             .catch(err => {
-                res.json(err)
+                console.log(err)
+                res.json({errors: ['Server error']})
             })
     }).catch((err) => {
         console.log(err)
+        res.json({errors: ['Server error']})
     });
 })
 

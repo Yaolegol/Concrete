@@ -20,6 +20,7 @@ router.get('/admin/get-purchases', (req, res, next) => {
             }
         })
         .catch(err => {
+            console.log(err)
             res.json({errors: ['Server error']})
         })
 })
