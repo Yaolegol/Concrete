@@ -22,7 +22,7 @@ router
 if (process.env.NODE_ENV === 'production') {
     router.get('/*', (req, res) => {
         const path = require('path')
-        res.sendFile(path.resolve('/app', 'build', 'index.html'))
+        res.sendFile(path.resolve('/app', 'dist', 'index.html'))
     })
 }
 
