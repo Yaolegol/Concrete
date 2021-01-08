@@ -7,11 +7,19 @@ export const OrderHeader = (): React$Node => {
         <div className="admin-order-header">
             <div className="admin-order-header__image" />
             <p>Title</p>
-            <p>Description</p>
-            <p>Price</p>
-            <p>Count</p>
-            <p>Total</p>
-            <p>Email</p>
+            <p className="admin-order-header__item admin-order-header__item_mobile-hidden">
+                Description
+            </p>
+            <p className="admin-order-header__item admin-order-header__item_mobile-hidden">
+                Price
+            </p>
+            <p className="admin-order-header__item admin-order-header__item_mobile-hidden">
+                Count
+            </p>
+            <p className="admin-order-header__item admin-order-header__item_mobile-hidden">
+                Total
+            </p>
+            <p className="admin-order-header__item admin-order-header__item_mobile-hidden">Email</p>
         </div>
     );
 };

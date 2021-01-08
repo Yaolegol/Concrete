@@ -1,11 +1,33 @@
+@import (reference) '~styles/adaptive';
+
 .admin-order-item {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 
+    @media @laptop {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media @mobile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     &__image {
         height: 275px;
         object-fit: cover;
         width: 275px;
+
+        @media @laptop {
+            display: none;
+        }
+    }
+
+    &__item {
+        &_mobile-hidden {
+            @media @mobile {
+                display: none;
+            }
+        }
     }
 }
