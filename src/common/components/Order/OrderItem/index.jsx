@@ -25,9 +25,15 @@ export const OrderItem = ({
         <div className="order-item">
             <img alt={title} className="order-item__image" src={src} />
             <h4>{title}</h4>
-            <p>{description}</p>
-            <p>{price}</p>
-            <p>{countInCart}</p>
+            <p className="order-item__item order-item__item_mobile-hidden">
+                {description}
+            </p>
+            <p className="order-item__item order-item__item_mobile-hidden">
+                {price}
+            </p>
+            <p className="order-item__item order-item__item_mobile-hidden">
+                {countInCart}
+            </p>
             <p>{totalPrice}</p>
         </div>
     );

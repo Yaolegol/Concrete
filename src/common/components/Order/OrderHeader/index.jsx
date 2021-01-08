@@ -2,14 +2,20 @@
 import React from "react";
 import "./index.less";
 
-export const OrderHeader = () => {
+export const OrderHeader = (): React$Node => {
     return (
         <div className="order-header">
             <div className="order-header__image" />
             <p>Title</p>
-            <p>Description</p>
-            <p>Price</p>
-            <p>Count</p>
+            <p className="order-header__item order-header__item_mobile-hidden">
+                Description
+            </p>
+            <p className="order-header__item order-header__item_mobile-hidden">
+                Price
+            </p>
+            <p className="order-header__item order-header__item_mobile-hidden">
+                Count
+            </p>
             <p>Total</p>
         </div>
     );
