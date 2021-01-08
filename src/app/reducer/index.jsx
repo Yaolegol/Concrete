@@ -1,4 +1,3 @@
-import { commonReducer } from "common/reducer";
 import { adminReducer } from "modules/Admin/reducer";
 import { authReducer } from "modules/Auth/reducer";
 import { cartReducer } from "modules/Cart/reducer";
@@ -12,7 +11,6 @@ export const rootReducer = combineReducers({
     admin: adminReducer,
     auth: authReducer,
     cart: cartReducer,
-    common: commonReducer,
     locale: localeReducer,
     mobileMenu: mobileMenuReducer,
     shop: shopReducer,

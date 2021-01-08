@@ -26,16 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modules/Locale/actions/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/Locale/constants/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/Locale/reducer/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/Locale/selectors/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/CustomIntl/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/CustomIntl/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reducer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/CustomSelect/LangSelect/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Locale/components/LangSelect/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/CustomSelect/LangSelect/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Locale/components/LangSelect/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/components/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/actions/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/constants/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/reducer/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/selectors/index.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +139,7 @@
       <workItem from="1608990275237" duration="17831000" />
       <workItem from="1609751880800" duration="56339000" />
       <workItem from="1609931240484" duration="38839000" />
-      <workItem from="1610110703939" duration="4413000" />
+      <workItem from="1610110703939" duration="4475000" />
     </task>
     <servers />
   </component>
