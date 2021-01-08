@@ -13,6 +13,7 @@ import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import { CartEmpty } from "pages/Cart/components/CartEmpty";
 import { Formik } from "formik";
 import React, { useCallback, useEffect, useMemo } from "react";
+import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./index.less";
@@ -99,11 +100,15 @@ const CartPage = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
                 </div>
                 {user ? (
                     <div className="cart-page__buy-section">
-                        <Button onClick={handleBuy}>Buy</Button>
+                        <Button onClick={handleBuy}>
+                            <FormattedMessage id="common.buy" />
+                        </Button>
                     </div>
                 ) : (
                     <div className="cart-page__buy-section">
-                        <h4>Enter your e-mail</h4>
+                        <h4>
+                            <FormattedMessage id="common.enterEmail" />
+                        </h4>
                         <div className="cart-page__form-container">
                             <Formik
                                 initialValues={{
@@ -158,7 +163,7 @@ const CartPage = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
                                                     }
                                                     type="submit"
                                                 >
-                                                    Buy
+                                                    <FormattedMessage id="common.buy" />
                                                 </Button>
                                             </div>
                                         </form>
@@ -181,7 +186,9 @@ const CartPage = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
     return (
         <Layout>
             <div className="cart-page">
-                <h1 className="cart-page__title">Cart</h1>
+                <h1 className="cart-page__title">
+                    <FormattedMessage id="cart.title" />
+                </h1>
                 {content}
             </div>
         </Layout>
