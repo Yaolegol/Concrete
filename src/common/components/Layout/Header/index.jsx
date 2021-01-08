@@ -1,7 +1,7 @@
 // @flow
+import { LangSelect } from "modules/Locale/components/LangSelect";
 import { actionToggleMobileMenu } from "modules/MobileMenu/actions";
 import { BurgerButton } from "common/components/Button/BurgerButton";
-import { LangSelect } from "common/components/CustomSelect/LangSelect";
 import CartLink from "common/components/Layout/Header/CartLink";
 import { Logo } from "common/components/Logo";
 import { Menu } from "common/components/Menu";

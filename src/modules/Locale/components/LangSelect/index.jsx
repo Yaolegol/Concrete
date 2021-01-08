@@ -1,7 +1,7 @@
 // @flow
-import { actionSelectLang } from "common/actions";
 import { CustomSelect } from "common/components/CustomSelect";
-import { selectCurrentLocale } from "common/selectors";
+import { actionSetLocale } from "modules/Locale/actions";
+import { selectCurrentLocale } from "modules/Locale/selectors";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./index.less";
@@ -18,7 +18,7 @@ export const LangSelect = (): React$Node => {
     const [selectedOption, setSelectedOption] = useState(null);
     const onSelectChange = (value) => {
         setSelectedOption(value);
-        dispatch(actionSelectLang(value.value));
+        dispatch(actionSetLocale(value.value));
     };
 
     useEffect(() => {
