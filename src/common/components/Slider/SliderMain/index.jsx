@@ -1,6 +1,6 @@
 // @flow
 import { SliderMainSlide } from "common/components/Slider/SliderMain/SliderMainSlide";
-import ArrowIcon from "img/arrow-right.svg";
+import ArrowIcon from "images/arrow-right.svg";
 import { Slider } from "common/components/Slider";
 import React, { useState, useCallback } from "react";
 import { useIntl } from "react-intl";
@@ -34,7 +34,7 @@ export const SliderMain = () => {
                         id: "hero.slide.description",
                     })}
                     imgAlt="Hero"
-                    imgSrc="img/main/header/hero.jpg"
+                    imgSrc="images/main/header/hero.jpg"
                     onClick={() => console.log("click")}
                     title={intl.formatMessage({
                         id: "hero.slide.title",
@@ -48,7 +48,7 @@ export const SliderMain = () => {
                         id: "hero.slide.description",
                     })}
                     imgAlt="Hero"
-                    imgSrc="img/main/header/hero.jpg"
+                    imgSrc="images/main/header/hero.jpg"
                     onClick={() => console.log("click")}
                     title={intl.formatMessage({
                         id: "hero.slide.title",
@@ -62,7 +62,7 @@ export const SliderMain = () => {
                         id: "hero.slide.description",
                     })}
                     imgAlt="Hero"
-                    imgSrc="img/main/header/hero.jpg"
+                    imgSrc="images/main/header/hero.jpg"
                     onClick={() => console.log("click")}
                     title={intl.formatMessage({
                         id: "hero.slide.title",

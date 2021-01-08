@@ -26,12 +26,12 @@ export const Description = (): React$Node => {
                 <div className="main-description__image-container">
                     <img
                         className="main-description__image-main"
-                        src="img/main/description/room.jpg"
+                        src="images/main/description/room.jpg"
                         alt="Room"
                     />
                     <img
                         className="main-description__image-second"
-                        src="img/main/description/table.jpg"
+                        src="images/main/description/table.jpg"
                         alt="Table"
                     />
                 </div>

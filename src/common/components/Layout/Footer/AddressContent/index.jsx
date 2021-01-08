@@ -1,8 +1,8 @@
 // @flow
 import cn from "classnames";
-import EmailIcon from "img/email.svg";
-import MapMarkerIcon from "img/map-marker.svg";
-import PhoneIcon from "img/phone.svg";
+import EmailIcon from "images/email.svg";
+import MapMarkerIcon from "images/map-marker.svg";
+import PhoneIcon from "images/phone.svg";
 import React from "react";
 import "./index.less";
 
