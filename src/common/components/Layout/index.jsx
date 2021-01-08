@@ -2,7 +2,7 @@
 import cn from "classnames";
 import { Footer } from "common/components/Layout/Footer";
 import { Header } from "common/components/Layout/Header";
-import MobileMenu from "common/components/Menu/MobileMenu";
+import MobileMenu from "modules/MobileMenu/components/MobileMenu";
 import React, { useMemo } from "react";
 import "./index.less";
 

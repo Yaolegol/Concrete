@@ -26,12 +26,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a2b6874-921f-4d24-9ccd-591d68d1df3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/modules/MobileMenu/actions/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/MobileMenu/constants/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/MobileMenu/reducer/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/MobileMenu/selectors/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/admin/createProduct/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/admin/createProduct/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/admin/getPurchases/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/admin/getPurchases/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/products/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/products/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/purchase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/purchase/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/user/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/reducer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reducer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/components/Layout/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/components/Layout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Layout/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/components/Menu/BurgerButton/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Button/BurgerButton/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/components/Menu/BurgerButton/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/components/Button/BurgerButton/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/components/Menu/MobileMenu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/MobileMenu/components/MobileMenu/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/components/Menu/MobileMenu/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/MobileMenu/components/MobileMenu/index.less" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +71,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/Admin/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/common/components/Button" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -80,11 +86,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/common/components/Button" />
+      <recent name="$PROJECT_DIR$/src/modules/MobileMenu/components" />
+      <recent name="$PROJECT_DIR$/src/modules/MobileMenu" />
+      <recent name="$PROJECT_DIR$/src/modules" />
       <recent name="$PROJECT_DIR$/src/modules/Admin/components" />
-      <recent name="$PROJECT_DIR$/src/pages/Admin/components" />
-      <recent name="$PROJECT_DIR$/src/modules/Admin" />
-      <recent name="$PROJECT_DIR$/server/helpers" />
-      <recent name="$PROJECT_DIR$/server/routes/admin/viewPurchases" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/common/components/Layout/Footer" />
@@ -140,7 +146,7 @@
       <workItem from="1608990275237" duration="17831000" />
       <workItem from="1609751880800" duration="56339000" />
       <workItem from="1609931240484" duration="38839000" />
-      <workItem from="1610110703939" duration="1996000" />
+      <workItem from="1610110703939" duration="3355000" />
     </task>
     <servers />
   </component>

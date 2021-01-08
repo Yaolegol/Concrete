@@ -1,10 +1,10 @@
 // @flow
-import { actionShowMobileMenu } from "common/actions";
+import { actionToggleMobileMenu } from "modules/MobileMenu/actions";
+import { BurgerButton } from "common/components/Button/BurgerButton";
 import { LangSelect } from "common/components/CustomSelect/LangSelect";
 import CartLink from "common/components/Layout/Header/CartLink";
 import { Logo } from "common/components/Logo";
 import { Menu } from "common/components/Menu";
-import { BurgerButton } from "common/components/Menu/BurgerButton";
 import { Socials } from "common/components/Socials";
 import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
@@ -13,15 +13,15 @@ import "./index.less";
 export const Header = (): React$Node => {
     const dispatch = useDispatch();
 
-    const showMobileMenu = useCallback(() => {
-        dispatch(actionShowMobileMenu(true));
+    const toggleMobileMenu = useCallback(() => {
+        dispatch(actionToggleMobileMenu());
     }, [dispatch]);
 
     return (
         <div className="header">
             <BurgerButton
                 className="header__burger-button"
-                onClick={showMobileMenu}
+                onClick={toggleMobileMenu}
             />
             <Logo className="header__item_tablet-hidden" />
             <Socials className="header__item_tablet-hidden" />

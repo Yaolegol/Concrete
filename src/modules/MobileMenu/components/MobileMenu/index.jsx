@@ -1,7 +1,7 @@
 // @flow
 import cn from "classnames";
-import { actionShowMobileMenu } from "common/actions";
-import { selectMobileMenuShowStatus } from "common/selectors";
+import { actionToggleMobileMenu } from "modules/MobileMenu/actions";
+import { selectMobileMenuShowStatus } from "modules/MobileMenu/selectors";
 import React, { useCallback } from "react";
 import { connect } from "react-redux";
 import "./index.less";
@@ -13,14 +13,14 @@ type TProps = {
 };
 
 const MobileMenu = ({ children, dispatch, isShow }: TProps): React$Node => {
-    const showMobileMenu = useCallback(() => {
-        dispatch(actionShowMobileMenu(false));
+    const toggleMobileMenu = useCallback(() => {
+        dispatch(actionToggleMobileMenu());
     }, [dispatch]);
 
     return (
         <div
             className={cn("mobile-menu", isShow ? "mobile-menu_show" : null)}
-            onClick={showMobileMenu}
+            onClick={toggleMobileMenu}
         >
             <div className="mobile-menu__body">{children}</div>
         </div>
