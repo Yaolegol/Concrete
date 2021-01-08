@@ -17,12 +17,18 @@ const MobileMenu = ({ children, dispatch, isShow }: TProps): React$Node => {
         dispatch(actionToggleMobileMenu());
     }, [dispatch]);
 
+    const preventClick = useCallback((e) => {
+        e.stopPropagation();
+    }, []);
+
     return (
         <div
             className={cn("mobile-menu", isShow ? "mobile-menu_show" : null)}
             onClick={toggleMobileMenu}
         >
-            <div className="mobile-menu__body">{children}</div>
+            <div className="mobile-menu__body" onClick={preventClick}>
+                {children}
+            </div>
         </div>
     );
 };
