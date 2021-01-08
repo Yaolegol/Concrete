@@ -15,7 +15,7 @@
     top: 0;
     z-index: 999;
 
-    @media @tablet {
+    @media @laptop {
         justify-content: space-between;
         padding: 0 50px;
     }
@@ -27,14 +27,14 @@
     &__burger-button {
         display: none;
 
-        @media @tablet {
+        @media @laptop {
             display: flex;
         }
     }
 
     &__item {
-        &_tablet-hidden {
-            @media @tablet {
+        &_laptop-hidden {
+            @media @laptop {
                 display: none !important;
             }
         }
