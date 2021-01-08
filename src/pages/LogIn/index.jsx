@@ -107,7 +107,7 @@ const LogIn = (): React$Node => {
                                         >
                                             {errors.common}
                                         </div>
-                                        <div className="signup-page__submit-button-container">
+                                        <div className="login-page__submit-button-container">
                                             <Button
                                                 disabled={!isValid || !dirty}
                                                 theme="white"
