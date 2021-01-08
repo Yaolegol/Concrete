@@ -5,11 +5,13 @@ import thunk from "redux-thunk";
 
 const middlewares = [thunk];
 const reduxDevTools =
-    window.__REDUX_DEVTOOLS_EXTENSION__ &&
-    window.__REDUX_DEVTOOLS_EXTENSION__();
+    process.env.NODE_ENV === "development" &&
+    window.__REDUX_DEVTOOLS_EXTENSION__
+        ? window.__REDUX_DEVTOOLS_EXTENSION__()
+        : null;
 
-export const store = (createStore(
-    rootReducer,
-    {},
-    compose(applyMiddleware(...middlewares), reduxDevTools)
-): any);
+const composes = reduxDevTools
+    ? [applyMiddleware(...middlewares), reduxDevTools]
+    : [applyMiddleware(...middlewares)];
+
+export const store = (createStore(rootReducer, {}, compose(...composes)): any);
