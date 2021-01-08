@@ -109,7 +109,7 @@ export const CreateProduct = (): React$Node => {
                                             handler: setFieldValue,
                                             name: "images",
                                         })}
-                                        title="Выберите фото"
+                                        title="Choose foto"
                                     />
                                 </div>
                                 <div className="admin-page-create-product__input-container">
@@ -129,7 +129,7 @@ export const CreateProduct = (): React$Node => {
                                         theme="white"
                                         type="submit"
                                     >
-                                        Создать товар
+                                        Create product
                                     </Button>
                                 </div>
                             </form>

@@ -5,8 +5,8 @@ import { OrderItem } from "common/components/Order/OrderItem";
 import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import { actionGetUser } from "modules/User/actions";
 import { selectUserPurchases } from "modules/User/selectors";
-import { CartEmpty } from "pages/Cart/components/CartEmpty";
 import React, { useEffect, useMemo } from "react";
+import { FormattedMessage } from "react-intl";
 import { useDispatch, useSelector } from "react-redux";
 import "./index.less";
 
@@ -52,9 +52,11 @@ const ProfilePage = (): React$Node => {
     return (
         <Layout>
             <div className="profile-page">
-                <h1 className="profile-page__title">Profile</h1>
+                <h1 className="profile-page__title">
+                    <FormattedMessage id="profile.title" />
+                </h1>
                 <h4 className="profile-page__orders-history-title">
-                    Orders history
+                    <FormattedMessage id="profile.ordersHistory" />
                 </h4>
                 {content}
             </div>
