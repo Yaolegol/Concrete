@@ -1,6 +1,12 @@
 // @flow
 import { logError } from "common/helpers/errors";
 
+let requestHost = "";
+
+if (process.env.NODE_ENV === "development") {
+    requestHost = "http://localhost:8000";
+}
+
 type TProps = {
     formData?: any,
     isPrivate?: boolean,
@@ -57,7 +63,7 @@ export const request = async ({
     }
 
     try {
-        const response = await fetch(url, {
+        const response = await fetch(`${requestHost}${url}`, {
             ..._options,
             headers: {
                 ...headers,
