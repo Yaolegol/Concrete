@@ -1,6 +1,6 @@
 // @flow
 import cn from "classnames";
-import CartIcon from "images/cart.svg";
+import CartIcon from "icons/cart.svg";
 import React from "react";
 import "./index.less";
 

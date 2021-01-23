@@ -1,7 +1,7 @@
 // @flow
 import { SliderMainSlide } from "common/components/Slider/SliderMain/SliderMainSlide";
-import ArrowIcon from "images/arrow-right.svg";
 import { Slider } from "common/components/Slider";
+import ArrowIcon from "icons/arrow-right.svg";
 import React, { useState, useCallback } from "react";
 import { useIntl } from "react-intl";
 import "./index.less";
