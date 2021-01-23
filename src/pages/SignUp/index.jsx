@@ -100,7 +100,9 @@ const SignUp = (): React$Node => {
                                                 name="email"
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
-                                                placeholder="Email"
+                                                placeholder={
+                                                    <FormattedMessage id="common.email" />
+                                                }
                                                 type="email"
                                                 value={values.email}
                                             />
@@ -114,7 +116,9 @@ const SignUp = (): React$Node => {
                                                 name="password"
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
-                                                placeholder="Password"
+                                                placeholder={
+                                                    <FormattedMessage id="common.password" />
+                                                }
                                                 type="password"
                                                 value={values.password}
                                             />
@@ -130,7 +134,9 @@ const SignUp = (): React$Node => {
                                                 name="passwordConfirm"
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
-                                                placeholder="Confirm password"
+                                                placeholder={
+                                                    <FormattedMessage id="common.confirmPassword" />
+                                                }
                                                 type="password"
                                                 value={values.passwordConfirm}
                                             />

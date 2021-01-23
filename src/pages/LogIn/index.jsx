@@ -85,7 +85,9 @@ const LogIn = (): React$Node => {
                                                 name="email"
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
-                                                placeholder="Email"
+                                                placeholder={
+                                                    <FormattedMessage id="common.email" />
+                                                }
                                                 type="email"
                                                 value={values.email}
                                             />
@@ -99,7 +101,9 @@ const LogIn = (): React$Node => {
                                                 name="password"
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
-                                                placeholder="Password"
+                                                placeholder={
+                                                    <FormattedMessage id="common.password" />
+                                                }
                                                 type="password"
                                                 value={values.password}
                                             />
