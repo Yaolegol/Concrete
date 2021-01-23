@@ -1,4 +1,6 @@
 const customRequire = require('app-root-path').require;
+const createErrors = customRequire('server/helpers/errors');
+const createResponse = customRequire('server/helpers/response');
 const ProductModel = customRequire('server/models/product');
 const cloudinary = require('cloudinary')
 const express = require('express');
@@ -37,15 +39,15 @@ router.post('/admin/create-product', (req, res, next) => {
         const productModel = new ProductModel(product);
         productModel.save()
             .then(product => {
-                res.json({data: product})
+                res.json(createResponse({product}))
             })
             .catch(err => {
                 console.log(err)
-                res.json({errors: ['Server error']})
+                res.json(createErrors(['Server error']))
             })
     }).catch((err) => {
         console.log(err)
-        res.json({errors: ['Server error']})
+        res.json(createErrors(['Server error']))
     });
 })
 

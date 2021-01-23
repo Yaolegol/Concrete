@@ -1,4 +1,6 @@
 const customRequire = require('app-root-path').require;
+const createErrors = customRequire('server/helpers/errors');
+const createResponse = customRequire('server/helpers/response');
 const UsersModel = customRequire('server/models/user');
 const express = require('express')
 const jwt = require('jsonwebtoken')
@@ -6,7 +8,7 @@ const jwt = require('jsonwebtoken')
 const router = express.Router()
 
 router.post('/registration', (req, res, next) => {
-    UsersModel.findOne({ email: req.body.email })
+    UsersModel.findOne({email: req.body.email})
         .then((doc) => {
             if (!doc) {
                 const user = new UsersModel(req.body)
@@ -17,40 +19,36 @@ router.post('/registration', (req, res, next) => {
                             id: user._id,
                         }, 'superSecretSecretSecret');
 
-                        res.json({
-                            data: {
-                                token,
-                            },
-                        })
+                        res.json(
+                            createResponse({token})
+                        )
                     })
                     .catch(err => {
                         console.log(err);
-                        res.json({
-                            errors: [{
+                        res.json(
+                            createErrors([{
                                 key: 'common',
                                 message: 'Server error'
-                            }]
-                        })
+                            }])
+                        )
                     })
             } else {
-                res.json({
-                    errors: [
-                        {
-                            key: 'email',
-                            message: 'User already exists',
-                        },
-                    ]
-                })
+                res.json(
+                    createErrors([{
+                        key: 'email',
+                        message: 'User already exists',
+                    }])
+                )
             }
         })
         .catch((error) => {
             console.log(error)
-            res.json({
-                errors: [{
+            res.json(
+                createErrors([{
                     key: 'common',
                     message: 'Server error'
-                }]
-            })
+                }])
+            )
         })
 })
 

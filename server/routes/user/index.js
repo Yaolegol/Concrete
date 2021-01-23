@@ -1,4 +1,6 @@
 const customRequire = require('app-root-path').require;
+const createErrors = customRequire('server/helpers/errors');
+const createResponse = customRequire('server/helpers/response');
 const UsersModel = customRequire('server/models/user');
 const express = require('express')
 const jwt = require('jsonwebtoken')
@@ -25,23 +27,17 @@ router.get('/user', (req, res, next) => {
                 })
                 .then(doc => {
                     if (doc) {
-                        res.json({
-                            data: {
-                                user: doc,
-                            }
-                        })
+                        res.json(createResponse({user: doc}))
                     } else {
-                        res.json({errors: ['User not found']})
+                        res.json(createErrors(['User not found']))
                     }
                 })
                 .catch(err => {
                     console.log(err)
-                    res.json({errors: ['Server error']})
+                    res.json(createErrors(['Server error']))
                 })
         } else {
-            res.json({
-                errors: ['Token not valid']
-            })
+            res.json(createErrors(['Token not valid']))
         }
     })
 })

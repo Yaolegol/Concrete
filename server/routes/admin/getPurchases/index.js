@@ -1,4 +1,6 @@
 const customRequire = require('app-root-path').require;
+const createErrors = customRequire('server/helpers/errors');
+const createResponse = customRequire('server/helpers/response');
 const PurchaseModel = customRequire('server/models/purchase');
 const express = require('express');
 
@@ -10,18 +12,18 @@ router.get('/admin/get-purchases', (req, res, next) => {
         .populate('purchase.productID')
         .then(doc => {
             if (doc) {
-                res.json({
-                    data: {
+                res.json(
+                    createResponse({
                         purchases: doc,
-                    }
-                })
+                    })
+                )
             } else {
-                res.json({errors: ['Purchases not found']})
+                res.json(createErrors(['Purchases not found']))
             }
         })
         .catch(err => {
             console.log(err)
-            res.json({errors: ['Server error']})
+            res.json(createErrors(['Server error']))
         })
 })
 

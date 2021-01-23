@@ -1,4 +1,6 @@
 const customRequire = require('app-root-path').require;
+const createErrors = customRequire('server/helpers/errors');
+const createResponse = customRequire('server/helpers/response');
 const UsersModel = customRequire('server/models/user');
 const express = require('express');
 const jwt = require('jsonwebtoken');
@@ -15,28 +17,28 @@ router.post('/login', (req, res, next) => {
                     id: doc._id,
                 }, 'superSecretSecretSecret')
 
-                res.json({
-                    data: {
+                res.json(
+                    createResponse({
                         token,
-                    },
-                })
+                    })
+                )
             } else {
-                res.json({
-                    errors: [{
+                res.json(
+                    createErrors([{
                         key: 'common',
                         message: 'Email or password incorrect'
-                    }]
-                })
+                    }])
+                )
             }
         })
         .catch(err => {
             console.log(err)
-            res.json({
-                errors: [{
+            res.json(
+                createErrors([{
                     key: 'common',
                     message: 'Server error'
-                }]
-            })
+                }])
+            )
         })
 })
 

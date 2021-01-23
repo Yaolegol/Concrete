@@ -1,5 +1,7 @@
 const customRequire = require('app-root-path').require;
+const createErrors = customRequire('server/helpers/errors');
 const isObjectEmpty = customRequire('server/helpers/object');
+const createResponse = customRequire('server/helpers/response');
 const ProductsModel = customRequire('server/models/product');
 const express = require('express');
 
@@ -14,7 +16,7 @@ router.post('/products', (req, res, next) => {
 
     if (!isObjectEmpty(req.body.filters)) {
         filters = Object.entries(req.body.filters).reduce((acc, [key, value]) => {
-            if(key === 'price') {
+            if (key === 'price') {
                 return {
                     ...acc,
                     [key]: {
@@ -48,25 +50,21 @@ router.post('/products', (req, res, next) => {
                     ...filters,
                 })
                 .then(count => {
-                    res.json({
-                        data: {
+                    res.json(
+                        createResponse({
                             list: products,
                             count
-                        }
-                    })
+                        })
+                    )
                 })
                 .catch(err => {
                     console.log(err)
-                    res.json({
-                        errors: ['Server error']
-                    })
+                    res.json(createErrors(['Server error']))
                 })
         })
         .catch(err => {
             console.log(err)
-            res.json({
-                errors: ['Server error']
-            })
+            res.json(createErrors(['Server error']))
         })
 })
 

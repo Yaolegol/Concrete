@@ -1,4 +1,6 @@
 const customRequire = require('app-root-path').require;
+const createErrors = customRequire('server/helpers/errors');
+const createResponse = customRequire('server/helpers/response');
 const PurchasesModel = customRequire('server/models/purchase');
 const UsersModel = customRequire('server/models/user');
 const express = require('express');
@@ -23,38 +25,34 @@ router.post('/purchase', (req, res, next) => {
                         })
                         user.save()
                             .then(_user => {
-                                res.json({
-                                    data: {
-                                        success: true,
-                                    }
-                                })
+                                res.json(
+                                    createResponse({success: true})
+                                )
                             })
                             .catch(error => {
                                 console.log(error)
-                                res.json({
-                                    errors: ['Server error']
-                                })
+                                res.json(
+                                    createErrors(['Server error'])
+                                )
                             })
                     } else {
-                        res.json({
-                            data: {
-                                success: true,
-                            }
-                        })
+                        res.json(
+                            createResponse({success: true})
+                        )
                     }
                 })
                 .catch(error => {
                     console.log(error)
-                    res.json({
-                        errors: ['Server error']
-                    })
+                    res.json(
+                        createErrors(['Server error'])
+                    )
                 })
         })
         .catch(error => {
             console.log(error)
-            res.json({
-                errors: ['Server error']
-            })
+            res.json(
+                createErrors(['Server error'])
+            )
         })
 });
 
