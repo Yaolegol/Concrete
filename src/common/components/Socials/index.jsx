@@ -14,28 +14,28 @@ export const Socials = ({ className }: TProps): React$Node => {
                 <img
                     alt="Facebook"
                     className="socials__icon"
-                    src="images/main/header/social/facebook.svg"
+                    src="images/socials/facebook.svg"
                 />
             </a>
             <a className="socials__link" href="#">
                 <img
                     alt="Vk"
                     className="socials__icon"
-                    src="images/main/header/social/vk.svg"
+                    src="images/socials/vk.svg"
                 />
             </a>
             <a className="socials__link" href="#">
                 <img
                     alt="Instagram"
                     className="socials__icon"
-                    src="images/main/header/social/instagram.svg"
+                    src="images/socials/instagram.svg"
                 />
             </a>
             <a className="socials__link" href="#">
                 <img
                     alt="Youtube"
                     className="socials__icon"
-                    src="images/main/header/social/youtube.svg"
+                    src="images/socials/youtube.svg"
                 />
             </a>
         </div>

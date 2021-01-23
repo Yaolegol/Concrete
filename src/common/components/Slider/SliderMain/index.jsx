@@ -34,7 +34,7 @@ export const SliderMain = () => {
                         id: "hero.slide.description",
                     })}
                     imgAlt="Hero"
-                    imgSrc="images/main/header/hero.jpg"
+                    imgSrc="images/main/hero/hero.jpg"
                     onClick={() => console.log("click")}
                     title={intl.formatMessage({
                         id: "hero.slide.title",
@@ -48,7 +48,7 @@ export const SliderMain = () => {
                         id: "hero.slide.description",
                     })}
                     imgAlt="Hero"
-                    imgSrc="images/main/header/hero.jpg"
+                    imgSrc="images/main/hero/hero.jpg"
                     onClick={() => console.log("click")}
                     title={intl.formatMessage({
                         id: "hero.slide.title",
@@ -62,7 +62,7 @@ export const SliderMain = () => {
                         id: "hero.slide.description",
                     })}
                     imgAlt="Hero"
-                    imgSrc="images/main/header/hero.jpg"
+                    imgSrc="images/main/hero/hero.jpg"
                     onClick={() => console.log("click")}
                     title={intl.formatMessage({
                         id: "hero.slide.title",

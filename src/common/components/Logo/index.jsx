@@ -11,11 +11,7 @@ type TProps = {
 export const Logo = ({ className }: TProps): React$Node => {
     return (
         <Link className={cn("logo", className)} to="/">
-            <img
-                className="logo__img"
-                src="images/main/header/logo.jpg"
-                alt="Logo"
-            />
+            <img className="logo__img" src="images/logo.jpg" alt="Logo" />
         </Link>
     );
 };

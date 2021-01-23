@@ -1,6 +1,6 @@
 // @flow
 import cn from "classnames";
-import CartIcon from "images/main/header/cart.svg";
+import CartIcon from "images/cart.svg";
 import { selectCartProductsTotal } from "modules/Cart/selectors";
 import React from "react";
 import { connect } from "react-redux";
