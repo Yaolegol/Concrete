@@ -4,7 +4,7 @@ import {
     actionGetProducts,
     actionSetProductsFilter,
 } from "modules/Shop/actions";
-import { PriceFilter } from "pages/Shop/components/Filters/PriceFilter";
+import { PriceFilter } from "modules/Shop/components/Filters/PriceFilter";
 import React, { useCallback, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { useDispatch } from "react-redux";

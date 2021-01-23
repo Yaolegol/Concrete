@@ -13,8 +13,8 @@ import {
     actionSetPage,
     actionSetProductsSort,
 } from "modules/Shop/actions";
+import { Filters } from "modules/Shop/components/Filters";
 import { selectCurrentPage, selectProducts } from "modules/Shop/selectors";
-import { Filters } from "pages/Shop/components/Filters";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
