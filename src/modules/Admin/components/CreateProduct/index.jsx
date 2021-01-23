@@ -9,6 +9,7 @@ import { Formik } from "formik";
 import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import "./index.less";
+import { FormattedMessage } from "react-intl";
 
 export const CreateProduct = (): React$Node => {
     const dispatch = useDispatch();
@@ -22,7 +23,9 @@ export const CreateProduct = (): React$Node => {
 
     return (
         <div className="admin-page-create-product">
-            <h4>Create product</h4>
+            <h4>
+                <FormattedMessage id="common.createProduct" />
+            </h4>
             <div className="admin-page-create-product__content-container">
                 <Formik
                     initialValues={{
@@ -72,7 +75,9 @@ export const CreateProduct = (): React$Node => {
                                         name="title"
                                         onBlur={handleBlur}
                                         onChange={handleChange}
-                                        placeholder="Title"
+                                        placeholder={
+                                            <FormattedMessage id="common.title" />
+                                        }
                                         value={values.title}
                                     />
                                 </FormField>
@@ -85,7 +90,9 @@ export const CreateProduct = (): React$Node => {
                                         name="description"
                                         onBlur={handleBlur}
                                         onChange={handleChange}
-                                        placeholder="Description"
+                                        placeholder={
+                                            <FormattedMessage id="common.description" />
+                                        }
                                         value={values.description}
                                     />
                                 </FormField>
@@ -99,7 +106,9 @@ export const CreateProduct = (): React$Node => {
                                         name="price"
                                         onBlur={handleBlur}
                                         onChange={handleChange}
-                                        placeholder="Price"
+                                        placeholder={
+                                            <FormattedMessage id="common.price" />
+                                        }
                                         value={values.price}
                                     />
                                 </FormField>
@@ -109,7 +118,9 @@ export const CreateProduct = (): React$Node => {
                                             handler: setFieldValue,
                                             name: "images",
                                         })}
-                                        title="Choose foto"
+                                        title={
+                                            <FormattedMessage id="common.choosePhoto" />
+                                        }
                                     />
                                 </div>
                                 <div className="admin-page-create-product__input-container">
@@ -120,7 +131,7 @@ export const CreateProduct = (): React$Node => {
                                         onChange={handleChange}
                                         value={values.availability}
                                     >
-                                        Is available
+                                        <FormattedMessage id="common.isAvailable" />
                                     </Checkbox>
                                 </div>
                                 <div className="admin-page-create-product__submit-button-container">
@@ -129,7 +140,7 @@ export const CreateProduct = (): React$Node => {
                                         theme="white"
                                         type="submit"
                                     >
-                                        Create product
+                                        <FormattedMessage id="common.createProduct" />
                                     </Button>
                                 </div>
                             </form>

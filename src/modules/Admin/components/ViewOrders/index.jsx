@@ -4,6 +4,7 @@ import { OrderItem } from "modules/Admin/components/Order/OrderItem";
 import { selectOrders } from "modules/Admin/selectors";
 import { actionGetPurchases } from "modules/Admin/actions";
 import React, { useEffect, useMemo } from "react";
+import { FormattedMessage } from "react-intl";
 import { useDispatch, useSelector } from "react-redux";
 import "./index.less";
 
@@ -48,7 +49,9 @@ export const ViewOrders = (): React$Node => {
 
     return (
         <div>
-            <h4>Orders</h4>
+            <h4>
+                <FormattedMessage id="common.orders.title" />
+            </h4>
             {content}
         </div>
     );

@@ -5,7 +5,7 @@ import "./index.less";
 type TProps = {
     isNumber?: boolean,
     onChange: (any) => void,
-    placeholder: string,
+    placeholder: any,
 };
 
 export const Input = ({

@@ -5,6 +5,7 @@ import { CreateProduct } from "modules/Admin/components/CreateProduct";
 import { ViewOrders } from "modules/Admin/components/ViewOrders";
 import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { FormattedMessage } from "react-intl";
 import { useDispatch } from "react-redux";
 import "./index.less";
 
@@ -38,10 +39,14 @@ const AdminPage = (): React$Node => {
     return (
         <Layout withFooter={false}>
             <div className="admin-page">
-                <h1>Dashboard</h1>
+                <h1 className="admin-page__header">
+                    <FormattedMessage id="common.menu.adminDashboard" />
+                </h1>
                 <div className="admin-page__main-section">
                     <div className="admin-page__controls-section">
-                        <h4>Menu</h4>
+                        <h4>
+                            <FormattedMessage id="common.menu.title" />
+                        </h4>
                         <div className="admin-page__controls-container">
                             <div className="admin-page__control">
                                 <Button
@@ -49,7 +54,7 @@ const AdminPage = (): React$Node => {
                                     onClick={changeContent("create product")}
                                     theme="white"
                                 >
-                                    Create product
+                                    <FormattedMessage id="common.createProduct" />
                                 </Button>
                             </div>
                             <div className="admin-page__control">
@@ -58,7 +63,7 @@ const AdminPage = (): React$Node => {
                                     onClick={changeContent("view orders")}
                                     theme="white"
                                 >
-                                    View orders
+                                    <FormattedMessage id="common.menu.viewOrders" />
                                 </Button>
                             </div>
                         </div>

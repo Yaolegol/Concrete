@@ -4,7 +4,7 @@ import "./index.less";
 
 type TProps = {
     onChange: (any) => void,
-    title: string,
+    title: any,
 };
 
 export const FileInput = ({ onChange, title, ...rest }: TProps): React$Node => {
