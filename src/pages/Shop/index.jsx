@@ -2,7 +2,6 @@
 import { Button } from "common/components/Button";
 import { SortSelect } from "common/components/CustomSelect/SortSelect";
 import { Layout } from "common/components/Layout";
-import { ProductCard } from "common/components/ProductCard";
 import { selectCartProductsItems } from "modules/Cart/selectors";
 import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import {
@@ -14,6 +13,7 @@ import {
     actionSetProductsSort,
 } from "modules/Shop/actions";
 import { Filters } from "modules/Shop/components/Filters";
+import { ProductCard } from "modules/Shop/components/ProductCard";
 import { selectCurrentPage, selectProducts } from "modules/Shop/selectors";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";

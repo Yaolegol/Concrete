@@ -1,9 +1,9 @@
 // @flow
-import { ProductCardCounter } from "common/components/ProductCard/ProductCardCounter";
 import {
     actionDecCartProductsCount,
     actionIncCartProductsCount,
 } from "modules/Cart/actions";
+import { ProductCardCounter } from "modules/Shop/components/ProductCard/ProductCardCounter";
 import React, { useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
 import "./index.less";
