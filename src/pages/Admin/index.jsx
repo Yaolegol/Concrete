@@ -3,15 +3,11 @@ import { Button } from "common/components/Button";
 import { Layout } from "common/components/Layout";
 import { CreateProduct } from "modules/Admin/components/CreateProduct";
 import { ViewOrders } from "modules/Admin/components/ViewOrders";
-import { actionHideMobileMenu } from "modules/MobileMenu/actions";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { useDispatch } from "react-redux";
 import "./index.less";
 
 const AdminPage = (): React$Node => {
-    const dispatch = useDispatch();
-
     const [currentContent, setCurrentContent] = useState("create product");
 
     const changeContent = useCallback(
@@ -31,10 +27,6 @@ const AdminPage = (): React$Node => {
                 return null;
         }
     }, [currentContent]);
-
-    useEffect(() => {
-        dispatch(actionHideMobileMenu());
-    }, [dispatch]);
 
     return (
         <Layout withFooter={false}>
