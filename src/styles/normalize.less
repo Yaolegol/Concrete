@@ -1,3 +1,5 @@
+@import (reference) '~styles/font';
+
 * {
     box-sizing: border-box;
 }
@@ -34,6 +36,30 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
+h1 {
+    .f_h1();
+}
+
+h2 {
+    .f_h2();
+}
+
+h3 {
+    .f_h3();
+}
+
+h4 {
+    .f_h4();
+}
+
+h5 {
+    .f_h5();
+}
+
+h6 {
+    .f_h6();
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -45,6 +71,10 @@ input {
     &:focus {
         outline: none;
     }
+}
+
+p {
+    .f_p();
 }
 
 ul {
