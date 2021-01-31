@@ -11,8 +11,9 @@
     }
 
     @media @mobile {
+        grid-auto-rows: minmax(min-content, max-content);
         grid-template-columns: none;
-        grid-template-rows: repeat(5, 1fr);
+        justify-content: center;
         margin-top: 20px;
     }
 
@@ -31,6 +32,10 @@
 
         @media @laptop {
             display: none;
+        }
+
+        @media @mobile {
+            display: initial;
         }
     }
 }
