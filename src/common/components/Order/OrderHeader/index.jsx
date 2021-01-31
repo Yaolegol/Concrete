@@ -1,11 +1,16 @@
 // @flow
+import cn from "classnames";
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import "./index.less";
 
-export const OrderHeader = (): React$Node => {
+type TProps = {
+    className?: string,
+};
+
+export const OrderHeader = ({ className }: TProps): React$Node => {
     return (
-        <div className="order-header">
+        <div className={cn("order-header", className)}>
             <div className="order-header__image" />
             <p>
                 <FormattedMessage id="order.title" />
