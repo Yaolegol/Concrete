@@ -11,7 +11,17 @@
     }
 
     @media @mobile {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: none;
+        grid-template-rows: repeat(5, 1fr);
+        margin-top: 20px;
+    }
+
+    &__data-description {
+        display: none;
+
+        @media @mobile {
+            display: initial;
+        }
     }
 
     &__image {
@@ -21,14 +31,6 @@
 
         @media @laptop {
             display: none;
-        }
-    }
-
-    &__item {
-        &_mobile-hidden {
-            @media @mobile {
-                display: none;
-            }
         }
     }
 }

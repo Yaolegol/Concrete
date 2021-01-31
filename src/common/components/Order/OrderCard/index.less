@@ -1,24 +1,22 @@
 @import (reference) '~styles/adaptive';
 
-.order-header {
+.order-item {
+    align-items: center;
     display: grid;
-    font-weight: bold;
     grid-template-columns: repeat(6, 1fr);
-    justify-content: center;
-    margin-top: 50px;
-    text-transform: capitalize;
     width: 100%;
 
     @media @laptop {
         grid-template-columns: repeat(5, 1fr);
-        max-width: none;
     }
 
     @media @mobile {
-        display: none;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     &__image {
+        height: 275px;
+        object-fit: cover;
         width: 275px;
 
         @media @laptop {
