@@ -1,9 +1,9 @@
 // @flow
-import React from "react";
+import React, { useCallback } from "react";
 import "./index.less";
+import { useIntl } from "react-intl";
 
 type TProps = {
-    alt?: string,
     countInCart: number,
     description: string,
     email: string,
@@ -14,7 +14,6 @@ type TProps = {
 };
 
 export const OrderItem = ({
-    alt = "",
     countInCart,
     description,
     email,
@@ -23,23 +22,64 @@ export const OrderItem = ({
     title,
     totalPrice,
 }: TProps): React$Node => {
+    const intl = useIntl();
+
+    const createDescription = useCallback((msg) => {
+        return `${msg}: `;
+    }, []);
+
     return (
         <div className="admin-order-item">
             <img alt={title} className="admin-order-item__image" src={src} />
             <h4>{title}</h4>
-            <p className="admin-order-header__item admin-order-header__item_mobile-hidden">
-                {description}
+            <p>
+                <span className="order-item__data-description">
+                    {createDescription(
+                        intl.formatMessage({
+                            id: "order.description",
+                        })
+                    )}
+                </span>
+                {description || "-"}
             </p>
-            <p className="admin-order-header__item admin-order-header__item_mobile-hidden">
+            <p>
+                <span className="order-item__data-description">
+                    {createDescription(
+                        intl.formatMessage({
+                            id: "order.price",
+                        })
+                    )}
+                </span>
                 {price}
             </p>
-            <p className="admin-order-header__item admin-order-header__item_mobile-hidden">
+            <p>
+                <span className="order-item__data-description">
+                    {createDescription(
+                        intl.formatMessage({
+                            id: "order.count",
+                        })
+                    )}
+                </span>
                 {countInCart}
             </p>
-            <p className="admin-order-header__item admin-order-header__item_mobile-hidden">
+            <p>
+                <span className="order-item__data-description">
+                    {createDescription(
+                        intl.formatMessage({
+                            id: "order.total",
+                        })
+                    )}
+                </span>
                 {totalPrice}
             </p>
-            <p className="admin-order-header__item admin-order-header__item_mobile-hidden">
+            <p>
+                <span className="order-item__data-description">
+                    {createDescription(
+                        intl.formatMessage({
+                            id: "common.email",
+                        })
+                    )}
+                </span>
                 {email}
             </p>
         </div>

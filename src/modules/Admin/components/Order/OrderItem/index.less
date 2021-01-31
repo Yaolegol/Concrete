@@ -10,7 +10,18 @@
     }
 
     @media @mobile {
-        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(min-content, max-content);
+        grid-template-columns: none;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    &__data-description {
+        display: none;
+
+        @media @mobile {
+            display: initial;
+        }
     }
 
     &__image {
@@ -21,13 +32,9 @@
         @media @laptop {
             display: none;
         }
-    }
 
-    &__item {
-        &_mobile-hidden {
-            @media @mobile {
-                display: none;
-            }
+        @media @mobile {
+            display: initial;
         }
     }
 }
