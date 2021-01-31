@@ -34,9 +34,9 @@ const ProfilePage = (): React$Node => {
 
     const content = useMemo(() => {
         return contentItems.length ? (
-            <div className="cart-page__content-section">
+            <div className="profile-page__content-section">
                 <OrderHeader />
-                <div className="cart-page__content-container">
+                <div className="profile-page__content-container">
                     {contentItems}
                 </div>
             </div>

@@ -92,7 +92,7 @@ const CartPage = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
         return contentItems.length ? (
             <>
                 <div className="cart-page__content-section">
-                    <OrderHeader className="cart-page__order-header" />
+                    <OrderHeader />
                     <div className="cart-page__content-container">
                         {contentItems}
                     </div>
