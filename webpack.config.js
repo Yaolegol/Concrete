@@ -10,10 +10,9 @@ module.exports = {
         hot: true,
         inline: true,
     },
-    devtool: "source-map",
     entry: "./src/index.jsx",
     output: {
-        path: path.join(__dirname, "/dist"),
+        path: path.resolve(__dirname, "dist"),
         filename: "[name].[hash].js",
     },
     module: {
