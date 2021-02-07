@@ -3,17 +3,12 @@
 ### 1. Install dependencies
 > npm i
 
-### 2. Run frontend
-> npm start
-
-**Frontend** start on **8080** port
-
-### 3. Run backend
+### 2. Run backend
 > npm run server
 
-**Backend** start on **8000** port
+Project start on **8000** port
 
-### 4. Enjoy!
+### 3. Enjoy!
 
 Email and password for login as admin
 - email - admin@admin.com
