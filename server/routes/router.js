@@ -20,14 +20,8 @@ router
     .use(registrationRoute)
     .use(userRoute);
 
-if (process.env.NODE_ENV === 'production') {
-    router.get('/*', (req, res) => {
-        res.sendFile(path.resolve('dist', 'index.html'))
-    })
-} else {
-    router.get('/*', (req, res) => {
-        res.sendFile(path.resolve('dist', 'index.html'))
-    })
-}
+router.get('/*', (req, res) => {
+    res.sendFile(path.resolve('dist', 'index.html'))
+})
 
 module.exports = router
