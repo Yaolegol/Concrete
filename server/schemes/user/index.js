@@ -1,5 +1,5 @@
 const customRequire = require('app-root-path').require;
-const userOrderSchema = customRequire('server/schemes/userOrder');
+const userOrderSchema = customRequire('schemes/userOrder');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 

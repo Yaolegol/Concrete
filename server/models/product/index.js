@@ -1,5 +1,5 @@
 const customRequire = require('app-root-path').require;
-const productSchema = customRequire('server/schemes/product');
+const productSchema = customRequire('schemes/product');
 const mongoose = require('mongoose');
 
 const ProductsModel = mongoose.model('product', productSchema);

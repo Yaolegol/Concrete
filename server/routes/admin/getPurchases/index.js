@@ -1,7 +1,7 @@
 const customRequire = require('app-root-path').require;
-const createErrors = customRequire('server/helpers/errors');
-const createResponse = customRequire('server/helpers/response');
-const PurchaseModel = customRequire('server/models/purchase');
+const createErrors = customRequire('helpers/errors');
+const createResponse = customRequire('helpers/response');
+const PurchaseModel = customRequire('models/purchase');
 const express = require('express');
 
 const router = express.Router()

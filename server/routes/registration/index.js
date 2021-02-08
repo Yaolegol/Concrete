@@ -1,7 +1,7 @@
 const customRequire = require('app-root-path').require;
-const createErrors = customRequire('server/helpers/errors');
-const createResponse = customRequire('server/helpers/response');
-const UsersModel = customRequire('server/models/user');
+const createErrors = customRequire('helpers/errors');
+const createResponse = customRequire('helpers/response');
+const UsersModel = customRequire('models/user');
 const express = require('express')
 const jwt = require('jsonwebtoken')
 

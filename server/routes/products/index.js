@@ -1,8 +1,8 @@
 const customRequire = require('app-root-path').require;
-const createErrors = customRequire('server/helpers/errors');
-const isObjectEmpty = customRequire('server/helpers/object');
-const createResponse = customRequire('server/helpers/response');
-const ProductsModel = customRequire('server/models/product');
+const createErrors = customRequire('helpers/errors');
+const isObjectEmpty = customRequire('helpers/object');
+const createResponse = customRequire('helpers/response');
+const ProductsModel = customRequire('models/product');
 const express = require('express');
 
 const router = express.Router();

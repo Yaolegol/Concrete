@@ -1,28 +1,25 @@
 {
-  "name": "concrete",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack --mode production",
-    "flow": "flow",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm run build",
-    "server": "nodemon ./server/index.js",
-    "server:prod": "./server/index.js",
-    "start": "webpack-dev-server",
-    "style:lint": "npx stylelint **/*.less",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Yaolegol/Concrete.git"
-  },
   "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Yaolegol/Concrete/issues"
   },
-  "homepage": "https://github.com/Yaolegol/Concrete#readme",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "formik": "^2.2.5",
+    "rc-slider": "^9.6.3",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-intl": "^5.10.6",
+    "react-redux": "^7.2.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-select": "^3.1.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "swiper": "^6.3.4"
+  },
+  "description": "",
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
@@ -69,28 +66,21 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {
-    "app-root-path": "^3.0.0",
-    "body-parser": "^1.19.0",
-    "classnames": "^2.2.6",
-    "cloudinary": "^1.23.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "formik": "^2.2.5",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.13",
-    "multer": "^1.4.2",
-    "rc-slider": "^9.6.3",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-intl": "^5.10.6",
-    "react-redux": "^7.2.2",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-select": "^3.1.1",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0",
-    "swiper": "^6.3.4"
-  }
+  "homepage": "https://github.com/Yaolegol/Concrete",
+  "license": "ISC",
+  "main": "./src/index.js",
+  "name": "concrete",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yaolegol/Concrete.git"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "flow": "flow",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm run build",
+    "start": "webpack-dev-server",
+    "style:lint": "npx stylelint **/*.less",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }
