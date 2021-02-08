@@ -4,8 +4,9 @@
 > npm i
 
 ###2. Запустить сервер
-> cd ./server
-> npm start
+- cd ./server
+- npm i
+- npm start
 
 Проект доступен на **8000** порту
 
