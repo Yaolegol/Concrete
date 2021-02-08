@@ -4,7 +4,8 @@
 > npm i
 
 ### 2. Run backend
-> npm run server
+> cd ./server
+> npm start
 
 Project start on **8000** port
 
