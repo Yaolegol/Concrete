@@ -78,6 +78,7 @@
     "build": "webpack --mode production",
     "flow": "flow",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm run build",
+    "heroku-prebuild": "./server && npm i",
     "start": "webpack-dev-server",
     "style:lint": "npx stylelint **/*.less",
     "test": "echo \"Error: no test specified\" && exit 1"
