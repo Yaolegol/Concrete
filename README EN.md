@@ -3,9 +3,10 @@
 ### 1. Install dependencies
 > npm i
 
+### 2. Build projects
 > npm run build
 
-### 2. Run backend
+### 3. Run backend
 > cd ./server
 
 > npm i
@@ -14,7 +15,7 @@
 
 Project start on **8000** port
 
-### 3. Enjoy!
+### 4. Enjoy!
 
 Email and password for login as admin
 - email - admin@admin.com
