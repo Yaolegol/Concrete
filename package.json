@@ -68,7 +68,7 @@
   },
   "homepage": "https://github.com/Yaolegol/Concrete",
   "license": "ISC",
-  "main": "./src/index.js",
+  "main": "./src/index.jsx",
   "name": "concrete",
   "repository": {
     "type": "git",
@@ -77,7 +77,6 @@
   "scripts": {
     "build": "webpack --mode production",
     "flow": "flow",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm run build",
     "heroku-prebuild": "cd ./server && npm i",
     "start": "webpack-dev-server",
     "style:lint": "npx stylelint **/*.less",

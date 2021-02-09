@@ -14,16 +14,19 @@
     "multer": "^1.4.2"
   },
   "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
   "homepage": "https://github.com/Yaolegol/Concrete",
   "license": "ISC",
-  "main": "index.js",
+  "main": "./index.js",
   "name": "concrete",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Yaolegol/Concrete.git"
   },
   "scripts": {
-    "server:prod": "./index.js",
+    "start:prod": "node ./index.js",
     "start": "nodemon ./index.js",
     "style:lint": "npx stylelint **/*.less",
     "test": "echo \"Error: no test specified\" && exit 1"
