@@ -26,8 +26,8 @@
     "url": "git+https://github.com/Yaolegol/Concrete.git"
   },
   "scripts": {
-    "start:prod": "node ./index.js",
     "start": "nodemon ./index.js",
+    "start:prod": "node ./index.js",
     "style:lint": "npx stylelint **/*.less",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
