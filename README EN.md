@@ -3,10 +3,14 @@
 ### 1. Install dependencies
 > npm i
 
+> npm run build
+
 ### 2. Run backend
-- cd ./server
-- npm i
-- npm start
+> cd ./server
+
+> npm i
+
+> npm start
 
 Project start on **8000** port
 

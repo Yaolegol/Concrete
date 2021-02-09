@@ -3,10 +3,14 @@
 ###1. Установить зависимости
 > npm i
 
+> npm run build
+
 ###2. Запустить сервер
-- cd ./server
-- npm i
-- npm start
+> cd ./server
+
+> npm i
+
+> npm start
 
 Проект доступен на **8000** порту
 
