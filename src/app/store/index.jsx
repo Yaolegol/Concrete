@@ -14,4 +14,4 @@ const composes = reduxDevTools
     ? [applyMiddleware(...middlewares), reduxDevTools]
     : [applyMiddleware(...middlewares)];
 
-export const store = (createStore(rootReducer, {}, compose(...composes)): any);
+export const store = createStore(rootReducer, {}, compose(...composes));
