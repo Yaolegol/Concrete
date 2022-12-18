@@ -1,6 +1,4 @@
 // @flow
-import { logError } from "common/helpers/errors";
-
 let requestHost = "";
 
 if (process.env.NODE_ENV === "development") {
@@ -71,7 +69,7 @@ export const request = async ({
         });
         return await handleResponse({ response, toJSON });
     } catch (error) {
-        logError(error, "request");
+        console.error(error);
     }
 };
 
@@ -82,7 +80,7 @@ const handleResponse = async ({ response, toJSON }) => {
             const { data, errors } = await response.json();
             return { data, errors, status };
         } catch (error) {
-            logError(error, "handleResponse");
+            console.error(error);
         }
     }
     return { response };

@@ -2,7 +2,6 @@
 import App from "app";
 import { CustomIntl } from "app/components/CustomIntl";
 import { CustomProvider } from "app/components/CustomProvider";
-import { logError } from "common/helpers/errors";
 import React from "react";
 import { render } from "react-dom";
 import "styles/index.less";
@@ -19,5 +18,5 @@ if (rootElement) {
         rootElement
     );
 } else {
-    logError("No root element is found", "index.jsx");
+    console.error("No root element");
 }
