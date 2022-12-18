@@ -7,6 +7,6 @@ type TProps = {
     children: React$Node,
 };
 
-export const CustomProvider = ({ children }: TProps): React$Node => {
+export const ProviderStore = ({ children }: TProps): React$Node => {
     return <Provider store={store}>{children}</Provider>;
 };
