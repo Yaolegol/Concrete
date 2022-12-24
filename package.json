@@ -75,7 +75,7 @@
     "url": "git+https://github.com/Yaolegol/Concrete.git"
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "NODE_ENV=production webpack --mode production",
     "build:dev": "webpack --mode development",
     "flow": "flow",
     "heroku-prebuild": "cd ./server && npm i",
