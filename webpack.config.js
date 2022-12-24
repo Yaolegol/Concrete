@@ -93,7 +93,6 @@ module.exports = (env, argv) => {
             }),
             new HtmlWebPackPlugin({
                 filename: "index.html",
-                hash: true,
                 template: "src/index.html",
                 title: "My app",
             }),
