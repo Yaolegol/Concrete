@@ -4,6 +4,7 @@ import React, { Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { hot } from "react-hot-loader/root";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Layout } from "../common/components/Layout";
 
 const AdminPage = React.lazy(() => import("pages/Admin"));
 const MainPage = React.lazy(() => import("pages/Main"));
@@ -23,29 +24,31 @@ const App = () => {
     return (
         <Router>
             <Suspense fallback={<div />}>
-                <Switch>
-                    <Route path="/admin">
-                        <AdminPage />
-                    </Route>
-                    <Route path="/cart">
-                        <CartPage />
-                    </Route>
-                    <Route path="/login">
-                        <LogIn />
-                    </Route>
-                    <Route path="/profile">
-                        <ProfilePage />
-                    </Route>
-                    <Route path="/shop">
-                        <ShopPage />
-                    </Route>
-                    <Route path="/signup">
-                        <SignUp />
-                    </Route>
-                    <Route path="/">
-                        <MainPage />
-                    </Route>
-                </Switch>
+                <Layout>
+                    <Switch>
+                        <Route path="/admin">
+                            <AdminPage />
+                        </Route>
+                        <Route path="/cart">
+                            <CartPage />
+                        </Route>
+                        <Route path="/login">
+                            <LogIn />
+                        </Route>
+                        <Route path="/profile">
+                            <ProfilePage />
+                        </Route>
+                        <Route path="/shop">
+                            <ShopPage />
+                        </Route>
+                        <Route path="/signup">
+                            <SignUp />
+                        </Route>
+                        <Route path="/">
+                            <MainPage />
+                        </Route>
+                    </Switch>
+                </Layout>
             </Suspense>
         </Router>
     );

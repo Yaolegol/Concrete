@@ -2,7 +2,6 @@
 import { Button } from "common/components/Button";
 import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
-import { Layout } from "common/components/Layout";
 import { OrderHeader } from "common/components/Order/OrderHeader";
 import { OrderItem } from "common/components/Order/OrderItem";
 import { selectUser } from "modules/User/selectors";
@@ -179,14 +178,12 @@ const CartPage = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
     }, [contentItems, empty, handleBuy, user]);
 
     return (
-        <Layout>
-            <div className="cart-page">
-                <h1 className="cart-page__title">
-                    <FormattedMessage id="cart.title" />
-                </h1>
-                {content}
-            </div>
-        </Layout>
+        <div className="cart-page">
+            <h1 className="cart-page__title">
+                <FormattedMessage id="cart.title" />
+            </h1>
+            {content}
+        </div>
     );
 };
 

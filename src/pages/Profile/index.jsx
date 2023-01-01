@@ -1,5 +1,4 @@
 // @flow
-import { Layout } from "common/components/Layout";
 import { OrderHeader } from "common/components/Order/OrderHeader";
 import { OrderItem } from "common/components/Order/OrderItem";
 import { actionGetUser } from "modules/User/actions";
@@ -48,17 +47,15 @@ const ProfilePage = (): React$Node => {
     }, [dispatch]);
 
     return (
-        <Layout>
-            <div className="profile-page">
-                <h1 className="profile-page__title">
-                    <FormattedMessage id="profile.title" />
-                </h1>
-                <h4 className="profile-page__orders-history-title">
-                    <FormattedMessage id="profile.ordersHistory" />
-                </h4>
-                {content}
-            </div>
-        </Layout>
+        <div className="profile-page">
+            <h1 className="profile-page__title">
+                <FormattedMessage id="profile.title" />
+            </h1>
+            <h4 className="profile-page__orders-history-title">
+                <FormattedMessage id="profile.ordersHistory" />
+            </h4>
+            {content}
+        </div>
     );
 };
 

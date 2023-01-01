@@ -1,7 +1,6 @@
 // @flow
 import { Button } from "common/components/Button";
 import { SortSelect } from "common/components/CustomSelect/SortSelect";
-import { Layout } from "common/components/Layout";
 import { selectCartProductsItems } from "modules/Cart/selectors";
 import {
     actionGetProducts,
@@ -93,32 +92,30 @@ const ShopPage = ({
     }, [dispatch]);
 
     return (
-        <Layout>
-            <div className="shop-page">
-                <h1>
-                    <FormattedMessage id="shop.title" />
-                </h1>
-                <div className="shop-page__content">
-                    <div className="shop-page__filters-section">
-                        <Filters />
+        <div className="shop-page">
+            <h1>
+                <FormattedMessage id="shop.title" />
+            </h1>
+            <div className="shop-page__content">
+                <div className="shop-page__filters-section">
+                    <Filters />
+                </div>
+                <div className="shop-page__goods-section">
+                    <div className="shop-page__sort-container">
+                        <span className="shop-page__sort-select">
+                            <SortSelect
+                                onChange={handleSortSelectChange}
+                                value={sortSelectValue}
+                            />
+                        </span>
                     </div>
-                    <div className="shop-page__goods-section">
-                        <div className="shop-page__sort-container">
-                            <span className="shop-page__sort-select">
-                                <SortSelect
-                                    onChange={handleSortSelectChange}
-                                    value={sortSelectValue}
-                                />
-                            </span>
-                        </div>
-                        <div className="shop-page__goods-container">
-                            {productCards}
-                        </div>
-                        {showMore}
+                    <div className="shop-page__goods-container">
+                        {productCards}
                     </div>
+                    {showMore}
                 </div>
             </div>
-        </Layout>
+        </div>
     );
 };
 
