@@ -42,6 +42,7 @@ module.exports = (env, argv) => {
                                         ? "[hash:base64]"
                                         : "[local]",
                                 },
+                                url: false,
                             },
                         },
                         "postcss-loader",
@@ -53,7 +54,12 @@ module.exports = (env, argv) => {
                     test: /\.less$/,
                     use: [
                         MiniCssExtractPlugin.loader,
-                        "css-loader",
+                        {
+                            loader: "css-loader",
+                            options: {
+                                url: false,
+                            },
+                        },
                         "postcss-loader",
                         "less-loader",
                     ],
@@ -93,6 +99,10 @@ module.exports = (env, argv) => {
         plugins: [
             new CopyPlugin({
                 patterns: [
+                    {
+                        from: "src/fonts",
+                        to: "fonts",
+                    },
                     {
                         from: "src/icons",
                         to: "icons",
