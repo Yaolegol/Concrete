@@ -1,12 +1,12 @@
 // @flow
-import { getRandomString } from "common/helpers/random";
+import { getRandomString } from "helpers/random";
 import React, { useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.less";
 import "./index.less";
 
 type TProps = {
-    children: React$Node,
+    children: Array<React$Node>,
     slidesPerView?: number,
     spaceBetween?: number,
 };

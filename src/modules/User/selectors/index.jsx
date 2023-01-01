@@ -1,5 +1,5 @@
 // @flow
-import { isObjectEmpty } from "common/helpers/object";
+import { isObjectEmpty } from "helpers/object";
 import { createSelector } from "reselect";
 
 const getUserState = (state) => {

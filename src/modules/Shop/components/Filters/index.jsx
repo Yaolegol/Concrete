@@ -1,5 +1,5 @@
 // @flow
-import { debounce } from "common/helpers/debounce";
+import { debounce } from "helpers/debounce";
 import {
     actionGetProducts,
     actionSetProductsFilter,
