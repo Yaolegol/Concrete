@@ -1,6 +1,6 @@
 // @flow
-import { Description } from "main/Main/Description";
-import { Portfolio } from "main/Main/Portfolio";
+import { Description } from "main/Home/Description";
+import { Portfolio } from "main/Home/Portfolio";
 import React from "react";
 import "./index.less";
 

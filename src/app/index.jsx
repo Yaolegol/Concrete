@@ -1,6 +1,6 @@
 // @flow
 import { Layout } from "common/components/Layout";
-import { MainHero } from "main/Main/Hero";
+import { MainHero } from "main/Home/Hero";
 import { actionGetUser } from "modules/User/actions";
 import React, { Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -8,7 +8,7 @@ import { hot } from "react-hot-loader/root";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const AdminPage = React.lazy(() => import("main/Admin"));
-const MainPage = React.lazy(() => import("main/Main"));
+const MainPage = React.lazy(() => import("main/Home"));
 const CartPage = React.lazy(() => import("main/Cart"));
 const LogIn = React.lazy(() => import("main/LogIn"));
 const ProfilePage = React.lazy(() => import("main/Profile"));
