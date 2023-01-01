@@ -29,19 +29,32 @@ module.exports = (env, argv) => {
                         loader: "babel-loader",
                     },
                 },
-                // less
+                // less modules
                 {
-                    test: /\.less$/,
+                    test: /\.module\.less$/,
                     use: [
                         MiniCssExtractPlugin.loader,
                         {
                             loader: "css-loader",
                             options: {
+                                esModule: true,
                                 modules: {
-                                    localIdentName: "[local]",
+                                    localIdentName: isProduction
+                                        ? "[hash:base64]"
+                                        : "[local]",
                                 },
                             },
                         },
+                        "postcss-loader",
+                        "less-loader",
+                    ],
+                },
+                // less
+                {
+                    test: /\.less$/,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        "css-loader",
                         "postcss-loader",
                         "less-loader",
                     ],
