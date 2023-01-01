@@ -1,6 +1,6 @@
 // @flow
 import { Layout } from "common/components/Layout";
-import { MainHero } from "main/Home/Hero";
+import { HomeHero } from "main/Home/Hero";
 import { actionGetUser } from "modules/User/actions";
 import React, { Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -9,8 +9,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "styles/index.less";
 
 const AdminPage = React.lazy(() => import("main/Admin"));
-const MainPage = React.lazy(() => import("main/Home"));
 const CartPage = React.lazy(() => import("main/Cart"));
+const HomePage = React.lazy(() => import("main/Home"));
 const LogIn = React.lazy(() => import("main/LogIn"));
 const ProfilePage = React.lazy(() => import("main/Profile"));
 const ShopPage = React.lazy(() => import("main/Shop"));
@@ -58,8 +58,8 @@ const App = () => {
                         </Layout>
                     </Route>
                     <Route path="/">
-                        <Layout hero={<MainHero />}>
-                            <MainPage />
+                        <Layout hero={<HomeHero />}>
+                            <HomePage />
                         </Layout>
                     </Route>
                 </Switch>
