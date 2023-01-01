@@ -1,10 +1,10 @@
 // @flow
+import { Layout } from "common/components/Layout";
 import { actionGetUser } from "modules/User/actions";
 import React, { Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { hot } from "react-hot-loader/root";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Layout } from "../common/components/Layout";
 
 const AdminPage = React.lazy(() => import("pages/Admin"));
 const MainPage = React.lazy(() => import("pages/Main"));
