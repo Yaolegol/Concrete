@@ -4,7 +4,6 @@ import { CustomIntl } from "app/components/CustomIntl";
 import { ProviderStore } from "app/components/ProviderStore";
 import React from "react";
 import { render } from "react-dom";
-import "styles/index.less";
 
 const rootElement = document.getElementById("root");
 
