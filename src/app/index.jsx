@@ -1,5 +1,6 @@
 // @flow
 import { Layout } from "common/components/Layout";
+import { MainHero } from "main/Main/Hero";
 import { actionGetUser } from "modules/User/actions";
 import React, { Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -24,31 +25,43 @@ const App = () => {
     return (
         <Router>
             <Suspense fallback={<div />}>
-                <Layout>
-                    <Switch>
-                        <Route path="/admin">
+                <Switch>
+                    <Route path="/admin">
+                        <Layout>
                             <AdminPage />
-                        </Route>
-                        <Route path="/cart">
+                        </Layout>
+                    </Route>
+                    <Route path="/cart">
+                        <Layout>
                             <CartPage />
-                        </Route>
-                        <Route path="/login">
+                        </Layout>
+                    </Route>
+                    <Route path="/login">
+                        <Layout>
                             <LogIn />
-                        </Route>
-                        <Route path="/profile">
+                        </Layout>
+                    </Route>
+                    <Route path="/profile">
+                        <Layout>
                             <ProfilePage />
-                        </Route>
-                        <Route path="/shop">
+                        </Layout>
+                    </Route>
+                    <Route path="/shop">
+                        <Layout>
                             <ShopPage />
-                        </Route>
-                        <Route path="/signup">
+                        </Layout>
+                    </Route>
+                    <Route path="/signup">
+                        <Layout>
                             <SignUp />
-                        </Route>
-                        <Route path="/">
+                        </Layout>
+                    </Route>
+                    <Route path="/">
+                        <Layout hero={<MainHero />}>
                             <MainPage />
-                        </Route>
-                    </Switch>
-                </Layout>
+                        </Layout>
+                    </Route>
+                </Switch>
             </Suspense>
         </Router>
     );

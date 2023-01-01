@@ -7,14 +7,15 @@ import "./index.less";
 
 type TProps = {
     children: React$Node,
+    hero?: React$Node,
 };
 
-export const Layout = ({ children }: TProps): React$Node => {
+export const Layout = ({ children, hero }: TProps): React$Node => {
     return (
         <div className="layout">
             <MobileMenu />
             <Header />
-            <div id="id-layout-hero-section"></div>
+            {hero ? <div className="layout__hero">{hero}</div> : null}
             <div className="layout__content">{children}</div>
             <Footer />
         </div>
