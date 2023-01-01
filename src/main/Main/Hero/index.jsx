@@ -1,8 +1,8 @@
 // @flow
+import { LayoutHero } from "common/components/Layout/Hero";
 import { SliderMain } from "common/components/Slider/SliderMain";
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.less";
 
 export const Hero = (): React$Node => {
     const layoutHeroSectionContainer = document.querySelector(
@@ -10,13 +10,15 @@ export const Hero = (): React$Node => {
     );
 
     if (!layoutHeroSectionContainer) {
+        console.error("No #id-layout-hero-section found");
+
         return <></>;
     }
 
     return ReactDOM.createPortal(
-        <div className="main-hero">
+        <LayoutHero>
             <SliderMain />
-        </div>,
+        </LayoutHero>,
         layoutHeroSectionContainer
     );
 };
