@@ -2,6 +2,7 @@
 import React from "react";
 import Select from "react-select";
 import "./index.less";
+import type { ActionMeta, ValueType } from "react-select/src/types";
 
 type TSelectOption = {
     id?: any,
@@ -11,7 +12,7 @@ type TSelectOption = {
 
 type TProps = {
     isSearchable?: boolean,
-    onChange: (TSelectOption) => any,
+    onChange: (ValueType, ActionMeta) => void,
     options: Array<TSelectOption>,
     placeholder?: string,
     value: ?TSelectOption,
