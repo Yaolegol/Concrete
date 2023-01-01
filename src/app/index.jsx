@@ -6,13 +6,13 @@ import { useDispatch } from "react-redux";
 import { hot } from "react-hot-loader/root";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const AdminPage = React.lazy(() => import("pages/Admin"));
-const MainPage = React.lazy(() => import("pages/Main"));
-const CartPage = React.lazy(() => import("pages/Cart"));
-const LogIn = React.lazy(() => import("pages/LogIn"));
-const ProfilePage = React.lazy(() => import("pages/Profile"));
-const ShopPage = React.lazy(() => import("pages/Shop"));
-const SignUp = React.lazy(() => import("pages/SignUp"));
+const AdminPage = React.lazy(() => import("main/Admin"));
+const MainPage = React.lazy(() => import("main/Main"));
+const CartPage = React.lazy(() => import("main/Cart"));
+const LogIn = React.lazy(() => import("main/LogIn"));
+const ProfilePage = React.lazy(() => import("main/Profile"));
+const ShopPage = React.lazy(() => import("main/Shop"));
+const SignUp = React.lazy(() => import("main/SignUp"));
 
 const App = () => {
     const dispatch = useDispatch();
