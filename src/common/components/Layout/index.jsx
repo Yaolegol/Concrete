@@ -14,7 +14,7 @@ export const Layout = ({ children }: TProps): React$Node => {
         <div className="layout">
             <MobileMenu />
             <Header />
-            <div className="layout__content">{children}</div>
+            {children}
             <Footer />
         </div>
     );
