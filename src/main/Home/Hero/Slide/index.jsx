@@ -8,19 +8,21 @@ type TProps = {
     description: string,
     imgAlt: string,
     imgSrc: string,
+    key?: string,
     onClick?: () => void,
     title: string,
 };
 
-export const SliderMainSlide = ({
+export const Slide = ({
     description,
     imgAlt,
     imgSrc,
+    key,
     onClick,
     title,
 }: TProps): React$Node => {
     return (
-        <div className="slider-main-slide">
+        <div className="slider-main-slide" key={key}>
             <div className="slider-main-slide__image-section">
                 <img
                     className="slider-main-slide__image"
