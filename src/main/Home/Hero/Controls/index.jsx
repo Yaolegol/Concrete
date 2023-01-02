@@ -21,12 +21,18 @@ export const Controls = ({ swiper }: TProps): React$Node => {
     }
 
     return (
-        <div className="slider-main__controls">
-            <button className="slider-main__control-button" onClick={slidePrev}>
-                <ArrowIcon className="slider-main__control-icon slider-main__control-icon_left" />
+        <div className="main-home-hero-controls">
+            <button
+                className="main-home-hero-controls__control-button"
+                onClick={slidePrev}
+            >
+                <ArrowIcon className="main-home-hero-controls__control-icon main-home-hero-controls__control-icon_left" />
             </button>
-            <button className="slider-main__control-button" onClick={slideNext}>
-                <ArrowIcon className="slider-main__control-icon" />
+            <button
+                className="main-home-hero-controls__control-button"
+                onClick={slideNext}
+            >
+                <ArrowIcon className="main-home-hero-controls__control-icon" />
             </button>
         </div>
     );

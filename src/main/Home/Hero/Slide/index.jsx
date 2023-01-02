@@ -22,23 +22,23 @@ export const Slide = ({
     title,
 }: TProps): React$Node => {
     return (
-        <div className="slider-main-slide" key={key}>
-            <div className="slider-main-slide__image-section">
+        <div className="main-home-hero-slide" key={key}>
+            <div className="main-home-hero-slide__image-section">
                 <img
-                    className="slider-main-slide__image"
+                    className="main-home-hero-slide__image"
                     src={imgSrc}
                     alt={imgAlt}
                 />
             </div>
-            <div className="slider-main-slide__content-section">
-                <div className="slider-main-slide__content">
-                    <h1 className="slider-main-slide__content-header">
+            <div className="main-home-hero-slide__content-section">
+                <div className="main-home-hero-slide__content">
+                    <h1 className="main-home-hero-slide__content-header">
                         {title}
                     </h1>
-                    <p className="slider-main-slide__content-description">
+                    <p className="main-home-hero-slide__content-description">
                         {description}
                     </p>
-                    <div className="slider-main-slide__button-container">
+                    <div className="main-home-hero-slide__button-container">
                         <ShopNowButton onClick={onClick} />
                     </div>
                 </div>

@@ -1,18 +1,13 @@
 @import (reference) '~styles/colors';
 @import (reference) '~styles/flex';
 
-.slider-main {
-    height: 100%;
-    position: relative;
-
-    &__controls {
-        bottom: 0;
-        display: flex;
-        left: 50%;
-        position: absolute;
-        transform: translateX(-50%);
-        z-index: 9;
-    }
+.main-home-hero-controls {
+    bottom: 0;
+    display: flex;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 9;
 
     &__control-button {
         .f_c();
@@ -38,6 +33,10 @@
 
         &_left {
             transform: rotate(180deg);
+        }
+
+        .main-home-hero-controls__control-button:hover & {
+            color: @white;
         }
     }
 }

@@ -19,11 +19,7 @@ export const Slider = ({
 }: TProps): React$Node => {
     const slides = useMemo(() => {
         return children.map((item) => {
-            return (
-                <SwiperSlide key={getRandomString()}>
-                    <div className="slider__slide">{item}</div>
-                </SwiperSlide>
-            );
+            return <SwiperSlide key={getRandomString()}>{item}</SwiperSlide>;
         });
     }, [children]);
 

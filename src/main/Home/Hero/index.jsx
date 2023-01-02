@@ -59,7 +59,7 @@ export const HomeHero = (): React$Node => {
     }, [intl]);
 
     return (
-        <div className="slider-main">
+        <div className="main-home-hero">
             <Slider onSwiper={setSwiper}>{slides}</Slider>
             <Controls swiper={swiper} />
         </div>
