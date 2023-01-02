@@ -6,7 +6,7 @@ import React, { Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { hot } from "react-hot-loader/root";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "styles/index.less";
+import "./index.less";
 
 const AdminPage = React.lazy(() => import("main/Admin"));
 const CartPage = React.lazy(() => import("main/Cart"));
