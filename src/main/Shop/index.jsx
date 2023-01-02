@@ -119,8 +119,8 @@ const ShopPage = ({
     );
 };
 
-export default (connect((state) => ({
+export default connect<TProps, void, _, _, _, _>((state) => ({
     cartProducts: selectCartProductsItems(state),
     currentPage: selectCurrentPage(state),
     products: selectProducts(state),
-}))(ShopPage): any);
+}))(ShopPage);

@@ -22,7 +22,7 @@ type TProps = {
     user: any,
 };
 
-const CartPage = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
+const Cart = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
     const history = useHistory();
 
     const contentItems = useMemo(() => {
@@ -187,7 +187,7 @@ const CartPage = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
     );
 };
 
-export default (connect((state) => ({
+export default connect<TProps, void, _, _, _, _>((state) => ({
     cartProductsData: selectCartProductsData(state),
     user: selectUser(state),
-}))(CartPage): any);
+}))(Cart);

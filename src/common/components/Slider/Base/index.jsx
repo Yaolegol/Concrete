@@ -28,7 +28,7 @@ export const Slider = ({
     }, [children]);
 
     return (
-        <div className="slider">
+        <div className="common-components-slider-base">
             <Swiper
                 {...rest}
                 spaceBetween={spaceBetween}

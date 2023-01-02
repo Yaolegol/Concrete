@@ -1,13 +1,12 @@
 // @flow
 import { Button } from "common/components/Button";
-import { Layout } from "common/components/Layout";
 import { CreateProduct } from "modules/Admin/components/CreateProduct";
 import { ViewOrders } from "modules/Admin/components/ViewOrders";
 import React, { useCallback, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import "./index.less";
 
-const AdminPage = (): React$Node => {
+const Admin = (): React$Node => {
     const [currentContent, setCurrentContent] = useState("create product");
 
     const changeContent = useCallback(
@@ -65,4 +64,4 @@ const AdminPage = (): React$Node => {
     );
 };
 
-export default AdminPage;
+export default Admin;

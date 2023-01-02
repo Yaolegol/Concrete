@@ -8,12 +8,12 @@ import { hot } from "react-hot-loader/root";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./index.less";
 
-const AdminPage = React.lazy(() => import("main/Admin"));
-const CartPage = React.lazy(() => import("main/Cart"));
-const HomePage = React.lazy(() => import("main/Home"));
+const Admin = React.lazy(() => import("main/Admin"));
+const Cart = React.lazy(() => import("main/Cart"));
+const Home = React.lazy(() => import("main/Home"));
 const LogIn = React.lazy(() => import("main/LogIn"));
-const ProfilePage = React.lazy(() => import("main/Profile"));
-const ShopPage = React.lazy(() => import("main/Shop"));
+const Profile = React.lazy(() => import("main/Profile"));
+const Shop = React.lazy(() => import("main/Shop"));
 const SignUp = React.lazy(() => import("main/SignUp"));
 
 const App = () => {
@@ -29,12 +29,12 @@ const App = () => {
                 <Switch>
                     <Route path="/admin">
                         <Layout>
-                            <AdminPage />
+                            <Admin />
                         </Layout>
                     </Route>
                     <Route path="/cart">
                         <Layout>
-                            <CartPage />
+                            <Cart />
                         </Layout>
                     </Route>
                     <Route path="/login">
@@ -44,12 +44,12 @@ const App = () => {
                     </Route>
                     <Route path="/profile">
                         <Layout>
-                            <ProfilePage />
+                            <Profile />
                         </Layout>
                     </Route>
                     <Route path="/shop">
                         <Layout>
-                            <ShopPage />
+                            <Shop />
                         </Layout>
                     </Route>
                     <Route path="/signup">
@@ -59,7 +59,7 @@ const App = () => {
                     </Route>
                     <Route path="/">
                         <Layout hero={<HomeHero />}>
-                            <HomePage />
+                            <Home />
                         </Layout>
                     </Route>
                 </Switch>

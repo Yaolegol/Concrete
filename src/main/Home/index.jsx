@@ -3,7 +3,7 @@ import { Description } from "main/Home/Description";
 import { Portfolio } from "main/Home/Portfolio";
 import React from "react";
 
-const MainPage = (): React$Node => {
+const HomePage = (): React$Node => {
     return (
         <>
             <Description />
@@ -12,4 +12,4 @@ const MainPage = (): React$Node => {
     );
 };
 
-export default MainPage;
+export default HomePage;

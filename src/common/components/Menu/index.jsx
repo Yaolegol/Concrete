@@ -111,7 +111,7 @@ export const Menu = ({ className }: TProps): React$Node => {
                     to="/"
                 >
                     <MenuItem>
-                        <FormattedMessage id="common.menu.mainPage" />
+                        <FormattedMessage id="common.menu.homePage" />
                     </MenuItem>
                 </NavLink>
             </button>
