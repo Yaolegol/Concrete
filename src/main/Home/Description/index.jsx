@@ -6,33 +6,33 @@ import "./index.less";
 
 export const Description = (): React$Node => {
     return (
-        <div className="main-description">
-            <div className="main-description__content-section">
-                <div className="main-description__content">
-                    <h3 className="main-description__content-title">
+        <div className="main-home-description">
+            <div className="main-home-description__content-section">
+                <div className="main-home-description__content">
+                    <h3 className="main-home-description__content-title">
                         <FormattedMessage id="main.descriptionSection.title" />
                     </h3>
-                    <p className="main-description__content-description">
+                    <p className="main-home-description__content-description">
                         <FormattedMessage id="main.descriptionSection.description" />
                     </p>
-                    <div className="main-description__about-link-container">
+                    <div className="main-home-description__about-link-container">
                         <CustomLink url="/about">
                             <FormattedMessage id="common.learnMore.title" />
                         </CustomLink>
                     </div>
                 </div>
             </div>
-            <div className="main-description__image-section">
-                <div className="main-description__image-container">
+            <div className="main-home-description__image-section">
+                <div className="main-home-description__image-container">
                     <img
-                        className="main-description__image-main"
-                        src="images/main/description/room.jpg"
-                        alt="Room"
+                        alt=""
+                        className="main-home-description__image-main"
+                        src="/images/main/description/room.jpg"
                     />
                     <img
-                        className="main-description__image-second"
-                        src="images/main/description/table.jpg"
-                        alt="Table"
+                        alt=""
+                        className="main-home-description__image-second"
+                        src="/images/main/description/table.jpg"
                     />
                 </div>
             </div>
