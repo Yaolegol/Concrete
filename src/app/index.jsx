@@ -1,6 +1,6 @@
 // @flow
-import { Layout } from "common/components/Layout";
 import { HomeHero } from "main/Home/Hero";
+import { Layout } from "modules/Layout";
 import { actionGetUser } from "modules/User/actions";
 import React, { Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";

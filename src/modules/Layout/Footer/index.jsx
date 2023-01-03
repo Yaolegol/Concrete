@@ -1,7 +1,7 @@
 // @flow
 import { GoogleMap } from "common/components/GoogleMap";
-import { AddressContent } from "common/components/Layout/Footer/AddressContent";
 import { Tabs } from "common/components/Tabs";
+import { AddressContent } from "modules/Layout/Footer/AddressContent";
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import "./index.less";

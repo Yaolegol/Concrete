@@ -1,11 +1,11 @@
 // @flow
-import { LangSelect } from "modules/Locale/components/LangSelect";
-import { actionShowMobileMenu } from "modules/MobileMenu/actions";
 import { BurgerButton } from "common/components/Button/BurgerButton";
-import CartLink from "common/components/Layout/Header/CartLink";
 import { Logo } from "common/components/Logo";
 import { Menu } from "common/components/Menu";
 import { Socials } from "common/components/Socials";
+import CartLink from "modules/Layout/Header/CartLink";
+import { LangSelect } from "modules/Locale/components/LangSelect";
+import { actionShowMobileMenu } from "modules/MobileMenu/actions";
 import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import "./index.less";

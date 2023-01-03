@@ -1,6 +1,6 @@
 // @flow
-import { Footer } from "common/components/Layout/Footer";
-import { Header } from "common/components/Layout/Header";
+import { Footer } from "modules/Layout/Footer";
+import { Header } from "modules/Layout/Header";
 import MobileMenu from "modules/MobileMenu/components/MobileMenu";
 import React from "react";
 import "./index.less";
