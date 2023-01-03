@@ -6,32 +6,19 @@ import "swiper/swiper.less";
 import "./index.less";
 
 type TProps = {
-    children: Array<React$Node>,
-    slidesPerView?: number,
-    spaceBetween?: number,
+    slides: Array<React$Node>,
 };
 
-export const Slider = ({
-    children,
-    slidesPerView = 1,
-    spaceBetween = 0,
-    ...rest
-}: TProps): React$Node => {
-    const slides = useMemo(() => {
-        return children.map((item) => {
+export const SliderBase = ({ slides, ...rest }: TProps): React$Node => {
+    const _slides = useMemo(() => {
+        return slides.map((item) => {
             return <SwiperSlide key={getRandomString()}>{item}</SwiperSlide>;
         });
-    }, [children]);
+    }, [slides]);
 
     return (
         <div className="common-components-slider-base">
-            <Swiper
-                {...rest}
-                spaceBetween={spaceBetween}
-                slidesPerView={slidesPerView}
-            >
-                {slides}
-            </Swiper>
+            <Swiper {...rest}>{_slides}</Swiper>
         </div>
     );
 };

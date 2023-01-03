@@ -9,16 +9,20 @@ type TProps = {
 
 export const Controls = ({ swiper }: TProps): React$Node => {
     const slideNext = useCallback(() => {
+        if (!swiper) {
+            return;
+        }
+
         swiper.slideNext(300);
     }, [swiper]);
 
     const slidePrev = useCallback(() => {
+        if (!swiper) {
+            return;
+        }
+
         swiper.slidePrev(300);
     }, [swiper]);
-
-    if (!swiper) {
-        return <></>;
-    }
 
     return (
         <div className="main-home-hero-controls">

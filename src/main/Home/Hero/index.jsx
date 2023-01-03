@@ -1,6 +1,5 @@
 // @flow
-import { Slider } from "common/components/Slider/Base";
-import { getRandomString } from "helpers/random";
+import { SliderBase } from "common/components/Slider/Base";
 import { Controls } from "main/Home/Hero/Controls";
 import { Slide } from "main/Home/Hero/Slide";
 import React, { useMemo, useState } from "react";
@@ -12,7 +11,7 @@ export const HomeHero = (): React$Node => {
     const intl = useIntl();
 
     const slides = useMemo(() => {
-        return [
+        return new Array(3).fill(
             <Slide
                 buttonText={intl.formatMessage({
                     id: "common.buttons.shopNow.title",
@@ -22,45 +21,16 @@ export const HomeHero = (): React$Node => {
                 })}
                 imgAlt="Test image"
                 imgSrc="images/main/hero/hero.jpg"
-                key={getRandomString()}
                 title={intl.formatMessage({
                     id: "hero.slide.title",
                 })}
-            />,
-            <Slide
-                buttonText={intl.formatMessage({
-                    id: "common.buttons.shopNow.title",
-                })}
-                description={intl.formatMessage({
-                    id: "hero.slide.description",
-                })}
-                imgAlt="Test image"
-                imgSrc="images/main/hero/hero.jpg"
-                key={getRandomString()}
-                title={intl.formatMessage({
-                    id: "hero.slide.title",
-                })}
-            />,
-            <Slide
-                buttonText={intl.formatMessage({
-                    id: "common.buttons.shopNow.title",
-                })}
-                description={intl.formatMessage({
-                    id: "hero.slide.description",
-                })}
-                imgAlt="Test image"
-                imgSrc="images/main/hero/hero.jpg"
-                key={getRandomString()}
-                title={intl.formatMessage({
-                    id: "hero.slide.title",
-                })}
-            />,
-        ];
+            />
+        );
     }, [intl]);
 
     return (
         <div className="main-home-hero">
-            <Slider onSwiper={setSwiper}>{slides}</Slider>
+            <SliderBase onSwiper={setSwiper} slides={slides} spaceBetween={0} />
             <Controls swiper={swiper} />
         </div>
     );
