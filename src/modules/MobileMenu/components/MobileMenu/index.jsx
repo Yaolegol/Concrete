@@ -1,5 +1,6 @@
 // @flow
 import cn from "classnames";
+import { Logo } from "common/components/Logo";
 import { Menu } from "common/components/Menu";
 import { LangSelect } from "modules/Locale/components/LangSelect";
 import { actionHideMobileMenu } from "modules/MobileMenu/actions";
@@ -18,16 +19,15 @@ const MobileMenu = ({ dispatch, isShow }: TProps): React$Node => {
         dispatch(actionHideMobileMenu());
     }, [dispatch]);
 
-    const preventClick = useCallback((e) => {
-        e.stopPropagation();
-    }, []);
-
     return (
         <div
-            className={cn("mobile-menu", isShow ? "mobile-menu_show" : null)}
+            className={cn("mobile-menu", isShow ? "active" : "")}
             onClick={toggleMobileMenu}
         >
-            <div className="mobile-menu__body" onClick={preventClick}>
+            <div className="mobile-menu__content-container">
+                <div className="mobile-menu__logo-container">
+                    <Logo />
+                </div>
                 <Menu className="mobile-menu__menu" />
                 <div className="mobile-menu__lang-select">
                     <LangSelect />
