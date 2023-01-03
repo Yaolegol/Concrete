@@ -1,5 +1,5 @@
 // @flow
-import { CustomLink } from "common/components/Link";
+import { CustomLink } from "common/components/Link/Custom";
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import "./index.less";

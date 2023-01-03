@@ -16,7 +16,9 @@ module.exports = (env, argv) => {
         entry: "./src/index.jsx",
         output: {
             path: path.resolve(__dirname, "dist"),
-            filename: "[name].[contenthash].js",
+            filename: isProduction
+                ? "[name].[contenthash].js"
+                : "[name].[hash].js",
         },
         module: {
             rules: [

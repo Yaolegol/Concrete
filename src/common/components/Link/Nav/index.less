@@ -1,6 +1,6 @@
 @import (reference) '~styles/colors';
 
-.menu-item {
+.common-components-nav-link {
     color: @white;
     cursor: pointer;
     display: flex;
@@ -8,7 +8,8 @@
     text-align: center;
     text-transform: uppercase;
 
-    &:hover {
+    &:hover,
+    &.active {
         background-color: @blue;
     }
 }

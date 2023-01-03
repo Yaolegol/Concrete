@@ -1,7 +1,7 @@
 // @flow
 import cn from "classnames";
 import { Logo } from "common/components/Logo";
-import { Menu } from "common/components/Menu";
+import { Menu } from "modules/Layout/Menu";
 import { LangSelect } from "modules/Locale/components/LangSelect";
 import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import { selectMobileMenuShowStatus } from "modules/MobileMenu/selectors";
