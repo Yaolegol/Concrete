@@ -3,8 +3,12 @@
 .menu {
     display: flex;
 
+    &_column {
+        flex-direction: column;
+    }
+
     &__link {
-        &_active {
+        &.active {
             .menu-item {
                 background-color: @blue;
             }

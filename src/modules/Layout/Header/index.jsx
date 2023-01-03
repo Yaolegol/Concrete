@@ -25,7 +25,9 @@ export const Header = (): React$Node => {
             />
             <Logo className="header__item_laptop-hidden" />
             <Socials className="header__item_laptop-hidden" />
-            <Menu className="header__item_laptop-hidden" />
+            <div className="header__item_laptop-hidden">
+                <Menu />
+            </div>
             <div className="header__lang-select header__item_laptop-hidden">
                 <LangSelect />
             </div>

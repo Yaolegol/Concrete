@@ -28,7 +28,9 @@ const MobileMenu = ({ dispatch, isShow }: TProps): React$Node => {
                 <div className="mobile-menu__logo-container">
                     <Logo />
                 </div>
-                <Menu className="mobile-menu__menu" />
+                <div className="mobile-menu__menu">
+                    <Menu column={true} />
+                </div>
                 <div className="mobile-menu__lang-select">
                     <LangSelect />
                 </div>
