@@ -1,0 +1,15 @@
+@import (reference) '~styles/adaptive';
+
+.modules-layout-header-section-left {
+    &__burger {
+        @media @min_1441 {
+            display: none !important;
+        }
+    }
+
+    &__logo {
+        @media @max_1440 {
+            display: none !important;
+        }
+    }
+}

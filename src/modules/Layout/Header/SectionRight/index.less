@@ -1,0 +1,15 @@
+@import (reference) '~styles/adaptive';
+
+.modules-layout-header-section-right {
+    align-items: center;
+    display: flex;
+
+    &__lang-select {
+        margin-right: 50px;
+        width: 80px;
+
+        @media @max_1440 {
+            display: none !important;
+        }
+    }
+}

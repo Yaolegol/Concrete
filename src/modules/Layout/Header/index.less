@@ -5,11 +5,12 @@
     align-items: center;
     background-color: @black;
     display: flex;
-    justify-content: space-around;
     height: 84px;
+    justify-content: center;
     left: 0;
     margin: 0 auto;
     max-width: 1920px;
+    padding: 0 50px;
     position: fixed;
     right: 0;
     top: 0;
@@ -17,36 +18,33 @@
 
     @media @max_1440 {
         justify-content: space-between;
-        padding: 0 50px;
     }
 
     @media @max_768 {
         height: 48px;
     }
 
-    &__burger-button {
-        display: none;
-
-        @media @max_1440 {
-            display: flex;
+    &__section {
+        &_left {
+            flex: 0 0 200px;
         }
-    }
 
-    &__item {
-        &_desktop {
+        &_main {
+            align-items: center;
+            display: flex;
+            flex: 1 1 auto;
+            justify-content: center;
+
             @media @max_1440 {
                 display: none !important;
             }
         }
 
-        &_mobile {
-            @media @min_1441 {
-                display: none !important;
-            }
+        &_right {
+            align-items: center;
+            display: flex;
+            flex: 0 0 200px;
+            justify-content: flex-end;
         }
-    }
-
-    &__lang-select {
-        width: 80px;
     }
 }
