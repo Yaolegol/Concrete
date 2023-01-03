@@ -19,16 +19,19 @@ export const Header = (): React$Node => {
 
     return (
         <div className="header">
-            <BurgerButton
-                className="header__burger-button"
-                onClick={toggleMobileMenu}
-            />
-            <Logo className="header__item_laptop-hidden" />
-            <Socials className="header__item_laptop-hidden" />
-            <div className="header__item_laptop-hidden">
+            <div className="header__item header__item_mobile">
+                <BurgerButton onClick={toggleMobileMenu} />
+            </div>
+            <div className="header__item header__item_desktop">
+                <Logo />
+            </div>
+            <div className="header__item header__item_desktop">
+                <Socials />
+            </div>
+            <div className="header__item header__item_desktop">
                 <Menu />
             </div>
-            <div className="header__lang-select header__item_laptop-hidden">
+            <div className="header__lang-select header__item header__item_desktop">
                 <LangSelect />
             </div>
             <CartLink />

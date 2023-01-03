@@ -8,11 +8,11 @@
     &__button-container {
         margin-top: 100px;
 
-        @media @laptop {
+        @media @max_1440 {
             margin-top: 50px;
         }
 
-        @media @mobile {
+        @media @max_768 {
             margin-top: 25px;
         }
     }
@@ -26,7 +26,7 @@
         color: @white;
         margin-top: 35px;
 
-        @media @mobile {
+        @media @max_768 {
             margin-top: 15px;
         }
     }
@@ -46,11 +46,11 @@
         position: relative;
         text-align: left;
 
-        @media @laptop {
+        @media @max_1440 {
             padding: 100px 50px 50px;
         }
 
-        @media @mobile {
+        @media @max_768 {
             background: url('/images/main/hero/hero.jpg') no-repeat center;
             background-size: cover;
             padding: 50px;
@@ -76,7 +76,7 @@
     &__image-section {
         flex: 1 1 50%;
 
-        @media @mobile {
+        @media @max_768 {
             display: none;
         }
     }

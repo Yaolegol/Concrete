@@ -2,8 +2,9 @@
 import { CustomSelect } from "common/components/CustomSelect";
 import { actionSetLocale } from "modules/Locale/actions";
 import { selectCurrentLocale } from "modules/Locale/selectors";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import type { ValueType } from "react-select/src/types";
 import "./index.less";
 
 const options = [
@@ -14,12 +15,18 @@ const options = [
 export const LangSelect = (): React$Node => {
     const currentLocale = useSelector(selectCurrentLocale);
     const dispatch = useDispatch();
+    const [selectedOption, setSelectedOption] = useState<ValueType>(null);
 
-    const [selectedOption, setSelectedOption] = useState(null);
-    const onSelectChange = (value) => {
-        setSelectedOption(value);
-        dispatch(actionSetLocale(value.value));
-    };
+    const onChange = useCallback(
+        (selectValue: ValueType) => {
+            setSelectedOption(selectValue);
+
+            if (selectValue && !Array.isArray(selectValue)) {
+                dispatch(actionSetLocale(selectValue.value));
+            }
+        },
+        [dispatch]
+    );
 
     useEffect(() => {
         const localeOption = options.find((opt) => opt.value === currentLocale);
@@ -31,7 +38,7 @@ export const LangSelect = (): React$Node => {
             components={{
                 IndicatorSeparator: null,
             }}
-            onChange={onSelectChange}
+            onChange={onChange}
             options={options}
             value={selectedOption}
         />

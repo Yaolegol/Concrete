@@ -8,7 +8,7 @@
     flex-direction: column;
 
     &__button-container {
-        @media @mobile {
+        @media @max_768 {
             margin-top: 50px;
         }
     }
@@ -18,13 +18,13 @@
         padding: 0;
         position: relative;
 
-        @media @tablet {
+        @media @max_1024 {
             align-items: center;
             flex-direction: column;
             padding: 0 50px;
         }
 
-        @media @mobile {
+        @media @max_768 {
             padding: 0;
         }
     }
@@ -34,7 +34,7 @@
         object-fit: cover;
         width: 600px;
 
-        @media @tablet {
+        @media @max_1024 {
             max-width: 600px;
             width: 100%;
         }
@@ -44,7 +44,7 @@
         position: absolute;
         z-index: 9;
 
-        @media @tablet {
+        @media @max_1024 {
             flex: 1;
             flex-basis: 50%;
             object-fit: cover;
@@ -75,7 +75,7 @@
     &__image-section {
         margin: 300px 0 200px;
 
-        @media @mobile {
+        @media @max_768 {
             margin: 100px 0 0;
         }
     }

@@ -15,33 +15,38 @@
     top: 0;
     z-index: 999;
 
-    @media @laptop {
+    @media @max_1440 {
         justify-content: space-between;
         padding: 0 50px;
     }
 
-    @media @mobile {
+    @media @max_768 {
         height: 48px;
     }
 
     &__burger-button {
         display: none;
 
-        @media @laptop {
+        @media @max_1440 {
             display: flex;
         }
     }
 
     &__item {
-        &_laptop-hidden {
-            @media @laptop {
+        &_desktop {
+            @media @max_1440 {
+                display: none !important;
+            }
+        }
+
+        &_mobile {
+            @media @min_1441 {
                 display: none !important;
             }
         }
     }
 
     &__lang-select {
-        display: flex;
-        min-width: 80px;
+        width: 80px;
     }
 }

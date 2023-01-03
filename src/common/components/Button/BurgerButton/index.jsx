@@ -1,15 +1,14 @@
 // @flow
-import cn from "classnames";
 import React from "react";
 import "./index.less";
 
 type TProps = {
-    className?: string,
+    onClick?: () => void,
 };
 
-export const BurgerButton = ({ className, ...rest }: TProps): React$Node => {
+export const BurgerButton = ({ onClick }: TProps): React$Node => {
     return (
-        <button {...rest} className={cn("burger-button", className)}>
+        <button className="burger-button" onClick={onClick} type="button">
             <span className="burger-button__line burger-button__line_without-margin"></span>
             <span className="burger-button__line"></span>
             <span className="burger-button__line"></span>

@@ -9,26 +9,26 @@
     text-transform: capitalize;
     width: 100%;
 
-    @media @laptop {
+    @media @max_1440 {
         grid-template-columns: repeat(6, 1fr);
         max-width: none;
     }
 
-    @media @mobile {
+    @media @max_768 {
         display: none;
     }
 
     &__image {
         width: 275px;
 
-        @media @laptop {
+        @media @max_1440 {
             display: none;
         }
     }
 
     &__item {
         &_mobile-hidden {
-            @media @mobile {
+            @media @max_768 {
                 display: none;
             }
         }
