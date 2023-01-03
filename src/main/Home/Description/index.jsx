@@ -16,7 +16,7 @@ export const Description = (): React$Node => {
                         <FormattedMessage id="main.descriptionSection.description" />
                     </p>
                     <div className="main-home-description__about-link-container">
-                        <CustomLink url="/about">
+                        <CustomLink url="#">
                             <FormattedMessage id="common.learnMore.title" />
                         </CustomLink>
                     </div>
