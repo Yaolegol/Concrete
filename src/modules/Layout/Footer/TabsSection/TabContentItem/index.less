@@ -1,23 +1,19 @@
 @import (reference) '~styles/colors';
 
-.tabs-content {
+.modules-layout-footer-tabs-section-tab-content-item {
     color: @white;
     display: none;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
 
     &_active {
-        display: flex;
+        display: block;
     }
 
     &__item {
         align-items: center;
         display: flex;
         margin-top: 30px;
-        width: fit-content;
 
-        &:first-child, &:only-child {
+        &:first-child {
             margin-top: 0;
         }
     }

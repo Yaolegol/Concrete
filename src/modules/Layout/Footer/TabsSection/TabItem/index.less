@@ -1,20 +1,18 @@
 @import (reference) '~styles/adaptive';
 @import (reference) '~styles/colors';
 
-.tabs-tab {
+.modules-layout-footer-tabs-section-tab-item {
     color: @white;
     cursor: pointer;
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    padding: 11px 40px;
+    flex: 1 1 auto;
+    padding: 12px 40px;
     text-transform: uppercase;
 
     &:hover, &_active {
         background-color: @blue;
     }
 
-    @media @max_768 {
-        padding: 11px 25px;
+    @media @max_1440 {
+        padding: 12px 24px;
     }
 }
