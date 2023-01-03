@@ -15,21 +15,35 @@ type TProps = {
 };
 
 const MobileMenu = ({ dispatch, isShow }: TProps): React$Node => {
-    const toggleMobileMenu = useCallback(() => {
-        dispatch(actionHideMobileMenu());
-    }, [dispatch]);
+    const toggleMobileMenu = useCallback(
+        (e) => {
+            dispatch(actionHideMobileMenu());
+        },
+        [dispatch]
+    );
+
+    const handleBackdropClick = useCallback(
+        (e) => {
+            if (!e.target.classList.contains("mobile-menu")) {
+                return;
+            }
+
+            toggleMobileMenu();
+        },
+        [toggleMobileMenu]
+    );
 
     return (
         <div
             className={cn("mobile-menu", isShow ? "active" : "")}
-            onClick={toggleMobileMenu}
+            onClick={handleBackdropClick}
         >
             <div className="mobile-menu__content-container">
                 <div className="mobile-menu__logo-container">
                     <Logo />
                 </div>
                 <div className="mobile-menu__menu">
-                    <Menu column={true} />
+                    <Menu column={true} onSelect={toggleMobileMenu} />
                 </div>
                 <div className="mobile-menu__lang-select">
                     <LangSelect />

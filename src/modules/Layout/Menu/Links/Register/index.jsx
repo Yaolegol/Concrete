@@ -4,7 +4,11 @@ import { actionLogout } from "modules/Auth/actions";
 import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
 
-export const RegisterLinks = (): React$Node => {
+type TProps = {
+    onSelect?: () => void,
+};
+
+export const RegisterLinks = ({ onSelect }: TProps): React$Node => {
     const dispatch = useDispatch();
 
     const logout = useCallback(() => {
@@ -13,7 +17,11 @@ export const RegisterLinks = (): React$Node => {
 
     return (
         <>
-            <CustomNavLink messageId="common.menu.profile" url="/profile" />
+            <CustomNavLink
+                onClick={onSelect}
+                messageId="common.menu.profile"
+                url="/profile"
+            />
             <CustomNavLink
                 messageId="common.menu.logOut"
                 onClick={logout}

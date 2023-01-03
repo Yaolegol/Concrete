@@ -2,8 +2,16 @@
 import { CustomNavLink } from "common/components/Link/Nav";
 import React from "react";
 
-export const AdminLinks = (): React$Node => {
+type TProps = {
+    onSelect?: () => void,
+};
+
+export const AdminLinks = ({ onSelect }: TProps): React$Node => {
     return (
-        <CustomNavLink messageId="common.menu.adminDashboard" url="/admin" />
+        <CustomNavLink
+            onClick={onSelect}
+            messageId="common.menu.adminDashboard"
+            url="/admin"
+        />
     );
 };

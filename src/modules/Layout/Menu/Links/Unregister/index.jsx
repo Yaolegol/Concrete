@@ -2,11 +2,23 @@
 import { CustomNavLink } from "common/components/Link/Nav";
 import React from "react";
 
-export const UnregisterLinks = (): React$Node => {
+type TProps = {
+    onSelect?: () => void,
+};
+
+export const UnregisterLinks = ({ onSelect }: TProps): React$Node => {
     return (
         <>
-            <CustomNavLink messageId="common.menu.signUp" url="/signup" />
-            <CustomNavLink messageId="common.menu.logIn" url="/login" />
+            <CustomNavLink
+                onClick={onSelect}
+                messageId="common.menu.signUp"
+                url="/signup"
+            />
+            <CustomNavLink
+                onClick={onSelect}
+                messageId="common.menu.logIn"
+                url="/login"
+            />
         </>
     );
 };

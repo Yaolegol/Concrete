@@ -11,16 +11,21 @@ import "./index.less";
 
 type TProps = {
     column?: boolean,
+    onSelect?: () => void,
 };
 
-export const Menu = ({ column }: TProps): React$Node => {
+export const Menu = ({ column, onSelect }: TProps): React$Node => {
     const user = useSelector(selectUser);
 
     return (
         <div className={cn("menu", column ? "menu_column" : "")}>
-            <PagesLinks />
-            {user && user.admin ? <AdminLinks /> : null}
-            {user ? <RegisterLinks /> : <UnregisterLinks />}
+            <PagesLinks onSelect={onSelect} />
+            {user && user.admin ? <AdminLinks onSelect={onSelect} /> : null}
+            {user ? (
+                <RegisterLinks onSelect={onSelect} />
+            ) : (
+                <UnregisterLinks onSelect={onSelect} />
+            )}
         </div>
     );
 };
