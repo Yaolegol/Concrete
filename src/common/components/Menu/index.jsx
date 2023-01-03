@@ -12,7 +12,7 @@ import { NavLink } from "react-router-dom";
 import "./index.less";
 
 type TProps = {
-    column: boolean,
+    column?: boolean,
 };
 
 export const Menu = ({ column }: TProps): React$Node => {
