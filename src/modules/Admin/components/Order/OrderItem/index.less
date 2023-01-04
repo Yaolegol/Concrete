@@ -5,11 +5,11 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 
-    @media @max_1440 {
+    @media @max_1439 {
         grid-template-columns: repeat(6, 1fr);
     }
 
-    @media @max_768 {
+    @media @max_767 {
         grid-auto-rows: minmax(min-content, max-content);
         grid-template-columns: none;
         justify-content: center;
@@ -19,7 +19,7 @@
     &__data-description {
         display: none;
 
-        @media @max_768 {
+        @media @max_767 {
             display: initial;
         }
     }
@@ -29,11 +29,11 @@
         object-fit: cover;
         width: 275px;
 
-        @media @max_1440 {
+        @media @max_1439 {
             display: none;
         }
 
-        @media @max_768 {
+        @media @max_767 {
             display: initial;
         }
     }

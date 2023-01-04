@@ -5,7 +5,7 @@
 .main-home-description {
     display: flex;
 
-    @media @max_1024 {
+    @media @max_1023 {
         flex-direction: column;
         align-items: center;
     }
@@ -13,10 +13,6 @@
     &__about-link-container {
         margin-top: 70px;
         text-align: left;
-    }
-
-    &__content {
-        max-width: 450px;
     }
 
     &__content-description {
@@ -31,8 +27,11 @@
         padding: 0 80px;
         text-align: center;
 
-        @media @max_768 {
+        @media @max_1023 {
+            flex: 1 1 auto;
+            max-width: none;
             padding: 0 10px;
+            width: 100%;
         }
     }
 
@@ -41,11 +40,10 @@
     }
 
     &__image-main {
-        height: auto;
         max-width: 600px;
         width: 100%;
 
-        @media @max_768 {
+        @media @max_1023 {
             max-width: none;
         }
     }
@@ -58,7 +56,7 @@
         top: -80px;
         width: 250px;
 
-        @media @max_1440 {
+        @media @max_1439 {
             display: none;
         }
     }
@@ -67,12 +65,9 @@
         flex: 1 1 50%;
         position: relative;
 
-        @media @max_1024 {
+        @media @max_1023 {
+            flex: 1 1 auto;
             margin-top: 50px;
-        }
-
-        @media @max_768 {
-            flex: 1 1 100%;
             width: 100%;
         }
     }
