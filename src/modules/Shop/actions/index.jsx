@@ -7,7 +7,6 @@ const {
     GET_PRODUCTS_FAIL,
     GET_PRODUCTS_START,
     GET_PRODUCTS_SUCCESS,
-    SET_PRODUCTS_SORT,
 } = SHOP_ACTION_TYPES;
 
 const actionGetProductsFail = (errors) => (dispatch) => {
@@ -52,8 +51,4 @@ export const actionGetProducts = ({ filters = {}, page = 1 }) => async (
     } catch (error) {
         dispatch(actionGetProductsFail([error]));
     }
-};
-
-export const actionSetProductsSort = (data: any): any => (dispatch) => {
-    dispatch({ data, type: SET_PRODUCTS_SORT });
 };

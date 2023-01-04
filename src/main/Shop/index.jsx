@@ -4,7 +4,7 @@ import { SortSelect } from "common/components/CustomSelect/SortSelect";
 import { useGetQueryFilters } from "hooks/filters";
 import { useCustomLocation } from "hooks/location";
 import { selectCartProductsItems } from "modules/Cart/selectors";
-import { actionGetProducts, actionSetProductsSort } from "modules/Shop/actions";
+import { actionGetProducts } from "modules/Shop/actions";
 import { Filters } from "modules/Shop/components/Filters";
 import { ProductCard } from "modules/Shop/components/ProductCard";
 import { selectProducts } from "modules/Shop/selectors";
@@ -24,19 +24,6 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
     const { search } = useCustomLocation();
     const [page, setPage] = useState(1);
     const [sortSelectValue, setSortSelectValue] = useState(null);
-
-    const handleSortSelectChange = useCallback(
-        (value) => {
-            setSortSelectValue(value);
-            dispatch(
-                actionSetProductsSort({
-                    [value.id]: value.value,
-                })
-            );
-            dispatch(actionGetProducts());
-        },
-        [dispatch]
-    );
 
     const productCards = useMemo(() => {
         return products.list.map(
@@ -73,6 +60,10 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
         },
         [dispatch, filtersData, page]
     );
+
+    const handleSortSelectChange = useCallback((value) => {
+        setSortSelectValue(value);
+    }, []);
 
     const loadMoreProducts = useCallback(() => {
         const nextPage = page + 1;
