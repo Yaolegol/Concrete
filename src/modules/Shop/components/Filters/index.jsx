@@ -17,7 +17,11 @@ export const Filters = (): React$Node => {
     const dispatch = useDispatch();
     const [priceFilterValue, setPriceFilterValue] = useState(initialValues);
 
-    const getProducts = useCallback(
+    const onChange = useCallback((val) => {
+        setPriceFilterValue(val);
+    }, []);
+
+    const onAfterChange = useCallback(
         (val) => {
             dispatch(
                 actionSetProductsFilter({
@@ -27,17 +31,6 @@ export const Filters = (): React$Node => {
             dispatch(actionGetProducts());
         },
         [dispatch]
-    );
-
-    const onChange = useCallback((val) => {
-        setPriceFilterValue(val);
-    }, []);
-
-    const onAfterChange = useCallback(
-        (val) => {
-            getProducts(val);
-        },
-        [getProducts]
     );
 
     return (
