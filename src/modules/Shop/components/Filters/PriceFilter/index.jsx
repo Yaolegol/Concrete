@@ -7,7 +7,6 @@ import "./index.less";
 type rangeValues = [number, number];
 
 type TProps = {
-    initialValues: rangeValues,
     max: number,
     onChange: (rangeValues) => any,
     onAfterChange: (rangeValues) => any,
@@ -15,7 +14,6 @@ type TProps = {
 };
 
 export const PriceFilter = ({
-    initialValues,
     max,
     onChange,
     onAfterChange,
@@ -39,10 +37,10 @@ export const PriceFilter = ({
             <div className="shop-page-price-filter__item">
                 <div className="shop-page-price-filter__item">
                     <Range
-                        defaultValue={initialValues}
                         max={max}
                         onChange={onChange}
                         onAfterChange={onAfterChange}
+                        value={values}
                     />
                 </div>
             </div>

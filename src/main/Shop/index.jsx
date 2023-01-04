@@ -1,11 +1,12 @@
 // @flow
 import { Button } from "common/components/Button";
 import { SortSelect } from "common/components/CustomSelect/SortSelect";
+import { useGetFilters } from "hooks/filters";
+import { useCustomLocation } from "hooks/location";
 import { selectCartProductsItems } from "modules/Cart/selectors";
 import {
     actionGetProducts,
     actionResetPage,
-    actionResetProductsFilters,
     actionResetProductsSorts,
     actionSetPage,
     actionSetProductsSort,
@@ -31,6 +32,8 @@ const ShopPage = ({
     dispatch,
     products,
 }: TProps): React$Node => {
+    const filtersData = useGetFilters();
+    const { search } = useCustomLocation();
     const [sortSelectValue, setSortSelectValue] = useState(null);
 
     const handleSortSelectChange = useCallback(
@@ -88,10 +91,18 @@ const ShopPage = ({
 
     useEffect(() => {
         dispatch(actionResetPage());
-        dispatch(actionResetProductsFilters());
         dispatch(actionResetProductsSorts());
-        dispatch(actionGetProducts());
     }, [dispatch]);
+
+    useEffect(() => {
+        const { currentSearch, newSearch } = search;
+
+        if (currentSearch === newSearch) {
+            return;
+        }
+
+        dispatch(actionGetProducts({ filters: filtersData }));
+    }, [dispatch, filtersData, search]);
 
     return (
         <div className="shop-page">

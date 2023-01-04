@@ -2,7 +2,6 @@
 import { SHOP_ACTION_TYPES } from "modules/Shop/constants";
 
 const initialState = {
-    filters: {},
     errors: [],
     loading: false,
     currentPage: 1,
@@ -18,10 +17,8 @@ const {
     GET_PRODUCTS_START,
     GET_PRODUCTS_SUCCESS,
     RESET_PAGE,
-    RESET_PRODUCTS_FILTERS,
     RESET_PRODUCTS_SORTS,
     SET_PAGE,
-    SET_PRODUCTS_FILTER,
     SET_PRODUCTS_SORT,
 } = SHOP_ACTION_TYPES;
 
@@ -57,11 +54,6 @@ export const shopReducer = (state: any = initialState, action: any): any => {
                 ...state,
                 currentPage: initialState.currentPage,
             };
-        case RESET_PRODUCTS_FILTERS:
-            return {
-                ...state,
-                filters: initialState.filters,
-            };
         case RESET_PRODUCTS_SORTS:
             return {
                 ...state,
@@ -71,11 +63,6 @@ export const shopReducer = (state: any = initialState, action: any): any => {
             return {
                 ...state,
                 currentPage: data,
-            };
-        case SET_PRODUCTS_FILTER:
-            return {
-                ...state,
-                filters: { ...state.filters, ...data },
             };
         case SET_PRODUCTS_SORT:
             return {

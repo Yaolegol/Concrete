@@ -1,12 +1,8 @@
 // @flow
-import {
-    actionGetProducts,
-    actionSetProductsFilter,
-} from "modules/Shop/actions";
+import { useGetFilters, useSetFiltersQuery } from "hooks/filters";
 import { PriceFilter } from "modules/Shop/components/Filters/PriceFilter";
 import React, { useCallback, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { useDispatch } from "react-redux";
 import "./index.less";
 
 const minValue = 0;
@@ -14,23 +10,24 @@ const maxValue = 10000;
 const initialValues = [minValue, maxValue];
 
 export const Filters = (): React$Node => {
-    const dispatch = useDispatch();
-    const [priceFilterValue, setPriceFilterValue] = useState(initialValues);
+    const { setFiltersQuery } = useSetFiltersQuery();
+    const { price } = useGetFilters();
+    const [priceFilterValue, setPriceFilterValue] = useState(
+        price || initialValues
+    );
 
     const onChange = useCallback((val) => {
         setPriceFilterValue(val);
     }, []);
 
     const onAfterChange = useCallback(
-        (val) => {
-            dispatch(
-                actionSetProductsFilter({
-                    price: val,
-                })
-            );
-            dispatch(actionGetProducts());
+        (values) => {
+            setFiltersQuery({
+                name: "price",
+                values,
+            });
         },
-        [dispatch]
+        [setFiltersQuery]
     );
 
     return (
@@ -40,7 +37,6 @@ export const Filters = (): React$Node => {
             </h6>
             <div className="shop-page-filters__container">
                 <PriceFilter
-                    initialValues={initialValues}
                     max={maxValue}
                     onChange={onChange}
                     onAfterChange={onAfterChange}
