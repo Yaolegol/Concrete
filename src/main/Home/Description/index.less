@@ -40,27 +40,21 @@
         color: @black;
     }
 
-    &__image-container {
-        display: flex;
-        position: relative;
-        width: fit-content;
-    }
-
     &__image-main {
-        height: 400px;
-        object-fit: cover;
-        width: 600px;
+        height: auto;
+        max-width: 600px;
+        width: 100%;
 
         @media @max_768 {
-            width: 100%;
+            max-width: none;
         }
     }
 
     &__image-second {
         height: 200px;
+        left: 450px;
         object-fit: cover;
         position: absolute;
-        right: -100px;
         top: -80px;
         width: 250px;
 
@@ -71,9 +65,15 @@
 
     &__image-section {
         flex: 1 1 50%;
+        position: relative;
 
         @media @max_1024 {
             margin-top: 50px;
+        }
+
+        @media @max_768 {
+            flex: 1 1 100%;
+            width: 100%;
         }
     }
 }
