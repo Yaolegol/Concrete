@@ -63,7 +63,12 @@ export const useSetFiltersQuery = () => {
             const filterValue = getFiltersQueryValue({ name, values });
 
             const params = new URLSearchParams(location.search);
-            params.set("filter", filterValue);
+
+            if (!filterValue) {
+                params.delete("filter");
+            } else {
+                params.set("filter", filterValue);
+            }
 
             history.push({
                 search: params.toString(),

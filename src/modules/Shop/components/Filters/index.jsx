@@ -21,10 +21,13 @@ export const Filters = (): React$Node => {
     }, []);
 
     const onAfterChange = useCallback(
-        (values) => {
+        (val) => {
+            const [min, max] = val;
+            const isDefaultValues = min === minValue && max === maxValue;
+
             setFiltersQuery({
                 name: "price",
-                values,
+                values: isDefaultValues ? [] : val,
             });
         },
         [setFiltersQuery]
