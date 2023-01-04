@@ -1,6 +1,5 @@
 // @flow
 import { SHOP_ACTION_TYPES } from "modules/Shop/constants";
-import { selectProductsSort } from "modules/Shop/selectors";
 import { getProducts } from "modules/Shop/service";
 
 const {
@@ -19,16 +18,14 @@ const actionGetProductsSuccess = (data) => (dispatch) => {
     dispatch({ data, type: GET_PRODUCTS_SUCCESS });
 };
 
-export const actionGetProducts = ({ filters = {}, page = 1 }) => async (
-    dispatch,
-    getState
-) => {
+export const actionGetProducts = ({
+    filters = {},
+    page = 1,
+    sort = {},
+} = {}) => async (dispatch) => {
     dispatch(actionGetProductsStart());
 
     try {
-        const state = getState();
-        const sort = selectProductsSort(state);
-
         const { data, errors } = await getProducts({
             filters,
             page,

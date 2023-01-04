@@ -19,8 +19,3 @@ export const selectProductsList: any = createSelector(
     [selectProducts],
     ({ list }) => list
 );
-
-export const selectProductsSort: any = createSelector(
-    [getShopState],
-    ({ sort }) => sort
-);
