@@ -1,5 +1,4 @@
 // @flow
-import { debounce } from "helpers/debounce";
 import {
     actionGetProducts,
     actionSetProductsFilter,
@@ -10,12 +9,16 @@ import { FormattedMessage } from "react-intl";
 import { useDispatch } from "react-redux";
 import "./index.less";
 
+const minValue = 0;
+const maxValue = 10000;
+const initialValues = [minValue, maxValue];
+
 export const Filters = (): React$Node => {
     const dispatch = useDispatch();
-    const [priceFilterValue, setPriceFilterValue] = useState([0, 10000]);
+    const [priceFilterValue, setPriceFilterValue] = useState(initialValues);
 
     const getProducts = useCallback(
-        (val) => () => {
+        (val) => {
             dispatch(
                 actionSetProductsFilter({
                     price: val,
@@ -26,10 +29,13 @@ export const Filters = (): React$Node => {
         [dispatch]
     );
 
-    const onPriceFilterChange = useCallback(
+    const onChange = useCallback((val) => {
+        setPriceFilterValue(val);
+    }, []);
+
+    const onAfterChange = useCallback(
         (val) => {
-            setPriceFilterValue(val);
-            debounce({ action: getProducts(val), id: "filters", time: 500 });
+            getProducts(val);
         },
         [getProducts]
     );
@@ -41,9 +47,10 @@ export const Filters = (): React$Node => {
             </h6>
             <div className="shop-page-filters__container">
                 <PriceFilter
-                    initialValues={[0, 10000]}
-                    max={10000}
-                    onChange={onPriceFilterChange}
+                    initialValues={initialValues}
+                    max={maxValue}
+                    onChange={onChange}
+                    onAfterChange={onAfterChange}
                     values={priceFilterValue}
                 />
             </div>

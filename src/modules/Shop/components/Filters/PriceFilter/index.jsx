@@ -10,6 +10,7 @@ type TProps = {
     initialValues: rangeValues,
     max: number,
     onChange: (rangeValues) => any,
+    onAfterChange: (rangeValues) => any,
     values: rangeValues,
 };
 
@@ -17,6 +18,7 @@ export const PriceFilter = ({
     initialValues,
     max,
     onChange,
+    onAfterChange,
     values,
 }: TProps): React$Node => {
     return (
@@ -40,6 +42,7 @@ export const PriceFilter = ({
                         defaultValue={initialValues}
                         max={max}
                         onChange={onChange}
+                        onAfterChange={onAfterChange}
                     />
                 </div>
             </div>

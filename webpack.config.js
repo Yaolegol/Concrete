@@ -127,11 +127,7 @@ module.exports = (env, argv) => {
         ],
         resolve: {
             extensions: [".js", ".jsx"],
-            modules: [
-                path.resolve(__dirname, "src"),
-                "node_modules",
-                "flow-typed",
-            ],
+            modules: [path.resolve(__dirname, "src"), "node_modules"],
         },
     };
 };
