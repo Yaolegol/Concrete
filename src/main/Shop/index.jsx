@@ -6,7 +6,6 @@ import { useCustomLocation } from "hooks/location";
 import { selectCartProductsItems } from "modules/Cart/selectors";
 import {
     actionGetProducts,
-    actionResetProductsSorts,
     actionSetPage,
     actionSetProductsSort,
 } from "modules/Shop/actions";
