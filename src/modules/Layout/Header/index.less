@@ -27,6 +27,10 @@
     &__section {
         &_left {
             flex: 0 0 200px;
+
+            @media @max_1440 {
+                flex: 0 0 auto;
+            }
         }
 
         &_main {
@@ -45,6 +49,10 @@
             display: flex;
             flex: 0 0 200px;
             justify-content: flex-end;
+
+            @media @max_1440 {
+                flex: 0 0 auto;
+            }
         }
     }
 }
