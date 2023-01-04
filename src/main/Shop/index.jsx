@@ -59,14 +59,16 @@ const ShopPage = ({
 
                 return (
                     <div className="shop-page__product-container" key={_id}>
-                        <ProductCard
-                            description={description}
-                            id={_id}
-                            imageUrl={images[0]}
-                            initialCount={initialCount}
-                            price={price}
-                            title={title}
-                        />
+                        <div className="shop-page__product-item">
+                            <ProductCard
+                                description={description}
+                                id={_id}
+                                imageUrl={images[0]}
+                                initialCount={initialCount}
+                                price={price}
+                                title={title}
+                            />
+                        </div>
                     </div>
                 );
             }
@@ -109,8 +111,10 @@ const ShopPage = ({
                             />
                         </div>
                     </div>
-                    <div className="shop-page__products-block">
-                        {productCards}
+                    <div className="shop-page__products-area">
+                        <div className="shop-page__products-block">
+                            {productCards}
+                        </div>
                     </div>
                     {showMore}
                 </div>

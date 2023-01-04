@@ -1,7 +1,21 @@
 @import (reference) "~styles/adaptive";
 
+@horizontal_padding_desktop: 50px;
+@horizontal_padding_mobile: 20px;
+
+.padding_horizontal_50-20 {
+    padding-left: @horizontal_padding_desktop;
+    padding-right: @horizontal_padding_desktop;
+
+    @media @max_1023 {
+        padding-left: @horizontal_padding_mobile;
+        padding-right: @horizontal_padding_mobile;
+    }
+}
+
 .padding_1023_horizontal_20 {
     @media @max_1023 {
-        padding: 0 20px;
+        padding-left: @horizontal_padding_mobile;
+        padding-right: @horizontal_padding_mobile;
     }
 }
