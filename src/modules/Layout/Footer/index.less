@@ -2,17 +2,18 @@
 @import (reference) '~styles/colors';
 
 .footer {
+    display: flex;
+
+    @media @max_1024 {
+        flex-direction: column-reverse;
+    }
+
     &__content-container {
         background-color: @black;
         flex: 1 1 50%;
-    }
-
-    &__content-section {
-        display: flex;
-        margin-top: 60px;
 
         @media @max_1024 {
-            flex-direction: column-reverse;
+            flex: 1 1 auto;
         }
     }
 
@@ -21,11 +22,7 @@
         height: 475px;
 
         @media @max_1024 {
-            width: 100%;
+            flex: 1 1 auto;
         }
-    }
-
-    &__title {
-        text-align: center;
     }
 }

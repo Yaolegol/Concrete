@@ -29,9 +29,7 @@ export const Layout = ({ children }: TProps): React$Node => {
             <Header />
             {hero ? <div className="layout__hero">{hero}</div> : null}
             <div className="layout__content">{children}</div>
-            <div className="layout__footer">
-                <Footer />
-            </div>
+            <Footer />
         </div>
     );
 };
