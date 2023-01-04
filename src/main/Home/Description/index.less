@@ -1,6 +1,7 @@
 @import (reference) "~styles/adaptive";
 @import (reference) "~styles/colors";
 @import (reference) "~styles/flex";
+@import (reference) "~styles/padding";
 
 .main-home-description {
     display: flex;
@@ -19,6 +20,7 @@
 
     &__content-section {
         .f_c();
+        .padding_1023_horizontal_20();
 
         flex: 1 1 50%;
         flex-direction: column;
@@ -27,7 +29,6 @@
 
         @media @max_1023 {
             flex: 1 1 auto;
-            padding: 0;
         }
     }
 
