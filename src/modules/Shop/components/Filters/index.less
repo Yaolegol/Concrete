@@ -1,13 +1,15 @@
-@import (reference) '~styles/colors';
+@import (reference) '~styles/adaptive';
 
 .shop-page-filters {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: 0 20px;
-
     &__container {
         margin-top: 50px;
-        text-align: initial;
+    }
+
+    &__title {
+        text-align: center;
+
+        @media @max_1439 {
+            text-align: left;
+        }
     }
 }

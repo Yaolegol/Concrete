@@ -36,7 +36,7 @@ export const Filters = (): React$Node => {
 
     return (
         <div className="shop-page-filters">
-            <h6>
+            <h6 className="shop-page-filters__title">
                 <FormattedMessage id="common.filters" />
             </h6>
             <div className="shop-page-filters__container">
