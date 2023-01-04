@@ -6,7 +6,6 @@ import { useCustomLocation } from "hooks/location";
 import { selectCartProductsItems } from "modules/Cart/selectors";
 import {
     actionGetProducts,
-    actionResetPage,
     actionResetProductsSorts,
     actionSetPage,
     actionSetProductsSort,
@@ -88,11 +87,6 @@ const ShopPage = ({
             </div>
         ) : null;
     }, [loadMoreProducts, products.count, products.list.length]);
-
-    useEffect(() => {
-        dispatch(actionResetPage());
-        dispatch(actionResetProductsSorts());
-    }, [dispatch]);
 
     useEffect(() => {
         const { currentSearch, newSearch } = search;

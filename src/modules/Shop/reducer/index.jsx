@@ -16,8 +16,6 @@ const {
     GET_PRODUCTS_FAIL,
     GET_PRODUCTS_START,
     GET_PRODUCTS_SUCCESS,
-    RESET_PAGE,
-    RESET_PRODUCTS_SORTS,
     SET_PAGE,
     SET_PRODUCTS_SORT,
 } = SHOP_ACTION_TYPES;
@@ -48,16 +46,6 @@ export const shopReducer = (state: any = initialState, action: any): any => {
                         ? [...state.products.list, ...data.list]
                         : [...data.list],
                 },
-            };
-        case RESET_PAGE:
-            return {
-                ...state,
-                currentPage: initialState.currentPage,
-            };
-        case RESET_PRODUCTS_SORTS:
-            return {
-                ...state,
-                sort: initialState.sort,
             };
         case SET_PAGE:
             return {
