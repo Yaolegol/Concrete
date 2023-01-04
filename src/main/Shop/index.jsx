@@ -1,17 +1,13 @@
 // @flow
 import { Button } from "common/components/Button";
 import { SortSelect } from "common/components/CustomSelect/SortSelect";
-import { useGetFilters } from "hooks/filters";
+import { useGetQueryFilters } from "hooks/filters";
 import { useCustomLocation } from "hooks/location";
 import { selectCartProductsItems } from "modules/Cart/selectors";
-import {
-    actionGetProducts,
-    actionSetPage,
-    actionSetProductsSort,
-} from "modules/Shop/actions";
+import { actionGetProducts, actionSetProductsSort } from "modules/Shop/actions";
 import { Filters } from "modules/Shop/components/Filters";
 import { ProductCard } from "modules/Shop/components/ProductCard";
-import { selectCurrentPage, selectProducts } from "modules/Shop/selectors";
+import { selectProducts } from "modules/Shop/selectors";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
@@ -19,19 +15,14 @@ import "./index.less";
 
 type TProps = {
     cartProducts: any,
-    currentPage: number,
     dispatch: any,
     products: any,
 };
 
-const ShopPage = ({
-    cartProducts,
-    currentPage,
-    dispatch,
-    products,
-}: TProps): React$Node => {
-    const filtersData = useGetFilters();
+const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
+    const filtersData = useGetQueryFilters();
     const { search } = useCustomLocation();
+    const [page, setPage] = useState(1);
     const [sortSelectValue, setSortSelectValue] = useState(null);
 
     const handleSortSelectChange = useCallback(
@@ -46,11 +37,6 @@ const ShopPage = ({
         },
         [dispatch]
     );
-
-    const loadMoreProducts = useCallback(() => {
-        dispatch(actionSetPage(currentPage + 1));
-        dispatch(actionGetProducts());
-    }, [currentPage, dispatch]);
 
     const productCards = useMemo(() => {
         return products.list.map(
@@ -76,6 +62,25 @@ const ShopPage = ({
         );
     }, [cartProducts, products]);
 
+    const getProducts = useCallback(
+        ({ nextPage } = {}) => {
+            dispatch(
+                actionGetProducts({
+                    filters: filtersData,
+                    page: nextPage ?? page,
+                })
+            );
+        },
+        [dispatch, filtersData, page]
+    );
+
+    const loadMoreProducts = useCallback(() => {
+        const nextPage = page + 1;
+
+        setPage(nextPage);
+        getProducts({ nextPage });
+    }, [getProducts, page]);
+
     const showMore = useMemo(() => {
         const isShow = products.list.length < products.count;
         return isShow ? (
@@ -94,8 +99,12 @@ const ShopPage = ({
             return;
         }
 
-        dispatch(actionGetProducts({ filters: filtersData }));
-    }, [dispatch, filtersData, search]);
+        getProducts();
+    }, [getProducts, search]);
+
+    useEffect(() => {
+        setPage(1);
+    }, [filtersData]);
 
     return (
         <div className="shop-page">
@@ -129,6 +138,5 @@ const ShopPage = ({
 
 export default connect<TProps, void, _, _, _, _>((state) => ({
     cartProducts: selectCartProductsItems(state),
-    currentPage: selectCurrentPage(state),
     products: selectProducts(state),
 }))(ShopPage);

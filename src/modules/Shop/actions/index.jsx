@@ -1,13 +1,12 @@
 // @flow
 import { SHOP_ACTION_TYPES } from "modules/Shop/constants";
-import { selectCurrentPage, selectProductsSort } from "modules/Shop/selectors";
+import { selectProductsSort } from "modules/Shop/selectors";
 import { getProducts } from "modules/Shop/service";
 
 const {
     GET_PRODUCTS_FAIL,
     GET_PRODUCTS_START,
     GET_PRODUCTS_SUCCESS,
-    SET_PAGE,
     SET_PRODUCTS_SORT,
 } = SHOP_ACTION_TYPES;
 
@@ -21,7 +20,7 @@ const actionGetProductsSuccess = (data) => (dispatch) => {
     dispatch({ data, type: GET_PRODUCTS_SUCCESS });
 };
 
-export const actionGetProducts = ({ filters }) => async (
+export const actionGetProducts = ({ filters = {}, page = 1 }) => async (
     dispatch,
     getState
 ) => {
@@ -29,7 +28,6 @@ export const actionGetProducts = ({ filters }) => async (
 
     try {
         const state = getState();
-        const page = selectCurrentPage(state);
         const sort = selectProductsSort(state);
 
         const { data, errors } = await getProducts({
@@ -56,11 +54,6 @@ export const actionGetProducts = ({ filters }) => async (
     }
 };
 
-export const actionSetPage = (data: number): any => (dispatch) => {
-    dispatch({ data, type: SET_PAGE });
-};
-
 export const actionSetProductsSort = (data: any): any => (dispatch) => {
-    dispatch(actionResetPage());
     dispatch({ data, type: SET_PRODUCTS_SORT });
 };

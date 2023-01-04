@@ -1,5 +1,5 @@
 // @flow
-import { useGetFilters, useSetFiltersQuery } from "hooks/filters";
+import { useGetQueryFilters, useSetFiltersQuery } from "hooks/filters";
 import { PriceFilter } from "modules/Shop/components/Filters/PriceFilter";
 import React, { useCallback, useState } from "react";
 import { FormattedMessage } from "react-intl";
@@ -11,7 +11,7 @@ const initialValues = [minValue, maxValue];
 
 export const Filters = (): React$Node => {
     const { setFiltersQuery } = useSetFiltersQuery();
-    const { price } = useGetFilters();
+    const { price } = useGetQueryFilters();
     const [priceFilterValue, setPriceFilterValue] = useState(
         price || initialValues
     );

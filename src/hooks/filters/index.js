@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 
-export const useGetFilters = () => {
+export const useGetQueryFilters = () => {
     const location = useLocation();
 
     const params = new URLSearchParams(location.search);
@@ -29,7 +29,7 @@ export const useGetFilters = () => {
 };
 
 export const useSetFiltersQuery = () => {
-    const filtersData = useGetFilters();
+    const filtersData = useGetQueryFilters();
     const location = useLocation();
     const history = useHistory();
 
