@@ -44,20 +44,27 @@ export const ProductCard = ({
 
     return (
         <div className="product-card">
-            <img
-                className="product-card__image"
-                src={imageUrl}
-                alt={imageAlt}
-            />
-            <h6 className="product-card__title">{title}</h6>
-            <p className="product-card__description">{description}</p>
-            <p className="product-card__price">{price}</p>
-            <div className="product-card__counter-container">
-                <ProductCardCounter
-                    count={count}
-                    onDecrement={onDecrement}
-                    onIncrement={onIncrement}
+            <div className="product-card__image-container">
+                <img
+                    alt={imageAlt}
+                    className="product-card__image"
+                    src={imageUrl}
                 />
+            </div>
+            <div className="product-card__content-block">
+                <div className="product-card__title">{title}</div>
+                <div className="product-card__description">{description}</div>
+                <div className="product-card__price-container">
+                    <div>Price:</div>
+                    <div className="product-card__price">{price}</div>
+                </div>
+                <div className="product-card__counter-container">
+                    <ProductCardCounter
+                        count={count}
+                        onDecrement={onDecrement}
+                        onIncrement={onIncrement}
+                    />
+                </div>
             </div>
         </div>
     );

@@ -1,44 +1,53 @@
 @import (reference) '~styles/adaptive';
 @import (reference) '~styles/colors';
+@import (reference) '~styles/font';
+@import (reference) '~styles/position';
 
 .product-card {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    user-select: none;
+    width: 100%;
 
-    @media @max_767 {
-        align-items: center;
+    &__content-block {
+        padding: 20px;
     }
 
     &__counter-container {
         display: flex;
         justify-content: flex-end;
-        margin-top: 10px;
+        margin-top: 50px;
     }
 
     &__description {
-        user-select: text;
+        margin-top: 20px;
     }
 
     &__image {
-        height: 300px;
-        object-fit: cover;
-        width: 300px;
+        .position_absolute_full();
 
-        @media @max_767 {
-            height: 150px;
-            width: 150px;
-        }
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__image-container {
+        padding-bottom: 100%;
+        position: relative;
     }
 
     &__price {
-        margin-top: 10px;
-        user-select: text;
+        font-weight: 700;
+    }
+
+    &__price-container {
+        .f_h4();
+
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
     }
 
     &__title {
-        margin-top: 20px;
-        user-select: text;
+        .f_h6();
+
+        text-align: center;
     }
 }

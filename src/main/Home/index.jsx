@@ -7,9 +7,7 @@ import "./index.less";
 const HomePage = (): React$Node => {
     return (
         <div className="main-home">
-            <div className="main-home__container">
-                <Description />
-            </div>
+            <Description />
             <div className="main-home__container">
                 <Portfolio />
             </div>

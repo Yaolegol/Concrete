@@ -54,9 +54,9 @@ const ShopPage = ({
     const productCards = useMemo(() => {
         return products.list.map(
             ({ description, _id, images, price, title }) => {
-                const initialCount = cartProducts[_id]
-                    ? cartProducts[_id].count
-                    : 0;
+                const { count } = cartProducts[_id] || {};
+                const initialCount = count || 0;
+
                 return (
                     <div className="shop-page__product-container" key={_id}>
                         <ProductCard
@@ -93,23 +93,23 @@ const ShopPage = ({
 
     return (
         <div className="shop-page">
-            <h1>
+            <h1 className="shop-page__title">
                 <FormattedMessage id="shop.title" />
             </h1>
             <div className="shop-page__content">
-                <div className="shop-page__filters-section">
+                <div className="shop-page__section-filters">
                     <Filters />
                 </div>
-                <div className="shop-page__goods-section">
-                    <div className="shop-page__sort-container">
-                        <span className="shop-page__sort-select">
+                <div className="shop-page__section-products">
+                    <div className="shop-page__sort-block">
+                        <div className="shop-page__sort-container">
                             <SortSelect
                                 onChange={handleSortSelectChange}
                                 value={sortSelectValue}
                             />
-                        </span>
+                        </div>
                     </div>
-                    <div className="shop-page__goods-container">
+                    <div className="shop-page__products-block">
                         {productCards}
                     </div>
                     {showMore}
