@@ -1,5 +1,6 @@
 @import (reference) '~styles/adaptive';
 @import (reference) '~styles/colors';
+@import (reference) '~styles/text';
 @import (reference) '~styles/font';
 @import (reference) '~styles/position';
 
@@ -14,6 +15,10 @@
         flex: 1 1 auto;
         flex-direction: column;
         padding: 20px;
+
+        @media @max_1023 {
+            padding: 10px 0;
+        }
     }
 
     &__counter-block {
@@ -27,7 +32,10 @@
     }
 
     &__description {
+        .ellipsis();
+
         margin-top: 20px;
+        min-height: 14px;
     }
 
     &__image {
@@ -48,7 +56,7 @@
     }
 
     &__price-container {
-        .f_h4();
+        .f_text();
 
         display: flex;
         justify-content: space-between;
@@ -56,7 +64,8 @@
     }
 
     &__title {
-        .f_h6();
+        .ellipsis();
+        .f_title();
 
         text-align: center;
     }

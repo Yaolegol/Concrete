@@ -1,5 +1,4 @@
 @import (reference) 'src/styles/adaptive';
-@import (reference) 'src/styles/colors';
 
 .f_default {
     font-size: 14px;
@@ -55,4 +54,26 @@
 .f_p {
     font-size: 16px;
     line-height: 26px;
+}
+
+.f_text {
+    font-size: 24px;
+    line-height: 24px;
+
+    @media @max_1023 {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+.f_title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: capitalize;
+
+    @media @max_1023 {
+        font-size: 18px;
+        line-height: 18px;
+    }
 }
