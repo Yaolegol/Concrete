@@ -1,52 +1,26 @@
 // @flow
-import { Button } from "common/components/Button";
 import { SortSelect } from "common/components/CustomSelect/SortSelect";
 import { useGetQueryFilters } from "hooks/filters";
 import { useCustomLocation } from "hooks/location";
 import { useGetSortQuery } from "hooks/sort";
-import { selectCartProductsItems } from "modules/Cart/selectors";
+import LoadMore from "main/Shop/LoadMore";
+import ProductsBlock from "main/Shop/ProductsBlock";
 import { actionGetProducts } from "modules/Shop/actions";
 import { Filters } from "modules/Shop/components/Filters";
-import { ProductCard } from "modules/Shop/components/ProductCard";
-import { selectProducts } from "modules/Shop/selectors";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import "./index.less";
 
 type TProps = {
-    cartProducts: any,
     dispatch: any,
-    products: any,
 };
 
-const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
+const ShopPage = ({ dispatch }: TProps): React$Node => {
     const sortQuery = useGetSortQuery();
     const filtersData = useGetQueryFilters();
     const { search } = useCustomLocation();
     const [page, setPage] = useState(1);
-
-    const productCards = useMemo(() => {
-        return products.list.map(
-            ({ description, _id, images, price, title }) => {
-                const { count } = cartProducts[_id] || {};
-                const initialCount = count || 0;
-
-                return (
-                    <div className="shop-page__product-container" key={_id}>
-                        <ProductCard
-                            description={description}
-                            id={_id}
-                            imageUrl={images[0]}
-                            initialCount={initialCount}
-                            price={price}
-                            title={title}
-                        />
-                    </div>
-                );
-            }
-        );
-    }, [cartProducts, products]);
 
     const getProducts = useCallback(
         ({ nextPage } = {}) => {
@@ -67,17 +41,6 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
         setPage(nextPage);
         getProducts({ nextPage });
     }, [getProducts, page]);
-
-    const showMore = useMemo(() => {
-        const isShow = products.list.length < products.count;
-        return isShow ? (
-            <div className="shop-page__show-more-container">
-                <Button onClick={loadMoreProducts} theme="white">
-                    <FormattedMessage id="common.showMore" />
-                </Button>
-            </div>
-        ) : null;
-    }, [loadMoreProducts, products.count, products.list.length]);
 
     const onSortChange = useCallback(() => {
         setPage(1);
@@ -113,18 +76,15 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
                         </div>
                     </div>
                     <div className="shop-page__products-area">
-                        <div className="shop-page__products-block">
-                            {productCards}
-                        </div>
+                        <ProductsBlock />
                     </div>
-                    {showMore}
+                    <div className="shop-page__show-more-container">
+                        <LoadMore onClick={loadMoreProducts} />
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
-export default connect<TProps, void, _, _, _, _>((state) => ({
-    cartProducts: selectCartProductsItems(state),
-    products: selectProducts(state),
-}))(ShopPage);
+export default connect()(ShopPage);

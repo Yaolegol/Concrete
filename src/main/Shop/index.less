@@ -2,9 +2,6 @@
 @import (reference) '~styles/padding';
 
 .shop-page {
-    @product_card_margin-top: 100px;
-    @product_card_margin-horizontal: 50px;
-
     .padding_horizontal();
 
     &__content {
@@ -18,27 +15,6 @@
 
     &__products-area {
         margin-top: 50px;
-    }
-
-    &__products-block {
-        display: flex;
-        flex-wrap: wrap;
-        margin: -@product_card_margin-top -@product_card_margin-horizontal 0;
-
-        @media @max_1023 {
-            margin: -50px -10px 0;
-        }
-    }
-
-    &__product-container {
-        flex: 0 1 auto;
-        padding: @product_card_margin-top @product_card_margin-horizontal 0;
-        width: 33%;
-
-        @media @max_1023 {
-            padding: 50px 10px 0;
-            width: 50%;
-        }
     }
 
     &__section-filters {
