@@ -6,16 +6,21 @@ export const useCustomLocation = () => {
     const newSearch = location.search;
     const [currentSearch, setCurrentSearch] = useState(null);
 
+    const isEqual = newSearch === currentSearch;
+
     useEffect(() => {
-        if (newSearch !== currentSearch) {
-            setCurrentSearch(newSearch);
+        if (isEqual) {
+            return;
         }
-    }, [currentSearch, newSearch]);
+
+        setCurrentSearch(newSearch);
+    }, [isEqual, newSearch]);
 
     return {
         search: {
-            newSearch,
             currentSearch,
+            isEqual,
+            newSearch,
         },
     };
 };

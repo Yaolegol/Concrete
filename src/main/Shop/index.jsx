@@ -3,6 +3,7 @@ import { Button } from "common/components/Button";
 import { SortSelect } from "common/components/CustomSelect/SortSelect";
 import { useGetQueryFilters } from "hooks/filters";
 import { useCustomLocation } from "hooks/location";
+import { useGetSortQuery } from "hooks/sort";
 import { selectCartProductsItems } from "modules/Cart/selectors";
 import { actionGetProducts } from "modules/Shop/actions";
 import { Filters } from "modules/Shop/components/Filters";
@@ -20,10 +21,10 @@ type TProps = {
 };
 
 const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
+    const sortQuery = useGetSortQuery();
     const filtersData = useGetQueryFilters();
     const { search } = useCustomLocation();
     const [page, setPage] = useState(1);
-    const [sortSelectValue, setSortSelectValue] = useState(null);
 
     const productCards = useMemo(() => {
         return products.list.map(
@@ -55,15 +56,12 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
                 actionGetProducts({
                     filters: filtersData,
                     page: nextPage ?? page,
+                    sort: sortQuery,
                 })
             );
         },
-        [dispatch, filtersData, page]
+        [dispatch, filtersData, page, sortQuery]
     );
-
-    const handleSortSelectChange = useCallback((value) => {
-        setSortSelectValue(value);
-    }, []);
 
     const loadMoreProducts = useCallback(() => {
         const nextPage = page + 1;
@@ -84,9 +82,9 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
     }, [loadMoreProducts, products.count, products.list.length]);
 
     useEffect(() => {
-        const { currentSearch, newSearch } = search;
+        const { isEqual } = search;
 
-        if (currentSearch === newSearch) {
+        if (isEqual) {
             return;
         }
 
@@ -109,10 +107,7 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
                 <div className="shop-page__section-products">
                     <div className="shop-page__sort-block">
                         <div className="shop-page__sort-container">
-                            <SortSelect
-                                onChange={handleSortSelectChange}
-                                value={sortSelectValue}
-                            />
+                            <SortSelect initialValue={sortQuery} />
                         </div>
                     </div>
                     <div className="shop-page__products-area">
