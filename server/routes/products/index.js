@@ -9,8 +9,8 @@ const router = express.Router();
 const perPage = 9;
 
 router.post('/products', (req, res, next) => {
-    const currentPage = req.body.page;
-    const skip = currentPage > 1 ? (currentPage - 1) * perPage : 0;
+    const currentPage = req.body.page || 1;
+    const skip = (currentPage - 1) * perPage;
 
     let filters = {};
 
@@ -20,8 +20,8 @@ router.post('/products', (req, res, next) => {
                 return {
                     ...acc,
                     [key]: {
-                        $gte: value[0],
-                        $lte: value[1]
+                        $gte: Number(value[0]),
+                        $lte: Number(value[1])
                     }
                 }
             }
@@ -34,21 +34,22 @@ router.post('/products', (req, res, next) => {
 
     const sort = !isObjectEmpty(req.body.sort) ? req.body.sort : {};
 
+    const _filters = {
+        availability: true,
+        ...filters,
+    }
+
     ProductsModel
-        .find({
-            availability: true,
-            ...filters
-        }, null, {
-            limit: perPage,
-            skip: skip,
-            sort,
+        .find(_filters)
+        .sort({
+            ...sort,
+            _id: -1,
         })
+        .skip(skip)
+        .limit(perPage)
         .then(products => {
             ProductsModel
-                .count({
-                    availability: true,
-                    ...filters,
-                })
+                .count(_filters)
                 .then(count => {
                     res.json(
                         createResponse({

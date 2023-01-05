@@ -9,7 +9,11 @@ const minValue = 0;
 const maxValue = 10000;
 const initialValues = [minValue, maxValue];
 
-export const Filters = (): React$Node => {
+type TProps = {
+    onAfterChange?: () => void,
+};
+
+export const Filters = ({ onAfterChange }: TProps): React$Node => {
     const { setFiltersQuery } = useSetFiltersQuery();
     const { price } = useGetQueryFilters();
     const [priceFilterValue, setPriceFilterValue] = useState(
@@ -20,17 +24,21 @@ export const Filters = (): React$Node => {
         setPriceFilterValue(val);
     }, []);
 
-    const onAfterChange = useCallback(
+    const _onAfterChange = useCallback(
         (val) => {
             const [min, max] = val;
             const isDefaultValues = min === minValue && max === maxValue;
+
+            if (onAfterChange) {
+                onAfterChange();
+            }
 
             setFiltersQuery({
                 name: "price",
                 values: isDefaultValues ? [] : val,
             });
         },
-        [setFiltersQuery]
+        [onAfterChange, setFiltersQuery]
     );
 
     return (
@@ -42,7 +50,7 @@ export const Filters = (): React$Node => {
                 <PriceFilter
                     max={maxValue}
                     onChange={onChange}
-                    onAfterChange={onAfterChange}
+                    onAfterChange={_onAfterChange}
                     values={priceFilterValue}
                 />
             </div>

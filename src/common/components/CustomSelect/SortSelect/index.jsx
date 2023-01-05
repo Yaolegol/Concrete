@@ -24,16 +24,21 @@ const getInitialValue = (initialValue) => {
 
 type TProps = {
     initialValue: string,
+    onChange?: () => void,
 };
 
-export const SortSelect = ({ initialValue }: TProps): React$Node => {
+export const SortSelect = ({ initialValue, onChange }: TProps): React$Node => {
     const { setSortQuery } = useSetSortQuery();
     const [value, setValue] = useState(
         getInitialValue(initialValue) || options[0]
     );
 
-    const onChange = useCallback(
+    const _onChange = useCallback(
         (val) => {
+            if (onChange) {
+                onChange();
+            }
+
             setValue(val);
 
             const { id, value } = val;
@@ -42,7 +47,7 @@ export const SortSelect = ({ initialValue }: TProps): React$Node => {
                 value,
             });
         },
-        [setSortQuery]
+        [onChange, setSortQuery]
     );
 
     return (
@@ -51,7 +56,7 @@ export const SortSelect = ({ initialValue }: TProps): React$Node => {
                 components={{
                     IndicatorSeparator: null,
                 }}
-                onChange={onChange}
+                onChange={_onChange}
                 options={options}
                 placeholder={<FormattedMessage id="common.sort.placeholder" />}
                 value={value}

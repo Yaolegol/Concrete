@@ -59,7 +59,7 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
                     filters: filtersData,
                     page: nextPage ?? page,
                     sort: {
-                        [name]: value,
+                        [name]: value === "ascending" ? 1 : -1,
                     },
                 })
             );
@@ -85,6 +85,14 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
         ) : null;
     }, [loadMoreProducts, products.count, products.list.length]);
 
+    const onSortChange = useCallback(() => {
+        setPage(1);
+    }, []);
+
+    const onFilterChange = useCallback(() => {
+        setPage(1);
+    }, []);
+
     useEffect(() => {
         const { isEqual } = search;
 
@@ -95,10 +103,6 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
         getProducts();
     }, [getProducts, search]);
 
-    useEffect(() => {
-        setPage(1);
-    }, [filtersData]);
-
     return (
         <div className="shop-page">
             <h1 className="shop-page__title">
@@ -106,12 +110,15 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
             </h1>
             <div className="shop-page__content">
                 <div className="shop-page__section-filters">
-                    <Filters />
+                    <Filters onAfterChange={onFilterChange} />
                 </div>
                 <div className="shop-page__section-products">
                     <div className="shop-page__sort-block">
                         <div className="shop-page__sort-container">
-                            <SortSelect initialValue={sortData.value} />
+                            <SortSelect
+                                initialValue={sortData.value}
+                                onChange={onSortChange}
+                            />
                         </div>
                     </div>
                     <div className="shop-page__products-area">
