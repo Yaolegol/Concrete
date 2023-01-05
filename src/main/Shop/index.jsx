@@ -21,7 +21,7 @@ type TProps = {
 };
 
 const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
-    const sortData = useGetSortQuery();
+    const sortQuery = useGetSortQuery();
     const filtersData = useGetQueryFilters();
     const { search } = useCustomLocation();
     const [page, setPage] = useState(1);
@@ -52,25 +52,15 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
 
     const getProducts = useCallback(
         ({ nextPage } = {}) => {
-            let sort = {};
-
-            if (sortData) {
-                const { name, value } = sortData;
-
-                sort = {
-                    [name]: value,
-                };
-            }
-
             dispatch(
                 actionGetProducts({
                     filters: filtersData,
                     page: nextPage ?? page,
-                    sort,
+                    sort: sortQuery,
                 })
             );
         },
-        [dispatch, filtersData, page, sortData]
+        [dispatch, filtersData, page, sortQuery]
     );
 
     const loadMoreProducts = useCallback(() => {

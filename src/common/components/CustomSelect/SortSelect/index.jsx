@@ -9,12 +9,12 @@ const options = [
     {
         id: "price",
         label: <FormattedMessage id="common.sort.priceAscending" />,
-        value: 1,
+        value: "ascending",
     },
     {
         id: "price",
         label: <FormattedMessage id="common.sort.priceDescending" />,
-        value: -1,
+        value: "descending",
     },
 ];
 

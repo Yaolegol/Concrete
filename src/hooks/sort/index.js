@@ -19,7 +19,7 @@ export const useGetSortQuery = () => {
 
     return {
         name,
-        value: value === "ascending" ? 1 : -1,
+        value,
     };
 };
 
@@ -34,10 +34,7 @@ export const useSetSortQuery = () => {
             if (!value) {
                 params.delete("sort");
             } else {
-                params.set(
-                    "sort",
-                    `${name}_${value === 1 ? "ascending" : "descending"}`
-                );
+                params.set("sort", `${name}_${value}`);
             }
 
             history.push({

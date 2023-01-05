@@ -32,7 +32,15 @@ router.post('/products', (req, res, next) => {
         }, {});
     }
 
-    const sort = !isObjectEmpty(req.body.sort) ? req.body.sort : {};
+    let sort = {};
+
+    if(!isObjectEmpty(req.body.sort)) {
+        const {name, value} = req.body.sort;
+
+        sort = {
+            [name]: value,
+        };
+    }
 
     const _filters = {
         availability: true,
