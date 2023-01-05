@@ -1,17 +1,13 @@
 @import (reference) '~styles/adaptive';
 @import (reference) '~styles/colors';
+@import (reference) '~styles/flex';
+@import (reference) '~styles/padding';
 
 .login-page {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: 100px 0;
-    width: 100%;
+    .padding_horizontal();
 
-    @media @max_767 {
-        padding: 50px 20px;
-    }
+    display: flex;
+    justify-content: center;
 
     &__common-error-container {
         color: @red;
@@ -26,17 +22,12 @@
     &__content-container {
         border-radius: 5px;
         box-shadow: 1px 1px 15px @shadow;
-        display: flex;
-        flex-direction: column;
         min-width: 800px;
         padding: 50px 100px;
         text-align: center;
 
         @media @max_1023 {
             min-width: 100%;
-        }
-
-        @media @max_767 {
             padding: 50px 20px;
         }
     }
