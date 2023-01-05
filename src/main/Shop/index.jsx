@@ -52,15 +52,21 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
 
     const getProducts = useCallback(
         ({ nextPage } = {}) => {
-            const { name, value } = sortData;
+            let sort = {};
+
+            if (sortData) {
+                const { name, value } = sortData;
+
+                sort = {
+                    [name]: value,
+                };
+            }
 
             dispatch(
                 actionGetProducts({
                     filters: filtersData,
                     page: nextPage ?? page,
-                    sort: {
-                        [name]: value === "ascending" ? 1 : -1,
-                    },
+                    sort,
                 })
             );
         },
@@ -115,10 +121,7 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
                 <div className="shop-page__section-products">
                     <div className="shop-page__sort-block">
                         <div className="shop-page__sort-container">
-                            <SortSelect
-                                initialValue={sortData.value}
-                                onChange={onSortChange}
-                            />
+                            <SortSelect onChange={onSortChange} />
                         </div>
                     </div>
                     <div className="shop-page__products-area">

@@ -14,12 +14,12 @@ export const useGetSortQuery = () => {
     const [name, value] = queryParam.split("_");
 
     if (!value) {
-        return {};
+        return null;
     }
 
     return {
         name,
-        value,
+        value: value === "ascending" ? 1 : -1,
     };
 };
 
@@ -34,7 +34,10 @@ export const useSetSortQuery = () => {
             if (!value) {
                 params.delete("sort");
             } else {
-                params.set("sort", `${name}_${value}`);
+                params.set(
+                    "sort",
+                    `${name}_${value === 1 ? "ascending" : "descending"}`
+                );
             }
 
             history.push({
