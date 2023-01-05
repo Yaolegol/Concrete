@@ -19,7 +19,10 @@ const ProductsBlock = ({ cartProducts, products }: TProps): React$Node => {
                 const initialCount = count || 0;
 
                 return (
-                    <div className="shop-page__product-container" key={_id}>
+                    <div
+                        className="main-shop-products-block__product-container"
+                        key={_id}
+                    >
                         <ProductCard
                             description={description}
                             id={_id}
@@ -34,7 +37,11 @@ const ProductsBlock = ({ cartProducts, products }: TProps): React$Node => {
         );
     }, [cartProducts, products]);
 
-    return <div className="shop-page__products-block">{productCards}</div>;
+    return (
+        <div className="main-shop-products-block__products-block">
+            {productCards}
+        </div>
+    );
 };
 
 export default connect<TProps, void, _, _, _, _>((state) => ({

@@ -4,7 +4,6 @@ import { selectProducts } from "modules/Shop/selectors";
 import React, { useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
-import "./index.less";
 
 type TProps = {
     onClick: () => void,
