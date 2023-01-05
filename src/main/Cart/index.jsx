@@ -51,14 +51,6 @@ const Cart = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
         );
     }, [cartProductsData]);
 
-    const empty = useMemo(() => {
-        return (
-            <div className="cart-page__empty-container">
-                <CartEmpty />
-            </div>
-        );
-    }, []);
-
     const handleBuy = useCallback(
         ({ email }) => {
             const purchase = cartProductsData.map(
@@ -87,102 +79,100 @@ const Cart = ({ cartProductsData, dispatch, user }: TProps): React$Node => {
         [cartProductsData, dispatch, history, user]
     );
 
-    const content = useMemo(() => {
-        return contentItems.length ? (
-            <>
-                <div className="cart-page__content-section">
-                    <OrderHeader />
-                    <div className="cart-page__content-container">
-                        {contentItems}
-                    </div>
-                </div>
-                {user ? (
-                    <div className="cart-page__buy-section">
-                        <Button onClick={handleBuy}>
-                            <FormattedMessage id="common.buy" />
-                        </Button>
-                    </div>
-                ) : (
-                    <div className="cart-page__buy-section">
-                        <h4>
-                            <FormattedMessage id="common.enterEmail" />
-                        </h4>
-                        <div className="cart-page__form-container">
-                            <Formik
-                                initialValues={{
-                                    email: "",
-                                }}
-                                onSubmit={(values) => {
-                                    handleBuy({ email: values.email });
-                                }}
-                                validate={(values) => {
-                                    const { email } = values;
-                                    const errors = {};
-                                    if (!email) {
-                                        errors.email = "Required";
-                                    }
-                                    return errors;
-                                }}
-                            >
-                                {({
-                                    dirty,
-                                    errors,
-                                    handleBlur,
-                                    handleChange,
-                                    handleSubmit,
-                                    isValid,
-                                    touched,
-                                    values,
-                                }) => {
-                                    return (
-                                        <form
-                                            className="cart-page__form"
-                                            onSubmit={handleSubmit}
-                                        >
-                                            <FormField
-                                                errorMessage={errors.email}
-                                                isError={errors.email}
-                                                isTouched={touched.email}
-                                                withMargin={false}
-                                            >
-                                                <Input
-                                                    name="email"
-                                                    onBlur={handleBlur}
-                                                    onChange={handleChange}
-                                                    placeholder="Email"
-                                                    type="email"
-                                                    value={values.email}
-                                                />
-                                            </FormField>
-                                            <div className="signup-page__submit-button-container">
-                                                <Button
-                                                    disabled={
-                                                        !isValid || !dirty
-                                                    }
-                                                    type="submit"
-                                                >
-                                                    <FormattedMessage id="common.buy" />
-                                                </Button>
-                                            </div>
-                                        </form>
-                                    );
-                                }}
-                            </Formik>
-                        </div>
-                    </div>
-                )}
-            </>
-        ) : (
-            empty
-        );
-    }, [contentItems, empty, handleBuy, user]);
-
     return (
         <div className="cart-page">
             <h1 className="cart-page__title">
                 <FormattedMessage id="cart.title" />
             </h1>
-            {content}
+            {contentItems.length ? (
+                <>
+                    <div className="cart-page__content-section">
+                        <OrderHeader />
+                        <div className="cart-page__content-container">
+                            {contentItems}
+                        </div>
+                    </div>
+                    {user ? (
+                        <div className="cart-page__buy-section">
+                            <Button onClick={handleBuy}>
+                                <FormattedMessage id="common.buy" />
+                            </Button>
+                        </div>
+                    ) : (
+                        <div className="cart-page__buy-section">
+                            <h4>
+                                <FormattedMessage id="common.enterEmail" />
+                            </h4>
+                            <div className="cart-page__form-container">
+                                <Formik
+                                    initialValues={{
+                                        email: "",
+                                    }}
+                                    onSubmit={(values) => {
+                                        handleBuy({ email: values.email });
+                                    }}
+                                    validate={(values) => {
+                                        const { email } = values;
+                                        const errors = {};
+                                        if (!email) {
+                                            errors.email = "Required";
+                                        }
+                                        return errors;
+                                    }}
+                                >
+                                    {({
+                                        dirty,
+                                        errors,
+                                        handleBlur,
+                                        handleChange,
+                                        handleSubmit,
+                                        isValid,
+                                        touched,
+                                        values,
+                                    }) => {
+                                        return (
+                                            <form
+                                                className="cart-page__form"
+                                                onSubmit={handleSubmit}
+                                            >
+                                                <FormField
+                                                    errorMessage={errors.email}
+                                                    isError={errors.email}
+                                                    isTouched={touched.email}
+                                                    withMargin={false}
+                                                >
+                                                    <Input
+                                                        name="email"
+                                                        onBlur={handleBlur}
+                                                        onChange={handleChange}
+                                                        placeholder="Email"
+                                                        type="email"
+                                                        value={values.email}
+                                                    />
+                                                </FormField>
+                                                <div className="signup-page__submit-button-container">
+                                                    <Button
+                                                        disabled={
+                                                            !isValid || !dirty
+                                                        }
+                                                        type="submit"
+                                                    >
+                                                        <FormattedMessage id="common.buy" />
+                                                    </Button>
+                                                </div>
+                                            </form>
+                                        );
+                                    }}
+                                </Formik>
+                            </div>
+                        </div>
+                    )}
+                </>
+            ) : (
+                <div className="cart-page__empty-container">
+                    <CartEmpty />
+                </div>
+            )}
         </div>
     );
 };
