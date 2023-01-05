@@ -1,0 +1,16 @@
+@import (reference) '~styles/adaptive';
+
+.modules-cart-components-products-list {
+    &__item {
+        margin-top: 20px;
+        width: 600px;
+
+        @media @max_767 {
+            width: 100%;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
