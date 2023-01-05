@@ -4,10 +4,20 @@
 @import (reference) '~styles/position';
 
 .product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     width: 100%;
 
     &__content-block {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
         padding: 20px;
+    }
+
+    &__counter-block {
+        margin-top: auto;
     }
 
     &__counter-container {

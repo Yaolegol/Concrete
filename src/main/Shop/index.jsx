@@ -34,16 +34,14 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
 
                 return (
                     <div className="shop-page__product-container" key={_id}>
-                        <div className="shop-page__product-item">
-                            <ProductCard
-                                description={description}
-                                id={_id}
-                                imageUrl={images[0]}
-                                initialCount={initialCount}
-                                price={price}
-                                title={title}
-                            />
-                        </div>
+                        <ProductCard
+                            description={description}
+                            id={_id}
+                            imageUrl={images[0]}
+                            initialCount={initialCount}
+                            price={price}
+                            title={title}
+                        />
                     </div>
                 );
             }

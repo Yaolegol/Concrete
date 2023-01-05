@@ -58,12 +58,14 @@ export const ProductCard = ({
                     <div>Price:</div>
                     <div className="product-card__price">{price}</div>
                 </div>
-                <div className="product-card__counter-container">
-                    <ProductCardCounter
-                        count={count}
-                        onDecrement={onDecrement}
-                        onIncrement={onIncrement}
-                    />
+                <div className="product-card__counter-block">
+                    <div className="product-card__counter-container">
+                        <ProductCardCounter
+                            count={count}
+                            onDecrement={onDecrement}
+                            onIncrement={onIncrement}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
