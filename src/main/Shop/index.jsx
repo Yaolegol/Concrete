@@ -21,7 +21,7 @@ type TProps = {
 };
 
 const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
-    const sortQuery = useGetSortQuery();
+    const sortData = useGetSortQuery();
     const filtersData = useGetQueryFilters();
     const { search } = useCustomLocation();
     const [page, setPage] = useState(1);
@@ -52,15 +52,19 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
 
     const getProducts = useCallback(
         ({ nextPage } = {}) => {
+            const { name, value } = sortData;
+
             dispatch(
                 actionGetProducts({
                     filters: filtersData,
                     page: nextPage ?? page,
-                    sort: sortQuery,
+                    sort: {
+                        [name]: value,
+                    },
                 })
             );
         },
-        [dispatch, filtersData, page, sortQuery]
+        [dispatch, filtersData, page, sortData]
     );
 
     const loadMoreProducts = useCallback(() => {
@@ -107,7 +111,7 @@ const ShopPage = ({ cartProducts, dispatch, products }: TProps): React$Node => {
                 <div className="shop-page__section-products">
                     <div className="shop-page__sort-block">
                         <div className="shop-page__sort-container">
-                            <SortSelect initialValue={sortQuery} />
+                            <SortSelect initialValue={sortData.value} />
                         </div>
                     </div>
                     <div className="shop-page__products-area">

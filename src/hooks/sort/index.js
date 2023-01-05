@@ -3,19 +3,39 @@ import { useHistory, useLocation } from "react-router-dom";
 
 export const useGetSortQuery = () => {
     const location = useLocation();
-    const params = new URLSearchParams(location.search);
 
-    return params.get("sort");
+    const params = new URLSearchParams(location.search);
+    const queryParam = params.get("sort");
+
+    if (!queryParam) {
+        return {};
+    }
+
+    const [name, value] = queryParam.split("_");
+
+    if (!value) {
+        return {};
+    }
+
+    return {
+        name,
+        value,
+    };
 };
 
 export const useSetSortQuery = () => {
     const location = useLocation();
     const history = useHistory();
 
-    const setFiltersQuery = useCallback(
-        (value) => {
+    const setSortQuery = useCallback(
+        ({ name, value }) => {
             const params = new URLSearchParams(location.search);
-            params.set("sort", value);
+
+            if (!value) {
+                params.delete("sort");
+            } else {
+                params.set("sort", `${name}_${value}`);
+            }
 
             history.push({
                 search: params.toString(),
@@ -25,6 +45,6 @@ export const useSetSortQuery = () => {
     );
 
     return {
-        setFiltersQuery,
+        setSortQuery,
     };
 };

@@ -18,20 +18,31 @@ const options = [
     },
 ];
 
+const getInitialValue = (initialValue) => {
+    return options.find(({ value }) => value === initialValue);
+};
+
 type TProps = {
     initialValue: string,
 };
 
 export const SortSelect = ({ initialValue }: TProps): React$Node => {
-    const { setFiltersQuery } = useSetSortQuery();
-    const [value, setValue] = useState(initialValue || options[0]);
+    const { setSortQuery } = useSetSortQuery();
+    const [value, setValue] = useState(
+        getInitialValue(initialValue) || options[0]
+    );
 
     const onChange = useCallback(
         (val) => {
             setValue(val);
-            setFiltersQuery(val.value);
+
+            const { id, value } = val;
+            setSortQuery({
+                name: id,
+                value,
+            });
         },
-        [setFiltersQuery]
+        [setSortQuery]
     );
 
     return (
