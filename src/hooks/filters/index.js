@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 
 export const useGetQueryFilters = () => {
@@ -7,25 +7,27 @@ export const useGetQueryFilters = () => {
     const params = new URLSearchParams(location.search);
     const filterQueryParam = params.get("filter");
 
-    if (!filterQueryParam) {
-        return {};
-    }
-
-    const filtersStringArray = filterQueryParam.split("__");
-
-    return filtersStringArray.reduce((acc, nameValueString) => {
-        if (!nameValueString) {
-            return acc;
+    return useMemo(() => {
+        if (!filterQueryParam) {
+            return {};
         }
 
-        const [name, valuesString] = nameValueString.split("_");
-        const values = valuesString.split("-");
+        const filtersStringArray = filterQueryParam.split("__");
 
-        return {
-            ...acc,
-            [name]: values,
-        };
-    }, {});
+        return filtersStringArray.reduce((acc, nameValueString) => {
+            if (!nameValueString) {
+                return acc;
+            }
+
+            const [name, valuesString] = nameValueString.split("_");
+            const [min, max] = valuesString.split("-");
+
+            return {
+                ...acc,
+                [name]: [Number(min), Number(max)],
+            };
+        }, {});
+    }, [filterQueryParam]);
 };
 
 export const useSetFiltersQuery = () => {

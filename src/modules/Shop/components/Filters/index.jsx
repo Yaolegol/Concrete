@@ -1,7 +1,7 @@
 // @flow
 import { useGetQueryFilters, useSetFiltersQuery } from "hooks/filters";
 import { PriceFilter } from "modules/Shop/components/Filters/PriceFilter";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import "./index.less";
 
@@ -16,9 +16,7 @@ type TProps = {
 export const Filters = ({ onAfterChange }: TProps): React$Node => {
     const { setFiltersQuery } = useSetFiltersQuery();
     const { price } = useGetQueryFilters();
-    const [priceFilterValue, setPriceFilterValue] = useState(
-        price || initialValues
-    );
+    const [priceFilterValue, setPriceFilterValue] = useState(initialValues);
 
     const onChange = useCallback((val) => {
         setPriceFilterValue(val);
@@ -40,6 +38,14 @@ export const Filters = ({ onAfterChange }: TProps): React$Node => {
         },
         [onAfterChange, setFiltersQuery]
     );
+
+    useEffect(() => {
+        if (!price) {
+            return;
+        }
+
+        setPriceFilterValue(price);
+    }, [price]);
 
     return (
         <div className="shop-page-filters">
