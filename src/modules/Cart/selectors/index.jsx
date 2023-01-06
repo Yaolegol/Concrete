@@ -1,7 +1,13 @@
 // @flow
 import { selectProductsList } from "modules/Shop/selectors";
 
-export const selectCartProducts: any = ({ cart }) => cart.products;
+export const selectCartState: any = ({ cart }) => cart;
+
+export const selectCartProducts: any = (state) => {
+    const cart = selectCartState(state);
+
+    return cart.products;
+};
 
 export const selectCartProductsItems: any = (state) => {
     const products = selectCartProducts(state);

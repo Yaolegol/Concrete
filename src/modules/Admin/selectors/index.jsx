@@ -1,7 +1,5 @@
 // @flow
-const getAdminState = (state) => {
-    return state.admin;
-};
+const getAdminState = ({ admin }) => admin;
 
 export const selectOrders: any = (state) => {
     const admin = getAdminState(state);

@@ -1,7 +1,5 @@
 // @flow
-const getLocaleState = (state) => {
-    return state.locale;
-};
+const getLocaleState = ({ locale }) => locale;
 
 export const selectCurrentLocale: any = (state) => {
     const locale = getLocaleState(state);

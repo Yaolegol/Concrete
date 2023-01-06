@@ -1,5 +1,5 @@
 // @flow
-export const getShopState: any = ({ cart }) => cart.shop;
+export const getShopState: any = ({ shop }) => shop;
 
 export const selectProducts: any = (state) => {
     const shop = getShopState(state);
