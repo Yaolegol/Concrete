@@ -1,9 +1,9 @@
 @import (reference) '~styles/adaptive';
 
 .main-shop-products-block {
-    @product_card_margin-top: 100px;
+    @product_card_margin-top: 50px;
     @product_card_margin-top_mobile: 50px;
-    @product_card_margin-horizontal: 50px;
+    @product_card_margin-horizontal: 10px;
     @product_card_margin-horizontal_mobile: 10px;
 
     &__products-block {
@@ -24,6 +24,10 @@
         @media @max_1023 {
             padding: @product_card_margin-top_mobile @product_card_margin-horizontal_mobile 0;
             width: 50%;
+        }
+
+        @media @max_374 {
+            width: 100%;
         }
     }
 }

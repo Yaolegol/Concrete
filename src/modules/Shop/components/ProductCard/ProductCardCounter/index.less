@@ -1,9 +1,14 @@
+@import (reference) '~styles/adaptive';
 @import (reference) '~styles/colors';
 @import (reference) '~styles/flex';
 
 .product-card-counter {
     display: flex;
     height: 50px;
+
+    @media @max_767 {
+        height: 30px;
+    }
 
     &__button {
         .f_c();
@@ -12,6 +17,10 @@
         color: @white;
         cursor: pointer;
         width: 50px;
+
+        @media @max_767 {
+            width: 30px;
+        }
     }
 
     &__count {
@@ -20,12 +29,21 @@
         background-color: @white;
         user-select: none;
         width: 50px;
+
+        @media @max_767 {
+            width: 30px;
+        }
     }
 
     &__icon {
         color: @white;
         height: 18px;
         width: 18px;
+
+        @media @max_767 {
+            height: 12px;
+            width: 12px;
+        }
     }
 
     &__icon-container {
@@ -34,6 +52,10 @@
         cursor: pointer;
         justify-content: center;
         width: 50px;
+
+        @media @max_767 {
+            width: 30px;
+        }
     }
 
     &__item {
