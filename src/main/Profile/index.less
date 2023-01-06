@@ -1,35 +1,23 @@
 @import (reference) '~styles/adaptive';
 
 .profile-page {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: 0 50px 50px;
-    text-align: center;
+    &__orders-history-title {
+        margin-top: 50px;
+        text-align: center;
+        text-transform: capitalize;
+    }
 
-    &__content-container {
+    &__products-container {
         display: flex;
-        flex: 1;
-        flex-direction: column;
-        width: 100%;
+        justify-content: center;
+        margin-top: 50px;
 
-        @media @max_1439 {
-            max-width: none;
+        @media @max_767 {
+            display: block;
         }
     }
 
-    &__content-section {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
-
-    &__orders-history-title {
-        margin-top: 50px;
-    }
-
     &__title {
-        margin-top: 100px;
+        text-align: center;
     }
 }

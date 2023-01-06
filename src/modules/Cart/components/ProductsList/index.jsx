@@ -1,18 +1,16 @@
 // @flow
 import { ProductCard } from "modules/Cart/components/ProductCard";
-import { selectCartProductsData } from "modules/Cart/selectors";
 import type { TCartProductsData } from "modules/Cart/types";
 import React, { useMemo } from "react";
-import { connect } from "react-redux";
 import "./index.less";
 
 type TProps = {
-    cartProductsDataList: TCartProductsData,
+    dataList: TCartProductsData,
 };
 
-const ProductsList = ({ cartProductsDataList }: TProps): React$Node => {
+export const ProductsList = ({ dataList }: TProps): React$Node => {
     const products = useMemo(() => {
-        return cartProductsDataList.map(
+        return dataList.map(
             ({ countInCart, _id, images, price, title, totalPrice }) => {
                 return (
                     <div
@@ -20,7 +18,7 @@ const ProductsList = ({ cartProductsDataList }: TProps): React$Node => {
                         key={_id}
                     >
                         <ProductCard
-                            countInCart={countInCart}
+                            count={countInCart}
                             price={price}
                             src={images[0]}
                             title={title}
@@ -30,13 +28,9 @@ const ProductsList = ({ cartProductsDataList }: TProps): React$Node => {
                 );
             }
         );
-    }, [cartProductsDataList]);
+    }, [dataList]);
 
     return (
         <div className="modules-cart-components-products-list">{products}</div>
     );
 };
-
-export default connect<TProps, void, _, _, _, _>((state) => ({
-    cartProductsDataList: selectCartProductsData(state),
-}))(ProductsList);

@@ -1,7 +1,6 @@
 // @flow
-import { OrderHeader } from "common/components/Order/OrderHeader";
-import { OrderItem } from "common/components/Order/OrderItem";
 import { actionGetUser } from "modules/User/actions";
+import { ProductsList } from "modules/User/components/ProductsList";
 import { selectUserPurchases } from "modules/User/selectors";
 import React, { useEffect, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
@@ -12,35 +11,9 @@ const ProfilePage = (): React$Node => {
     const dispatch = useDispatch();
     const userPurchases = useSelector(selectUserPurchases);
 
-    const contentItems = useMemo(() => {
-        return userPurchases.map((purchase) => {
-            return purchase.map(({ _id, count, productID, price, sum }) => {
-                const { description, images, title } = productID;
-                return (
-                    <OrderItem
-                        countInCart={count}
-                        description={description}
-                        key={_id}
-                        price={price}
-                        src={images[0]}
-                        title={title}
-                        totalPrice={sum}
-                    />
-                );
-            });
-        });
+    const productsList = useMemo(() => {
+        return userPurchases.flat();
     }, [userPurchases]);
-
-    const content = useMemo(() => {
-        return contentItems.length ? (
-            <div className="profile-page__content-section">
-                <OrderHeader />
-                <div className="profile-page__content-container">
-                    {contentItems}
-                </div>
-            </div>
-        ) : null;
-    }, [contentItems]);
 
     useEffect(() => {
         dispatch(actionGetUser());
@@ -54,7 +27,9 @@ const ProfilePage = (): React$Node => {
             <h4 className="profile-page__orders-history-title">
                 <FormattedMessage id="profile.ordersHistory" />
             </h4>
-            {content}
+            <div className="profile-page__products-container">
+                <ProductsList dataList={productsList} />
+            </div>
         </div>
     );
 };

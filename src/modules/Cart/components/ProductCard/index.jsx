@@ -3,7 +3,7 @@ import React from "react";
 import "./index.less";
 
 type TProps = {
-    countInCart: number,
+    count: number,
     price: number,
     src: string,
     title: string,
@@ -11,7 +11,7 @@ type TProps = {
 };
 
 export const ProductCard = ({
-    countInCart,
+    count,
     price,
     src,
     title,
@@ -51,7 +51,7 @@ export const ProductCard = ({
                             Count:
                         </div>
                         <div className="modules-cart-components-product-card__content-item-value">
-                            {countInCart}
+                            {count}
                         </div>
                     </div>
                 </div>

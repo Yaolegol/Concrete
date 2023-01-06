@@ -6,7 +6,6 @@ import { actionGetPurchases } from "modules/Admin/actions";
 import React, { useEffect, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import { useDispatch, useSelector } from "react-redux";
-import "./index.less";
 
 export const ViewOrders = (): React$Node => {
     const dispatch = useDispatch();
