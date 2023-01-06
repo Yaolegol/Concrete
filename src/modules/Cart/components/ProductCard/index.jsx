@@ -4,6 +4,7 @@ import "./index.less";
 
 type TProps = {
     count: number,
+    email?: string,
     price: number,
     src: string,
     title: string,
@@ -12,6 +13,7 @@ type TProps = {
 
 export const ProductCard = ({
     count,
+    email,
     price,
     src,
     title,
@@ -56,6 +58,16 @@ export const ProductCard = ({
                     </div>
                 </div>
                 <div className="modules-cart-components-product-card__content-total">
+                    {email ? (
+                        <div className="modules-cart-components-product-card__content-item">
+                            <div className="modules-cart-components-product-card__content-item-name modules-cart-components-product-card__content-item-name_bold">
+                                Email:
+                            </div>
+                            <div className="modules-cart-components-product-card__content-item-value modules-cart-components-product-card__content-item-value_bold">
+                                {email}
+                            </div>
+                        </div>
+                    ) : null}
                     <div className="modules-cart-components-product-card__content-item">
                         <div className="modules-cart-components-product-card__content-item-name modules-cart-components-product-card__content-item-name_bold">
                             Total price:

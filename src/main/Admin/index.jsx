@@ -40,6 +40,7 @@ const Admin = (): React$Node => {
                     <div className="admin-page__controls-container">
                         <div className="admin-page__control">
                             <Button
+                                active={currentContent === "create product"}
                                 fullWidth
                                 onClick={changeContent("create product")}
                                 theme="white"
@@ -49,6 +50,7 @@ const Admin = (): React$Node => {
                         </div>
                         <div className="admin-page__control">
                             <Button
+                                active={currentContent === "view orders"}
                                 fullWidth
                                 onClick={changeContent("view orders")}
                                 theme="white"
