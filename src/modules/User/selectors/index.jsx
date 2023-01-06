@@ -1,25 +1,24 @@
 // @flow
 import { isObjectEmpty } from "helpers/object";
-import { createSelector } from "reselect";
 
-const getUserState = (state) => {
-    return state.user;
+export const selectUser: any = ({ user }) => {
+    if (isObjectEmpty(user)) {
+        return null;
+    }
+
+    return { ...user };
 };
 
-export const selectUser: any = createSelector([getUserState], ({ user }) => {
-    if (!isObjectEmpty(user)) {
-        return { ...user };
+export const selectUserPurchases: any = (user) => {
+    if (isObjectEmpty(user)) {
+        return [];
     }
-    return null;
-});
 
-export const selectUserPurchases: any = createSelector([selectUser], (user) => {
-    if (user) {
-        const { purchases } = user;
-        if (!purchases) {
-            return [];
-        }
-        return purchases.map(({ purchaseID }) => purchaseID.purchase);
+    const { purchases } = user;
+
+    if (!purchases) {
+        return [];
     }
-    return [];
-});
+
+    return purchases.map(({ purchaseID }) => purchaseID.purchase);
+};

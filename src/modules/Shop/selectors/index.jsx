@@ -1,21 +1,20 @@
 // @flow
-import { createSelector } from "reselect";
+export const getShopState: any = ({ cart }) => cart.shop;
 
-const getShopState = (state) => {
-    return state.shop;
+export const selectProducts: any = (state) => {
+    const shop = getShopState(state);
+
+    return shop.products;
 };
 
-export const selectProducts: any = createSelector(
-    [getShopState],
-    ({ products }) => products
-);
+export const selectProductsFilters: any = (state) => {
+    const shop = getShopState(state);
 
-export const selectProductsFilters: any = createSelector(
-    [getShopState],
-    ({ filters }) => filters
-);
+    return shop.filters;
+};
 
-export const selectProductsList: any = createSelector(
-    [selectProducts],
-    ({ list }) => list
-);
+export const selectProductsList: any = (state) => {
+    const products = selectProducts(state);
+
+    return products.list;
+};

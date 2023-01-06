@@ -1,11 +1,10 @@
 // @flow
-import { createSelector } from "reselect";
-
 const getLocaleState = (state) => {
     return state.locale;
 };
 
-export const selectCurrentLocale = (createSelector(
-    [getLocaleState],
-    ({ currentLocale }) => currentLocale
-): any);
+export const selectCurrentLocale: any = (state) => {
+    const locale = getLocaleState(state);
+
+    return locale.currentLocale;
+};
