@@ -1,35 +1,16 @@
 @import (reference) '~styles/adaptive';
+@import (reference) '~styles/padding';
 
 .admin-page {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: 50px 20px 100px;
-    text-align: center;
+    .padding_horizontal();
 
-    &__header {
-        overflow-wrap: anywhere;
-    }
-
-    &__main-section {
+    &__content-area {
         display: flex;
-        flex: 1;
+        flex: 1 1 auto;
         margin-top: 50px;
 
         @media @max_1023 {
             flex-direction: column;
-        }
-    }
-
-    &__content-section {
-        align-items: center;
-        display: flex;
-        flex: 5;
-        flex-direction: column;
-        padding: 0 20px;
-
-        @media @max_1023 {
-            margin-top: 100px;
         }
     }
 
@@ -41,9 +22,26 @@
         margin-top: 50px;
     }
 
-    &__controls-section {
+    &__section-content {
         display: flex;
-        flex: 1;
-        flex-direction: column;
+        flex: 8 1 auto;
+        justify-content: center;
+        margin-left: 50px;
+
+        @media @max_1023 {
+            margin-top: 100px;
+        }
+    }
+
+    &__section-controls {
+        flex: 2 1 auto;
+    }
+
+    &__section-controls-title {
+        text-align: center;
+    }
+
+    &__title {
+        text-align: center;
     }
 }
