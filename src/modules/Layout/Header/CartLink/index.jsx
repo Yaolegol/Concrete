@@ -3,15 +3,13 @@ import cn from "classnames";
 import CartIcon from "icons/cart.svg";
 import { selectCartProductsTotal } from "modules/Cart/selectors";
 import React from "react";
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./index.less";
 
-type TProps = {
-    cartProductsTotal: number,
-};
+export const CartLink = (): React$Node => {
+    const cartProductsTotal = useSelector(selectCartProductsTotal);
 
-const CartLink = ({ cartProductsTotal }: TProps): React$Node => {
     return (
         <Link className="cart-link" to="/cart">
             <div className="cart-link__icon-container">
@@ -30,7 +28,3 @@ const CartLink = ({ cartProductsTotal }: TProps): React$Node => {
         </Link>
     );
 };
-
-export default (connect((state) => ({
-    cartProductsTotal: selectCartProductsTotal(state),
-}))(CartLink): any);

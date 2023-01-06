@@ -1,5 +1,5 @@
 // @flow
-import CartLink from "modules/Layout/Header/CartLink";
+import { CartLink } from "modules/Layout/Header/CartLink";
 import { LangSelect } from "modules/Locale/components/LangSelect";
 import React from "react";
 import "./index.less";
