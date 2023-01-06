@@ -1,6 +1,6 @@
 // @flow
 import { usePageScrollUp } from "hooks/scroll";
-import BuyForm from "modules/Cart/components/BuyForm";
+import { BuyForm } from "modules/Cart/components/BuyForm";
 import { CartEmpty } from "modules/Cart/components/CartEmpty";
 import { ProductsList } from "modules/Cart/components/ProductsList";
 import { selectCartProductsData } from "modules/Cart/selectors";

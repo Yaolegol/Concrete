@@ -4,26 +4,18 @@ import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
 import { actionBuyProducts, actionResetCart } from "modules/Cart/actions";
 import { selectCartProductsData } from "modules/Cart/selectors";
-import type { TCartProductsData } from "modules/Cart/types";
 import { selectUser } from "modules/User/selectors";
 import { Formik } from "formik";
 import React, { useCallback } from "react";
 import { FormattedMessage } from "react-intl";
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./index.less";
 
-type TProps = {
-    cartProductsDataList: TCartProductsData,
-    dispatch: any,
-    user: any,
-};
-
-const BuyForm = ({
-    cartProductsDataList,
-    dispatch,
-    user,
-}: TProps): React$Node => {
+export const BuyForm = (): React$Node => {
+    const dispatch = useDispatch();
+    const cartProductsDataList = useSelector(selectCartProductsData);
+    const user = useSelector(selectUser);
     const history = useHistory();
 
     const handleSubmit = useCallback(
@@ -119,8 +111,3 @@ const BuyForm = ({
         </div>
     );
 };
-
-export default connect<TProps, void, _, _, _, _>((state) => ({
-    cartProductsDataList: selectCartProductsData(state),
-    user: selectUser(state),
-}))(BuyForm);
