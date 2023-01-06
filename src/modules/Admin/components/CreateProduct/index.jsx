@@ -7,9 +7,9 @@ import { Input } from "common/components/Input";
 import { actionAdminCreateProduct } from "modules/Admin/actions";
 import { Formik } from "formik";
 import React, { useCallback } from "react";
+import { FormattedMessage } from "react-intl";
 import { useDispatch } from "react-redux";
 import "./index.less";
-import { FormattedMessage } from "react-intl";
 
 export const CreateProduct = (): React$Node => {
     const dispatch = useDispatch();
@@ -23,7 +23,7 @@ export const CreateProduct = (): React$Node => {
 
     return (
         <div className="admin-page-create-product">
-            <h4>
+            <h4 className="admin-page-create-product__title">
                 <FormattedMessage id="common.createProduct" />
             </h4>
             <div className="admin-page-create-product__content-container">
