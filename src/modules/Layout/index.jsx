@@ -2,7 +2,7 @@
 import { HomeHero } from "main/Home/Hero";
 import { Footer } from "modules/Layout/Footer";
 import { Header } from "modules/Layout/Header";
-import MobileMenu from "modules/MobileMenu/components/MobileMenu";
+import { MobileMenu } from "modules/MobileMenu/components/MobileMenu";
 import React, { useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import "./index.less";

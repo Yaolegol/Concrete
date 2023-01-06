@@ -6,15 +6,13 @@ import { LangSelect } from "modules/Locale/components/LangSelect";
 import { actionHideMobileMenu } from "modules/MobileMenu/actions";
 import { selectMobileMenuShowStatus } from "modules/MobileMenu/selectors";
 import React, { useCallback } from "react";
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./index.less";
 
-type TProps = {
-    dispatch: any,
-    isShow: boolean,
-};
+export const MobileMenu = (): React$Node => {
+    const dispatch = useDispatch();
+    const isShow = useSelector(selectMobileMenuShowStatus);
 
-const MobileMenu = ({ dispatch, isShow }: TProps): React$Node => {
     const toggleMobileMenu = useCallback(
         (e) => {
             dispatch(actionHideMobileMenu());
@@ -52,7 +50,3 @@ const MobileMenu = ({ dispatch, isShow }: TProps): React$Node => {
         </div>
     );
 };
-
-export default (connect((state) => ({
-    isShow: selectMobileMenuShowStatus(state),
-}))(MobileMenu): any);
