@@ -2,16 +2,58 @@
 import { Button } from "common/components/Button";
 import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
+import { actionBuyProducts, actionResetCart } from "modules/Cart/actions";
+import { selectCartProductsData } from "modules/Cart/selectors";
+import type { TCartProductsData } from "modules/Cart/types";
+import { selectUser } from "modules/User/selectors";
 import { Formik } from "formik";
-import React from "react";
+import React, { useCallback } from "react";
 import { FormattedMessage } from "react-intl";
+import { connect } from "react-redux";
+import { useHistory } from "react-router-dom";
 import "./index.less";
 
 type TProps = {
-    onSubmit: (any) => void,
+    cartProductsDataList: TCartProductsData,
+    dispatch: any,
+    user: any,
 };
 
-export const BuyForm = ({ onSubmit }: TProps): React$Node => {
+const BuyForm = ({
+    cartProductsDataList,
+    dispatch,
+    user,
+}: TProps): React$Node => {
+    const history = useHistory();
+
+    const handleSubmit = useCallback(
+        ({ email }) => {
+            const purchase = cartProductsDataList.map(
+                ({ _id, countInCart, price, totalPrice }) => {
+                    return {
+                        count: countInCart,
+                        productID: _id,
+                        price,
+                        sum: totalPrice,
+                    };
+                }
+            );
+
+            dispatch(
+                actionBuyProducts({
+                    email: email || user.email,
+                    purchase,
+                })
+            ).then(({ errors }) => {
+                if (!errors) {
+                    dispatch(actionResetCart());
+                    history.push("/");
+                }
+            });
+        },
+        [cartProductsDataList, dispatch, history, user]
+    );
+
     return (
         <div className="cart-page__buy-section">
             <h4>
@@ -23,7 +65,7 @@ export const BuyForm = ({ onSubmit }: TProps): React$Node => {
                         email: "",
                     }}
                     onSubmit={(values) => {
-                        onSubmit({ email: values.email });
+                        handleSubmit({ email: values.email });
                     }}
                     validate={(values) => {
                         const { email } = values;
@@ -80,3 +122,8 @@ export const BuyForm = ({ onSubmit }: TProps): React$Node => {
         </div>
     );
 };
+
+export default connect<TProps, void, _, _, _, _>((state) => ({
+    cartProductsDataList: selectCartProductsData(state),
+    user: selectUser(state),
+}))(BuyForm);
