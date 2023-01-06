@@ -7,9 +7,7 @@ import "./index.less";
 export const CartEmpty = (): React$Node => {
     return (
         <div className="cart-empty">
-            <p>
-                <FormattedMessage id="cart.empty.description" />
-            </p>
+            <FormattedMessage id="cart.empty.description" />
             <div className="cart-empty__button-shop">
                 <ShopNowButton />
             </div>

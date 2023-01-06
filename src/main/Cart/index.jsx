@@ -19,18 +19,20 @@ const Cart = ({ cartProductsDataList }: TProps): React$Node => {
             <h1 className="cart-page__title">
                 <FormattedMessage id="cart.title" />
             </h1>
-            {!cartProductsDataList.length ? (
-                <CartEmpty />
-            ) : (
-                <div className="cart-page__content-block">
-                    <div className="cart-page__products-container">
-                        <ProductsList />
-                    </div>
-                    <div className="cart-page__buy-form-container">
-                        <BuyForm />
-                    </div>
-                </div>
-            )}
+            <div className="cart-page__content-block">
+                {!cartProductsDataList.length ? (
+                    <CartEmpty />
+                ) : (
+                    <>
+                        <div className="cart-page__products-container">
+                            <ProductsList />
+                        </div>
+                        <div className="cart-page__buy-form-container">
+                            <BuyForm />
+                        </div>
+                    </>
+                )}
+            </div>
         </div>
     );
 };
