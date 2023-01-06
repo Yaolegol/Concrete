@@ -25,7 +25,7 @@ export const RegisterLinks = ({ onSelect }: TProps): React$Node => {
             <CustomNavLink
                 messageId="common.menu.logOut"
                 onClick={logout}
-                url="/"
+                url="/logout"
             />
         </>
     );
