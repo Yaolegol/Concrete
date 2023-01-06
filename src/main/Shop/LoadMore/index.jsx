@@ -3,14 +3,15 @@ import { Button } from "common/components/Button";
 import { selectProducts } from "modules/Shop/selectors";
 import React, { useMemo } from "react";
 import { FormattedMessage } from "react-intl";
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 
 type TProps = {
     onClick: () => void,
-    products: any,
 };
 
-const LoadMore = ({ onClick, products }: TProps): React$Node => {
+export const LoadMore = ({ onClick }: TProps): React$Node => {
+    const products = useSelector(selectProducts);
+
     return useMemo(() => {
         const isShow = products.list.length < products.count;
         return isShow ? (
@@ -20,7 +21,3 @@ const LoadMore = ({ onClick, products }: TProps): React$Node => {
         ) : null;
     }, [onClick, products.count, products.list.length]);
 };
-
-export default connect<TProps, void, _, _, _, _>((state) => ({
-    products: selectProducts(state),
-}))(LoadMore);

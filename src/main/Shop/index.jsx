@@ -4,21 +4,18 @@ import { useGetQueryFilters } from "hooks/filters";
 import { useCustomLocation } from "hooks/location";
 import { usePageScrollUp } from "hooks/scroll";
 import { useGetSortQuery } from "hooks/sort";
-import LoadMore from "main/Shop/LoadMore";
-import ProductsBlock from "main/Shop/ProductsBlock";
+import { LoadMore } from "main/Shop/LoadMore";
+import { ProductsBlock } from "main/Shop/ProductsBlock";
 import { actionGetProducts } from "modules/Shop/actions";
 import { Filters } from "modules/Shop/components/Filters";
 import React, { useCallback, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 import "./index.less";
 
-type TProps = {
-    dispatch: any,
-};
-
-const ShopPage = ({ dispatch }: TProps): React$Node => {
+const ShopPage = (): React$Node => {
     usePageScrollUp();
+    const dispatch = useDispatch();
     const sortQuery = useGetSortQuery();
     const filtersData = useGetQueryFilters();
     const { search } = useCustomLocation();
@@ -89,4 +86,4 @@ const ShopPage = ({ dispatch }: TProps): React$Node => {
     );
 };
 
-export default connect()(ShopPage);
+export default ShopPage;

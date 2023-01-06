@@ -3,15 +3,13 @@ import { selectCartProductsItems } from "modules/Cart/selectors";
 import { ProductCard } from "modules/Shop/components/ProductCard";
 import { selectProducts } from "modules/Shop/selectors";
 import React, { useMemo } from "react";
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 import "./index.less";
 
-type TProps = {
-    cartProducts: any,
-    products: any,
-};
+export const ProductsBlock = (): React$Node => {
+    const cartProducts = useSelector(selectCartProductsItems);
+    const products = useSelector(selectProducts);
 
-const ProductsBlock = ({ cartProducts, products }: TProps): React$Node => {
     const productCards = useMemo(() => {
         return products.list.map(
             ({ description, _id, images, price, title }) => {
@@ -43,8 +41,3 @@ const ProductsBlock = ({ cartProducts, products }: TProps): React$Node => {
         </div>
     );
 };
-
-export default connect<TProps, void, _, _, _, _>((state) => ({
-    cartProducts: selectCartProductsItems(state),
-    products: selectProducts(state),
-}))(ProductsBlock);
