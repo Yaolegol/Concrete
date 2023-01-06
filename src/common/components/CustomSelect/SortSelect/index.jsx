@@ -36,7 +36,7 @@ export const SortSelect = ({ onChange }: TProps): React$Node => {
     const [value, setValue] = useState(getInitialValue(sortData));
 
     const _onChange = useCallback(
-        (val) => {
+        (val: any) => {
             if (onChange) {
                 onChange();
             }

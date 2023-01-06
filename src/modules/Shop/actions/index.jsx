@@ -22,7 +22,7 @@ export const actionGetProducts = ({
     filters = {},
     page = 1,
     sort = {},
-} = {}) => async (dispatch) => {
+}: any = {}) => async (dispatch: any) => {
     dispatch(actionGetProductsStart());
 
     try {

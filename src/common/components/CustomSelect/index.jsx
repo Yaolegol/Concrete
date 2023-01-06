@@ -6,7 +6,7 @@ import type { ActionMeta, ValueType } from "react-select/src/types";
 
 type TSelectOption = {
     id?: any,
-    label: string,
+    label: string | React$Node,
     value: string,
 };
 
@@ -14,7 +14,7 @@ type TProps = {
     isSearchable?: boolean,
     onChange: (ValueType, ActionMeta) => void,
     options: Array<TSelectOption>,
-    placeholder?: string,
+    placeholder?: string | React$Node,
     value: ValueType,
 };
 
