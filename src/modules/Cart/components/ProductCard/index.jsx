@@ -4,7 +4,6 @@ import "./index.less";
 
 type TProps = {
     countInCart: number,
-    description: string,
     price: number,
     src: string,
     title: string,
@@ -13,7 +12,6 @@ type TProps = {
 
 export const ProductCard = ({
     countInCart,
-    description,
     price,
     src,
     title,

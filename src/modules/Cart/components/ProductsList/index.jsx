@@ -13,15 +13,7 @@ type TProps = {
 const ProductsList = ({ cartProductsDataList }: TProps): React$Node => {
     const products = useMemo(() => {
         return cartProductsDataList.map(
-            ({
-                countInCart,
-                description,
-                _id,
-                images,
-                price,
-                title,
-                totalPrice,
-            }) => {
+            ({ countInCart, _id, images, price, title, totalPrice }) => {
                 return (
                     <div
                         className="modules-cart-components-products-list__item"
@@ -29,7 +21,6 @@ const ProductsList = ({ cartProductsDataList }: TProps): React$Node => {
                     >
                         <ProductCard
                             countInCart={countInCart}
-                            description={description}
                             price={price}
                             src={images[0]}
                             title={title}
