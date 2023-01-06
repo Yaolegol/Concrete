@@ -6,17 +6,19 @@ import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
 import { actionAdminCreateProduct } from "modules/Admin/actions";
 import { Formik } from "formik";
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { useDispatch } from "react-redux";
 import "./index.less";
 
 export const CreateProduct = (): React$Node => {
     const dispatch = useDispatch();
+    const [fileInputValue, setFileInputValue] = useState("");
 
     const handleFileInputChange = useCallback(
         ({ handler, name }) => (e) => {
             handler(name, e.target.files);
+            setFileInputValue(e.target.value);
         },
         []
     );
@@ -35,10 +37,13 @@ export const CreateProduct = (): React$Node => {
                         price: "",
                         title: "",
                     }}
-                    onSubmit={(values, { setFieldError }) => {
+                    onSubmit={(values, { resetForm }) => {
                         dispatch(
                             actionAdminCreateProduct({ productData: values })
                         );
+
+                        resetForm();
+                        setFileInputValue("");
                     }}
                     validate={(values) => {
                         const { price, title } = values;
@@ -121,6 +126,7 @@ export const CreateProduct = (): React$Node => {
                                         title={
                                             <FormattedMessage id="common.choosePhoto" />
                                         }
+                                        value={fileInputValue}
                                     />
                                 </div>
                                 <div className="admin-page-create-product__input-container">

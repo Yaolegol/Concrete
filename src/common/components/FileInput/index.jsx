@@ -5,9 +5,15 @@ import "./index.less";
 type TProps = {
     onChange: (any) => void,
     title: any,
+    value: string,
 };
 
-export const FileInput = ({ onChange, title, ...rest }: TProps): React$Node => {
+export const FileInput = ({
+    onChange,
+    title,
+    value,
+    ...rest
+}: TProps): React$Node => {
     const [previewUrlList, setPreviewUrlList] = useState([]);
 
     const handleChange = useCallback(
@@ -25,6 +31,10 @@ export const FileInput = ({ onChange, title, ...rest }: TProps): React$Node => {
     );
 
     const preview = useMemo(() => {
+        if (!value) {
+            return null;
+        }
+
         return previewUrlList.map(({ name, url }) => {
             return (
                 <div className="file-input__preview-card" key={url}>
@@ -39,7 +49,7 @@ export const FileInput = ({ onChange, title, ...rest }: TProps): React$Node => {
                 </div>
             );
         });
-    }, [previewUrlList]);
+    }, [previewUrlList, value]);
 
     return (
         <div className="file-input">
@@ -50,6 +60,7 @@ export const FileInput = ({ onChange, title, ...rest }: TProps): React$Node => {
                     multiple
                     onChange={handleChange}
                     type="file"
+                    value={value}
                 />
                 <span>{title}</span>
             </label>
