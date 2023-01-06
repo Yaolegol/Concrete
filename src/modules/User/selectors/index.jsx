@@ -1,7 +1,11 @@
 // @flow
 import { isObjectEmpty } from "helpers/object";
 
-export const selectUser: any = ({ user }) => {
+export const selectUserState: any = ({ user }) => user;
+
+export const selectUser: any = (state) => {
+    const { user } = selectUserState(state);
+
     if (isObjectEmpty(user)) {
         return null;
     }
