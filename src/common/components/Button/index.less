@@ -1,3 +1,4 @@
+@import (reference) '~styles/adaptive';
 @import (reference) '~styles/colors';
 @import (reference) '~styles/font';
 
@@ -24,6 +25,12 @@
 
     &_full-width {
         width: 100%;
+    }
+
+    &_mobile-full-width {
+        @media @max_1023 {
+            width: 100%;
+        }
     }
 
     &_white {

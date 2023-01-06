@@ -143,6 +143,7 @@ export const CreateProduct = (): React$Node => {
                                 <div className="admin-page-create-product__submit-button-container">
                                     <Button
                                         disabled={!isValid || !dirty}
+                                        mobileFull
                                         theme="white"
                                         type="submit"
                                     >

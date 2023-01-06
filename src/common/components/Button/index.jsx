@@ -6,6 +6,7 @@ import "./index.less";
 type TProps = {
     children: any,
     fullWidth?: boolean,
+    mobileFull?: boolean,
     theme?: "white",
     type?: string,
 };
@@ -13,6 +14,7 @@ type TProps = {
 export const Button = ({
     children,
     fullWidth,
+    mobileFull,
     theme,
     type = "button",
     ...rest
@@ -25,7 +27,8 @@ export const Button = ({
                 {
                     [`button_${theme || ""}`]: theme,
                 },
-                { "button_full-width": fullWidth }
+                { "button_full-width": fullWidth },
+                mobileFull ? "button_mobile-full-width" : ""
             )}
             type={type}
         >
