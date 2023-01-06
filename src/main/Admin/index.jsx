@@ -1,4 +1,5 @@
 // @flow
+import { usePageScrollUp } from "hooks/scroll";
 import { Button } from "common/components/Button";
 import { CreateProduct } from "modules/Admin/components/CreateProduct";
 import { ViewOrders } from "modules/Admin/components/ViewOrders";
@@ -7,6 +8,7 @@ import { FormattedMessage } from "react-intl";
 import "./index.less";
 
 const Admin = (): React$Node => {
+    usePageScrollUp();
     const [currentContent, setCurrentContent] = useState("create product");
 
     const changeContent = useCallback(

@@ -2,6 +2,7 @@
 import { Button } from "common/components/Button";
 import { FormField } from "common/components/FormField";
 import { Input } from "common/components/Input";
+import { usePageScrollUp } from "hooks/scroll";
 import { actionLogin, actionRegistration } from "modules/Auth/actions";
 import { actionGetUser } from "modules/User/actions";
 import { Formik } from "formik";
@@ -12,6 +13,7 @@ import { useHistory } from "react-router-dom";
 import "./index.less";
 
 const SignUp = (): React$Node => {
+    usePageScrollUp();
     const dispatch = useDispatch();
     const history = useHistory();
 

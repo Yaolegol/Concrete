@@ -2,6 +2,7 @@
 import { SortSelect } from "common/components/CustomSelect/SortSelect";
 import { useGetQueryFilters } from "hooks/filters";
 import { useCustomLocation } from "hooks/location";
+import { usePageScrollUp } from "hooks/scroll";
 import { useGetSortQuery } from "hooks/sort";
 import LoadMore from "main/Shop/LoadMore";
 import ProductsBlock from "main/Shop/ProductsBlock";
@@ -17,6 +18,7 @@ type TProps = {
 };
 
 const ShopPage = ({ dispatch }: TProps): React$Node => {
+    usePageScrollUp();
     const sortQuery = useGetSortQuery();
     const filtersData = useGetQueryFilters();
     const { search } = useCustomLocation();

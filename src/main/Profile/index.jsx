@@ -2,12 +2,14 @@
 import { actionGetUser } from "modules/User/actions";
 import { ProductsList } from "modules/User/components/ProductsList";
 import { selectUserPurchases } from "modules/User/selectors";
+import { usePageScrollUp } from "hooks/scroll";
 import React, { useEffect, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import { useDispatch, useSelector } from "react-redux";
 import "./index.less";
 
 const ProfilePage = (): React$Node => {
+    usePageScrollUp();
     const dispatch = useDispatch();
     const userPurchases = useSelector(selectUserPurchases);
 
