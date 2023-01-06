@@ -62,7 +62,7 @@ const BuyForm = ({
             <div className="modules-cart-components-buy-form__form-container">
                 <Formik
                     initialValues={{
-                        email: "",
+                        email: user ? user.email : "",
                     }}
                     onSubmit={(values) => {
                         handleSubmit({ email: values.email });
@@ -75,9 +75,9 @@ const BuyForm = ({
                         }
                         return errors;
                     }}
+                    validateOnMount
                 >
                     {({
-                        dirty,
                         errors,
                         handleBlur,
                         handleChange,
@@ -107,10 +107,7 @@ const BuyForm = ({
                                     />
                                 </FormField>
                                 <div className="modules-cart-components-buy-form__submit-button-container">
-                                    <Button
-                                        disabled={!isValid || !dirty}
-                                        type="submit"
-                                    >
+                                    <Button disabled={!isValid} type="submit">
                                         <FormattedMessage id="common.buy" />
                                     </Button>
                                 </div>
