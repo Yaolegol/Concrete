@@ -55,11 +55,11 @@ const BuyForm = ({
     );
 
     return (
-        <div className="cart-page__buy-section">
-            <h4>
+        <div className="modules-cart-components-buy-form">
+            <h4 className="modules-cart-components-buy-form__title">
                 <FormattedMessage id="common.enterEmail" />
             </h4>
-            <div className="cart-page__form-container">
+            <div className="modules-cart-components-buy-form__form-container">
                 <Formik
                     initialValues={{
                         email: "",
@@ -88,7 +88,7 @@ const BuyForm = ({
                     }) => {
                         return (
                             <form
-                                className="cart-page__form"
+                                className="modules-cart-components-buy-form__form"
                                 onSubmit={handleSubmit}
                             >
                                 <FormField
@@ -106,7 +106,7 @@ const BuyForm = ({
                                         value={values.email}
                                     />
                                 </FormField>
-                                <div className="signup-page__submit-button-container">
+                                <div className="modules-cart-components-buy-form__submit-button-container">
                                     <Button
                                         disabled={!isValid || !dirty}
                                         type="submit"
