@@ -13,7 +13,9 @@ export const selectUser: any = (state) => {
     return { ...user };
 };
 
-export const selectUserPurchases: any = (user) => {
+export const selectUserPurchases: any = (state) => {
+    const { user } = selectUserState(state);
+
     if (isObjectEmpty(user)) {
         return [];
     }
