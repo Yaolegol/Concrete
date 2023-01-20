@@ -77,7 +77,6 @@
     "build": "NODE_ENV=production webpack --mode production",
     "build:dev": "webpack --mode development",
     "flow": "flow",
-    "heroku-prebuild": "cd ./server && npm i",
     "start": "webpack-dev-server",
     "style:lint": "npx stylelint **/*.less",
     "test": "echo \"Error: no test specified\" && exit 1"
