@@ -9,8 +9,8 @@ type TProps = {
 
 export const ProductsList = ({ dataList }: TProps): React$Node => {
     const products = useMemo(() => {
-        return dataList.map(({ _id, count, productID, price, sum }) => {
-            const { images, title } = productID;
+        return dataList.map(({ _id, count, productID = {}, price, sum }) => {
+            const { images = [], title } = productID || {};
             return (
                 <div
                     className="modules-user-components-products-list__item"

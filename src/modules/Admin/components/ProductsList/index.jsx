@@ -11,7 +11,7 @@ export const ProductsList = (): React$Node => {
     const products = useMemo(() => {
         return orders.map(({ email, purchase }) => {
             return purchase.map(({ _id, count, productID, price, sum }) => {
-                const { images, title } = productID;
+                const { images = [], title } = productID || {};
                 return (
                     <div
                         className="modules-admin-components-products-list__item"
