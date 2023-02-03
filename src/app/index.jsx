@@ -25,7 +25,7 @@ const App = () => {
     return (
         <Router>
             <Layout>
-                <Suspense fallback={<div />}>
+                <Suspense>
                     <Switch>
                         <Route path="/admin">
                             <Admin />
