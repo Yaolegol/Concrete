@@ -3,6 +3,7 @@ import { Button } from "common/components/Button";
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import "./index.less";
+import { ShopNowButton } from "../../../common/components/Button/ShopNowButton";
 
 export const Portfolio = (): React$Node => {
     return (
@@ -40,9 +41,7 @@ export const Portfolio = (): React$Node => {
                 </div>
             </div>
             <div className="main-portfolio__button-container">
-                <Button theme="white">
-                    <FormattedMessage id="common.portfolio.title" />
-                </Button>
+                <ShopNowButton />
             </div>
         </div>
     );

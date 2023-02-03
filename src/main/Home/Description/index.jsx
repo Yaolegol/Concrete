@@ -14,11 +14,6 @@ export const Description = (): React$Node => {
                 <p className="main-home-description__content-description">
                     <FormattedMessage id="main.descriptionSection.description" />
                 </p>
-                <div className="main-home-description__about-link-container">
-                    <CustomLink url="#">
-                        <FormattedMessage id="common.learnMore.title" />
-                    </CustomLink>
-                </div>
             </div>
             <div className="main-home-description__image-section">
                 <img

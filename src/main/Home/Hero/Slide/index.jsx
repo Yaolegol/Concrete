@@ -9,7 +9,6 @@ type TProps = {
     imgAlt: string,
     imgSrc: string,
     key?: string,
-    onClick?: () => void,
     title: string,
 };
 
@@ -18,7 +17,6 @@ export const Slide = ({
     imgAlt,
     imgSrc,
     key,
-    onClick,
     title,
 }: TProps): React$Node => {
     return (
@@ -39,7 +37,7 @@ export const Slide = ({
                         {description}
                     </p>
                     <div className="main-home-hero-slide__button-container">
-                        <ShopNowButton onClick={onClick} />
+                        <ShopNowButton />
                     </div>
                 </div>
             </div>
