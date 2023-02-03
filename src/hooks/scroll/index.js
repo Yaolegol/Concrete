@@ -3,6 +3,9 @@ import { useEffect } from "react";
 
 export const usePageScrollUp = () => {
     useEffect(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo({
+            behavior: "instant",
+            top: 0,
+        });
     }, []);
 };
