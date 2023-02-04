@@ -49,7 +49,7 @@ mongoose
     )
     .then(result => {
         console.log('db connect')
-        app.listen(process.env.PORT || 8000, () => console.log('Server start on 8000'))
+        app.listen(process.env.PORT || 8001, () => console.log('Server start on 8001'))
     })
     .catch(err => {
         console.log(err)

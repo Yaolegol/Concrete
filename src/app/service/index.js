@@ -2,7 +2,7 @@
 let requestHost = "";
 
 if (process.env.NODE_ENV === "development") {
-    requestHost = "http://localhost:8000";
+    requestHost = "http://localhost:8001";
 }
 
 type TProps = {

@@ -1,21 +1,29 @@
 # Start project
 
+## Client
+
 ### 1. Install dependencies
-> npm i
+> npm ci
 
-### 2. Build projects
-> npm run build
-
-### 3. Run backend
-> cd ./server
-
-> npm i
-
+### 2. Start dev server
 > npm start
 
-Project start on **8000** port
+Client dev server use **8000** port
 
-### 4. Enjoy!
+## Server
+
+### 3. Go to server dir
+> cd ./server
+
+### 4. Install dependencies
+> npm ci
+
+### 5. Start dev server
+> npm start
+
+Server listen **8001** port
+
+### 6. Enjoy!
 
 Email and password for login as admin
 - email - admin@admin.com
@@ -26,30 +34,3 @@ Email and password for login as admin
 
 ### Description
 Online-store
-
-### Client
-- created with react, react-router, react-intl, redux, redux-thunk, formik, classnames, reselect, less, swiper
-- responsive layout
-- locale (en/ru)
-- lazy loading modules
-- flow typed
-- eslint, stylelint
-- autoprefixer postcss
-- custom webpack build (NO create react app)
-
-### Server
-- created with node, express, multer, mongoose, jsonwebtoken, cloudinary
-- database - MongoDB Cloud
-- database for images - cloudinary
-- auth with jsonwebtoken
-
-### Abilities
-- sing in, log in, log out
-- view order history (only for login users)
-- create products (only for admin users)
-- view orders (only for admin users)
-- sort products by price
-- filter products by price
-- add products to cart
-- view cart
-- choose locale (en/ru)
