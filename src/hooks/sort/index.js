@@ -1,26 +1,35 @@
-import { useCallback } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 
 export const useGetSortQuery = () => {
     const location = useLocation();
+    const [currentSortQuery, setCurrentSortQuery] = useState("");
+    const [previousSortQuery, setPreviousSortQuery] = useState("");
 
     const params = new URLSearchParams(location.search);
     const queryParam = params.get("sort");
 
-    if (!queryParam) {
-        return {};
-    }
+    useEffect(() => {
+        setPreviousSortQuery(currentSortQuery);
+        setCurrentSortQuery(queryParam);
+    }, [currentSortQuery, queryParam]);
 
-    const [name, value] = queryParam.split("_");
+    return useMemo(() => {
+        const [name, value] = currentSortQuery
+            ? currentSortQuery.split("_")
+            : [];
 
-    if (!value) {
-        return null;
-    }
-
-    return {
-        name,
-        value,
-    };
+        return {
+            data: {
+                name,
+                value,
+            },
+            query: {
+                current: currentSortQuery,
+                previous: previousSortQuery,
+            },
+        };
+    }, [currentSortQuery, previousSortQuery]);
 };
 
 export const useSetSortQuery = () => {

@@ -1,7 +1,6 @@
 // @flow
 import { SortSelect } from "common/components/CustomSelect/SortSelect";
 import { useGetQueryFilters } from "hooks/filters";
-import { useCustomLocation } from "hooks/location";
 import { usePageScrollUp } from "hooks/scroll";
 import { useGetSortQuery } from "hooks/sort";
 import { LoadMore } from "main/Shop/LoadMore";
@@ -18,7 +17,6 @@ const ShopPage = (): React$Node => {
     const dispatch = useDispatch();
     const sortQuery = useGetSortQuery();
     const filtersData = useGetQueryFilters();
-    const { search } = useCustomLocation();
     const [page, setPage] = useState(1);
 
     const getProducts = useCallback(
@@ -27,7 +25,7 @@ const ShopPage = (): React$Node => {
                 actionGetProducts({
                     filters: filtersData,
                     page: nextPage ?? page,
-                    sort: sortQuery,
+                    sort: sortQuery.data,
                 })
             );
         },
@@ -41,23 +39,19 @@ const ShopPage = (): React$Node => {
         getProducts({ nextPage });
     }, [getProducts, page]);
 
-    const onSortChange = useCallback(() => {
-        setPage(1);
-    }, []);
-
-    const onFilterChange = useCallback(() => {
+    const resetPage = useCallback(() => {
         setPage(1);
     }, []);
 
     useEffect(() => {
-        const { isEqual } = search;
+        const { current, previous } = sortQuery.query;
 
-        if (isEqual) {
+        if (current === previous) {
             return;
         }
 
         getProducts();
-    }, [getProducts, search]);
+    }, [getProducts, sortQuery]);
 
     return (
         <div className="shop-page">
@@ -66,12 +60,12 @@ const ShopPage = (): React$Node => {
             </h1>
             <div className="shop-page__content">
                 <div className="shop-page__section-filters">
-                    <Filters onAfterChange={onFilterChange} />
+                    <Filters onAfterChange={resetPage} />
                 </div>
                 <div className="shop-page__section-products">
                     <div className="shop-page__sort-block">
                         <div className="shop-page__sort-container">
-                            <SortSelect onChange={onSortChange} />
+                            <SortSelect onChange={resetPage} />
                         </div>
                     </div>
                     <div className="shop-page__products-area">
