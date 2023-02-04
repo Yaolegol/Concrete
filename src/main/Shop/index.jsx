@@ -23,7 +23,7 @@ const ShopPage = (): React$Node => {
         ({ nextPage } = {}) => {
             dispatch(
                 actionGetProducts({
-                    filters: filtersData,
+                    filters: filtersData.data,
                     page: nextPage ?? page,
                     sort: sortQuery.data,
                 })
@@ -44,14 +44,16 @@ const ShopPage = (): React$Node => {
     }, []);
 
     useEffect(() => {
-        const { current, previous } = sortQuery.query;
+        const isQueryParamsSame =
+            sortQuery.query.current === sortQuery.query.previous &&
+            filtersData.query.current === filtersData.query.previous;
 
-        if (current === previous) {
+        if (isQueryParamsSame) {
             return;
         }
 
         getProducts();
-    }, [getProducts, sortQuery]);
+    }, [filtersData, getProducts, sortQuery]);
 
     return (
         <div className="shop-page">

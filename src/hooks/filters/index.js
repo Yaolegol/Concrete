@@ -1,20 +1,25 @@
-import { useCallback, useMemo } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 
 export const useGetQueryFilters = () => {
     const location = useLocation();
+    const [currentFiltersQuery, setCurrentFiltersQuery] = useState("");
+    const [previousFiltersQuery, setPreviousFiltersQuery] = useState("");
 
     const params = new URLSearchParams(location.search);
     const filterQueryParam = params.get("filter");
 
+    useEffect(() => {
+        setPreviousFiltersQuery(currentFiltersQuery);
+        setCurrentFiltersQuery(filterQueryParam);
+    }, [currentFiltersQuery, filterQueryParam]);
+
     return useMemo(() => {
-        if (!filterQueryParam) {
-            return {};
-        }
+        const filtersStringArray = currentFiltersQuery
+            ? currentFiltersQuery.split("__")
+            : [];
 
-        const filtersStringArray = filterQueryParam.split("__");
-
-        return filtersStringArray.reduce((acc, nameValueString) => {
+        const data = filtersStringArray.reduce((acc, nameValueString) => {
             if (!nameValueString) {
                 return acc;
             }
@@ -27,7 +32,15 @@ export const useGetQueryFilters = () => {
                 [name]: [Number(min), Number(max)],
             };
         }, {});
-    }, [filterQueryParam]);
+
+        return {
+            data,
+            query: {
+                current: currentFiltersQuery,
+                previous: previousFiltersQuery,
+            },
+        };
+    }, [currentFiltersQuery, previousFiltersQuery]);
 };
 
 export const useSetFiltersQuery = () => {
