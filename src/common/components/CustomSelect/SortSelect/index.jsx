@@ -1,7 +1,7 @@
 // @flow
 import { CustomSelect } from "common/components/CustomSelect";
 import { useGetSortQuery, useSetSortQuery } from "hooks/sort";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import "./index.less";
 
@@ -18,7 +18,7 @@ const options = [
     },
 ];
 
-const getInitialValue = (sortData) => {
+const getOption = (sortData) => {
     if (!sortData) {
         return null;
     }
@@ -26,31 +26,25 @@ const getInitialValue = (sortData) => {
     return options.find(({ value }) => value === sortData.value);
 };
 
-type TProps = {
-    onChange?: () => void,
-};
-
-export const SortSelect = ({ onChange }: TProps): React$Node => {
-    const sortData = useGetSortQuery();
+export const SortSelect = (): React$Node => {
+    const { data } = useGetSortQuery();
     const { setSortQuery } = useSetSortQuery();
-    const [value, setValue] = useState(getInitialValue(sortData));
+    const [value, setValue] = useState(getOption(data));
 
     const _onChange = useCallback(
         (val: any) => {
-            if (onChange) {
-                onChange();
-            }
-
-            setValue(val);
-
             const { id, value } = val;
             setSortQuery({
                 name: id,
                 value,
             });
         },
-        [onChange, setSortQuery]
+        [setSortQuery]
     );
+
+    useEffect(() => {
+        setValue(getOption(data));
+    }, [data]);
 
     return (
         <div className="sort-select">

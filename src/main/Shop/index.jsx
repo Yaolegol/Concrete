@@ -39,10 +39,6 @@ const ShopPage = (): React$Node => {
         getProducts({ nextPage });
     }, [getProducts, page]);
 
-    const resetPage = useCallback(() => {
-        setPage(1);
-    }, []);
-
     useEffect(() => {
         const isQueryParamsSame =
             sortQuery.query.current === sortQuery.query.previous &&
@@ -52,7 +48,7 @@ const ShopPage = (): React$Node => {
             return;
         }
 
-        getProducts();
+        getProducts({ nextPage: 1 });
     }, [filtersData, getProducts, sortQuery]);
 
     return (
@@ -62,12 +58,12 @@ const ShopPage = (): React$Node => {
             </h1>
             <div className="shop-page__content">
                 <div className="shop-page__section-filters">
-                    <Filters onAfterChange={resetPage} />
+                    <Filters />
                 </div>
                 <div className="shop-page__section-products">
                     <div className="shop-page__sort-block">
                         <div className="shop-page__sort-container">
-                            <SortSelect onChange={resetPage} />
+                            <SortSelect />
                         </div>
                     </div>
                     <div className="shop-page__products-area">
