@@ -1,8 +1,10 @@
 // @flow
 let requestHost = "";
+let apiPrefix = "/api";
 
 if (process.env.NODE_ENV === "development") {
     requestHost = "http://localhost:8001";
+    apiPrefix = "";
 }
 
 type TProps = {
@@ -61,7 +63,7 @@ export const request = async ({
     }
 
     try {
-        const response = await fetch(`${requestHost}/api${url}`, {
+        const response = await fetch(`${requestHost}${apiPrefix}${url}`, {
             ..._options,
             headers: {
                 ...headers,
