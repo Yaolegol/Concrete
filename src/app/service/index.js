@@ -61,7 +61,7 @@ export const request = async ({
     }
 
     try {
-        const response = await fetch(`${requestHost}${url}`, {
+        const response = await fetch(`${requestHost}/api${url}`, {
             ..._options,
             headers: {
                 ...headers,
