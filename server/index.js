@@ -44,8 +44,8 @@ app.use(router);
 
 mongoose
     .connect(
-        'mongodb+srv://any:anypsw@veltry-2jqsc.mongodb.net/veltry?retryWrites=true&w=majority',
-        { useNewUrlParser: true }
+        'mongodb://localhost:27017/concrete',
+        { useNewUrlParser: true, useUnifiedTopology: true }
     )
     .then(result => {
         console.log('db connect')
