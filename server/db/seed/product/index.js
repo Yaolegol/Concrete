@@ -4,22 +4,22 @@ const mongoose = require('mongoose');
 
 const products = [
     {
-        description: 'Описание очень крутого товара',
+        description: 'test description 1',
         images: ['/public/images/1.jpg'],
         price: 10000,
-        title: 'Очень крутой товар',
+        title: 'Test 1',
     },
     {
-        description: 'Описание очень крутого товара 2',
+        description: 'test description 2',
         images: ['/public/images/2.jpg'],
         price: 5000,
-        title: 'Очень крутой товар 2',
+        title: 'test 2',
     },
     {
-        description: 'Описание просто товара',
+        description: 'test description 3',
         images: ['/public/images/3.jpg'],
         price: 1000,
-        title: 'Просто товар',
+        title: 'test 3',
     }
 ];
 
