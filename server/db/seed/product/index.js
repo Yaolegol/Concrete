@@ -32,7 +32,7 @@ const seedDB = async () => {
     await Product.deleteMany({});
     await Product.insertMany(products);
 
-    console.log('Database seeded!');
+    console.log('Products seeded!');
 
     mongoose.connection.close();
 };
