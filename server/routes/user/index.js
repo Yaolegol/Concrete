@@ -10,6 +10,12 @@ const router = express.Router()
 router.get('/user', (req, res, next) => {
     const reqToken = req.get('Authorization').split(' ')[1]
 
+    if(!reqToken) {
+        res.json(createErrors(['Token not valid']))
+
+        return;
+    }
+
     jwt.verify(reqToken, 'superSecretSecretSecret', (err, tokenData) => {
         if (tokenData && !err) {
             UsersModel.findOne({_id: tokenData.id})
