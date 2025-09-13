@@ -8,13 +8,15 @@ const jwt = require('jsonwebtoken');
 const router = express.Router()
 
 router.get('/user', (req, res, next) => {
-    const reqToken = req.get('Authorization').split(' ')[1]
+    const authData = req.get('Authorization');
 
-    if(!reqToken) {
+    if(!authData) {
         res.json(createErrors(['Token not valid']))
 
         return;
     }
+
+    const reqToken = authData.split(' ')[1]
 
     jwt.verify(reqToken, 'superSecretSecretSecret', (err, tokenData) => {
         if (tokenData && !err) {
